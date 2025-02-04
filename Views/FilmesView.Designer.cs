@@ -355,7 +355,7 @@
             CopiarButton.Name = "CopiarButton";
             CopiarButton.Size = new Size(137, 61);
             CopiarButton.TabIndex = 38;
-            CopiarButton.Text = "Copiar";
+            CopiarButton.Text = "Copiar Dados";
             CopiarButton.UseVisualStyleBackColor = false;
             CopiarButton.Click += CopiarButton_Click;
             // 
@@ -370,7 +370,7 @@
             SalvarButton.Name = "SalvarButton";
             SalvarButton.Size = new Size(137, 61);
             SalvarButton.TabIndex = 39;
-            SalvarButton.Text = "Salvar";
+            SalvarButton.Text = "Inserir Novo";
             SalvarButton.UseVisualStyleBackColor = false;
             SalvarButton.Click += SalvarButton_Click;
             // 
