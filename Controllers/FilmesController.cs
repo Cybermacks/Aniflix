@@ -55,5 +55,25 @@ namespace Aniflix.Controllers
         {
             return _conn.GetNextRecord("filmes", id);
         }
+
+        public static void AtualizaFilme(Filmes filmes)
+        {
+            _conn.UpdateData("filmes",
+                new MySqlParameter("@codigo", filmes.Codigo),
+                new MySqlParameter("@titulo", filmes.Titulo),
+                new MySqlParameter("@audio", filmes.Audio),
+                new MySqlParameter("@sinopse", filmes.Sinopse),
+                new MySqlParameter("@titulo_original", filmes.TituloOriginal),
+                new MySqlParameter("@data_lancamento", filmes.DataLancamento),
+                new MySqlParameter("@titulo_alternativo", filmes.TituloAlternativo),
+                new MySqlParameter("@franquia", filmes.Franquia),
+                new MySqlParameter("@genero", filmes.Genero),
+                new MySqlParameter("@tags", filmes.Tags),
+                new MySqlParameter("@diretor", filmes.Diretor),
+                new MySqlParameter("@mcu", filmes.MCU),
+                new MySqlParameter("@estrelas", filmes.Estrelas),
+                new MySqlParameter("@estudio", filmes.Estudio)
+            );
+        }
     }
 }
