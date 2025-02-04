@@ -34,7 +34,7 @@ namespace Aniflix.Controllers
                     new MySqlParameter("@MCU", filmes.MCU),
                     new MySqlParameter("@Estrelas", filmes.Estrelas),
                     new MySqlParameter("@Estudio", filmes.Estudio)
-                        );
+                );
 
                 if (rowsAffected > 0)
                 {
