@@ -405,6 +405,7 @@ namespace Aniflix
         private void EditarButton_Click(object sender, EventArgs e)
         {
             EditarButton.Text = "Editando";
+            EditarButton.Text = "Editar";
         }
     }
 }
