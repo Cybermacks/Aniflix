@@ -446,6 +446,8 @@ namespace Aniflix
                 {
                     editando = true;
                     EditarButton.Text = "Salvar Alterações";
+                    Functions.UndoReadOnly(this);
+
                     var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (atualizar == DialogResult.Yes)
