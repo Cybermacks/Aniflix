@@ -15,7 +15,7 @@ namespace Aniflix.Controllers
 
             if (filme.Rows.Count > 0)
             {
-                MessageBox.Show("Filme " + filmes.Titulo + " já está cadastrado!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(filmes.Titulo + " já está cadastrado!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
@@ -39,7 +39,7 @@ namespace Aniflix.Controllers
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Filme " + filmes.Titulo + " cadastrado com sucesso!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(filmes.Titulo + " cadastrado com sucesso!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
