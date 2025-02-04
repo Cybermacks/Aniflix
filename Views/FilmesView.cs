@@ -352,7 +352,7 @@ namespace Aniflix
                 MessageBox.Show("Por favor, insira o código do filme.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void LoadRecord(DataRow record)
+        private void PreencheDados(DataRow record)
         {
             if (record != null)
             {
@@ -380,7 +380,7 @@ namespace Aniflix
 
             if (nextRecord != null)
             {
-                LoadRecord(nextRecord);
+                PreencheDados(nextRecord);
             }
             else
             {
@@ -394,7 +394,7 @@ namespace Aniflix
 
             if (record != null)
             {
-                LoadRecord(record);
+                PreencheDados(record);
             }
             else
             {
