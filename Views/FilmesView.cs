@@ -392,11 +392,11 @@ namespace Aniflix
 
         private void AnteriorButton_Click(object sender, EventArgs e)
         {
-            var record = FilmesController.ProcuraFilmeAnterior(currentId);
+            var previousRecord = FilmesController.ProcuraFilmeAnterior(currentId);
 
-            if (record != null)
+            if (previousRecord != null)
             {
-                PreencheDados(record);
+                PreencheDados(previousRecord);
             }
             else
             {
