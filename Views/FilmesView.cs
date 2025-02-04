@@ -425,13 +425,13 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
 
-            if (!editando) // Se não está editando
+            if (!editando)
             {
                 editando = true;
                 EditarButton.Text = "Cancelar";
                 Functions.UndoReadOnly(this);
             }
-            else if (EditarButton.Text == "Cancelar") // Se o botão está em "Cancelar"
+            else if (EditarButton.Text == "Cancelar")
             {
                 var cancelar = MessageBox.Show($"Cancelar a edição do filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -441,12 +441,12 @@ namespace Aniflix
                     Functions.DoReadOnly(this);
                     EditarButton.Text = "Editar";
                 }
-                else // Se clicar em "Não", muda para "Salvar", mas não salva ainda
+                else
                 {
                     EditarButton.Text = "Salvar";
                 }
             }
-            else if (EditarButton.Text == "Salvar") // Somente agora pergunta se deseja salvar
+            else if (EditarButton.Text == "Salvar")
             {
                 var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
