@@ -11,7 +11,7 @@ namespace Aniflix.Controllers
 
         public static void InsereNovoFilme(Filmes filmes)
         {
-            var filme = _conn.SelectData("filmes", "codigo = @Codigo", new MySqlParameter("@Codigo", filmes.Codigo));
+            var filme = _conn.SelectData("filmes", "codigo = @codigo", new MySqlParameter("@codigo", filmes.Codigo));
 
             if (filme != null)
             {
