@@ -110,11 +110,6 @@ namespace Aniflix.Factory
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
-            }
-            finally
-            {
-                CloseConnection();
             }
 
         }
