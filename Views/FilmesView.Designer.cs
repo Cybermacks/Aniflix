@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            FilmesCodigoText = new TextBox();
+            CodigoText = new TextBox();
             FilmesTituloText = new TextBox();
             FilmesAudioBox = new ComboBox();
             FilmesSinopseText = new TextBox();
@@ -66,15 +66,15 @@
             VoltarButton = new Button();
             SuspendLayout();
             // 
-            // FilmesCodigoText
+            // CodigoText
             // 
-            FilmesCodigoText.Location = new Point(12, 33);
-            FilmesCodigoText.Name = "FilmesCodigoText";
-            FilmesCodigoText.PlaceholderText = "Código";
-            FilmesCodigoText.Size = new Size(100, 23);
-            FilmesCodigoText.TabIndex = 0;
-            FilmesCodigoText.KeyPress += FilmesCodigoText_KeyPress;
-            FilmesCodigoText.Leave += FilmesCodigoText_Leave;
+            CodigoText.Location = new Point(12, 33);
+            CodigoText.Name = "CodigoText";
+            CodigoText.PlaceholderText = "Código";
+            CodigoText.Size = new Size(100, 23);
+            CodigoText.TabIndex = 0;
+            CodigoText.KeyPress += CodigoText_KeyPress;
+            CodigoText.Leave += CodigoText_Leave;
             // 
             // FilmesTituloText
             // 
@@ -83,7 +83,7 @@
             FilmesTituloText.PlaceholderText = "Título";
             FilmesTituloText.Size = new Size(506, 23);
             FilmesTituloText.TabIndex = 1;
-            FilmesTituloText.TextChanged += FilmesTituloText_TextChanged;
+            FilmesTituloText.TextChanged += TituloText_TextChanged;
             // 
             // FilmesAudioBox
             // 
@@ -94,7 +94,7 @@
             FilmesAudioBox.Size = new Size(144, 23);
             FilmesAudioBox.TabIndex = 2;
             FilmesAudioBox.Text = "Dublado";
-            FilmesAudioBox.SelectedIndexChanged += FilmesAudioBox_SelectedIndexChanged;
+            FilmesAudioBox.SelectedIndexChanged += AudioBox_SelectedIndexChanged;
             // 
             // FilmesSinopseText
             // 
@@ -473,7 +473,7 @@
             Controls.Add(FilmesSinopseText);
             Controls.Add(FilmesAudioBox);
             Controls.Add(FilmesTituloText);
-            Controls.Add(FilmesCodigoText);
+            Controls.Add(CodigoText);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "FilmesView";
@@ -486,7 +486,7 @@
 
         #endregion
 
-        private TextBox FilmesCodigoText;
+        private TextBox CodigoText;
         private TextBox FilmesTituloText;
         private ComboBox FilmesAudioBox;
         private TextBox FilmesSinopseText;
