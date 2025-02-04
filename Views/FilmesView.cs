@@ -301,25 +301,24 @@ namespace Aniflix
 
         private void CarregarFilme()
         {
-            var filme = FilmesController.GetFirstFilme
+            var filme = FilmesController.BuscaPrimeiroFilme();
 
-                if (filme != null)
+            if (filme != null)
             {
-                FilmesCodigoText.Text = filme.Codigo;
-                FilmesTituloText.Text = filme.Titulo;
-                FilmesAudioBox.SelectedItem = filme.Audio;
-                FilmesSinopseText.Text = filme.Sinopse;
-                FilmesTituloOriginalText.Text = filme.TituloOriginal;
-                FilmesDataLancamentoText.Text = filme.DataLancamento;
-                FilmesTituloAlternativoText.Text = filme.TituloAlternativo;
-                FilmesFranquiaText.Text = filme.Franquia;
-                FilmesGeneroText.Text = filme.Genero;
-                FilmesTagsText.Text = filme.Tags;
-                FilmesDiretorText.Text = filme.Diretor;
-                FilmesFaseMCUText.Text = filme.MCU;
-                FilmesEstrelasText.Text = filme.Estrelas;
-                FilmesEstudioText.Text = filme.Estudio;
-                FilmesEstudioText.Text = filme.Estudio;
+                FilmesCodigoText.Text = filme["codigo"].ToString();
+                FilmesTituloText.Text = filme["titulo"].ToString();
+                FilmesAudioBox.SelectedItem = filme["audio"].ToString();
+                FilmesSinopseText.Text = filme["sinopse"].ToString();
+                FilmesTituloOriginalText.Text = filme["tituloOriginal"].ToString();
+                FilmesDataLancamentoText.Text = filme["dataLancamento"].ToString();
+                FilmesTituloAlternativoText.Text = filme["tituloAlternativo"].ToString();
+                FilmesFranquiaText.Text = filme["franquia"].ToString();
+                FilmesGeneroText.Text = filme["genero"].ToString();
+                FilmesTagsText.Text = filme["tags"].ToString();
+                FilmesDiretorText.Text = filme["diretor"].ToString();
+                FilmesFaseMCUText.Text = filme["mcu"].ToString();
+                FilmesEstrelasText.Text = filme["estrelas"].ToString();
+                FilmesEstudioText.Text = filme["estudio"].ToString();
             }
         }
 
