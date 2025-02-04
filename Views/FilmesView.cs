@@ -386,7 +386,7 @@ namespace Aniflix
             }
             else
             {
-                MessageBox.Show("Último registro alcançado.");
+                MessageBox.Show("Você chegou ao último registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -400,7 +400,7 @@ namespace Aniflix
             }
             else
             {
-                MessageBox.Show("Primeiro registro alcançado.");
+                MessageBox.Show("Você chegou ao primeiro registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private bool editando = false;
