@@ -353,7 +353,7 @@
             CopiarButton.TabIndex = 38;
             CopiarButton.Text = "Copiar Dados";
             CopiarButton.UseVisualStyleBackColor = false;
-            CopiarButton.Click += CopiarButton_Click;
+
             // 
             // SalvarButton
             // 
@@ -383,7 +383,7 @@
             EditarButton.TabIndex = 40;
             EditarButton.Text = "Editar";
             EditarButton.UseVisualStyleBackColor = false;
-            EditarButton.Click += EditarButton_Click;
+
             // 
             // AnteriorButton
             // 
