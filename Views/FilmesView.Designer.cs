@@ -62,7 +62,7 @@
             TituloText = new TextBox();
             CodigoText = new TextBox();
             label11 = new Label();
-            textBox1 = new TextBox();
+            FranquiaText = new TextBox();
             label9 = new Label();
             SuspendLayout();
             // 
@@ -395,13 +395,13 @@
             label11.TabIndex = 127;
             label11.Text = "Franquia";
             // 
-            // textBox1
+            // FranquiaText
             // 
-            textBox1.Location = new Point(13, 400);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Franquia";
-            textBox1.Size = new Size(368, 23);
-            textBox1.TabIndex = 126;
+            FranquiaText.Location = new Point(13, 400);
+            FranquiaText.Name = "FranquiaText";
+            FranquiaText.PlaceholderText = "Franquia";
+            FranquiaText.Size = new Size(368, 23);
+            FranquiaText.TabIndex = 126;
             // 
             // label9
             // 
@@ -419,7 +419,7 @@
             ClientSize = new Size(1400, 695);
             Controls.Add(label9);
             Controls.Add(label11);
-            Controls.Add(textBox1);
+            Controls.Add(FranquiaText);
             Controls.Add(VoltarButton);
             Controls.Add(ProximoButton);
             Controls.Add(AnteriorButton);
@@ -495,7 +495,7 @@
         private TextBox TituloText;
         private TextBox CodigoText;
         private Label label11;
-        private TextBox textBox1;
+        private TextBox FranquiaText;
         private Label label9;
     }
 }
