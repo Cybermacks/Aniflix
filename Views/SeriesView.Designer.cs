@@ -38,8 +38,10 @@ partial class SeriesView
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1708, 1032);
+        MaximizeBox = false;
         Name = "SeriesView";
-        Text = "SeriesView";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Séries";
         ResumeLayout(false);
     }
 
