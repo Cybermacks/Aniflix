@@ -21,20 +21,20 @@ namespace Aniflix.Controllers
             else
             {
                 int rowsAffected = _conn.InsertData("filmes",
-                    new MySqlParameter("@Codigo", filmes.Codigo),
-                    new MySqlParameter("@Titulo", filmes.Titulo),
-                    new MySqlParameter("@Audio", filmes.Audio),
-                    new MySqlParameter("@Sinopse", filmes.Sinopse),
-                    new MySqlParameter("@TituloOriginal", filmes.TituloOriginal),
-                    new MySqlParameter("@DataLancamento", filmes.DataLancamento),
-                    new MySqlParameter("@TituloAlternativo", filmes.TituloAlternativo),
-                    new MySqlParameter("@Franquia", filmes.Franquia),
-                    new MySqlParameter("@Genero", filmes.Genero),
-                    new MySqlParameter("@Tags", filmes.Tags),
-                    new MySqlParameter("@Diretor", filmes.Diretor),
-                    new MySqlParameter("@MCU", filmes.MCU),
-                    new MySqlParameter("@Estrelas", filmes.Estrelas),
-                    new MySqlParameter("@Estudio", filmes.Estudio)
+                    new MySqlParameter("@codigo", filmes.Codigo),
+                    new MySqlParameter("@titulo", filmes.Titulo),
+                    new MySqlParameter("@audio", filmes.Audio),
+                    new MySqlParameter("@sinopse", filmes.Sinopse),
+                    new MySqlParameter("@titulo_original", filmes.TituloOriginal),
+                    new MySqlParameter("@data_lancamento", filmes.DataLancamento),
+                    new MySqlParameter("@titulo_alternativo", filmes.TituloAlternativo),
+                    new MySqlParameter("@franquia", filmes.Franquia),
+                    new MySqlParameter("@genero", filmes.Genero),
+                    new MySqlParameter("@tags", filmes.Tags),
+                    new MySqlParameter("@diretor", filmes.Diretor),
+                    new MySqlParameter("@mcu", filmes.MCU),
+                    new MySqlParameter("@estrelas", filmes.Estrelas),
+                    new MySqlParameter("@estudio", filmes.Estudio)
                 );
 
                 if (rowsAffected > 0)
