@@ -422,7 +422,7 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
 
-            var resposta = MessageBox.Show("Deseja editar o filme selecionado?", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var resposta = MessageBox.Show("Deseja editar o filme " + filmes.Titulo + " ?", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resposta == DialogResult.Yes)
             {
