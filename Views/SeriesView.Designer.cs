@@ -50,7 +50,7 @@ partial class SeriesView
         label11 = new Label();
         label12 = new Label();
         TituloAlternativoText = new TextBox();
-        SeriesObraOriginalText = new TextBox();
+        ObraOriginalText = new TextBox();
         SeriesGeneroText = new TextBox();
         SeriesDiretorText = new TextBox();
         label5 = new Label();
@@ -71,7 +71,7 @@ partial class SeriesView
         label15 = new Label();
         IdiomaOriginalText = new TextBox();
         label18 = new Label();
-        SeriesSerieText = new TextBox();
+        SerieText = new TextBox();
         label19 = new Label();
         AutoresText = new TextBox();
         label20 = new Label();
@@ -286,14 +286,14 @@ partial class SeriesView
         TituloAlternativoText.TabIndex = 60;
         TituloAlternativoText.Text = "--";
         // 
-        // SeriesObraOriginalText
+        // ObraOriginalText
         // 
-        SeriesObraOriginalText.Location = new Point(12, 491);
-        SeriesObraOriginalText.Name = "SeriesObraOriginalText";
-        SeriesObraOriginalText.PlaceholderText = "Franquia";
-        SeriesObraOriginalText.Size = new Size(381, 23);
-        SeriesObraOriginalText.TabIndex = 59;
-        SeriesObraOriginalText.Text = "--";
+        ObraOriginalText.Location = new Point(12, 491);
+        ObraOriginalText.Name = "ObraOriginalText";
+        ObraOriginalText.PlaceholderText = "Franquia";
+        ObraOriginalText.Size = new Size(381, 23);
+        ObraOriginalText.TabIndex = 59;
+        ObraOriginalText.Text = "--";
         // 
         // SeriesGeneroText
         // 
@@ -468,13 +468,13 @@ partial class SeriesView
         label18.TabIndex = 85;
         label18.Text = "Série";
         // 
-        // SeriesSerieText
+        // SerieText
         // 
-        SeriesSerieText.Location = new Point(12, 447);
-        SeriesSerieText.Name = "SeriesSerieText";
-        SeriesSerieText.PlaceholderText = "Série";
-        SeriesSerieText.Size = new Size(381, 23);
-        SeriesSerieText.TabIndex = 84;
+        SerieText.Location = new Point(12, 447);
+        SerieText.Name = "SerieText";
+        SerieText.PlaceholderText = "Série";
+        SerieText.Size = new Size(381, 23);
+        SerieText.TabIndex = 84;
         // 
         // label19
         // 
@@ -520,7 +520,7 @@ partial class SeriesView
         Controls.Add(label19);
         Controls.Add(AutoresText);
         Controls.Add(label18);
-        Controls.Add(SeriesSerieText);
+        Controls.Add(SerieText);
         Controls.Add(label15);
         Controls.Add(IdiomaOriginalText);
         Controls.Add(label9);
@@ -545,7 +545,7 @@ partial class SeriesView
         Controls.Add(label11);
         Controls.Add(label12);
         Controls.Add(TituloAlternativoText);
-        Controls.Add(SeriesObraOriginalText);
+        Controls.Add(ObraOriginalText);
         Controls.Add(SeriesGeneroText);
         Controls.Add(SeriesDiretorText);
         Controls.Add(label5);
@@ -591,7 +591,7 @@ partial class SeriesView
     private Label label11;
     private Label label12;
     private TextBox TituloAlternativoText;
-    private TextBox SeriesObraOriginalText;
+    private TextBox ObraOriginalText;
     private TextBox SeriesGeneroText;
     private TextBox SeriesDiretorText;
     private Label label5;
@@ -612,7 +612,7 @@ partial class SeriesView
     private Label label15;
     private TextBox IdiomaOriginalText;
     private Label label18;
-    private TextBox SeriesSerieText;
+    private TextBox SerieText;
     private Label label19;
     private TextBox AutoresText;
     private Label label20;
