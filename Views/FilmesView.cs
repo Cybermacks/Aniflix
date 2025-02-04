@@ -425,15 +425,15 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
 
-            if (!editando)
+            if (!editando) // Se não está editando
             {
                 editando = true;
                 EditarButton.Text = "Cancelar";
                 Functions.UndoReadOnly(this);
             }
-            else
+            else if (EditarButton.Text == "Cancelar") // Se o botão está em "Cancelar"
             {
-                var cancelar = MessageBox.Show("Cancelar a edição do filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var cancelar = MessageBox.Show($"Cancelar a edição do filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (cancelar == DialogResult.Yes)
                 {
@@ -441,26 +441,23 @@ namespace Aniflix
                     Functions.DoReadOnly(this);
                     EditarButton.Text = "Editar";
                 }
-                else if (cancelar == DialogResult.No)
+                else // Se clicar em "Não", muda para "Salvar", mas não salva ainda
                 {
-                    editando = true;
                     EditarButton.Text = "Salvar";
-                    Functions.UndoReadOnly(this);
-
-                    if (EditarButton.Text == "Salvar")
-                    {
-                        var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                        if (atualizar == DialogResult.Yes)
-                        {
-
-                            FilmesController.AtualizaFilme(filmes);
-                        }
-                        Functions.DoReadOnly(this);
-                        EditarButton.Text = "Editar";
-                        editando = false;
-                    }
                 }
+            }
+            else if (EditarButton.Text == "Salvar") // Somente agora pergunta se deseja salvar
+            {
+                var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (atualizar == DialogResult.Yes)
+                {
+                    FilmesController.AtualizaFilme(filmes);
+                }
+
+                Functions.DoReadOnly(this);
+                EditarButton.Text = "Editar";
+                editando = false;
             }
         }
     }
