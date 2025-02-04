@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using Aniflix.Models;
 using Aniflix.Factory;
+using Aniflix.Globals;
 using Aniflix.Services;
 using Aniflix.Extensions;
 using Aniflix.Controllers;
@@ -410,7 +411,7 @@ namespace Aniflix
             {
                 editando = true;
                 EditarButton.Text = "Salvar";
-                UndoReadOnly(this);
+                Functions.UndoReadOnly(this);
             }
             else
             {
@@ -439,7 +440,7 @@ namespace Aniflix
 
                     FilmesController.AtualizaFilme(filmes);
                 }
-                DoReadOnly(this);
+                Functions.DoReadOnly(this);
                 EditarButton.Text = "Editar";
                 editando = false;
             }
