@@ -442,12 +442,11 @@ namespace Aniflix
                 }
                 else if (resposta == DialogResult.No)
                 {
-                    // cancel
 
                 }
                 else
                 {
-                    return/;
+                    return;
                 }
 
 
