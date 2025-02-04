@@ -395,7 +395,7 @@
             AnteriorButton.TabIndex = 41;
             AnteriorButton.Text = "Anterior";
             AnteriorButton.UseVisualStyleBackColor = false;
-            AnteriorButton.Click += AnteriorButton_Click;
+
             // 
             // ProximoButton
             // 
@@ -410,7 +410,6 @@
             ProximoButton.TabIndex = 42;
             ProximoButton.Text = "Próximo";
             ProximoButton.UseVisualStyleBackColor = false;
-            ProximoButton.Click += ProximoButton_Click;
             // 
             // VoltarButton
             // 
