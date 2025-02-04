@@ -101,17 +101,9 @@ namespace Aniflix.Factory
 
         public DataRow? GetFirstRecord(string tableName, params MySqlParameter[] parameters)
         {
-            try
-            {
-                string query = $"SELECT * FROM {tableName} LIMIT 1;";
-                DataTable table = GetDataTable(query, parameters);
-                return table.Rows.Count > 0 ? table.Rows[0] : null;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            string query = $"SELECT * FROM {tableName} LIMIT 1;";
+            DataTable table = GetDataTable(query, parameters);
+            return table.Rows.Count > 0 ? table.Rows[0] : null;
         }
 
         public DataRow? GetFirstRecord(string tableName, string condition = "1=1", params MySqlParameter[] parameters)
