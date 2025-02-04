@@ -39,43 +39,43 @@ partial class SeriesView
         FilmesEstudioText = new TextBox();
         label8 = new Label();
         FilmesResumoText = new TextBox();
-        FilmesFaseMCUText = new TextBox();
-        FilmesEstrelasText = new TextBox();
+        SeriesFaseMCUText = new TextBox();
+        EstrelasText = new TextBox();
         label17 = new Label();
         label16 = new Label();
         label14 = new Label();
         label13 = new Label();
         label10 = new Label();
-        FilmesDataLancamentoText = new MaskedTextBox();
+        DataLancamentoText = new MaskedTextBox();
         label11 = new Label();
         label12 = new Label();
-        FilmesTituloAlternativoText = new TextBox();
+        TituloAlternativoText = new TextBox();
         SeriesObraOriginalText = new TextBox();
         SeriesGeneroText = new TextBox();
-        FilmesDiretorText = new TextBox();
+        SeriesDiretorText = new TextBox();
         label5 = new Label();
         label6 = new Label();
         label7 = new Label();
         SeriesTagsText = new TextBox();
-        FilmesTituloOriginalText = new TextBox();
+        TituloOriginalText = new TextBox();
         label4 = new Label();
         label3 = new Label();
         label2 = new Label();
         label1 = new Label();
-        FilmesSinopseText = new TextBox();
-        FilmesAudioBox = new ComboBox();
-        FilmesTituloText = new TextBox();
-        FilmesCodigoText = new TextBox();
+        SinopseText = new TextBox();
+        AudioBox = new ComboBox();
+        TituloText = new TextBox();
+        CodigoText = new TextBox();
         label9 = new Label();
-        SeriesPaisOrigemText = new TextBox();
+        PaisOrigemText = new TextBox();
         label15 = new Label();
-        SeriesIdiomaOriginalText = new TextBox();
+        IdiomaOriginalText = new TextBox();
         label18 = new Label();
         SeriesSerieText = new TextBox();
         label19 = new Label();
-        SeriesAutoresText = new TextBox();
+        AutoresText = new TextBox();
         label20 = new Label();
-        SeriesCriadoresText = new TextBox();
+        CriadoresText = new TextBox();
         SuspendLayout();
         // 
         // VoltarButton
@@ -188,22 +188,22 @@ partial class SeriesView
         FilmesResumoText.Size = new Size(601, 657);
         FilmesResumoText.TabIndex = 71;
         // 
-        // FilmesFaseMCUText
+        // SeriesFaseMCUText
         // 
-        FilmesFaseMCUText.Location = new Point(677, 535);
-        FilmesFaseMCUText.Name = "FilmesFaseMCUText";
-        FilmesFaseMCUText.PlaceholderText = "Fase MCU";
-        FilmesFaseMCUText.Size = new Size(96, 23);
-        FilmesFaseMCUText.TabIndex = 70;
-        FilmesFaseMCUText.Text = "--";
+        SeriesFaseMCUText.Location = new Point(677, 535);
+        SeriesFaseMCUText.Name = "SeriesFaseMCUText";
+        SeriesFaseMCUText.PlaceholderText = "Fase MCU";
+        SeriesFaseMCUText.Size = new Size(96, 23);
+        SeriesFaseMCUText.TabIndex = 70;
+        SeriesFaseMCUText.Text = "--";
         // 
-        // FilmesEstrelasText
+        // EstrelasText
         // 
-        FilmesEstrelasText.Location = new Point(12, 623);
-        FilmesEstrelasText.Name = "FilmesEstrelasText";
-        FilmesEstrelasText.PlaceholderText = "Estrelas";
-        FilmesEstrelasText.Size = new Size(761, 23);
-        FilmesEstrelasText.TabIndex = 69;
+        EstrelasText.Location = new Point(12, 623);
+        EstrelasText.Name = "EstrelasText";
+        EstrelasText.PlaceholderText = "Estrelas";
+        EstrelasText.Size = new Size(761, 23);
+        EstrelasText.TabIndex = 69;
         // 
         // label17
         // 
@@ -250,14 +250,14 @@ partial class SeriesView
         label10.TabIndex = 64;
         label10.Text = "Tags";
         // 
-        // FilmesDataLancamentoText
+        // DataLancamentoText
         // 
-        FilmesDataLancamentoText.Location = new Point(656, 315);
-        FilmesDataLancamentoText.Mask = "00/00/0000";
-        FilmesDataLancamentoText.Name = "FilmesDataLancamentoText";
-        FilmesDataLancamentoText.Size = new Size(118, 23);
-        FilmesDataLancamentoText.TabIndex = 63;
-        FilmesDataLancamentoText.ValidatingType = typeof(DateTime);
+        DataLancamentoText.Location = new Point(656, 315);
+        DataLancamentoText.Mask = "00/00/0000";
+        DataLancamentoText.Name = "DataLancamentoText";
+        DataLancamentoText.Size = new Size(118, 23);
+        DataLancamentoText.TabIndex = 63;
+        DataLancamentoText.ValidatingType = typeof(DateTime);
         // 
         // label11
         // 
@@ -277,14 +277,14 @@ partial class SeriesView
         label12.TabIndex = 61;
         label12.Text = "Título Alternativo";
         // 
-        // FilmesTituloAlternativoText
+        // TituloAlternativoText
         // 
-        FilmesTituloAlternativoText.Location = new Point(12, 359);
-        FilmesTituloAlternativoText.Name = "FilmesTituloAlternativoText";
-        FilmesTituloAlternativoText.PlaceholderText = "Título Alternativo";
-        FilmesTituloAlternativoText.Size = new Size(382, 23);
-        FilmesTituloAlternativoText.TabIndex = 60;
-        FilmesTituloAlternativoText.Text = "--";
+        TituloAlternativoText.Location = new Point(12, 359);
+        TituloAlternativoText.Name = "TituloAlternativoText";
+        TituloAlternativoText.PlaceholderText = "Título Alternativo";
+        TituloAlternativoText.Size = new Size(382, 23);
+        TituloAlternativoText.TabIndex = 60;
+        TituloAlternativoText.Text = "--";
         // 
         // SeriesObraOriginalText
         // 
@@ -303,13 +303,13 @@ partial class SeriesView
         SeriesGeneroText.Size = new Size(374, 23);
         SeriesGeneroText.TabIndex = 58;
         // 
-        // FilmesDiretorText
+        // SeriesDiretorText
         // 
-        FilmesDiretorText.Location = new Point(12, 579);
-        FilmesDiretorText.Name = "FilmesDiretorText";
-        FilmesDiretorText.PlaceholderText = "Diretor";
-        FilmesDiretorText.Size = new Size(761, 23);
-        FilmesDiretorText.TabIndex = 57;
+        SeriesDiretorText.Location = new Point(12, 579);
+        SeriesDiretorText.Name = "SeriesDiretorText";
+        SeriesDiretorText.PlaceholderText = "Diretor";
+        SeriesDiretorText.Size = new Size(761, 23);
+        SeriesDiretorText.TabIndex = 57;
         // 
         // label5
         // 
@@ -346,13 +346,13 @@ partial class SeriesView
         SeriesTagsText.Size = new Size(658, 23);
         SeriesTagsText.TabIndex = 53;
         // 
-        // FilmesTituloOriginalText
+        // TituloOriginalText
         // 
-        FilmesTituloOriginalText.Location = new Point(12, 315);
-        FilmesTituloOriginalText.Name = "FilmesTituloOriginalText";
-        FilmesTituloOriginalText.PlaceholderText = "Título Original";
-        FilmesTituloOriginalText.Size = new Size(638, 23);
-        FilmesTituloOriginalText.TabIndex = 52;
+        TituloOriginalText.Location = new Point(12, 315);
+        TituloOriginalText.Name = "TituloOriginalText";
+        TituloOriginalText.PlaceholderText = "Título Original";
+        TituloOriginalText.Size = new Size(638, 23);
+        TituloOriginalText.TabIndex = 52;
         // 
         // label4
         // 
@@ -390,40 +390,40 @@ partial class SeriesView
         label1.TabIndex = 48;
         label1.Text = "Código";
         // 
-        // FilmesSinopseText
+        // SinopseText
         // 
-        FilmesSinopseText.Location = new Point(12, 77);
-        FilmesSinopseText.Multiline = true;
-        FilmesSinopseText.Name = "FilmesSinopseText";
-        FilmesSinopseText.PlaceholderText = "Sinopse";
-        FilmesSinopseText.Size = new Size(762, 217);
-        FilmesSinopseText.TabIndex = 47;
+        SinopseText.Location = new Point(12, 77);
+        SinopseText.Multiline = true;
+        SinopseText.Name = "SinopseText";
+        SinopseText.PlaceholderText = "Sinopse";
+        SinopseText.Size = new Size(762, 217);
+        SinopseText.TabIndex = 47;
         // 
-        // FilmesAudioBox
+        // AudioBox
         // 
-        FilmesAudioBox.FormattingEnabled = true;
-        FilmesAudioBox.Items.AddRange(new object[] { "Dublado", "Legendado", "Nacional", "Desconhecido" });
-        FilmesAudioBox.Location = new Point(630, 33);
-        FilmesAudioBox.Name = "FilmesAudioBox";
-        FilmesAudioBox.Size = new Size(144, 23);
-        FilmesAudioBox.TabIndex = 46;
-        FilmesAudioBox.Text = "Dublado";
+        AudioBox.FormattingEnabled = true;
+        AudioBox.Items.AddRange(new object[] { "Dublado", "Legendado", "Nacional", "Desconhecido" });
+        AudioBox.Location = new Point(630, 33);
+        AudioBox.Name = "AudioBox";
+        AudioBox.Size = new Size(144, 23);
+        AudioBox.TabIndex = 46;
+        AudioBox.Text = "Dublado";
         // 
-        // FilmesTituloText
+        // TituloText
         // 
-        FilmesTituloText.Location = new Point(118, 33);
-        FilmesTituloText.Name = "FilmesTituloText";
-        FilmesTituloText.PlaceholderText = "Título";
-        FilmesTituloText.Size = new Size(506, 23);
-        FilmesTituloText.TabIndex = 45;
+        TituloText.Location = new Point(118, 33);
+        TituloText.Name = "TituloText";
+        TituloText.PlaceholderText = "Título";
+        TituloText.Size = new Size(506, 23);
+        TituloText.TabIndex = 45;
         // 
-        // FilmesCodigoText
+        // CodigoText
         // 
-        FilmesCodigoText.Location = new Point(12, 33);
-        FilmesCodigoText.Name = "FilmesCodigoText";
-        FilmesCodigoText.PlaceholderText = "Código";
-        FilmesCodigoText.Size = new Size(100, 23);
-        FilmesCodigoText.TabIndex = 44;
+        CodigoText.Location = new Point(12, 33);
+        CodigoText.Name = "CodigoText";
+        CodigoText.PlaceholderText = "Código";
+        CodigoText.Size = new Size(100, 23);
+        CodigoText.TabIndex = 44;
         // 
         // label9
         // 
@@ -434,13 +434,13 @@ partial class SeriesView
         label9.TabIndex = 81;
         label9.Text = "País de Origem";
         // 
-        // SeriesPaisOrigemText
+        // PaisOrigemText
         // 
-        SeriesPaisOrigemText.Location = new Point(400, 359);
-        SeriesPaisOrigemText.Name = "SeriesPaisOrigemText";
-        SeriesPaisOrigemText.PlaceholderText = "País de Origem";
-        SeriesPaisOrigemText.Size = new Size(374, 23);
-        SeriesPaisOrigemText.TabIndex = 80;
+        PaisOrigemText.Location = new Point(400, 359);
+        PaisOrigemText.Name = "PaisOrigemText";
+        PaisOrigemText.PlaceholderText = "País de Origem";
+        PaisOrigemText.Size = new Size(374, 23);
+        PaisOrigemText.TabIndex = 80;
         // 
         // label15
         // 
@@ -451,13 +451,13 @@ partial class SeriesView
         label15.TabIndex = 83;
         label15.Text = "Idioma de Origem";
         // 
-        // SeriesIdiomaOriginalText
+        // IdiomaOriginalText
         // 
-        SeriesIdiomaOriginalText.Location = new Point(12, 403);
-        SeriesIdiomaOriginalText.Name = "SeriesIdiomaOriginalText";
-        SeriesIdiomaOriginalText.PlaceholderText = "Idioma de Origem";
-        SeriesIdiomaOriginalText.Size = new Size(381, 23);
-        SeriesIdiomaOriginalText.TabIndex = 82;
+        IdiomaOriginalText.Location = new Point(12, 403);
+        IdiomaOriginalText.Name = "IdiomaOriginalText";
+        IdiomaOriginalText.PlaceholderText = "Idioma de Origem";
+        IdiomaOriginalText.Size = new Size(381, 23);
+        IdiomaOriginalText.TabIndex = 82;
         // 
         // label18
         // 
@@ -485,13 +485,13 @@ partial class SeriesView
         label19.TabIndex = 87;
         label19.Text = "Autores";
         // 
-        // SeriesAutoresText
+        // AutoresText
         // 
-        SeriesAutoresText.Location = new Point(400, 403);
-        SeriesAutoresText.Name = "SeriesAutoresText";
-        SeriesAutoresText.PlaceholderText = "Autores";
-        SeriesAutoresText.Size = new Size(374, 23);
-        SeriesAutoresText.TabIndex = 86;
+        AutoresText.Location = new Point(400, 403);
+        AutoresText.Name = "AutoresText";
+        AutoresText.PlaceholderText = "Autores";
+        AutoresText.Size = new Size(374, 23);
+        AutoresText.TabIndex = 86;
         // 
         // label20
         // 
@@ -502,13 +502,13 @@ partial class SeriesView
         label20.TabIndex = 89;
         label20.Text = "Criadores";
         // 
-        // SeriesCriadoresText
+        // CriadoresText
         // 
-        SeriesCriadoresText.Location = new Point(401, 447);
-        SeriesCriadoresText.Name = "SeriesCriadoresText";
-        SeriesCriadoresText.PlaceholderText = "Criadores";
-        SeriesCriadoresText.Size = new Size(373, 23);
-        SeriesCriadoresText.TabIndex = 88;
+        CriadoresText.Location = new Point(401, 447);
+        CriadoresText.Name = "CriadoresText";
+        CriadoresText.PlaceholderText = "Criadores";
+        CriadoresText.Size = new Size(373, 23);
+        CriadoresText.TabIndex = 88;
         // 
         // SeriesView
         // 
@@ -516,15 +516,15 @@ partial class SeriesView
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1397, 810);
         Controls.Add(label20);
-        Controls.Add(SeriesCriadoresText);
+        Controls.Add(CriadoresText);
         Controls.Add(label19);
-        Controls.Add(SeriesAutoresText);
+        Controls.Add(AutoresText);
         Controls.Add(label18);
         Controls.Add(SeriesSerieText);
         Controls.Add(label15);
-        Controls.Add(SeriesIdiomaOriginalText);
+        Controls.Add(IdiomaOriginalText);
         Controls.Add(label9);
-        Controls.Add(SeriesPaisOrigemText);
+        Controls.Add(PaisOrigemText);
         Controls.Add(VoltarButton);
         Controls.Add(ProximoButton);
         Controls.Add(AnteriorButton);
@@ -534,33 +534,33 @@ partial class SeriesView
         Controls.Add(FilmesEstudioText);
         Controls.Add(label8);
         Controls.Add(FilmesResumoText);
-        Controls.Add(FilmesFaseMCUText);
-        Controls.Add(FilmesEstrelasText);
+        Controls.Add(SeriesFaseMCUText);
+        Controls.Add(EstrelasText);
         Controls.Add(label17);
         Controls.Add(label16);
         Controls.Add(label14);
         Controls.Add(label13);
         Controls.Add(label10);
-        Controls.Add(FilmesDataLancamentoText);
+        Controls.Add(DataLancamentoText);
         Controls.Add(label11);
         Controls.Add(label12);
-        Controls.Add(FilmesTituloAlternativoText);
+        Controls.Add(TituloAlternativoText);
         Controls.Add(SeriesObraOriginalText);
         Controls.Add(SeriesGeneroText);
-        Controls.Add(FilmesDiretorText);
+        Controls.Add(SeriesDiretorText);
         Controls.Add(label5);
         Controls.Add(label6);
         Controls.Add(label7);
         Controls.Add(SeriesTagsText);
-        Controls.Add(FilmesTituloOriginalText);
+        Controls.Add(TituloOriginalText);
         Controls.Add(label4);
         Controls.Add(label3);
         Controls.Add(label2);
         Controls.Add(label1);
-        Controls.Add(FilmesSinopseText);
-        Controls.Add(FilmesAudioBox);
-        Controls.Add(FilmesTituloText);
-        Controls.Add(FilmesCodigoText);
+        Controls.Add(SinopseText);
+        Controls.Add(AudioBox);
+        Controls.Add(TituloText);
+        Controls.Add(CodigoText);
         MaximizeBox = false;
         Name = "SeriesView";
         StartPosition = FormStartPosition.CenterScreen;
@@ -580,41 +580,41 @@ partial class SeriesView
     private TextBox FilmesEstudioText;
     private Label label8;
     private TextBox FilmesResumoText;
-    private TextBox FilmesFaseMCUText;
-    private TextBox FilmesEstrelasText;
+    private TextBox SeriesFaseMCUText;
+    private TextBox EstrelasText;
     private Label label17;
     private Label label16;
     private Label label14;
     private Label label13;
     private Label label10;
-    private MaskedTextBox FilmesDataLancamentoText;
+    private MaskedTextBox DataLancamentoText;
     private Label label11;
     private Label label12;
-    private TextBox FilmesTituloAlternativoText;
+    private TextBox TituloAlternativoText;
     private TextBox SeriesObraOriginalText;
     private TextBox SeriesGeneroText;
-    private TextBox FilmesDiretorText;
+    private TextBox SeriesDiretorText;
     private Label label5;
     private Label label6;
     private Label label7;
     private TextBox SeriesTagsText;
-    private TextBox FilmesTituloOriginalText;
+    private TextBox TituloOriginalText;
     private Label label4;
     private Label label3;
     private Label label2;
     private Label label1;
-    private TextBox FilmesSinopseText;
-    private ComboBox FilmesAudioBox;
-    private TextBox FilmesTituloText;
-    private TextBox FilmesCodigoText;
+    private TextBox SinopseText;
+    private ComboBox AudioBox;
+    private TextBox TituloText;
+    private TextBox CodigoText;
     private Label label9;
-    private TextBox SeriesPaisOrigemText;
+    private TextBox PaisOrigemText;
     private Label label15;
-    private TextBox SeriesIdiomaOriginalText;
+    private TextBox IdiomaOriginalText;
     private Label label18;
     private TextBox SeriesSerieText;
     private Label label19;
-    private TextBox SeriesAutoresText;
+    private TextBox AutoresText;
     private Label label20;
-    private TextBox SeriesCriadoresText;
+    private TextBox CriadoresText;
 }
