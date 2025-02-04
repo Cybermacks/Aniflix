@@ -101,7 +101,7 @@
             SinopseText.PlaceholderText = "Sinopse";
             SinopseText.Size = new Size(762, 217);
             SinopseText.TabIndex = 3;
-            SinopseText.TextChanged += SinopseText_TextChanged;
+
             // 
             // label1
             // 
