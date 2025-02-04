@@ -429,9 +429,9 @@ namespace Aniflix
             if (resposta == DialogResult.Yes)
             {
 
-                FilmesController.AtualizaFilme(filmes);
+                //FilmesController.AtualizaFilme(filmes);
             }
-            EditarButton.Text = "Editar";
+
         }
     }
 }
