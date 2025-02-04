@@ -404,31 +404,7 @@ namespace Aniflix
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
-            var filmes = new Filmes
-            {
-                Codigo = FilmesCodigoText.Text,
-                Titulo = FilmesTituloText.Text,
-                Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
-                Sinopse = FilmesSinopseText.Text,
-                TituloOriginal = FilmesTituloOriginalText.Text,
-                DataLancamento = FilmesDataLancamentoText.Text,
-                TituloAlternativo = FilmesTituloAlternativoText.Text,
-                Franquia = FilmesFranquiaText.Text,
-                Genero = FilmesGeneroText.Text,
-                Tags = FilmesTagsText.Text,
-                Diretor = FilmesDiretorText.Text,
-                MCU = FilmesFaseMCUText.Text,
-                Estrelas = FilmesEstrelasText.Text,
-                Estudio = FilmesEstudioText.Text
-            };
-
-            var resposta = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (resposta == DialogResult.Yes)
-            {
-
-                FilmesController.AtualizaFilme(filmes);
-            }
+            this.Text = "Editando";
         }
     }
 }
