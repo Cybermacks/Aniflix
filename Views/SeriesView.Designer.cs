@@ -38,7 +38,7 @@ partial class SeriesView
         CopiarButton = new Button();
         EstudioText = new TextBox();
         label8 = new Label();
-        FilmesResumoText = new TextBox();
+        ResumoText = new TextBox();
         FaseMCUText = new TextBox();
         EstrelasText = new TextBox();
         label17 = new Label();
@@ -179,14 +179,14 @@ partial class SeriesView
         label8.TabIndex = 72;
         label8.Text = "Estúdio";
         // 
-        // FilmesResumoText
+        // ResumoText
         // 
-        FilmesResumoText.Location = new Point(779, 33);
-        FilmesResumoText.Multiline = true;
-        FilmesResumoText.Name = "FilmesResumoText";
-        FilmesResumoText.PlaceholderText = "Resumo";
-        FilmesResumoText.Size = new Size(601, 657);
-        FilmesResumoText.TabIndex = 71;
+        ResumoText.Location = new Point(779, 33);
+        ResumoText.Multiline = true;
+        ResumoText.Name = "ResumoText";
+        ResumoText.PlaceholderText = "Resumo";
+        ResumoText.Size = new Size(601, 657);
+        ResumoText.TabIndex = 71;
         // 
         // FaseMCUText
         // 
@@ -533,7 +533,7 @@ partial class SeriesView
         Controls.Add(CopiarButton);
         Controls.Add(EstudioText);
         Controls.Add(label8);
-        Controls.Add(FilmesResumoText);
+        Controls.Add(ResumoText);
         Controls.Add(FaseMCUText);
         Controls.Add(EstrelasText);
         Controls.Add(label17);
@@ -579,7 +579,7 @@ partial class SeriesView
     private Button CopiarButton;
     private TextBox EstudioText;
     private Label label8;
-    private TextBox FilmesResumoText;
+    private TextBox ResumoText;
     private TextBox FaseMCUText;
     private TextBox EstrelasText;
     private Label label17;
