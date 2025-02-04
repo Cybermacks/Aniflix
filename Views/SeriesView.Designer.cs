@@ -67,9 +67,9 @@ partial class SeriesView
         FilmesTituloText = new TextBox();
         FilmesCodigoText = new TextBox();
         label9 = new Label();
-        SeriesPaisOrigem = new TextBox();
+        SeriesPaisOrigemText = new TextBox();
         label15 = new Label();
-        textBox2 = new TextBox();
+        SeriesIdiomaOriginalText = new TextBox();
         label18 = new Label();
         textBox3 = new TextBox();
         label19 = new Label();
@@ -434,13 +434,13 @@ partial class SeriesView
         label9.TabIndex = 81;
         label9.Text = "País de Origem";
         // 
-        // SeriesPaisOrigem
+        // SeriesPaisOrigemText
         // 
-        SeriesPaisOrigem.Location = new Point(400, 359);
-        SeriesPaisOrigem.Name = "SeriesPaisOrigem";
-        SeriesPaisOrigem.PlaceholderText = "País de Origem";
-        SeriesPaisOrigem.Size = new Size(374, 23);
-        SeriesPaisOrigem.TabIndex = 80;
+        SeriesPaisOrigemText.Location = new Point(400, 359);
+        SeriesPaisOrigemText.Name = "SeriesPaisOrigemText";
+        SeriesPaisOrigemText.PlaceholderText = "País de Origem";
+        SeriesPaisOrigemText.Size = new Size(374, 23);
+        SeriesPaisOrigemText.TabIndex = 80;
         // 
         // label15
         // 
@@ -451,13 +451,13 @@ partial class SeriesView
         label15.TabIndex = 83;
         label15.Text = "Idioma de Origem";
         // 
-        // textBox2
+        // SeriesIdiomaOriginalText
         // 
-        textBox2.Location = new Point(12, 403);
-        textBox2.Name = "textBox2";
-        textBox2.PlaceholderText = "Idioma de Origem";
-        textBox2.Size = new Size(381, 23);
-        textBox2.TabIndex = 82;
+        SeriesIdiomaOriginalText.Location = new Point(12, 403);
+        SeriesIdiomaOriginalText.Name = "SeriesIdiomaOriginalText";
+        SeriesIdiomaOriginalText.PlaceholderText = "Idioma de Origem";
+        SeriesIdiomaOriginalText.Size = new Size(381, 23);
+        SeriesIdiomaOriginalText.TabIndex = 82;
         // 
         // label18
         // 
@@ -522,9 +522,9 @@ partial class SeriesView
         Controls.Add(label18);
         Controls.Add(textBox3);
         Controls.Add(label15);
-        Controls.Add(textBox2);
+        Controls.Add(SeriesIdiomaOriginalText);
         Controls.Add(label9);
-        Controls.Add(SeriesPaisOrigem);
+        Controls.Add(SeriesPaisOrigemText);
         Controls.Add(VoltarButton);
         Controls.Add(ProximoButton);
         Controls.Add(AnteriorButton);
@@ -608,9 +608,9 @@ partial class SeriesView
     private TextBox FilmesTituloText;
     private TextBox FilmesCodigoText;
     private Label label9;
-    private TextBox SeriesPaisOrigem;
+    private TextBox SeriesPaisOrigemText;
     private Label label15;
-    private TextBox textBox2;
+    private TextBox SeriesIdiomaOriginalText;
     private Label label18;
     private TextBox textBox3;
     private Label label19;
