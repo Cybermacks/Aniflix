@@ -36,10 +36,10 @@ partial class SeriesView
         EditarButton = new Button();
         SalvarButton = new Button();
         CopiarButton = new Button();
-        FilmesEstudioText = new TextBox();
+        EstudioText = new TextBox();
         label8 = new Label();
         FilmesResumoText = new TextBox();
-        SeriesFaseMCUText = new TextBox();
+        FaseMCUText = new TextBox();
         EstrelasText = new TextBox();
         label17 = new Label();
         label16 = new Label();
@@ -51,12 +51,12 @@ partial class SeriesView
         label12 = new Label();
         TituloAlternativoText = new TextBox();
         ObraOriginalText = new TextBox();
-        SeriesGeneroText = new TextBox();
-        SeriesDiretorText = new TextBox();
+        GeneroText = new TextBox();
+        DiretorText = new TextBox();
         label5 = new Label();
         label6 = new Label();
         label7 = new Label();
-        SeriesTagsText = new TextBox();
+        TagsText = new TextBox();
         TituloOriginalText = new TextBox();
         label4 = new Label();
         label3 = new Label();
@@ -162,13 +162,13 @@ partial class SeriesView
         CopiarButton.Text = "Copiar Dados";
         CopiarButton.UseVisualStyleBackColor = false;
         // 
-        // FilmesEstudioText
+        // EstudioText
         // 
-        FilmesEstudioText.Location = new Point(12, 667);
-        FilmesEstudioText.Name = "FilmesEstudioText";
-        FilmesEstudioText.PlaceholderText = "Estúdio";
-        FilmesEstudioText.Size = new Size(761, 23);
-        FilmesEstudioText.TabIndex = 73;
+        EstudioText.Location = new Point(12, 667);
+        EstudioText.Name = "EstudioText";
+        EstudioText.PlaceholderText = "Estúdio";
+        EstudioText.Size = new Size(761, 23);
+        EstudioText.TabIndex = 73;
         // 
         // label8
         // 
@@ -188,14 +188,14 @@ partial class SeriesView
         FilmesResumoText.Size = new Size(601, 657);
         FilmesResumoText.TabIndex = 71;
         // 
-        // SeriesFaseMCUText
+        // FaseMCUText
         // 
-        SeriesFaseMCUText.Location = new Point(677, 535);
-        SeriesFaseMCUText.Name = "SeriesFaseMCUText";
-        SeriesFaseMCUText.PlaceholderText = "Fase MCU";
-        SeriesFaseMCUText.Size = new Size(96, 23);
-        SeriesFaseMCUText.TabIndex = 70;
-        SeriesFaseMCUText.Text = "--";
+        FaseMCUText.Location = new Point(677, 535);
+        FaseMCUText.Name = "FaseMCUText";
+        FaseMCUText.PlaceholderText = "Fase MCU";
+        FaseMCUText.Size = new Size(96, 23);
+        FaseMCUText.TabIndex = 70;
+        FaseMCUText.Text = "--";
         // 
         // EstrelasText
         // 
@@ -295,21 +295,21 @@ partial class SeriesView
         ObraOriginalText.TabIndex = 59;
         ObraOriginalText.Text = "--";
         // 
-        // SeriesGeneroText
+        // GeneroText
         // 
-        SeriesGeneroText.Location = new Point(399, 491);
-        SeriesGeneroText.Name = "SeriesGeneroText";
-        SeriesGeneroText.PlaceholderText = "Gênero da Série";
-        SeriesGeneroText.Size = new Size(374, 23);
-        SeriesGeneroText.TabIndex = 58;
+        GeneroText.Location = new Point(399, 491);
+        GeneroText.Name = "GeneroText";
+        GeneroText.PlaceholderText = "Gênero da Série";
+        GeneroText.Size = new Size(374, 23);
+        GeneroText.TabIndex = 58;
         // 
-        // SeriesDiretorText
+        // DiretorText
         // 
-        SeriesDiretorText.Location = new Point(12, 579);
-        SeriesDiretorText.Name = "SeriesDiretorText";
-        SeriesDiretorText.PlaceholderText = "Diretor";
-        SeriesDiretorText.Size = new Size(761, 23);
-        SeriesDiretorText.TabIndex = 57;
+        DiretorText.Location = new Point(12, 579);
+        DiretorText.Name = "DiretorText";
+        DiretorText.PlaceholderText = "Diretor";
+        DiretorText.Size = new Size(761, 23);
+        DiretorText.TabIndex = 57;
         // 
         // label5
         // 
@@ -338,13 +338,13 @@ partial class SeriesView
         label7.TabIndex = 54;
         label7.Text = "Título Original";
         // 
-        // SeriesTagsText
+        // TagsText
         // 
-        SeriesTagsText.Location = new Point(13, 535);
-        SeriesTagsText.Name = "SeriesTagsText";
-        SeriesTagsText.PlaceholderText = "Tags";
-        SeriesTagsText.Size = new Size(658, 23);
-        SeriesTagsText.TabIndex = 53;
+        TagsText.Location = new Point(13, 535);
+        TagsText.Name = "TagsText";
+        TagsText.PlaceholderText = "Tags";
+        TagsText.Size = new Size(658, 23);
+        TagsText.TabIndex = 53;
         // 
         // TituloOriginalText
         // 
@@ -531,10 +531,10 @@ partial class SeriesView
         Controls.Add(EditarButton);
         Controls.Add(SalvarButton);
         Controls.Add(CopiarButton);
-        Controls.Add(FilmesEstudioText);
+        Controls.Add(EstudioText);
         Controls.Add(label8);
         Controls.Add(FilmesResumoText);
-        Controls.Add(SeriesFaseMCUText);
+        Controls.Add(FaseMCUText);
         Controls.Add(EstrelasText);
         Controls.Add(label17);
         Controls.Add(label16);
@@ -546,12 +546,12 @@ partial class SeriesView
         Controls.Add(label12);
         Controls.Add(TituloAlternativoText);
         Controls.Add(ObraOriginalText);
-        Controls.Add(SeriesGeneroText);
-        Controls.Add(SeriesDiretorText);
+        Controls.Add(GeneroText);
+        Controls.Add(DiretorText);
         Controls.Add(label5);
         Controls.Add(label6);
         Controls.Add(label7);
-        Controls.Add(SeriesTagsText);
+        Controls.Add(TagsText);
         Controls.Add(TituloOriginalText);
         Controls.Add(label4);
         Controls.Add(label3);
@@ -577,10 +577,10 @@ partial class SeriesView
     private Button EditarButton;
     private Button SalvarButton;
     private Button CopiarButton;
-    private TextBox FilmesEstudioText;
+    private TextBox EstudioText;
     private Label label8;
     private TextBox FilmesResumoText;
-    private TextBox SeriesFaseMCUText;
+    private TextBox FaseMCUText;
     private TextBox EstrelasText;
     private Label label17;
     private Label label16;
@@ -592,12 +592,12 @@ partial class SeriesView
     private Label label12;
     private TextBox TituloAlternativoText;
     private TextBox ObraOriginalText;
-    private TextBox SeriesGeneroText;
-    private TextBox SeriesDiretorText;
+    private TextBox GeneroText;
+    private TextBox DiretorText;
     private Label label5;
     private Label label6;
     private Label label7;
-    private TextBox SeriesTagsText;
+    private TextBox TagsText;
     private TextBox TituloOriginalText;
     private Label label4;
     private Label label3;
