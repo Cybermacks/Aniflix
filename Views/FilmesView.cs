@@ -433,7 +433,6 @@ namespace Aniflix
             }
             else
             {
-
                 var cancelar = MessageBox.Show("Cancelar a edição do filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (cancelar == DialogResult.Yes)
