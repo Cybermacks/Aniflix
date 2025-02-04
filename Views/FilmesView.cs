@@ -439,6 +439,7 @@ namespace Aniflix
                 if (cancelar == DialogResult.Yes)
                 {
                     editando = false;
+                    Functions.DoReadOnly(this);
                     EditarButton.Text = "Editar";
                 }
 
