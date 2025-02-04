@@ -16,6 +16,5 @@
         public string? MCU { get; set; }
         public string? Estrelas { get; set; }
         public string? Estudio { get; set; }
-
     }
 }
