@@ -404,6 +404,8 @@ namespace Aniflix
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Editando " + FilmesTituloText.Text + " .", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             var filmes = new Filmes
             {
                 Codigo = FilmesCodigoText.Text,
@@ -422,7 +424,7 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
 
-            var resposta = MessageBox.Show("Deseja editar o filme " + filmes.Titulo + " ?", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var resposta = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resposta == DialogResult.Yes)
             {
