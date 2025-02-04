@@ -352,25 +352,6 @@ namespace Aniflix
                 MessageBox.Show("Por favor, insira o código do filme.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void PreencheCampos(Filmes filmes)
-        {
-            filmes.Codigo = FilmesCodigoText.Text;
-            filmes.Titulo = FilmesTituloText.Text;
-            filmes.Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty;
-            filmes.Sinopse = FilmesSinopseText.Text;
-            filmes.TituloOriginal = FilmesTituloOriginalText.Text;
-            filmes.DataLancamento = FilmesDataLancamentoText.Text;
-            filmes.TituloAlternativo = FilmesTituloAlternativoText.Text;
-            filmes.Franquia = FilmesFranquiaText.Text;
-            filmes.Genero = FilmesGeneroText.Text;
-            filmes.Tags = FilmesTagsText.Text;
-            filmes.Diretor = FilmesDiretorText.Text;
-            filmes.MCU = FilmesFaseMCUText.Text;
-            filmes.Estrelas = FilmesEstrelasText.Text;
-            filmes.Estudio = FilmesEstudioText.Text;
-        }
-
         private void LoadRecord(DataRow record)
         {
             if (record != null)
