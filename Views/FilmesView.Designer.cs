@@ -176,7 +176,6 @@
             TagsText.PlaceholderText = "Tags";
             TagsText.Size = new Size(206, 23);
             TagsText.TabIndex = 9;
-            TagsText.TextChanged += TagsText_TextChanged;
             // 
             // TituloOriginalText
             // 
@@ -185,7 +184,6 @@
             TituloOriginalText.PlaceholderText = "Título Original";
             TituloOriginalText.Size = new Size(642, 23);
             TituloOriginalText.TabIndex = 8;
-            TituloOriginalText.TextChanged += TituloOriginalText_TextChanged;
             // 
             // GeneroText
             // 
@@ -194,7 +192,6 @@
             GeneroText.PlaceholderText = "Gênero do Filme";
             GeneroText.Size = new Size(374, 23);
             GeneroText.TabIndex = 15;
-            GeneroText.TextChanged += GeneroText_TextChanged;
             // 
             // DiretorText
             // 
@@ -203,7 +200,6 @@
             DiretorText.PlaceholderText = "Diretor";
             DiretorText.Size = new Size(660, 23);
             DiretorText.TabIndex = 14;
-            DiretorText.TextChanged += DiretorText_TextChanged;
             // 
             // label11
             // 
