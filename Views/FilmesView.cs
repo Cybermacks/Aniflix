@@ -435,21 +435,23 @@ namespace Aniflix
             }
         }
 
-        private void DisableControls(Control con)
+        private void SetReadonly(Control c)
         {
-            foreach (Control c in con.Controls)
+            if (c == null)
             {
-                DisableControls(c);
+                return;
             }
-            con.Enabled = false;
-        }
-
-        private void EnableControls(Control con)
-        {
-            if (con != null)
+            foreach (Control item in c.Controls)
             {
-                con.Enabled = true;
-                EnableControls(con.Parent);
+                if (item.HasChildren)
+                {
+                    SetReadonly(c);
+                }
+                else if (c is TextBox)
+                {
+                    ((TextBox)c).ReadOnly = true;
+                }
+
             }
         }
     }
