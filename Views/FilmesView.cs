@@ -9,7 +9,7 @@ namespace Aniflix
 {
     public partial class FilmesView : Form
     {
-        private int filmeAtualId = 1;
+        private int currentId = 0;
         public FilmesView()
         {
             InitializeComponent();
