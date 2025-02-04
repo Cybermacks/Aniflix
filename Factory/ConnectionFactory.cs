@@ -60,6 +60,17 @@ namespace Aniflix.Factory
             adapter.Fill(table);
             return table;
         }
+
+        public int InsertData(string tableName, params MySqlParameter[] parameters)
+        {
+            string columnNames = string.Join(", ", parameters.Select(p => p.ParameterName.TrimStart('@')));
+            string paramNames = string.Join(", ", parameters.Select(p => "@" + p.ParameterName.TrimStart('@')));
+            string query = $"INSERT INTO {tableName} ({columnNames}) VALUES ({paramNames});";
+            return ExecuteQuery(query, parameters);
+        }
+
+
+
     }
 }
 
