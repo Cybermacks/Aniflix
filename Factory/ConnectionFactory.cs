@@ -46,7 +46,6 @@ namespace Aniflix.Factory
 
             return cmd.ExecuteNonQuery();
         }
-
         public DataTable GetDataTable(string query, params MySqlParameter[] parameters)
         {
             using var cmd = new MySqlCommand(query, GetConnection());
@@ -60,7 +59,6 @@ namespace Aniflix.Factory
             adapter.Fill(table);
             return table;
         }
-
         public int InsertData(string tableName, params MySqlParameter[] parameters)
         {
             string columnNames = string.Join(", ", parameters.Select(p => p.ParameterName.TrimStart('@')));
@@ -70,30 +68,16 @@ namespace Aniflix.Factory
         }
         public int UpdateData(string tableName, string condition, params MySqlParameter[] parameters)
         {
-            try
-            {
-                string setClause = string.Join(", ", parameters.Select(p => $"{p.ParameterName.TrimStart('@')} = @{p.ParameterName.TrimStart('@')}"));
-                string query = $"UPDATE {tableName} SET {setClause} WHERE {condition};";
-                return ExecuteQuery(query, parameters);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
-            }
-            finally
-            {
-                CloseConnection();
-            }
+            string setClause = string.Join(", ", parameters.Select(p => $"{p.ParameterName.TrimStart('@')} = @{p.ParameterName.TrimStart('@')}"));
+            string query = $"UPDATE {tableName} SET {setClause} WHERE {condition};";
+            return ExecuteQuery(query, parameters);
         }
-
         public DataRow? GetFirstRecord(string tableName, params MySqlParameter[] parameters)
         {
             string query = $"SELECT * FROM {tableName} LIMIT 1;";
             DataTable table = GetDataTable(query, parameters);
             return table.Rows.Count > 0 ? table.Rows[0] : null;
         }
-
         public DataRow? GetFirstRecord(string tableName, string condition = "1=1", params MySqlParameter[] parameters)
         {
             string query = $"SELECT * FROM {tableName} WHERE {condition} LIMIT 1;";
