@@ -216,9 +216,9 @@
             label13.AutoSize = true;
             label13.Location = new Point(387, 382);
             label13.Name = "label13";
-            label13.Size = new Size(89, 15);
+            label13.Size = new Size(45, 15);
             label13.TabIndex = 111;
-            label13.Text = "Gênero da Série";
+            label13.Text = "Gênero";
             // 
             // label10
             // 
@@ -260,7 +260,7 @@
             // 
             GeneroText.Location = new Point(387, 400);
             GeneroText.Name = "GeneroText";
-            GeneroText.PlaceholderText = "Gênero da Série";
+            GeneroText.PlaceholderText = "Gênero ";
             GeneroText.Size = new Size(386, 23);
             GeneroText.TabIndex = 104;
             // 
@@ -399,7 +399,7 @@
             // 
             textBox1.Location = new Point(13, 400);
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Gênero da Série";
+            textBox1.PlaceholderText = "Franquia";
             textBox1.Size = new Size(368, 23);
             textBox1.TabIndex = 126;
             // 
