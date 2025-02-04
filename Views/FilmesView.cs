@@ -435,19 +435,18 @@ namespace Aniflix
             {
                 editando = false;
                 EditarButton.Text = "Cancelar";
+                var cancelar = MessageBox.Show("Cancelar edição?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                var resposta = MessageBox.Show("Cancelar edição?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (resposta == DialogResult.Yes)
+                if (cancelar == DialogResult.Yes)
                 {
 
                     Functions.DoReadOnly(this);
                 }
                 else
                 {
-                    var resposta = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    if (resposta == DialogResult.Yes)
+                    if (atualizar == DialogResult.Yes)
                     {
 
                         FilmesController.AtualizaFilme(filmes);
