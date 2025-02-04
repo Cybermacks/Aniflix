@@ -440,6 +440,18 @@ namespace Aniflix
 
                     FilmesController.AtualizaFilme(filmes);
                 }
+                else if (resposta == DialogResult.No)
+                {
+                    // cancel
+
+                }
+                else
+                {
+                    return/;
+                }
+
+
+
                 Functions.DoReadOnly(this);
                 EditarButton.Text = "Editar";
                 editando = false;
