@@ -58,7 +58,7 @@ namespace Aniflix.Controllers
 
         public static void AtualizaFilme(Filmes filmes)
         {
-            int rowsAffected = _conn.UpdateData("filmes", "",
+            int rowsAffected = _conn.UpdateData("filmes", "codigo = @codigo",
                 new MySqlParameter("@codigo", filmes.Codigo),
                 new MySqlParameter("@titulo", filmes.Titulo),
                 new MySqlParameter("@audio", filmes.Audio),
@@ -74,6 +74,7 @@ namespace Aniflix.Controllers
                 new MySqlParameter("@estrelas", filmes.Estrelas),
                 new MySqlParameter("@estudio", filmes.Estudio)
             );
+
             if (rowsAffected > 0)
             {
                 MessageBox.Show("Registro atualizado com sucesso!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
