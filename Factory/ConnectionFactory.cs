@@ -113,6 +113,5 @@ namespace Aniflix.Factory
             DataTable table = GetDataTable(query, new MySqlParameter("@currentId", currentId));
             return table.Rows.Count > 0 ? table.Rows[0] : null;
         }
-
     }
 }
