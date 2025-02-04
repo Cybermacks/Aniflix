@@ -1,6 +1,6 @@
 ﻿namespace Aniflix
 {
-    partial class FilmesView
+    partial class View
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             CodigoText = new TextBox();
-            FilmesTituloText = new TextBox();
-            FilmesAudioBox = new ComboBox();
-            FilmesSinopseText = new TextBox();
+            TituloText = new TextBox();
+            AudioBox = new ComboBox();
+            SinopseText = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -39,24 +39,24 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            FilmesTagsText = new TextBox();
-            FilmesTituloOriginalText = new TextBox();
-            FilmesGeneroText = new TextBox();
-            FilmesDiretorText = new TextBox();
+            TagsText = new TextBox();
+            TituloOriginalText = new TextBox();
+            GeneroText = new TextBox();
+            DiretorText = new TextBox();
             label11 = new Label();
             label12 = new Label();
-            FilmesTituloAlternativoText = new TextBox();
-            FilmesFranquiaText = new TextBox();
-            FilmesDataLancamentoText = new MaskedTextBox();
+            TituloAlternativoText = new TextBox();
+            FranquiaText = new TextBox();
+            DataLancamentoText = new MaskedTextBox();
             label10 = new Label();
             label13 = new Label();
             label14 = new Label();
             label16 = new Label();
             label17 = new Label();
-            FilmesEstrelasText = new TextBox();
-            FilmesFaseMCUText = new TextBox();
-            FilmesResumoText = new TextBox();
-            FilmesEstudioText = new TextBox();
+            EstrelasText = new TextBox();
+            FaseMCUText = new TextBox();
+            ResumoText = new TextBox();
+            EstudioText = new TextBox();
             label8 = new Label();
             CopiarButton = new Button();
             SalvarButton = new Button();
@@ -76,35 +76,35 @@
             CodigoText.KeyPress += CodigoText_KeyPress;
             CodigoText.Leave += CodigoText_Leave;
             // 
-            // FilmesTituloText
+            // TituloText
             // 
-            FilmesTituloText.Location = new Point(118, 33);
-            FilmesTituloText.Name = "FilmesTituloText";
-            FilmesTituloText.PlaceholderText = "Título";
-            FilmesTituloText.Size = new Size(506, 23);
-            FilmesTituloText.TabIndex = 1;
-            FilmesTituloText.TextChanged += TituloText_TextChanged;
+            TituloText.Location = new Point(118, 33);
+            TituloText.Name = "TituloText";
+            TituloText.PlaceholderText = "Título";
+            TituloText.Size = new Size(506, 23);
+            TituloText.TabIndex = 1;
+            TituloText.TextChanged += TituloText_TextChanged;
             // 
-            // FilmesAudioBox
+            // AudioBox
             // 
-            FilmesAudioBox.FormattingEnabled = true;
-            FilmesAudioBox.Items.AddRange(new object[] { "Dublado", "Legendado", "Nacional", "Desconhecido" });
-            FilmesAudioBox.Location = new Point(630, 33);
-            FilmesAudioBox.Name = "FilmesAudioBox";
-            FilmesAudioBox.Size = new Size(144, 23);
-            FilmesAudioBox.TabIndex = 2;
-            FilmesAudioBox.Text = "Dublado";
-            FilmesAudioBox.SelectedIndexChanged += AudioBox_SelectedIndexChanged;
+            AudioBox.FormattingEnabled = true;
+            AudioBox.Items.AddRange(new object[] { "Dublado", "Legendado", "Nacional", "Desconhecido" });
+            AudioBox.Location = new Point(630, 33);
+            AudioBox.Name = "AudioBox";
+            AudioBox.Size = new Size(144, 23);
+            AudioBox.TabIndex = 2;
+            AudioBox.Text = "Dublado";
+            AudioBox.SelectedIndexChanged += AudioBox_SelectedIndexChanged;
             // 
-            // FilmesSinopseText
+            // SinopseText
             // 
-            FilmesSinopseText.Location = new Point(12, 77);
-            FilmesSinopseText.Multiline = true;
-            FilmesSinopseText.Name = "FilmesSinopseText";
-            FilmesSinopseText.PlaceholderText = "Sinopse";
-            FilmesSinopseText.Size = new Size(762, 217);
-            FilmesSinopseText.TabIndex = 3;
-            FilmesSinopseText.TextChanged += SinopseText_TextChanged;
+            SinopseText.Location = new Point(12, 77);
+            SinopseText.Multiline = true;
+            SinopseText.Name = "SinopseText";
+            SinopseText.PlaceholderText = "Sinopse";
+            SinopseText.Size = new Size(762, 217);
+            SinopseText.TabIndex = 3;
+            SinopseText.TextChanged += SinopseText_TextChanged;
             // 
             // label1
             // 
@@ -169,41 +169,41 @@
             label7.TabIndex = 11;
             label7.Text = "Título Original";
             // 
-            // FilmesTagsText
+            // TagsText
             // 
-            FilmesTagsText.Location = new Point(568, 361);
-            FilmesTagsText.Name = "FilmesTagsText";
-            FilmesTagsText.PlaceholderText = "Tags";
-            FilmesTagsText.Size = new Size(206, 23);
-            FilmesTagsText.TabIndex = 9;
-            FilmesTagsText.TextChanged += TagsText_TextChanged;
+            TagsText.Location = new Point(568, 361);
+            TagsText.Name = "TagsText";
+            TagsText.PlaceholderText = "Tags";
+            TagsText.Size = new Size(206, 23);
+            TagsText.TabIndex = 9;
+            TagsText.TextChanged += TagsText_TextChanged;
             // 
-            // FilmesTituloOriginalText
+            // TituloOriginalText
             // 
-            FilmesTituloOriginalText.Location = new Point(12, 317);
-            FilmesTituloOriginalText.Name = "FilmesTituloOriginalText";
-            FilmesTituloOriginalText.PlaceholderText = "Título Original";
-            FilmesTituloOriginalText.Size = new Size(642, 23);
-            FilmesTituloOriginalText.TabIndex = 8;
-            FilmesTituloOriginalText.TextChanged += TituloOriginalText_TextChanged;
+            TituloOriginalText.Location = new Point(12, 317);
+            TituloOriginalText.Name = "TituloOriginalText";
+            TituloOriginalText.PlaceholderText = "Título Original";
+            TituloOriginalText.Size = new Size(642, 23);
+            TituloOriginalText.TabIndex = 8;
+            TituloOriginalText.TextChanged += TituloOriginalText_TextChanged;
             // 
-            // FilmesGeneroText
+            // GeneroText
             // 
-            FilmesGeneroText.Location = new Point(400, 405);
-            FilmesGeneroText.Name = "FilmesGeneroText";
-            FilmesGeneroText.PlaceholderText = "Gênero do Filme";
-            FilmesGeneroText.Size = new Size(374, 23);
-            FilmesGeneroText.TabIndex = 15;
-            FilmesGeneroText.TextChanged += GeneroText_TextChanged;
+            GeneroText.Location = new Point(400, 405);
+            GeneroText.Name = "GeneroText";
+            GeneroText.PlaceholderText = "Gênero do Filme";
+            GeneroText.Size = new Size(374, 23);
+            GeneroText.TabIndex = 15;
+            GeneroText.TextChanged += GeneroText_TextChanged;
             // 
-            // FilmesDiretorText
+            // DiretorText
             // 
-            FilmesDiretorText.Location = new Point(12, 449);
-            FilmesDiretorText.Name = "FilmesDiretorText";
-            FilmesDiretorText.PlaceholderText = "Diretor";
-            FilmesDiretorText.Size = new Size(660, 23);
-            FilmesDiretorText.TabIndex = 14;
-            FilmesDiretorText.TextChanged += DiretorText_TextChanged;
+            DiretorText.Location = new Point(12, 449);
+            DiretorText.Name = "DiretorText";
+            DiretorText.PlaceholderText = "Diretor";
+            DiretorText.Size = new Size(660, 23);
+            DiretorText.TabIndex = 14;
+            DiretorText.TextChanged += DiretorText_TextChanged;
             // 
             // label11
             // 
@@ -223,35 +223,35 @@
             label12.TabIndex = 24;
             label12.Text = "Título Alternativo";
             // 
-            // FilmesTituloAlternativoText
+            // TituloAlternativoText
             // 
-            FilmesTituloAlternativoText.Location = new Point(12, 361);
-            FilmesTituloAlternativoText.Name = "FilmesTituloAlternativoText";
-            FilmesTituloAlternativoText.PlaceholderText = "Título Alternativo";
-            FilmesTituloAlternativoText.Size = new Size(550, 23);
-            FilmesTituloAlternativoText.TabIndex = 21;
-            FilmesTituloAlternativoText.Text = "--";
-            FilmesTituloAlternativoText.TextChanged += TituloAlternativoText_TextChanged;
+            TituloAlternativoText.Location = new Point(12, 361);
+            TituloAlternativoText.Name = "TituloAlternativoText";
+            TituloAlternativoText.PlaceholderText = "Título Alternativo";
+            TituloAlternativoText.Size = new Size(550, 23);
+            TituloAlternativoText.TabIndex = 21;
+            TituloAlternativoText.Text = "--";
+            TituloAlternativoText.TextChanged += TituloAlternativoText_TextChanged;
             // 
-            // FilmesFranquiaText
+            // FranquiaText
             // 
-            FilmesFranquiaText.Location = new Point(12, 405);
-            FilmesFranquiaText.Name = "FilmesFranquiaText";
-            FilmesFranquiaText.PlaceholderText = "Franquia";
-            FilmesFranquiaText.Size = new Size(382, 23);
-            FilmesFranquiaText.TabIndex = 20;
-            FilmesFranquiaText.Text = "--";
-            FilmesFranquiaText.TextChanged += FranquiaText_TextChanged;
+            FranquiaText.Location = new Point(12, 405);
+            FranquiaText.Name = "FranquiaText";
+            FranquiaText.PlaceholderText = "Franquia";
+            FranquiaText.Size = new Size(382, 23);
+            FranquiaText.TabIndex = 20;
+            FranquiaText.Text = "--";
+            FranquiaText.TextChanged += FranquiaText_TextChanged;
             // 
-            // FilmesDataLancamentoText
+            // DataLancamentoText
             // 
-            FilmesDataLancamentoText.Location = new Point(658, 317);
-            FilmesDataLancamentoText.Mask = "00/00/0000";
-            FilmesDataLancamentoText.Name = "FilmesDataLancamentoText";
-            FilmesDataLancamentoText.Size = new Size(118, 23);
-            FilmesDataLancamentoText.TabIndex = 26;
-            FilmesDataLancamentoText.ValidatingType = typeof(DateTime);
-            FilmesDataLancamentoText.MaskInputRejected += DataLancamentoText_MaskInputRejected;
+            DataLancamentoText.Location = new Point(658, 317);
+            DataLancamentoText.Mask = "00/00/0000";
+            DataLancamentoText.Name = "DataLancamentoText";
+            DataLancamentoText.Size = new Size(118, 23);
+            DataLancamentoText.TabIndex = 26;
+            DataLancamentoText.ValidatingType = typeof(DateTime);
+            DataLancamentoText.MaskInputRejected += DataLancamentoText_MaskInputRejected;
             // 
             // label10
             // 
@@ -298,42 +298,42 @@
             label17.TabIndex = 32;
             label17.Text = "Diretor";
             // 
-            // FilmesEstrelasText
+            // EstrelasText
             // 
-            FilmesEstrelasText.Location = new Point(12, 493);
-            FilmesEstrelasText.Name = "FilmesEstrelasText";
-            FilmesEstrelasText.PlaceholderText = "Estrelas";
-            FilmesEstrelasText.Size = new Size(762, 23);
-            FilmesEstrelasText.TabIndex = 33;
-            FilmesEstrelasText.TextChanged += EstrelasText_TextChanged;
+            EstrelasText.Location = new Point(12, 493);
+            EstrelasText.Name = "EstrelasText";
+            EstrelasText.PlaceholderText = "Estrelas";
+            EstrelasText.Size = new Size(762, 23);
+            EstrelasText.TabIndex = 33;
+            EstrelasText.TextChanged += EstrelasText_TextChanged;
             // 
-            // FilmesFaseMCUText
+            // FaseMCUText
             // 
-            FilmesFaseMCUText.Location = new Point(678, 449);
-            FilmesFaseMCUText.Name = "FilmesFaseMCUText";
-            FilmesFaseMCUText.PlaceholderText = "Fase MCU";
-            FilmesFaseMCUText.Size = new Size(96, 23);
-            FilmesFaseMCUText.TabIndex = 34;
-            FilmesFaseMCUText.Text = "--";
-            FilmesFaseMCUText.TextChanged += FilmesFaseMCUText_TextChanged;
+            FaseMCUText.Location = new Point(678, 449);
+            FaseMCUText.Name = "FaseMCUText";
+            FaseMCUText.PlaceholderText = "Fase MCU";
+            FaseMCUText.Size = new Size(96, 23);
+            FaseMCUText.TabIndex = 34;
+            FaseMCUText.Text = "--";
+            FaseMCUText.TextChanged += FaseMCUText_TextChanged;
             // 
-            // FilmesResumoText
+            // ResumoText
             // 
-            FilmesResumoText.Location = new Point(784, 33);
-            FilmesResumoText.Multiline = true;
-            FilmesResumoText.Name = "FilmesResumoText";
-            FilmesResumoText.PlaceholderText = "Resumo";
-            FilmesResumoText.Size = new Size(601, 527);
-            FilmesResumoText.TabIndex = 35;
+            ResumoText.Location = new Point(784, 33);
+            ResumoText.Multiline = true;
+            ResumoText.Name = "ResumoText";
+            ResumoText.PlaceholderText = "Resumo";
+            ResumoText.Size = new Size(601, 527);
+            ResumoText.TabIndex = 35;
             // 
-            // FilmesEstudioText
+            // EstudioText
             // 
-            FilmesEstudioText.Location = new Point(12, 537);
-            FilmesEstudioText.Name = "FilmesEstudioText";
-            FilmesEstudioText.PlaceholderText = "Estúdio";
-            FilmesEstudioText.Size = new Size(762, 23);
-            FilmesEstudioText.TabIndex = 37;
-            FilmesEstudioText.TextChanged += EstudioText_TextChanged;
+            EstudioText.Location = new Point(12, 537);
+            EstudioText.Name = "EstudioText";
+            EstudioText.PlaceholderText = "Estúdio";
+            EstudioText.Size = new Size(762, 23);
+            EstudioText.TabIndex = 37;
+            EstudioText.TextChanged += EstudioText_TextChanged;
             // 
             // label8
             // 
@@ -433,7 +433,7 @@
             VoltarButton.Text = "Voltar";
             VoltarButton.UseVisualStyleBackColor = false;
             // 
-            // FilmesView
+            // View
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -444,42 +444,42 @@
             Controls.Add(EditarButton);
             Controls.Add(SalvarButton);
             Controls.Add(CopiarButton);
-            Controls.Add(FilmesEstudioText);
+            Controls.Add(EstudioText);
             Controls.Add(label8);
-            Controls.Add(FilmesResumoText);
-            Controls.Add(FilmesFaseMCUText);
-            Controls.Add(FilmesEstrelasText);
+            Controls.Add(ResumoText);
+            Controls.Add(FaseMCUText);
+            Controls.Add(EstrelasText);
             Controls.Add(label17);
             Controls.Add(label16);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label10);
-            Controls.Add(FilmesDataLancamentoText);
+            Controls.Add(DataLancamentoText);
             Controls.Add(label11);
             Controls.Add(label12);
-            Controls.Add(FilmesTituloAlternativoText);
-            Controls.Add(FilmesFranquiaText);
-            Controls.Add(FilmesGeneroText);
-            Controls.Add(FilmesDiretorText);
+            Controls.Add(TituloAlternativoText);
+            Controls.Add(FranquiaText);
+            Controls.Add(GeneroText);
+            Controls.Add(DiretorText);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(FilmesTagsText);
-            Controls.Add(FilmesTituloOriginalText);
+            Controls.Add(TagsText);
+            Controls.Add(TituloOriginalText);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(FilmesSinopseText);
-            Controls.Add(FilmesAudioBox);
-            Controls.Add(FilmesTituloText);
+            Controls.Add(SinopseText);
+            Controls.Add(AudioBox);
+            Controls.Add(TituloText);
             Controls.Add(CodigoText);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            Name = "FilmesView";
+            Name = "View";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FilmesView";
-            Load += FilmesView_Load;
+            Text = "View";
+            Load += View_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -487,9 +487,9 @@
         #endregion
 
         private TextBox CodigoText;
-        private TextBox FilmesTituloText;
-        private ComboBox FilmesAudioBox;
-        private TextBox FilmesSinopseText;
+        private TextBox TituloText;
+        private ComboBox AudioBox;
+        private TextBox SinopseText;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -497,24 +497,24 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox FilmesTagsText;
-        private TextBox FilmesTituloOriginalText;
-        private TextBox FilmesGeneroText;
-        private TextBox FilmesDiretorText;
+        private TextBox TagsText;
+        private TextBox TituloOriginalText;
+        private TextBox GeneroText;
+        private TextBox DiretorText;
         private Label label11;
         private Label label12;
-        private TextBox FilmesTituloAlternativoText;
-        private TextBox FilmesFranquiaText;
-        private MaskedTextBox FilmesDataLancamentoText;
+        private TextBox TituloAlternativoText;
+        private TextBox FranquiaText;
+        private MaskedTextBox DataLancamentoText;
         private Label label10;
         private Label label13;
         private Label label14;
         private Label label16;
         private Label label17;
-        private TextBox FilmesEstrelasText;
-        private TextBox FilmesFaseMCUText;
-        private TextBox FilmesResumoText;
-        private TextBox FilmesEstudioText;
+        private TextBox EstrelasText;
+        private TextBox FaseMCUText;
+        private TextBox ResumoText;
+        private TextBox EstudioText;
         private Label label8;
         private System.Windows.Forms.Button CopiarButton;
         private System.Windows.Forms.Button SalvarButton;
