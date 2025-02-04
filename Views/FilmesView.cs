@@ -301,8 +301,9 @@ namespace Aniflix
 
         private void CarregarFilme()
         {
-            var filme = FilmesController.GetFirstFilme();
-            if (filme != null)
+            var filme = FilmesController.GetFirstFilme
+
+                if (filme != null)
             {
                 FilmesCodigoText.Text = filme.Codigo;
                 FilmesTituloText.Text = filme.Titulo;
