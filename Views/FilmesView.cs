@@ -17,6 +17,8 @@ namespace Aniflix.Views
 {
     public partial class FilmesView : Form
     {
+        private int currentId = 0;
+
         public FilmesView()
         {
             InitializeComponent();
