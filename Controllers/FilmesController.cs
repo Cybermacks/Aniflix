@@ -47,17 +47,6 @@ namespace Aniflix.Controllers
         {
             return _conn.GetFirstRecord("filmes");
         }
-
-        public static DataTable BuscaTodosFilmes()
-        {
-            return _conn.SelectData("filmes");
-        }
-
-        public static DataTable BuscaFilmePorCodigo(int codigo)
-        {
-            return _conn.SelectData("filmes", "codigo = @codigo", new MySqlParameter("@codigo", codigo));
-        }
-
         public static DataRow? ProcuraFilmeAnterior(int id)
         {
             return _conn.GetPreviousRecord("filmes", id);
