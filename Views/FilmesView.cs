@@ -409,7 +409,16 @@ namespace Aniflix
 
         private void AnteriorButton_Click(object sender, EventArgs e)
         {
+            var record = FilmesController.ProcuraFilmeAnterior(currentId);
 
+            if (record != null)
+            {
+                LoadRecord(record);
+            }
+            else
+            {
+                MessageBox.Show("Primeiro registro alcançado.");
+            }
         }
     }
 }
