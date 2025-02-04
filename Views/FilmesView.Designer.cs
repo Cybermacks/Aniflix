@@ -455,6 +455,7 @@
             Controls.Add(CodigoText);
             Name = "FilmesView";
             Text = "FilmesView";
+            Load += FilmesView_Load;
             ResumeLayout(false);
             PerformLayout();
         }

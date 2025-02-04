@@ -3,6 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using Aniflix.Globals;
 using Aniflix.Services;
 using Aniflix.Extensions;
 using System.Globalization;
@@ -204,5 +205,15 @@ namespace Aniflix.Views
             ResumoText.Text = model.GetFormattedText();
         }
 
+        private void FilmesView_Load(object sender, EventArgs e)
+        {
+            UpdateData();
+            CarregarFilme();
+            Functions.DoReadOnly(this);
+            TituloAlternativoText.Text = "--";
+            FaseMCUText.Text = "--";
+            FranquiaText.Text = "--";
+
+        }
     }
 }
