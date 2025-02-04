@@ -104,7 +104,7 @@
             FilmesSinopseText.PlaceholderText = "Sinopse";
             FilmesSinopseText.Size = new Size(762, 217);
             FilmesSinopseText.TabIndex = 3;
-            FilmesSinopseText.TextChanged += FilmesSinopseText_TextChanged;
+            FilmesSinopseText.TextChanged += SinopseText_TextChanged;
             // 
             // label1
             // 
