@@ -448,15 +448,13 @@ namespace Aniflix
                 }
             }
         }
-
-
-             private static void DoReadOnly(Control control)
+             private static void UndoReadOnly(Control control)
         {
             foreach (Control c in control.Controls)
             {
                 if (c.Controls != null && c.Controls.Count > 0)
                 {
-                    DoReadOnly(c);
+                    UndoReadOnly(c);
                 }
                 else if (c is TextBox box)
                 {
