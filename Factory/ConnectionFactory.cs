@@ -81,5 +81,10 @@ namespace Aniflix.Factory
             DataTable table = GetDataTable(query, parameters);
             return table.Rows.Count > 0 ? table.Rows[0] : null;
         }
+        public DataTable SelectData(string tableName, string condition = "1=1", params MySqlParameter[] parameters)
+        {
+            string query = $"SELECT * FROM {tableName} WHERE {condition};";
+            return GetDataTable(query, parameters);
+        }
     }
 }
