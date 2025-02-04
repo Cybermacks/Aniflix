@@ -1,4 +1,5 @@
-﻿using Aniflix.Models;
+﻿using System.Data;
+using Aniflix.Models;
 using MySqlConnector;
 using Aniflix.Factory;
 
@@ -42,18 +43,9 @@ namespace Aniflix.Controllers
                 }
             }
         }
-        public static string GetFirstFilme()
+        public static DataRow? GetFirstFilme()
         {
             return _conn.GetFirstRecord("filmes");
-        }
-
-        public static Filmes? GetNextFilme(int id)
-        {
-            return _conn.QueryFirst<Filmes>("SELECT * FROM filmes WHERE id > @Id ORDER BY id DESC LIMIT 1", new { Id = id });
-        }
-        public static Filmes? GetPreviousFilme(int id)
-        {
-            return _conn.QueryFirst<Filmes>("SELECT * FROM filmes WHERE id > @Id ORDER BY id DESC LIMIT 1", new { Id = id });
         }
     }
 }
