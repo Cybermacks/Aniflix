@@ -1,4 +1,5 @@
-﻿using Aniflix.Models;
+﻿using System.Data;
+using Aniflix.Models;
 using Aniflix.Factory;
 using Aniflix.Services;
 using Aniflix.Extensions;
@@ -369,9 +370,36 @@ namespace Aniflix
             filmes.Estrelas = FilmesEstrelasText.Text;
             filmes.Estudio = FilmesEstudioText.Text;
         }
+
+        private void LoadRecord(DataRow record)
+        {
+            if (record != null)
+            {
+                currentId = Convert.ToInt32(record["id"]);
+                FilmesCodigoText.Text = record["codigo"].ToString();
+                FilmesTituloText.Text = record["titulo"].ToString();
+                FilmesAudioBox.SelectedItem = record["audio"].ToString();
+                FilmesSinopseText.Text = record["sinopse"].ToString();
+                FilmesTituloOriginalText.Text = record["titulo_original"].ToString();
+                FilmesDataLancamentoText.Text = record["data_lancamento"].ToString();
+                FilmesTituloAlternativoText.Text = record["titulo_alternativo"].ToString();
+                FilmesFranquiaText.Text = record["franquia"].ToString();
+                FilmesGeneroText.Text = record["genero"].ToString();
+                FilmesTagsText.Text = record["tags"].ToString();
+                FilmesDiretorText.Text = record["diretor"].ToString();
+                FilmesFaseMCUText.Text = record["mcu"].ToString();
+                FilmesEstrelasText.Text = record["estrelas"].ToString();
+                FilmesEstudioText.Text = record["estudio"].ToString();
+            }
+        }
+
         private void ProximoButton_Click(object sender, EventArgs e)
         {
-
+            DataRow nextRecord = DatabaseConnection.Instance.GetNextRecord("usuarios", currentId);
+            if (nextRecord != null)
+                LoadRecord(nextRecord);
+            else
+                MessageBox.Show("Último registro alcançado.");
         }
 
         private void AnteriorButton_Click(object sender, EventArgs e)
