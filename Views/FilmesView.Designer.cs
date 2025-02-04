@@ -176,7 +176,7 @@
             FilmesTagsText.PlaceholderText = "Tags";
             FilmesTagsText.Size = new Size(206, 23);
             FilmesTagsText.TabIndex = 9;
-            FilmesTagsText.TextChanged += FilmesTagsText_TextChanged;
+            FilmesTagsText.TextChanged += TagsText_TextChanged;
             // 
             // FilmesTituloOriginalText
             // 
@@ -185,7 +185,7 @@
             FilmesTituloOriginalText.PlaceholderText = "Título Original";
             FilmesTituloOriginalText.Size = new Size(642, 23);
             FilmesTituloOriginalText.TabIndex = 8;
-            FilmesTituloOriginalText.TextChanged += FilmesTituloOriginalText_TextChanged;
+            FilmesTituloOriginalText.TextChanged += TituloOriginalText_TextChanged;
             // 
             // FilmesGeneroText
             // 
@@ -194,7 +194,7 @@
             FilmesGeneroText.PlaceholderText = "Gênero do Filme";
             FilmesGeneroText.Size = new Size(374, 23);
             FilmesGeneroText.TabIndex = 15;
-            FilmesGeneroText.TextChanged += FilmesGeneroText_TextChanged;
+            FilmesGeneroText.TextChanged += GeneroText_TextChanged;
             // 
             // FilmesDiretorText
             // 
@@ -203,7 +203,7 @@
             FilmesDiretorText.PlaceholderText = "Diretor";
             FilmesDiretorText.Size = new Size(660, 23);
             FilmesDiretorText.TabIndex = 14;
-            FilmesDiretorText.TextChanged += FilmesDiretorText_TextChanged;
+            FilmesDiretorText.TextChanged += DiretorText_TextChanged;
             // 
             // label11
             // 
