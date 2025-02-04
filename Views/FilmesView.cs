@@ -309,9 +309,9 @@ namespace Aniflix
                 FilmesTituloText.Text = filme["titulo"].ToString();
                 FilmesAudioBox.SelectedItem = filme["audio"].ToString();
                 FilmesSinopseText.Text = filme["sinopse"].ToString();
-                FilmesTituloOriginalText.Text = filme["tituloOriginal"].ToString();
-                FilmesDataLancamentoText.Text = filme["dataLancamento"].ToString();
-                FilmesTituloAlternativoText.Text = filme["tituloAlternativo"].ToString();
+                FilmesTituloOriginalText.Text = filme["titulo_original"].ToString();
+                FilmesDataLancamentoText.Text = filme["data_lancamento"].ToString();
+                FilmesTituloAlternativoText.Text = filme["titulo_alternativo"].ToString();
                 FilmesFranquiaText.Text = filme["franquia"].ToString();
                 FilmesGeneroText.Text = filme["genero"].ToString();
                 FilmesTagsText.Text = filme["tags"].ToString();
