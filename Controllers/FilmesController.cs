@@ -5,7 +5,7 @@ namespace Aniflix.Controllers
 {
     public static class FilmesController
     {
-        public static readonly ConnectionFactory _conn = ConnectionFactory.GetInstance();
+        public static readonly DatabaseConnection _conn = DatabaseConnection.Instance;
 
         public static void InsereNovoFilme(Filmes filmes)
         {
