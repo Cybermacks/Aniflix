@@ -1,4 +1,5 @@
 ﻿using Aniflix.Models;
+using MySqlConnector;
 using Aniflix.Factory;
 
 namespace Aniflix.Controllers
@@ -9,7 +10,7 @@ namespace Aniflix.Controllers
 
         public static void InsereNovoFilme(Filmes filmes)
         {
-            var filme = _conn.Query<Filmes>("SELECT * FROM filmes WHERE codigo = @Codigo", new { filmes.Codigo }).FirstOrDefault();
+            var filme = _conn.ExecuteQuery("SELECT * FROM filmes WHERE codigo = @Codigo", new MySqlParameter("@Codigo", filmes.Codigo));
             if (filme != null)
             {
                 MessageBox.Show("Filme " + filmes.Titulo + " já está cadastrado!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
