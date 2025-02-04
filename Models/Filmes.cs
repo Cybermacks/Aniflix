@@ -1,8 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Aniflix.Models
+﻿namespace Aniflix.Models
 {
-    [Table("Filmes")]
     public class Filmes
     {
         public string? Codigo { get; set; }
