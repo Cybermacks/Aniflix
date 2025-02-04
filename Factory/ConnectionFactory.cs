@@ -63,16 +63,39 @@ namespace Aniflix.Factory
 
         public int InsertData(string tableName, params MySqlParameter[] parameters)
         {
-            string columnNames = string.Join(", ", parameters.Select(p => p.ParameterName.TrimStart('@')));
-            string paramNames = string.Join(", ", parameters.Select(p => "@" + p.ParameterName.TrimStart('@')));
-            string query = $"INSERT INTO {tableName} ({columnNames}) VALUES ({paramNames});";
-            return ExecuteQuery(query, parameters);
+            try
+            {
+                string columnNames = string.Join(", ", parameters.Select(p => p.ParameterName.TrimStart('@')));
+                string paramNames = string.Join(", ", parameters.Select(p => "@" + p.ParameterName.TrimStart('@')));
+                string query = $"INSERT INTO {tableName} ({columnNames}) VALUES ({paramNames});";
+                return ExecuteQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
         public int UpdateData(string tableName, string condition, params MySqlParameter[] parameters)
         {
-            string setClause = string.Join(", ", parameters.Select(p => $"{p.ParameterName.TrimStart('@')} = @{p.ParameterName.TrimStart('@')}"));
-            string query = $"UPDATE {tableName} SET {setClause} WHERE {condition};";
-            return ExecuteQuery(query, parameters);
+            try
+            {
+                string setClause = string.Join(", ", parameters.Select(p => $"{p.ParameterName.TrimStart('@')} = @{p.ParameterName.TrimStart('@')}"));
+                string query = $"UPDATE {tableName} SET {setClause} WHERE {condition};";
+                return ExecuteQuery(query, parameters);
+                catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public DataRow? GetFirstRecord(string tableName, params MySqlParameter[] parameters)
