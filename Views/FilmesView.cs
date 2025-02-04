@@ -456,6 +456,10 @@ namespace Aniflix
                 {
                     box.ReadOnly = true;
                 }
+                else if (c is ComboBox comboBox)
+                {
+                    comboBox.Enabled = true;
+                }
             }
         }
 
@@ -470,6 +474,10 @@ namespace Aniflix
                 else if (c is TextBox box)
                 {
                     box.ReadOnly = false;
+                }
+                else if (c is ComboBox comboBox)
+                {
+                    comboBox.Enabled = false;
                 }
             }
         }
