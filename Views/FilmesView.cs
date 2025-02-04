@@ -433,7 +433,7 @@ namespace Aniflix
                 //FilmesController.AtualizaFilme(filmes);
             }
         }
-        private void SetReadonly(Control c)
+        private static void SetReadonly(Control c)
         {
             if (c == null)
             {
@@ -445,9 +445,9 @@ namespace Aniflix
                 {
                     SetReadonly(c);
                 }
-                else if (c is TextBox)
+                else if (c is TextBox box)
                 {
-                    ((TextBox)c).ReadOnly = true;
+                    box.ReadOnly = true;
                 }
 
             }
