@@ -167,7 +167,7 @@ partial class SeriesView
         FilmesEstudioText.Location = new Point(12, 667);
         FilmesEstudioText.Name = "FilmesEstudioText";
         FilmesEstudioText.PlaceholderText = "Estúdio";
-        FilmesEstudioText.Size = new Size(661, 23);
+        FilmesEstudioText.Size = new Size(761, 23);
         FilmesEstudioText.TabIndex = 73;
         // 
         // label8
