@@ -68,9 +68,20 @@ namespace Aniflix.Factory
             string query = $"INSERT INTO {tableName} ({columnNames}) VALUES ({paramNames});";
             return ExecuteQuery(query, parameters);
         }
+        public int UpdateData(string tableName, string condition, params MySqlParameter[] parameters)
+        {
+            string setClause = string.Join(", ", parameters.Select(p => $"{p.ParameterName.TrimStart('@')} = @{p.ParameterName.TrimStart('@')}"));
+            string query = $"UPDATE {tableName} SET {setClause} WHERE {condition};";
+            return ExecuteQuery(query, parameters);
+        }
 
-
-
+        public DataRow GetFirstRecord(string tableName, string condition = "1=1", params MySqlParameter[] parameters)
+        {
+            string query = $"SELECT * FROM {tableName} WHERE {condition} LIMIT 1;";
+            DataTable table = GetDataTable(query, parameters);
+            return table.Rows.Count > 0 ? table.Rows[0] : null;
+        }
     }
+}
 }
 
