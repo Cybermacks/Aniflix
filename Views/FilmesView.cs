@@ -445,6 +445,5 @@ namespace Aniflix
                 editando = false;
             }
         }
-
     }
 }
