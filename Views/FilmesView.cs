@@ -448,7 +448,8 @@ namespace Aniflix
                 }
             }
         }
-             private static void UndoReadOnly(Control control)
+
+        private static void UndoReadOnly(Control control)
         {
             foreach (Control c in control.Controls)
             {
