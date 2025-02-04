@@ -239,6 +239,28 @@ namespace Aniflix.Views
                 EstudioText.Text = filme["estudio"].ToString();
             }
         }
+        private void PreencheDados(DataRow record)
+        {
+            if (record != null)
+            {
+                currentId = Convert.ToInt32(record["id"]);
+                CodigoText.Text = record["codigo"].ToString();
+                TituloText.Text = record["titulo"].ToString();
+                AudioBox.SelectedItem = record["audio"].ToString();
+                SinopseText.Text = record["sinopse"].ToString();
+                TituloOriginalText.Text = record["titulo_original"].ToString();
+                DataLancamentoText.Text = record["data_lancamento"].ToString();
+                TituloAlternativoText.Text = record["titulo_alternativo"].ToString();
+                FranquiaText.Text = record["franquia"].ToString();
+                GeneroText.Text = record["genero"].ToString();
+                TagsText.Text = record["tags"].ToString();
+                DiretorText.Text = record["diretor"].ToString();
+                FaseMCUText.Text = record["mcu"].ToString();
+                EstrelasText.Text = record["estrelas"].ToString();
+                EstudioText.Text = record["estudio"].ToString();
+            }
+        }
+
 
     }
 }
