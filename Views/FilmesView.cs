@@ -289,10 +289,10 @@ namespace Aniflix
         {
             UpdateData();
             CarregarFilme();
+            Functions.DoReadOnly(this);
             FilmesTituloAlternativoText.Text = "--";
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
-            Functions.DoReadOnly(this);
         }
 
         private void CopiarButton_Click(object sender, EventArgs e)
