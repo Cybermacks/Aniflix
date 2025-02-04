@@ -6,6 +6,7 @@ using System.Drawing;
 using Aniflix.Globals;
 using Aniflix.Services;
 using Aniflix.Extensions;
+using Aniflix.Controllers;
 using System.Globalization;
 using System.Windows.Forms;
 using System.ComponentModel;
@@ -215,5 +216,29 @@ namespace Aniflix.Views
             FranquiaText.Text = "--";
 
         }
+
+        private void CarregarFilme()
+        {
+            var filme = FilmesController.BuscaPrimeiroFilme();
+
+            if (filme != null)
+            {
+                CodigoText.Text = filme["codigo"].ToString();
+                TituloText.Text = filme["titulo"].ToString();
+                AudioBox.SelectedItem = filme["audio"].ToString();
+                SinopseText.Text = filme["sinopse"].ToString();
+                TituloOriginalText.Text = filme["titulo_original"].ToString();
+                DataLancamentoText.Text = filme["data_lancamento"].ToString();
+                TituloAlternativoText.Text = filme["titulo_alternativo"].ToString();
+                FranquiaText.Text = filme["franquia"].ToString();
+                GeneroText.Text = filme["genero"].ToString();
+                TagsText.Text = filme["tags"].ToString();
+                DiretorText.Text = filme["diretor"].ToString();
+                FaseMCUText.Text = filme["mcu"].ToString();
+                EstrelasText.Text = filme["estrelas"].ToString();
+                EstudioText.Text = filme["estudio"].ToString();
+            }
+        }
+
     }
 }
