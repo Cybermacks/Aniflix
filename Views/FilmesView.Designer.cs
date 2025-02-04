@@ -387,6 +387,7 @@
             EditarButton.TabIndex = 40;
             EditarButton.Text = "Editar";
             EditarButton.UseVisualStyleBackColor = false;
+            EditarButton.Click += EditarButton_Click;
             // 
             // AnteriorButton
             // 
