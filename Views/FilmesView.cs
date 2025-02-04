@@ -433,25 +433,18 @@ namespace Aniflix
                 //FilmesController.AtualizaFilme(filmes);
             }
         }
-        private void SetReadonly(Control c)
+        void DoReadOnly(Control control)
         {
-            if (c == null)
+            foreach (Control c in control.Controls)
             {
-                return;
-            }
-            foreach (Control item in c.Controls)
-            {
-
-                if (item is TextBox)
+                if (c.Controls != null && c.Controls.Count > 0)
                 {
-                    ((TextBox)item).ReadOnly = true;
+                    DoReadOnly(c);
                 }
-
-                else if (item.HasControls())
+                else if (c is TextBox)
                 {
-                    SetReadonly(item);
+                    (c as TextBox).ReadOnly = true;
                 }
-
             }
         }
     }
