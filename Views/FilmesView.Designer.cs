@@ -333,7 +333,7 @@
             FilmesEstudioText.PlaceholderText = "Estúdio";
             FilmesEstudioText.Size = new Size(762, 23);
             FilmesEstudioText.TabIndex = 37;
-            FilmesEstudioText.TextChanged += FilmesEstudioText_TextChanged;
+            FilmesEstudioText.TextChanged += EstudioText_TextChanged;
             // 
             // label8
             // 
