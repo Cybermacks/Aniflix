@@ -85,7 +85,7 @@ partial class SeriesView
         VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         VoltarButton.ForeColor = Color.White;
         VoltarButton.ImageIndex = 0;
-        VoltarButton.Location = new Point(1075, 742);
+        VoltarButton.Location = new Point(1075, 719);
         VoltarButton.Name = "VoltarButton";
         VoltarButton.Size = new Size(137, 61);
         VoltarButton.TabIndex = 79;
@@ -99,7 +99,7 @@ partial class SeriesView
         ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         ProximoButton.ForeColor = Color.White;
         ProximoButton.ImageIndex = 3;
-        ProximoButton.Location = new Point(897, 742);
+        ProximoButton.Location = new Point(897, 719);
         ProximoButton.Name = "ProximoButton";
         ProximoButton.Size = new Size(137, 61);
         ProximoButton.TabIndex = 78;
@@ -113,7 +113,7 @@ partial class SeriesView
         AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         AnteriorButton.ForeColor = Color.White;
         AnteriorButton.ImageIndex = 4;
-        AnteriorButton.Location = new Point(719, 742);
+        AnteriorButton.Location = new Point(719, 719);
         AnteriorButton.Name = "AnteriorButton";
         AnteriorButton.Size = new Size(137, 61);
         AnteriorButton.TabIndex = 77;
@@ -127,7 +127,7 @@ partial class SeriesView
         EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         EditarButton.ForeColor = Color.White;
         EditarButton.ImageIndex = 2;
-        EditarButton.Location = new Point(541, 742);
+        EditarButton.Location = new Point(541, 719);
         EditarButton.Name = "EditarButton";
         EditarButton.Size = new Size(137, 61);
         EditarButton.TabIndex = 76;
@@ -141,7 +141,7 @@ partial class SeriesView
         SalvarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         SalvarButton.ForeColor = Color.White;
         SalvarButton.ImageIndex = 2;
-        SalvarButton.Location = new Point(363, 742);
+        SalvarButton.Location = new Point(363, 719);
         SalvarButton.Name = "SalvarButton";
         SalvarButton.Size = new Size(137, 61);
         SalvarButton.TabIndex = 75;
@@ -155,7 +155,7 @@ partial class SeriesView
         CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         CopiarButton.ForeColor = Color.White;
         CopiarButton.ImageIndex = 1;
-        CopiarButton.Location = new Point(185, 742);
+        CopiarButton.Location = new Point(185, 719);
         CopiarButton.Name = "CopiarButton";
         CopiarButton.Size = new Size(137, 61);
         CopiarButton.TabIndex = 74;
@@ -514,7 +514,7 @@ partial class SeriesView
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1397, 859);
+        ClientSize = new Size(1397, 810);
         Controls.Add(label20);
         Controls.Add(textBox5);
         Controls.Add(label19);
