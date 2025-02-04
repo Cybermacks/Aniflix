@@ -227,7 +227,7 @@
             TituloAlternativoText.Size = new Size(550, 23);
             TituloAlternativoText.TabIndex = 21;
             TituloAlternativoText.Text = "--";
-            TituloAlternativoText.TextChanged += TituloAlternativoText_TextChanged;
+
             // 
             // FranquiaText
             // 
@@ -237,7 +237,7 @@
             FranquiaText.Size = new Size(382, 23);
             FranquiaText.TabIndex = 20;
             FranquiaText.Text = "--";
-            FranquiaText.TextChanged += FranquiaText_TextChanged;
+
             // 
             // DataLancamentoText
             // 
@@ -247,7 +247,7 @@
             DataLancamentoText.Size = new Size(118, 23);
             DataLancamentoText.TabIndex = 26;
             DataLancamentoText.ValidatingType = typeof(DateTime);
-            DataLancamentoText.MaskInputRejected += DataLancamentoText_MaskInputRejected;
+
             // 
             // label10
             // 
