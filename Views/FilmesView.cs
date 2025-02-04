@@ -92,9 +92,9 @@ namespace Aniflix
                             }
                         }
 
+                        FormatGenre(movie.Genres[0].Name, hashtags);
                         FormatGenre(movie.Genres[1].Name, hashtags);
                         FormatGenre(movie.Genres[2].Name, hashtags);
-                        FormatGenre(movie.Genres[0].Name, hashtags);
 
                         FilmesGeneroText.Text = string.Join(" ", hashtags);
                     }
