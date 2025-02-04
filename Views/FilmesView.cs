@@ -409,7 +409,6 @@ namespace Aniflix
 
             if (resposta == DialogResult.Yes)
             {
-
                 var filmes = new Filmes
                 {
                     Codigo = FilmesCodigoText.Text,
@@ -427,12 +426,9 @@ namespace Aniflix
                     Estrelas = FilmesEstrelasText.Text,
                     Estudio = FilmesEstudioText.Text
                 };
-
-                if (!string.IsNullOrEmpty(filmes.Codigo))
-                {
-                    FilmesController.AtualizaFilme(filmes);
-                }
+                FilmesController.AtualizaFilme(filmes);
             }
         }
     }
+}
 }
