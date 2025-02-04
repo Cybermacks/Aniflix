@@ -443,21 +443,20 @@ namespace Aniflix
 
                     Functions.DoReadOnly(this);
                 }
-                else
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resposta == DialogResult.Yes)
                 {
 
-
-                    var resposta = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (resposta == DialogResult.Yes)
-                    {
-
-                        FilmesController.AtualizaFilme(filmes);
-                    }
-                    Functions.DoReadOnly(this);
-                    EditarButton.Text = "Editar";
-                    editando = false;
+                    FilmesController.AtualizaFilme(filmes);
                 }
+                Functions.DoReadOnly(this);
+                EditarButton.Text = "Editar";
+                editando = false;
             }
         }
     }
+}
