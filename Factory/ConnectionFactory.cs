@@ -75,6 +75,13 @@ namespace Aniflix.Factory
             return ExecuteQuery(query, parameters);
         }
 
+        public DataRow? GetFirstRecord(string tableName, params MySqlParameter[] parameters)
+        {
+            string query = $"SELECT * FROM {tableName} LIMIT 1;";
+            DataTable table = GetDataTable(query, parameters);
+            return table.Rows.Count > 0 ? table.Rows[0] : null;
+        }
+
         public DataRow? GetFirstRecord(string tableName, string condition = "1=1", params MySqlParameter[] parameters)
         {
             string query = $"SELECT * FROM {tableName} WHERE {condition} LIMIT 1;";
