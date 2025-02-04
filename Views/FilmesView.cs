@@ -434,7 +434,7 @@ namespace Aniflix
             else if (editando)
             {
                 editando = false;
-                EditarButton.Text = "Salvar";
+                EditarButton.Text = "Editar";
                 var cancelar = MessageBox.Show("Cancelar edição?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (cancelar == DialogResult.Yes)
@@ -444,6 +444,8 @@ namespace Aniflix
                 }
                 else
                 {
+                    EditarButton.Text = "Salvar";
+
                     var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (atualizar == DialogResult.Yes)
