@@ -13,7 +13,7 @@ namespace Aniflix.Controllers
         {
             var filme = _conn.SelectData("filmes", "codigo = @codigo", new MySqlParameter("@codigo", filmes.Codigo));
 
-            if (filme != null)
+            if (filme.Rows.Count > 0)
             {
                 MessageBox.Show("Filme " + filmes.Titulo + " já está cadastrado!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
