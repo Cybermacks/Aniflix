@@ -444,10 +444,22 @@ namespace Aniflix
                 else if (cancelar == DialogResult.No)
                 {
                     editando = true;
-                    EditarButton.Text = "Salvar Alterações";
+                    EditarButton.Text = "Salvar";
                     Functions.UndoReadOnly(this);
 
+                    if (EditarButton.Text == "Salvar")
+                    {
+                        var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                        if (atualizar == DialogResult.Yes)
+                        {
+
+                            FilmesController.AtualizaFilme(filmes);
+                        }
+                        Functions.DoReadOnly(this);
+                        EditarButton.Text = "Editar";
+                        editando = false;
+                    }
                 }
             }
         }
