@@ -458,7 +458,7 @@ namespace Aniflix
                 }
                 else if (c is ComboBox comboBox)
                 {
-                    comboBox.Enabled = true;
+                    comboBox.Enabled = false;
                 }
             }
         }
@@ -477,7 +477,7 @@ namespace Aniflix
                 }
                 else if (c is ComboBox comboBox)
                 {
-                    comboBox.Enabled = false;
+                    comboBox.Enabled = true;
                 }
             }
         }
