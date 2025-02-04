@@ -395,7 +395,7 @@ namespace Aniflix
 
         private void ProximoButton_Click(object sender, EventArgs e)
         {
-            DataRow nextRecord = FilmesController.ProcuraFilmeProximo(currentId);
+            var nextRecord = FilmesController.ProcuraFilmeProximo(currentId);
 
             if (nextRecord != null)
             {
