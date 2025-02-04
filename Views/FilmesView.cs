@@ -407,35 +407,31 @@ namespace Aniflix
 
             var resposta = MessageBox.Show("Deseja realmente editar o filme?", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-
-
-            if (resposta == 0)
+            if (resposta == DialogResult.Yes)
             {
-                MessageBox.Show("Por favor, insira o código do filme.");
-                FilmesCodigoText.Focus();
-            }
 
-            var filmes = new Filmes
-            {
-                Codigo = FilmesCodigoText.Text,
-                Titulo = FilmesTituloText.Text,
-                Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
-                Sinopse = FilmesSinopseText.Text,
-                TituloOriginal = FilmesTituloOriginalText.Text,
-                DataLancamento = FilmesDataLancamentoText.Text,
-                TituloAlternativo = FilmesTituloAlternativoText.Text,
-                Franquia = FilmesFranquiaText.Text,
-                Genero = FilmesGeneroText.Text,
-                Tags = FilmesTagsText.Text,
-                Diretor = FilmesDiretorText.Text,
-                MCU = FilmesFaseMCUText.Text,
-                Estrelas = FilmesEstrelasText.Text,
-                Estudio = FilmesEstudioText.Text
-            };
+                var filmes = new Filmes
+                {
+                    Codigo = FilmesCodigoText.Text,
+                    Titulo = FilmesTituloText.Text,
+                    Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
+                    Sinopse = FilmesSinopseText.Text,
+                    TituloOriginal = FilmesTituloOriginalText.Text,
+                    DataLancamento = FilmesDataLancamentoText.Text,
+                    TituloAlternativo = FilmesTituloAlternativoText.Text,
+                    Franquia = FilmesFranquiaText.Text,
+                    Genero = FilmesGeneroText.Text,
+                    Tags = FilmesTagsText.Text,
+                    Diretor = FilmesDiretorText.Text,
+                    MCU = FilmesFaseMCUText.Text,
+                    Estrelas = FilmesEstrelasText.Text,
+                    Estudio = FilmesEstudioText.Text
+                };
 
-            if (!string.IsNullOrEmpty(filmes.Codigo))
-            {
-                FilmesController.AtualizaFilme(filmes);
+                if (!string.IsNullOrEmpty(filmes.Codigo))
+                {
+                    FilmesController.AtualizaFilme(filmes);
+                }
             }
         }
     }
