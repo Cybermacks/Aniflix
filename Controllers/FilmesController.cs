@@ -44,7 +44,7 @@ namespace Aniflix.Controllers
         }
         public static Filmes? GetFirstFilme()
         {
-            return _conn.Query<Filmes>("SELECT * FROM filmes LIMIT 1").FirstOrDefault() ?? new Filmes();
+            return _conn.GetFirstRecord("filmes");
         }
 
         public static Filmes? GetNextFilme(int id)
