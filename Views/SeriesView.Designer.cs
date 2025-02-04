@@ -237,9 +237,9 @@ partial class SeriesView
         label13.AutoSize = true;
         label13.Location = new Point(399, 473);
         label13.Name = "label13";
-        label13.Size = new Size(94, 15);
+        label13.Size = new Size(89, 15);
         label13.TabIndex = 65;
-        label13.Text = "Gênero do Filme";
+        label13.Text = "Gênero da Série";
         // 
         // label10
         // 
@@ -299,7 +299,7 @@ partial class SeriesView
         // 
         FilmesGeneroText.Location = new Point(399, 491);
         FilmesGeneroText.Name = "FilmesGeneroText";
-        FilmesGeneroText.PlaceholderText = "Gênero do Filme";
+        FilmesGeneroText.PlaceholderText = "Gênero da Série";
         FilmesGeneroText.Size = new Size(374, 23);
         FilmesGeneroText.TabIndex = 58;
         // 
