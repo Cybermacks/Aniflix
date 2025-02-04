@@ -428,7 +428,6 @@ namespace Aniflix
             if (!editando)
             {
                 editando = true;
-                EditarButton.Text = "Cancelar";
                 Functions.UndoReadOnly(this);
             }
             else
