@@ -291,7 +291,7 @@ namespace Aniflix
             FilmesTituloAlternativoText.Text = "--";
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
-            SetReadonly();
+            SetReadonly(this);
         }
 
         private void CopiarButton_Click(object sender, EventArgs e)
