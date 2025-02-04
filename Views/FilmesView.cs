@@ -395,11 +395,16 @@ namespace Aniflix
 
         private void ProximoButton_Click(object sender, EventArgs e)
         {
-            DataRow nextRecord = DatabaseConnection.Instance.GetNextRecord("usuarios", currentId);
+            DataRow nextRecord = FilmesController.ProcuraFilmeProximo(currentId);
+
             if (nextRecord != null)
+            {
                 LoadRecord(nextRecord);
+            }
             else
+            {
                 MessageBox.Show("Último registro alcançado.");
+            }
         }
 
         private void AnteriorButton_Click(object sender, EventArgs e)
