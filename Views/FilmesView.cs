@@ -413,7 +413,12 @@ namespace Aniflix
                 EditarButton.Text = "Salvar";
                 Functions.UndoReadOnly(this);
             }
-            else
+            else if (editando)
+            {
+                editando = false;
+                EditarButton.Text = "Cancelar";
+                Functions.DoReadOnly(this);
+            }
             {
                 var filmes = new Filmes
                 {
@@ -440,17 +445,6 @@ namespace Aniflix
 
                     FilmesController.AtualizaFilme(filmes);
                 }
-                else if (resposta == DialogResult.No)
-                {
-
-                }
-                else
-                {
-                    return;
-                }
-
-
-
                 Functions.DoReadOnly(this);
                 EditarButton.Text = "Editar";
                 editando = false;
