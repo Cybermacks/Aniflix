@@ -301,7 +301,7 @@
             EstrelasText.PlaceholderText = "Estrelas";
             EstrelasText.Size = new Size(762, 23);
             EstrelasText.TabIndex = 33;
-            EstrelasText.TextChanged += EstrelasText_TextChanged;
+
             // 
             // FaseMCUText
             // 
@@ -311,7 +311,7 @@
             FaseMCUText.Size = new Size(96, 23);
             FaseMCUText.TabIndex = 34;
             FaseMCUText.Text = "--";
-            FaseMCUText.TextChanged += FaseMCUText_TextChanged;
+
             // 
             // ResumoText
             // 
@@ -329,7 +329,7 @@
             EstudioText.PlaceholderText = "Estúdio";
             EstudioText.Size = new Size(762, 23);
             EstudioText.TabIndex = 37;
-            EstudioText.TextChanged += EstudioText_TextChanged;
+
             // 
             // label8
             // 
@@ -368,7 +368,7 @@
             SalvarButton.TabIndex = 39;
             SalvarButton.Text = "Inserir Novo";
             SalvarButton.UseVisualStyleBackColor = false;
-            SalvarButton.Click += SalvarButton_Click;
+
             // 
             // EditarButton
             // 
