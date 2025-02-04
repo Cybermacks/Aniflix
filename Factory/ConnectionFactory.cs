@@ -95,14 +95,12 @@ namespace Aniflix.Factory
             DataTable table = GetDataTable(query, new MySqlParameter("@id", id));
             return table.Rows.Count > 0 ? table.Rows[0] : null;
         }
-
         public DataRow? GetNextRecord(string tableName, int currentId)
         {
             string query = $"SELECT * FROM {tableName} WHERE id > @currentId ORDER BY id ASC LIMIT 1;";
             DataTable table = GetDataTable(query, new MySqlParameter("@currentId", currentId));
             return table.Rows.Count > 0 ? table.Rows[0] : null;
         }
-
         public DataRow? GetPreviousRecord(string tableName, int currentId)
         {
             string query = $"SELECT * FROM {tableName} WHERE id < @currentId ORDER BY id DESC LIMIT 1;";
