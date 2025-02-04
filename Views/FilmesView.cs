@@ -479,6 +479,10 @@ namespace Aniflix
                 {
                     comboBox.Enabled = true;
                 }
+                else if (c is MaskedTextBox maskTextBox)
+                {
+                    maskTextBox.ReadOnly = false;
+                }
             }
         }
     }
