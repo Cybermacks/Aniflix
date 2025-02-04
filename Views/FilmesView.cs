@@ -404,6 +404,17 @@ namespace Aniflix
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
+
+            var resposta = MessageBox.Show("Deseja realmente editar o filme?", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+
+            if (resposta == 0)
+            {
+                MessageBox.Show("Por favor, insira o código do filme.");
+                FilmesCodigoText.Focus();
+            }
+
             var filmes = new Filmes
             {
                 Codigo = FilmesCodigoText.Text,
