@@ -56,7 +56,7 @@ partial class SeriesView
         label5 = new Label();
         label6 = new Label();
         label7 = new Label();
-        FilmesTagsText = new TextBox();
+        SeriesTagsText = new TextBox();
         FilmesTituloOriginalText = new TextBox();
         label4 = new Label();
         label3 = new Label();
@@ -190,7 +190,7 @@ partial class SeriesView
         // 
         // FilmesFaseMCUText
         // 
-        FilmesFaseMCUText.Location = new Point(679, 667);
+        FilmesFaseMCUText.Location = new Point(677, 535);
         FilmesFaseMCUText.Name = "FilmesFaseMCUText";
         FilmesFaseMCUText.PlaceholderText = "Fase MCU";
         FilmesFaseMCUText.Size = new Size(96, 23);
@@ -323,7 +323,7 @@ partial class SeriesView
         // label6
         // 
         label6.AutoSize = true;
-        label6.Location = new Point(679, 649);
+        label6.Location = new Point(677, 517);
         label6.Name = "label6";
         label6.Size = new Size(60, 15);
         label6.TabIndex = 55;
@@ -338,13 +338,13 @@ partial class SeriesView
         label7.TabIndex = 54;
         label7.Text = "Título Original";
         // 
-        // FilmesTagsText
+        // SeriesTagsText
         // 
-        FilmesTagsText.Location = new Point(12, 535);
-        FilmesTagsText.Name = "FilmesTagsText";
-        FilmesTagsText.PlaceholderText = "Tags";
-        FilmesTagsText.Size = new Size(761, 23);
-        FilmesTagsText.TabIndex = 53;
+        SeriesTagsText.Location = new Point(13, 535);
+        SeriesTagsText.Name = "SeriesTagsText";
+        SeriesTagsText.PlaceholderText = "Tags";
+        SeriesTagsText.Size = new Size(658, 23);
+        SeriesTagsText.TabIndex = 53;
         // 
         // FilmesTituloOriginalText
         // 
@@ -357,7 +357,7 @@ partial class SeriesView
         // label4
         // 
         label4.AutoSize = true;
-        label4.Location = new Point(634, 15);
+        label4.Location = new Point(630, 15);
         label4.Name = "label4";
         label4.Size = new Size(39, 15);
         label4.TabIndex = 51;
@@ -551,7 +551,7 @@ partial class SeriesView
         Controls.Add(label5);
         Controls.Add(label6);
         Controls.Add(label7);
-        Controls.Add(FilmesTagsText);
+        Controls.Add(SeriesTagsText);
         Controls.Add(FilmesTituloOriginalText);
         Controls.Add(label4);
         Controls.Add(label3);
@@ -597,7 +597,7 @@ partial class SeriesView
     private Label label5;
     private Label label6;
     private Label label7;
-    private TextBox FilmesTagsText;
+    private TextBox SeriesTagsText;
     private TextBox FilmesTituloOriginalText;
     private Label label4;
     private Label label3;
