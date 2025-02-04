@@ -64,7 +64,7 @@
             AnteriorButton = new Button();
             ProximoButton = new Button();
             VoltarButton = new Button();
-            SuspendLayout();
+            //SuspendLayout();
             // 
             // CodigoText
             // 
