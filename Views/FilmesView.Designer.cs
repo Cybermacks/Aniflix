@@ -231,7 +231,7 @@
             FilmesTituloAlternativoText.Size = new Size(550, 23);
             FilmesTituloAlternativoText.TabIndex = 21;
             FilmesTituloAlternativoText.Text = "--";
-            FilmesTituloAlternativoText.TextChanged += FilmesTituloAlternativoText_TextChanged;
+            FilmesTituloAlternativoText.TextChanged += TituloAlternativoText_TextChanged;
             // 
             // FilmesFranquiaText
             // 
@@ -241,7 +241,7 @@
             FilmesFranquiaText.Size = new Size(382, 23);
             FilmesFranquiaText.TabIndex = 20;
             FilmesFranquiaText.Text = "--";
-            FilmesFranquiaText.TextChanged += FilmesFranquiaText_TextChanged;
+            FilmesFranquiaText.TextChanged += FranquiaText_TextChanged;
             // 
             // FilmesDataLancamentoText
             // 
@@ -251,7 +251,7 @@
             FilmesDataLancamentoText.Size = new Size(118, 23);
             FilmesDataLancamentoText.TabIndex = 26;
             FilmesDataLancamentoText.ValidatingType = typeof(DateTime);
-            FilmesDataLancamentoText.MaskInputRejected += FilmesDataLancamentoText_MaskInputRejected;
+            FilmesDataLancamentoText.MaskInputRejected += DataLancamentoText_MaskInputRejected;
             // 
             // label10
             // 
@@ -305,7 +305,7 @@
             FilmesEstrelasText.PlaceholderText = "Estrelas";
             FilmesEstrelasText.Size = new Size(762, 23);
             FilmesEstrelasText.TabIndex = 33;
-            FilmesEstrelasText.TextChanged += FilmesEstrelasText_TextChanged;
+            FilmesEstrelasText.TextChanged += EstrelasText_TextChanged;
             // 
             // FilmesFaseMCUText
             // 
