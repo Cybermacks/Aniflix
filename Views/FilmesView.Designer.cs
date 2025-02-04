@@ -73,8 +73,6 @@
             CodigoText.PlaceholderText = "Código";
             CodigoText.Size = new Size(100, 23);
             CodigoText.TabIndex = 0;
-            CodigoText.KeyPress += CodigoText_KeyPress;
-            CodigoText.Leave += CodigoText_Leave;
             // 
             // TituloText
             // 
@@ -83,7 +81,7 @@
             TituloText.PlaceholderText = "Título";
             TituloText.Size = new Size(506, 23);
             TituloText.TabIndex = 1;
-            TituloText.TextChanged += TituloText_TextChanged;
+
             // 
             // AudioBox
             // 
@@ -94,7 +92,6 @@
             AudioBox.Size = new Size(144, 23);
             AudioBox.TabIndex = 2;
             AudioBox.Text = "Dublado";
-            AudioBox.SelectedIndexChanged += AudioBox_SelectedIndexChanged;
             // 
             // SinopseText
             // 
