@@ -433,8 +433,15 @@ namespace Aniflix
             }
             else
             {
-                editando = false;
-                EditarButton.Text = "Atualizar";
+
+                var cancelar = MessageBox.Show("Cancelar a edição do filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (cancelar == DialogResult.Yes)
+                {
+                    editando = false;
+                    EditarButton.Text = "Editar";
+                }
+
 
                 /*var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
