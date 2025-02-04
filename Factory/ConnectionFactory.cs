@@ -40,7 +40,10 @@ namespace Aniflix.Factory
         {
             using var cmd = new MySqlCommand(query, GetConnection());
             if (parameters != null)
+            {
                 cmd.Parameters.AddRange(parameters);
+            }
+
             return cmd.ExecuteNonQuery();
         }
 
