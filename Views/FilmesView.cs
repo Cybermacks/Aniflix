@@ -404,7 +404,7 @@ namespace Aniflix
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Editando " + FilmesTituloText.Text + " .", "Filmes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBox.Show("Editando " + FilmesTituloText.Text + " .", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Question);
 
             var filmes = new Filmes
             {
