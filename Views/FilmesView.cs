@@ -301,7 +301,6 @@ namespace Aniflix
             FilmesResumoText.Copy();
         }
 
-
         private void CarregarFilme()
         {
             var filme = FilmesController.BuscaPrimeiroFilme();
@@ -324,7 +323,6 @@ namespace Aniflix
                 FilmesEstudioText.Text = filme["estudio"].ToString();
             }
         }
-
         private void SalvarButton_Click(object sender, EventArgs e)
         {
             var filmes = new Filmes
