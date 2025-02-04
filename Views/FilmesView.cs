@@ -27,8 +27,8 @@ namespace Aniflix
                     DefaultCountry = "BR",
                 };
 
-                var movieTask = client.GetMovieAsync(FilmesCodigoText.Text);
-                var creditsTask = client.GetMovieCreditsAsync(Convert.ToInt32(FilmesCodigoText.Text));
+                var movieTask = client.GetMovieAsync(CodigoText.Text);
+                var creditsTask = client.GetMovieCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
                 await Task.WhenAll(movieTask, creditsTask);
 
@@ -39,15 +39,15 @@ namespace Aniflix
                 {
                     Invoke((Action)(() =>
                     {
-                        FilmesTituloText.Text = movie.Title;
-                        FilmesSinopseText.Text = movie.Overview;
-                        FilmesTituloOriginalText.Text = movie.OriginalTitle;
-                        FilmesDataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
+                        TituloText.Text = movie.Title;
+                        SinopseText.Text = movie.Overview;
+                        TituloOriginalText.Text = movie.OriginalTitle;
+                        DataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
                     }));
 
                     if (
                         DateTime.TryParseExact(
-                            FilmesDataLancamentoText.Text,
+                            DataLancamentoText.Text,
                             "dd/MM/yyyy",
                             CultureInfo.InvariantCulture,
                             DateTimeStyles.None,
@@ -56,7 +56,7 @@ namespace Aniflix
                     )
                     {
                         string ano = releaseData.Year.ToString();
-                        FilmesTagsText.Text = $"#Filme #Filme{ano}";
+                        TagsText.Text = $"#Filme #Filme{ano}";
                     }
 
                     if (movie.Genres != null && movie.Genres.Count > 2)
@@ -97,7 +97,7 @@ namespace Aniflix
                         FormatGenre(movie.Genres[1].Name, hashtags);
                         FormatGenre(movie.Genres[2].Name, hashtags);
 
-                        FilmesGeneroText.Text = string.Join(" ", hashtags);
+                        GeneroText.Text = string.Join(" ", hashtags);
                     }
                 }
                 else
@@ -105,7 +105,7 @@ namespace Aniflix
                     Invoke(() =>
                     {
                         MessageBox.Show("Nenhum filme encontrado.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        FilmesCodigoText.Focus();
+                        CodigoText.Focus();
                     });
                 }
 
@@ -119,14 +119,14 @@ namespace Aniflix
 
                     Invoke((Action)(() =>
                     {
-                        FilmesDiretorText.Text = string.Join(" ", StringExtensions.ClearLists(directors));
+                        DiretorText.Text = string.Join(" ", StringExtensions.ClearLists(directors));
                     }));
                 }
                 else
                 {
                     Invoke((Action)(() =>
                     {
-                        FilmesDiretorText.Text = string.Empty;
+                        DiretorText.Text = string.Empty;
                     }));
                 }
 
@@ -139,14 +139,14 @@ namespace Aniflix
                     .ToList();
                     Invoke((Action)(() =>
                     {
-                        FilmesEstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
+                        EstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
                     }));
                 }
                 else
                 {
                     Invoke((Action)(() =>
                     {
-                        FilmesEstrelasText.Text = string.Empty;
+                        EstrelasText.Text = string.Empty;
                     }));
                 }
 
@@ -159,14 +159,14 @@ namespace Aniflix
                     .ToList();
                     Invoke((Action)(() =>
                     {
-                        FilmesEstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
+                        EstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
                     }));
                 }
                 else
                 {
                     Invoke((Action)(() =>
                     {
-                        FilmesEstudioText.Text = string.Empty;
+                        EstudioText.Text = string.Empty;
                     }));
                 }
             }
@@ -182,37 +182,37 @@ namespace Aniflix
         private void UpdateData()
         {
             var model = new FilmesServices(
-                titulo: FilmesTituloText.Text,
-                audio: FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
-                sinopse: FilmesSinopseText.Text,
-                tituloOriginal: FilmesTituloOriginalText.Text,
-                dataLancamento: FilmesDataLancamentoText.Text,
-                tituloAlternativo: FilmesTituloAlternativoText.Text,
-                franquia: FilmesFranquiaText.Text,
-                genero: FilmesGeneroText.Text,
-                tags: FilmesTagsText.Text,
-                diretor: FilmesDiretorText.Text,
-                  mcu: FilmesFaseMCUText.Text,
-                estrelas: FilmesEstrelasText.Text,
-                estudio: FilmesEstudioText.Text
+                titulo: TituloText.Text,
+                audio: AudioBox.SelectedItem?.ToString() ?? string.Empty,
+                sinopse: SinopseText.Text,
+                tituloOriginal: TituloOriginalText.Text,
+                dataLancamento: DataLancamentoText.Text,
+                tituloAlternativo: TituloAlternativoText.Text,
+                franquia: FranquiaText.Text,
+                genero: GeneroText.Text,
+                tags: TagsText.Text,
+                diretor: DiretorText.Text,
+                  mcu: FaseMCUText.Text,
+                estrelas: EstrelasText.Text,
+                estudio: EstudioText.Text
 
                 );
-            FilmesResumoText.Text = model.GetFormattedText();
+            ResumoText.Text = model.GetFormattedText();
         }
 
-        private void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
+        private void CodigoText_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
-        private async void FilmesCodigoText_Leave(object sender, EventArgs e)
+        private async void CodigoText_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(FilmesCodigoText.Text))
+            if (string.IsNullOrEmpty(CodigoText.Text))
             {
                 MessageBox.Show("Por favor, insira o código do filme.");
-                FilmesCodigoText.Focus();
+                CodigoText.Focus();
             }
             else
             {
@@ -220,52 +220,52 @@ namespace Aniflix
             }
         }
 
-        private void FilmesTituloText_TextChanged(object sender, EventArgs e)
+        private void TituloText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesAudioBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void AudioBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesSinopseText_TextChanged(object sender, EventArgs e)
+        private void SinopseText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesTituloOriginalText_TextChanged(object sender, EventArgs e)
+        private void TituloOriginalText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesDataLancamentoText_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void DataLancamentoText_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesTituloAlternativoText_TextChanged(object sender, EventArgs e)
+        private void TituloAlternativoText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesTagsText_TextChanged(object sender, EventArgs e)
+        private void TagsText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesFranquiaText_TextChanged(object sender, EventArgs e)
+        private void FranquiaText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesGeneroText_TextChanged(object sender, EventArgs e)
+        private void GeneroText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesDiretorText_TextChanged(object sender, EventArgs e)
+        private void DiretorText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
@@ -275,12 +275,12 @@ namespace Aniflix
             UpdateData();
         }
 
-        private void FilmesEstrelasText_TextChanged(object sender, EventArgs e)
+        private void EstrelasText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
 
-        private void FilmesEstudioText_TextChanged(object sender, EventArgs e)
+        private void EstudioText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
@@ -290,15 +290,15 @@ namespace Aniflix
             UpdateData();
             CarregarFilme();
             Functions.DoReadOnly(this);
-            FilmesTituloAlternativoText.Text = "--";
-            FilmesFaseMCUText.Text = "--";
-            FilmesFranquiaText.Text = "--";
+            TituloAlternativoText.Text = "--";
+            FaseMCUText.Text = "--";
+            FranquiaText.Text = "--";
         }
 
         private void CopiarButton_Click(object sender, EventArgs e)
         {
-            FilmesResumoText.SelectAll();
-            FilmesResumoText.Copy();
+            ResumoText.SelectAll();
+            ResumoText.Copy();
         }
 
         private void CarregarFilme()
@@ -307,40 +307,40 @@ namespace Aniflix
 
             if (filme != null)
             {
-                FilmesCodigoText.Text = filme["codigo"].ToString();
-                FilmesTituloText.Text = filme["titulo"].ToString();
-                FilmesAudioBox.SelectedItem = filme["audio"].ToString();
-                FilmesSinopseText.Text = filme["sinopse"].ToString();
-                FilmesTituloOriginalText.Text = filme["titulo_original"].ToString();
-                FilmesDataLancamentoText.Text = filme["data_lancamento"].ToString();
-                FilmesTituloAlternativoText.Text = filme["titulo_alternativo"].ToString();
-                FilmesFranquiaText.Text = filme["franquia"].ToString();
-                FilmesGeneroText.Text = filme["genero"].ToString();
-                FilmesTagsText.Text = filme["tags"].ToString();
-                FilmesDiretorText.Text = filme["diretor"].ToString();
-                FilmesFaseMCUText.Text = filme["mcu"].ToString();
-                FilmesEstrelasText.Text = filme["estrelas"].ToString();
-                FilmesEstudioText.Text = filme["estudio"].ToString();
+                CodigoText.Text = filme["codigo"].ToString();
+                TituloText.Text = filme["titulo"].ToString();
+                AudioBox.SelectedItem = filme["audio"].ToString();
+                SinopseText.Text = filme["sinopse"].ToString();
+                TituloOriginalText.Text = filme["titulo_original"].ToString();
+                DataLancamentoText.Text = filme["data_lancamento"].ToString();
+                TituloAlternativoText.Text = filme["titulo_alternativo"].ToString();
+                FranquiaText.Text = filme["franquia"].ToString();
+                GeneroText.Text = filme["genero"].ToString();
+                TagsText.Text = filme["tags"].ToString();
+                DiretorText.Text = filme["diretor"].ToString();
+                FaseMCUText.Text = filme["mcu"].ToString();
+                EstrelasText.Text = filme["estrelas"].ToString();
+                EstudioText.Text = filme["estudio"].ToString();
             }
         }
         private void SalvarButton_Click(object sender, EventArgs e)
         {
             var filmes = new Filmes
             {
-                Codigo = FilmesCodigoText.Text,
-                Titulo = FilmesTituloText.Text,
-                Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
-                Sinopse = FilmesSinopseText.Text,
-                TituloOriginal = FilmesTituloOriginalText.Text,
-                DataLancamento = FilmesDataLancamentoText.Text,
-                TituloAlternativo = FilmesTituloAlternativoText.Text,
-                Franquia = FilmesFranquiaText.Text,
-                Genero = FilmesGeneroText.Text,
-                Tags = FilmesTagsText.Text,
-                Diretor = FilmesDiretorText.Text,
-                MCU = FilmesFaseMCUText.Text,
-                Estrelas = FilmesEstrelasText.Text,
-                Estudio = FilmesEstudioText.Text
+                Codigo = CodigoText.Text,
+                Titulo = TituloText.Text,
+                Audio = AudioBox.SelectedItem?.ToString() ?? string.Empty,
+                Sinopse = SinopseText.Text,
+                TituloOriginal = TituloOriginalText.Text,
+                DataLancamento = DataLancamentoText.Text,
+                TituloAlternativo = TituloAlternativoText.Text,
+                Franquia = FranquiaText.Text,
+                Genero = GeneroText.Text,
+                Tags = TagsText.Text,
+                Diretor = DiretorText.Text,
+                MCU = FaseMCUText.Text,
+                Estrelas = EstrelasText.Text,
+                Estudio = EstudioText.Text
             };
 
             if (!string.IsNullOrEmpty(filmes.Codigo))
@@ -357,20 +357,20 @@ namespace Aniflix
             if (record != null)
             {
                 currentId = Convert.ToInt32(record["id"]);
-                FilmesCodigoText.Text = record["codigo"].ToString();
-                FilmesTituloText.Text = record["titulo"].ToString();
-                FilmesAudioBox.SelectedItem = record["audio"].ToString();
-                FilmesSinopseText.Text = record["sinopse"].ToString();
-                FilmesTituloOriginalText.Text = record["titulo_original"].ToString();
-                FilmesDataLancamentoText.Text = record["data_lancamento"].ToString();
-                FilmesTituloAlternativoText.Text = record["titulo_alternativo"].ToString();
-                FilmesFranquiaText.Text = record["franquia"].ToString();
-                FilmesGeneroText.Text = record["genero"].ToString();
-                FilmesTagsText.Text = record["tags"].ToString();
-                FilmesDiretorText.Text = record["diretor"].ToString();
-                FilmesFaseMCUText.Text = record["mcu"].ToString();
-                FilmesEstrelasText.Text = record["estrelas"].ToString();
-                FilmesEstudioText.Text = record["estudio"].ToString();
+                CodigoText.Text = record["codigo"].ToString();
+                TituloText.Text = record["titulo"].ToString();
+                AudioBox.SelectedItem = record["audio"].ToString();
+                SinopseText.Text = record["sinopse"].ToString();
+                TituloOriginalText.Text = record["titulo_original"].ToString();
+                DataLancamentoText.Text = record["data_lancamento"].ToString();
+                TituloAlternativoText.Text = record["titulo_alternativo"].ToString();
+                FranquiaText.Text = record["franquia"].ToString();
+                GeneroText.Text = record["genero"].ToString();
+                TagsText.Text = record["tags"].ToString();
+                DiretorText.Text = record["diretor"].ToString();
+                FaseMCUText.Text = record["mcu"].ToString();
+                EstrelasText.Text = record["estrelas"].ToString();
+                EstudioText.Text = record["estudio"].ToString();
             }
         }
 
@@ -407,20 +407,20 @@ namespace Aniflix
         {
             var filmes = new Filmes
             {
-                Codigo = FilmesCodigoText.Text,
-                Titulo = FilmesTituloText.Text,
-                Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
-                Sinopse = FilmesSinopseText.Text,
-                TituloOriginal = FilmesTituloOriginalText.Text,
-                DataLancamento = FilmesDataLancamentoText.Text,
-                TituloAlternativo = FilmesTituloAlternativoText.Text,
-                Franquia = FilmesFranquiaText.Text,
-                Genero = FilmesGeneroText.Text,
-                Tags = FilmesTagsText.Text,
-                Diretor = FilmesDiretorText.Text,
-                MCU = FilmesFaseMCUText.Text,
-                Estrelas = FilmesEstrelasText.Text,
-                Estudio = FilmesEstudioText.Text
+                Codigo = CodigoText.Text,
+                Titulo = TituloText.Text,
+                Audio = AudioBox.SelectedItem?.ToString() ?? string.Empty,
+                Sinopse = SinopseText.Text,
+                TituloOriginal = TituloOriginalText.Text,
+                DataLancamento = DataLancamentoText.Text,
+                TituloAlternativo = TituloAlternativoText.Text,
+                Franquia = FranquiaText.Text,
+                Genero = GeneroText.Text,
+                Tags = TagsText.Text,
+                Diretor = DiretorText.Text,
+                MCU = FaseMCUText.Text,
+                Estrelas = EstrelasText.Text,
+                Estudio = EstudioText.Text
             };
 
             if (!editando)
