@@ -181,11 +181,11 @@ partial class SeriesView
         // 
         // ResumoText
         // 
-        ResumoText.Location = new Point(779, 33);
+        ResumoText.Location = new Point(780, 33);
         ResumoText.Multiline = true;
         ResumoText.Name = "ResumoText";
         ResumoText.PlaceholderText = "Resumo";
-        ResumoText.Size = new Size(601, 657);
+        ResumoText.Size = new Size(605, 657);
         ResumoText.TabIndex = 71;
         // 
         // FaseMCUText
