@@ -406,11 +406,10 @@ namespace Aniflix
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
-
             if (!editando)
             {
                 editando = true;
-                EditarButton.Text = "Editando";
+                EditarButton.Text = "Salvar";
             }
             else
             {
@@ -439,6 +438,9 @@ namespace Aniflix
 
                     //FilmesController.AtualizaFilme(filmes);
                 }
+                DoReadOnly(this);
+                EditarButton.Text = "Editar";
+                editando = false;
             }
         }
         private static void DoReadOnly(Control control)
