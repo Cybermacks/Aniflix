@@ -87,7 +87,8 @@ namespace Aniflix.Factory
                 string setClause = string.Join(", ", parameters.Select(p => $"{p.ParameterName.TrimStart('@')} = @{p.ParameterName.TrimStart('@')}"));
                 string query = $"UPDATE {tableName} SET {setClause} WHERE {condition};";
                 return ExecuteQuery(query, parameters);
-                catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
