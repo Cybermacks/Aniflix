@@ -42,7 +42,7 @@ namespace Aniflix.Controllers
                 }
             }
         }
-        public static Filmes? GetFirstFilme()
+        public static string GetFirstFilme()
         {
             return _conn.GetFirstRecord("filmes");
         }
