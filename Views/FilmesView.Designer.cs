@@ -35,7 +35,6 @@
             SalvarButton = new Button();
             CopiarButton = new Button();
             EstudioText = new TextBox();
-            label8 = new Label();
             ResumoText = new TextBox();
             FaseMCUText = new TextBox();
             EstrelasText = new TextBox();
@@ -62,6 +61,9 @@
             AudioBox = new ComboBox();
             TituloText = new TextBox();
             CodigoText = new TextBox();
+            label11 = new Label();
+            textBox1 = new TextBox();
+            label9 = new Label();
             SuspendLayout();
             // 
             // VoltarButton
@@ -71,7 +73,7 @@
             VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             VoltarButton.ForeColor = Color.White;
             VoltarButton.ImageIndex = 0;
-            VoltarButton.Location = new Point(1117, 591);
+            VoltarButton.Location = new Point(1070, 597);
             VoltarButton.Name = "VoltarButton";
             VoltarButton.Size = new Size(137, 61);
             VoltarButton.TabIndex = 125;
@@ -85,7 +87,7 @@
             ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             ProximoButton.ForeColor = Color.White;
             ProximoButton.ImageIndex = 3;
-            ProximoButton.Location = new Point(939, 591);
+            ProximoButton.Location = new Point(892, 597);
             ProximoButton.Name = "ProximoButton";
             ProximoButton.Size = new Size(137, 61);
             ProximoButton.TabIndex = 124;
@@ -99,7 +101,7 @@
             AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             AnteriorButton.ForeColor = Color.White;
             AnteriorButton.ImageIndex = 4;
-            AnteriorButton.Location = new Point(761, 591);
+            AnteriorButton.Location = new Point(714, 597);
             AnteriorButton.Name = "AnteriorButton";
             AnteriorButton.Size = new Size(137, 61);
             AnteriorButton.TabIndex = 123;
@@ -113,7 +115,7 @@
             EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             EditarButton.ForeColor = Color.White;
             EditarButton.ImageIndex = 2;
-            EditarButton.Location = new Point(583, 591);
+            EditarButton.Location = new Point(536, 597);
             EditarButton.Name = "EditarButton";
             EditarButton.Size = new Size(137, 61);
             EditarButton.TabIndex = 122;
@@ -127,7 +129,7 @@
             SalvarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             SalvarButton.ForeColor = Color.White;
             SalvarButton.ImageIndex = 2;
-            SalvarButton.Location = new Point(405, 591);
+            SalvarButton.Location = new Point(358, 597);
             SalvarButton.Name = "SalvarButton";
             SalvarButton.Size = new Size(137, 61);
             SalvarButton.TabIndex = 121;
@@ -141,7 +143,7 @@
             CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             CopiarButton.ForeColor = Color.White;
             CopiarButton.ImageIndex = 1;
-            CopiarButton.Location = new Point(227, 591);
+            CopiarButton.Location = new Point(180, 597);
             CopiarButton.Name = "CopiarButton";
             CopiarButton.Size = new Size(137, 61);
             CopiarButton.TabIndex = 120;
@@ -153,17 +155,8 @@
             EstudioText.Location = new Point(13, 532);
             EstudioText.Name = "EstudioText";
             EstudioText.PlaceholderText = "Estúdio";
-            EstudioText.Size = new Size(761, 23);
+            EstudioText.Size = new Size(658, 23);
             EstudioText.TabIndex = 119;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(13, 514);
-            label8.Name = "label8";
-            label8.Size = new Size(46, 15);
-            label8.TabIndex = 118;
-            label8.Text = "Estúdio";
             // 
             // ResumoText
             // 
@@ -176,7 +169,7 @@
             // 
             // FaseMCUText
             // 
-            FaseMCUText.Location = new Point(677, 400);
+            FaseMCUText.Location = new Point(677, 532);
             FaseMCUText.Name = "FaseMCUText";
             FaseMCUText.PlaceholderText = "Fase MCU";
             FaseMCUText.Size = new Size(96, 23);
@@ -185,7 +178,7 @@
             // 
             // EstrelasText
             // 
-            EstrelasText.Location = new Point(13, 488);
+            EstrelasText.Location = new Point(12, 488);
             EstrelasText.Name = "EstrelasText";
             EstrelasText.PlaceholderText = "Estrelas";
             EstrelasText.Size = new Size(761, 23);
@@ -194,7 +187,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(13, 426);
+            label17.Location = new Point(12, 426);
             label17.Name = "label17";
             label17.Size = new Size(43, 15);
             label17.TabIndex = 114;
@@ -221,7 +214,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(12, 382);
+            label13.Location = new Point(387, 382);
             label13.Name = "label13";
             label13.Size = new Size(89, 15);
             label13.TabIndex = 111;
@@ -265,15 +258,15 @@
             // 
             // GeneroText
             // 
-            GeneroText.Location = new Point(13, 400);
+            GeneroText.Location = new Point(387, 400);
             GeneroText.Name = "GeneroText";
             GeneroText.PlaceholderText = "Gênero da Série";
-            GeneroText.Size = new Size(658, 23);
+            GeneroText.Size = new Size(386, 23);
             GeneroText.TabIndex = 104;
             // 
             // DiretorText
             // 
-            DiretorText.Location = new Point(13, 444);
+            DiretorText.Location = new Point(12, 444);
             DiretorText.Name = "DiretorText";
             DiretorText.PlaceholderText = "Diretor";
             DiretorText.Size = new Size(761, 23);
@@ -291,7 +284,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(677, 382);
+            label6.Location = new Point(677, 514);
             label6.Name = "label6";
             label6.Size = new Size(60, 15);
             label6.TabIndex = 101;
@@ -393,11 +386,40 @@
             CodigoText.Size = new Size(100, 23);
             CodigoText.TabIndex = 90;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(13, 382);
+            label11.Name = "label11";
+            label11.Size = new Size(53, 15);
+            label11.TabIndex = 127;
+            label11.Text = "Franquia";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(13, 400);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Gênero da Série";
+            textBox1.Size = new Size(368, 23);
+            textBox1.TabIndex = 126;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(12, 514);
+            label9.Name = "label9";
+            label9.Size = new Size(46, 15);
+            label9.TabIndex = 128;
+            label9.Text = "Estúdio";
+            // 
             // FilmesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1400, 691);
+            ClientSize = new Size(1400, 695);
+            Controls.Add(label9);
+            Controls.Add(label11);
+            Controls.Add(textBox1);
             Controls.Add(VoltarButton);
             Controls.Add(ProximoButton);
             Controls.Add(AnteriorButton);
@@ -405,7 +427,6 @@
             Controls.Add(SalvarButton);
             Controls.Add(CopiarButton);
             Controls.Add(EstudioText);
-            Controls.Add(label8);
             Controls.Add(ResumoText);
             Controls.Add(FaseMCUText);
             Controls.Add(EstrelasText);
@@ -447,7 +468,6 @@
         private Button SalvarButton;
         private Button CopiarButton;
         private TextBox EstudioText;
-        private Label label8;
         private TextBox ResumoText;
         private TextBox FaseMCUText;
         private TextBox EstrelasText;
@@ -474,5 +494,8 @@
         private ComboBox AudioBox;
         private TextBox TituloText;
         private TextBox CodigoText;
+        private Label label11;
+        private TextBox textBox1;
+        private Label label9;
     }
 }
