@@ -402,6 +402,7 @@ namespace Aniflix
                 MessageBox.Show("Primeiro registro alcançado.");
             }
         }
+        private bool editando = false;
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
@@ -444,6 +445,22 @@ namespace Aniflix
                 else if (c is TextBox box)
                 {
                     box.ReadOnly = true;
+                }
+            }
+        }
+
+
+             private static void DoReadOnly(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c.Controls != null && c.Controls.Count > 0)
+                {
+                    DoReadOnly(c);
+                }
+                else if (c is TextBox box)
+                {
+                    box.ReadOnly = false;
                 }
             }
         }
