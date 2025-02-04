@@ -434,7 +434,6 @@ namespace Aniflix
                 //FilmesController.AtualizaFilme(filmes);
             }
         }
-
         private void SetReadonly(Control c)
         {
             if (c == null)
