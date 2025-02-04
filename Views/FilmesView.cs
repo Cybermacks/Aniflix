@@ -410,6 +410,7 @@ namespace Aniflix
             {
                 editando = true;
                 EditarButton.Text = "Salvar";
+                UndoReadOnly(this);
             }
             else
             {
@@ -436,7 +437,7 @@ namespace Aniflix
                 if (resposta == DialogResult.Yes)
                 {
 
-                    //FilmesController.AtualizaFilme(filmes);
+                    FilmesController.AtualizaFilme(filmes);
                 }
                 DoReadOnly(this);
                 EditarButton.Text = "Editar";
