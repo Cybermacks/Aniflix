@@ -428,12 +428,15 @@ namespace Aniflix
             if (!editando)
             {
                 editando = true;
-                EditarButton.Text = "Atualizar";
+                EditarButton.Text = "Cancelar";
                 Functions.UndoReadOnly(this);
             }
             else
             {
-                var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                editando = false;
+                EditarButton.Text = "Atualizar";
+
+                /*var atualizar = MessageBox.Show("Atualizar as informações sobre o filme " + filmes.Titulo + " ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (atualizar == DialogResult.Yes)
                 {
@@ -443,6 +446,7 @@ namespace Aniflix
                 Functions.DoReadOnly(this);
                 EditarButton.Text = "Editar";
                 editando = false;
+                */
             }
         }
     }
