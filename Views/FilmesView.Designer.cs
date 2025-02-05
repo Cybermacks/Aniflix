@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmesView));
             VoltarButton = new Button();
             ProximoButton = new Button();
             AnteriorButton = new Button();
@@ -474,6 +475,7 @@
             Controls.Add(AudioBox);
             Controls.Add(TituloText);
             Controls.Add(CodigoText);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FilmesView";
             StartPosition = FormStartPosition.CenterScreen;
