@@ -30,6 +30,7 @@ partial class SeriesView
     /// </summary>
     private void InitializeComponent()
     {
+        ComponentResourceManager resources = new ComponentResourceManager(typeof(SeriesView));
         VoltarButton = new Button();
         ProximoButton = new Button();
         AnteriorButton = new Button();
@@ -561,6 +562,7 @@ partial class SeriesView
         Controls.Add(AudioBox);
         Controls.Add(TituloText);
         Controls.Add(CodigoText);
+        Icon = (Icon)resources.GetObject("$this.Icon");
         MaximizeBox = false;
         Name = "SeriesView";
         StartPosition = FormStartPosition.CenterScreen;
