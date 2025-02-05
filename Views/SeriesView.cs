@@ -52,7 +52,7 @@ public partial class SeriesView : Form
                 )
                 {
                     string ano = releaseData.Year.ToString();
-                    TagsText.Text = $"#Filme #Filme{ano}";
+                    TagsText.Text = $"#Serie #Serie{ano} #Série #Série{ano}";
                 }
 
                 if (given.Genres != null && given.Genres.Count > 2)
@@ -100,7 +100,7 @@ public partial class SeriesView : Form
             {
                 Invoke(() =>
                 {
-                    MessageBox.Show("Nenhum filme encontrado.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Nenhuma série encontrada.", "Séries - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     CodigoText.Focus();
                 });
             }
