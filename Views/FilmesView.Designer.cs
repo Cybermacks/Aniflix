@@ -183,6 +183,7 @@
             EstrelasText.PlaceholderText = "Estrelas";
             EstrelasText.Size = new Size(761, 23);
             EstrelasText.TabIndex = 115;
+            EstrelasText.TextChanged += EstrelasText_TextChanged;
             // 
             // label17
             // 

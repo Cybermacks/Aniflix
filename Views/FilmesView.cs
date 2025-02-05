@@ -332,5 +332,10 @@ namespace Aniflix.Views
         {
             UpdateData();
         }
+
+        private void EstrelasText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
     }
 }
