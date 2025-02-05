@@ -274,7 +274,6 @@ namespace Aniflix.Views
             {
                 e.Handled = true;
             }
-
         }
 
         private async void CodigoText_Leave(object sender, EventArgs e)
