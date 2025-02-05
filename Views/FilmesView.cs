@@ -297,5 +297,20 @@ namespace Aniflix.Views
         {
             UpdateData();
         }
+
+        private void TituloOriginalText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void DataLancamentoText_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void TituloAlternativoText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
     }
 }

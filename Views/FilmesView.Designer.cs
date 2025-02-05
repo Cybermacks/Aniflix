@@ -237,6 +237,7 @@
             DataLancamentoText.Size = new Size(118, 23);
             DataLancamentoText.TabIndex = 109;
             DataLancamentoText.ValidatingType = typeof(DateTime);
+            DataLancamentoText.MaskInputRejected += DataLancamentoText_MaskInputRejected;
             // 
             // label12
             // 
@@ -255,6 +256,7 @@
             TituloAlternativoText.Size = new Size(528, 23);
             TituloAlternativoText.TabIndex = 106;
             TituloAlternativoText.Text = "--";
+            TituloAlternativoText.TextChanged += TituloAlternativoText_TextChanged;
             // 
             // GeneroText
             // 
@@ -314,6 +316,7 @@
             TituloOriginalText.PlaceholderText = "Título Original";
             TituloOriginalText.Size = new Size(638, 23);
             TituloOriginalText.TabIndex = 98;
+            TituloOriginalText.TextChanged += TituloOriginalText_TextChanged;
             // 
             // label4
             // 
