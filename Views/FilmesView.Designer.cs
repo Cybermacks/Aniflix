@@ -473,8 +473,10 @@
             Controls.Add(AudioBox);
             Controls.Add(TituloText);
             Controls.Add(CodigoText);
+            MaximizeBox = false;
             Name = "FilmesView";
-            Text = "FilmesView";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Filmes";
             Load += FilmesView_Load;
             ResumeLayout(false);
             PerformLayout();
