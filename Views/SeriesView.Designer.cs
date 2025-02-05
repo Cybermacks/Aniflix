@@ -425,6 +425,7 @@ partial class SeriesView
         CodigoText.PlaceholderText = "Código";
         CodigoText.Size = new Size(100, 23);
         CodigoText.TabIndex = 44;
+        CodigoText.Leave += CodigoText_Leave;
         // 
         // label9
         // 

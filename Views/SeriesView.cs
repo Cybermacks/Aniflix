@@ -176,4 +176,9 @@ public partial class SeriesView : Form
             }));
         }
     }
+
+    private async void CodigoText_Leave(object sender, EventArgs e)
+    {
+        await GivenData();
+    }
 }
