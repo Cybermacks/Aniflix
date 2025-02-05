@@ -22,22 +22,23 @@ public partial class SeriesView : Form
                 DefaultCountry = "BR",
             };
 
-            var movieTask = client.GetMovieAsync(CodigoText.Text);
-            var creditsTask = client.GetMovieCreditsAsync(Convert.ToInt32(CodigoText.Text));
+            var givenTask = client.GetTvShowAsync(CodigoText.Text);
+            var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
-            await Task.WhenAll(movieTask, creditsTask);
+            await Task.WhenAll(givenTask, creditsTask);
 
-            var movie = movieTask.Result;
+            var given = givenTask.Result;
             var credits = creditsTask.Result;
 
-            if (movie != null)
+
+            if (given != null)
             {
                 Invoke((Action)(() =>
                 {
-                    TituloText.Text = movie.Title;
-                    SinopseText.Text = movie.Overview;
-                    TituloOriginalText.Text = movie.OriginalTitle;
-                    DataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
+                    TituloText.Text = given.Name;
+                    SinopseText.Text = given.Overview;
+                    TituloOriginalText.Text = given.OriginalName;
+                    DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
                 }));
 
                 if (
@@ -54,7 +55,7 @@ public partial class SeriesView : Form
                     TagsText.Text = $"#Filme #Filme{ano}";
                 }
 
-                if (movie.Genres != null && movie.Genres.Count > 2)
+                if (given.Genres != null && given.Genres.Count > 2)
                 {
                     var hashtags = new HashSet<string>();
 
@@ -88,9 +89,9 @@ public partial class SeriesView : Form
                         }
                     }
 
-                    FormatGenre(movie.Genres[0].Name, hashtags);
-                    FormatGenre(movie.Genres[1].Name, hashtags);
-                    FormatGenre(movie.Genres[2].Name, hashtags);
+                    FormatGenre(given.Genres[0].Name, hashtags);
+                    FormatGenre(given.Genres[1].Name, hashtags);
+                    FormatGenre(given.Genres[2].Name, hashtags);
 
                     GeneroText.Text = string.Join(" ", hashtags);
                 }
@@ -145,10 +146,10 @@ public partial class SeriesView : Form
                 }));
             }
 
-            if (movie != null && movie.ProductionCompanies != null)
+            if (given != null && given.ProductionCompanies != null)
             {
 
-                var studios = movie!
+                var studios = given!
                 .ProductionCompanies.Take(5)
                 .Select(company => $"#{company.Name.Replace(" ", "")}")
                 .ToList();
