@@ -1,3 +1,5 @@
+using Aniflix.Views;
+
 namespace Aniflix
 {
     internal static class Program
