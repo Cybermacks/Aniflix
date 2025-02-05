@@ -347,5 +347,11 @@ namespace Aniflix.Views
         {
             UpdateData();
         }
+
+        private void CopiarButton_Click(object sender, EventArgs e)
+        {
+            ResumoText.SelectAll();
+            ResumoText.Copy();
+        }
     }
 }

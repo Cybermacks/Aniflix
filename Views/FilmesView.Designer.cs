@@ -149,6 +149,7 @@
             CopiarButton.TabIndex = 120;
             CopiarButton.Text = "Copiar Dados";
             CopiarButton.UseVisualStyleBackColor = false;
+            CopiarButton.Click += CopiarButton_Click;
             // 
             // EstudioText
             // 
