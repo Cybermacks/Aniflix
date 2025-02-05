@@ -22,14 +22,14 @@ public partial class SeriesView : Form
                 DefaultCountry = "BR",
             };
 
-            var givenTask = client.GetTvShowAsync(CodigoText.Text);
+            var codigo = int.Parse(CodigoText.Text);
+            var givenTask = client.GetTvShowAsync(codigo);
             var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
             await Task.WhenAll(givenTask, creditsTask);
 
             var given = givenTask.Result;
             var credits = creditsTask.Result;
-
 
             if (given != null)
             {
