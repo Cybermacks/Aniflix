@@ -121,6 +121,7 @@
             EditarButton.TabIndex = 122;
             EditarButton.Text = "Editar";
             EditarButton.UseVisualStyleBackColor = false;
+            EditarButton.Click += EditarButton_Click;
             // 
             // InserirButton
             // 

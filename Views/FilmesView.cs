@@ -385,5 +385,61 @@ namespace Aniflix.Views
             }
 
         }
+
+        private void EditarButton_Click(object sender, EventArgs e)
+        {
+            var filmes = new Filmes
+            {
+                Codigo = CodigoText.Text,
+                Titulo = TituloText.Text,
+                Audio = AudioBox.SelectedItem?.ToString() ?? string.Empty,
+                Sinopse = SinopseText.Text,
+                TituloOriginal = TituloOriginalText.Text,
+                DataLancamento = DataLancamentoText.Text,
+                TituloAlternativo = TituloAlternativoText.Text,
+                Franquia = FranquiaText.Text,
+                Genero = GeneroText.Text,
+                Tags = TagsText.Text,
+                Diretor = DiretorText.Text,
+                MCU = FaseMCUText.Text,
+                Estrelas = EstrelasText.Text,
+                Estudio = EstudioText.Text
+            };
+
+            if (!editando)
+            {
+                editando = true;
+                EditarButton.Text = "Cancelar";
+                Functions.UndoReadOnly(this);
+            }
+            else if (EditarButton.Text == "Cancelar")
+            {
+                var cancelar = MessageBox.Show($"Cancelar a edição do filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (cancelar == DialogResult.Yes)
+                {
+                    editando = false;
+                    Functions.DoReadOnly(this);
+                    EditarButton.Text = "Editar";
+                }
+                else
+                {
+                    EditarButton.Text = "Salvar";
+                }
+            }
+            else if (EditarButton.Text == "Salvar")
+            {
+                var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (atualizar == DialogResult.Yes)
+                {
+                    FilmesController.AtualizaFilme(filmes);
+                }
+
+                Functions.DoReadOnly(this);
+                EditarButton.Text = "Editar";
+                editando = false;
+            }
+        }
     }
 }
