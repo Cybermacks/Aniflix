@@ -384,7 +384,6 @@ namespace Aniflix.Views
             {
                 MessageBox.Show("Por favor, insira o código do filme.", "Filmes - Inserir", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void EditarButton_Click(object sender, EventArgs e)
