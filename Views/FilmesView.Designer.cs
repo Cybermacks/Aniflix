@@ -308,6 +308,7 @@
             TagsText.PlaceholderText = "Tags";
             TagsText.Size = new Size(227, 23);
             TagsText.TabIndex = 99;
+            TagsText.TextChanged += TagsText_TextChanged;
             // 
             // TituloOriginalText
             // 
@@ -410,6 +411,7 @@
             FranquiaText.PlaceholderText = "Franquia";
             FranquiaText.Size = new Size(368, 23);
             FranquiaText.TabIndex = 126;
+            FranquiaText.TextChanged += FranquiaText_TextChanged;
             // 
             // label9
             // 

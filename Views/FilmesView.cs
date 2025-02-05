@@ -312,5 +312,15 @@ namespace Aniflix.Views
         {
             UpdateData();
         }
+
+        private void TagsText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FranquiaText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
     }
 }
