@@ -468,7 +468,7 @@ namespace Aniflix.Views
             }
             else
             {
-                MessageBox.Show("Você chegou ao primeiro registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Você chegou ao último registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
