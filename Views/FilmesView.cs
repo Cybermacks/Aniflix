@@ -446,7 +446,6 @@ namespace Aniflix.Views
             {
                 MessageBox.Show("Você chegou ao primeiro registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void ProximoButton_Click(object sender, EventArgs e)
