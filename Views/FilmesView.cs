@@ -287,9 +287,7 @@ namespace Aniflix.Views
             {
                 await GetFilmesAsync();
             }
-
         }
-
         private void TituloText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
