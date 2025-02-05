@@ -359,6 +359,7 @@
             SinopseText.PlaceholderText = "Sinopse";
             SinopseText.Size = new Size(762, 217);
             SinopseText.TabIndex = 93;
+            SinopseText.TextChanged += SinopseText_TextChanged;
             // 
             // AudioBox
             // 
@@ -377,6 +378,7 @@
             TituloText.PlaceholderText = "Título";
             TituloText.Size = new Size(506, 23);
             TituloText.TabIndex = 91;
+            TituloText.TextChanged += TituloText_TextChanged;
             // 
             // CodigoText
             // 
