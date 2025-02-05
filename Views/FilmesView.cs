@@ -19,6 +19,7 @@ namespace Aniflix.Views
     public partial class FilmesView : Form
     {
         private int currentId = 0;
+        private bool editando = false;
 
         public FilmesView()
         {
