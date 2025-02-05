@@ -442,5 +442,20 @@ namespace Aniflix.Views
                 editando = false;
             }
         }
+
+        private void AnteriorButton_Click(object sender, EventArgs e)
+        {
+            var previousRecord = FilmesController.ProcuraFilmeAnterior(currentId);
+
+            if (previousRecord != null)
+            {
+                PreencheDados(previousRecord);
+            }
+            else
+            {
+                MessageBox.Show("Você chegou ao primeiro registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }

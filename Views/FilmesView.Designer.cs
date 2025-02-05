@@ -107,6 +107,7 @@
             AnteriorButton.TabIndex = 123;
             AnteriorButton.Text = "Anterior";
             AnteriorButton.UseVisualStyleBackColor = false;
+            AnteriorButton.Click += AnteriorButton_Click;
             // 
             // EditarButton
             // 
