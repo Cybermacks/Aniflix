@@ -32,7 +32,7 @@
             ProximoButton = new Button();
             AnteriorButton = new Button();
             EditarButton = new Button();
-            SalvarButton = new Button();
+            InserirButton = new Button();
             CopiarButton = new Button();
             EstudioText = new TextBox();
             ResumoText = new TextBox();
@@ -122,19 +122,20 @@
             EditarButton.Text = "Editar";
             EditarButton.UseVisualStyleBackColor = false;
             // 
-            // SalvarButton
+            // InserirButton
             // 
-            SalvarButton.BackColor = Color.FromArgb(229, 92, 68);
-            SalvarButton.FlatStyle = FlatStyle.Popup;
-            SalvarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-            SalvarButton.ForeColor = Color.White;
-            SalvarButton.ImageIndex = 2;
-            SalvarButton.Location = new Point(358, 597);
-            SalvarButton.Name = "SalvarButton";
-            SalvarButton.Size = new Size(137, 61);
-            SalvarButton.TabIndex = 121;
-            SalvarButton.Text = "Inserir Novo";
-            SalvarButton.UseVisualStyleBackColor = false;
+            InserirButton.BackColor = Color.FromArgb(229, 92, 68);
+            InserirButton.FlatStyle = FlatStyle.Popup;
+            InserirButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            InserirButton.ForeColor = Color.White;
+            InserirButton.ImageIndex = 2;
+            InserirButton.Location = new Point(358, 597);
+            InserirButton.Name = "InserirButton";
+            InserirButton.Size = new Size(137, 61);
+            InserirButton.TabIndex = 121;
+            InserirButton.Text = "Inserir Novo";
+            InserirButton.UseVisualStyleBackColor = false;
+            InserirButton.Click += InserirButton_Click;
             // 
             // CopiarButton
             // 
@@ -440,7 +441,7 @@
             Controls.Add(ProximoButton);
             Controls.Add(AnteriorButton);
             Controls.Add(EditarButton);
-            Controls.Add(SalvarButton);
+            Controls.Add(InserirButton);
             Controls.Add(CopiarButton);
             Controls.Add(EstudioText);
             Controls.Add(ResumoText);
@@ -482,7 +483,7 @@
         private Button ProximoButton;
         private Button AnteriorButton;
         private Button EditarButton;
-        private Button SalvarButton;
+        private Button InserirButton;
         private Button CopiarButton;
         private TextBox EstudioText;
         private TextBox ResumoText;

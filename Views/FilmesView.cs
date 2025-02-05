@@ -3,6 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using Aniflix.Models;
 using Aniflix.Globals;
 using Aniflix.Services;
 using Aniflix.Extensions;
@@ -352,6 +353,37 @@ namespace Aniflix.Views
         {
             ResumoText.SelectAll();
             ResumoText.Copy();
+        }
+
+        private void InserirButton_Click(object sender, EventArgs e)
+        {
+            var filmes = new Filmes
+            {
+                Codigo = CodigoText.Text,
+                Titulo = TituloText.Text,
+                Audio = AudioBox.SelectedItem?.ToString() ?? string.Empty,
+                Sinopse = SinopseText.Text,
+                TituloOriginal = TituloOriginalText.Text,
+                DataLancamento = DataLancamentoText.Text,
+                TituloAlternativo = TituloAlternativoText.Text,
+                Franquia = FranquiaText.Text,
+                Genero = GeneroText.Text,
+                Tags = TagsText.Text,
+                Diretor = DiretorText.Text,
+                MCU = FaseMCUText.Text,
+                Estrelas = EstrelasText.Text,
+                Estudio = EstudioText.Text
+            };
+
+            if (!string.IsNullOrEmpty(filmes.Codigo))
+            {
+                FilmesController.InsereNovoFilme(filmes);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira o código do filme.", "Filmes - Salvar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }
