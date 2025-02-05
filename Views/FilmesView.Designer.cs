@@ -387,6 +387,7 @@
             CodigoText.TabIndex = 90;
             CodigoText.TextChanged += CodigoText_TextChanged;
             CodigoText.KeyPress += CodigoText_KeyPress;
+            CodigoText.Leave += CodigoText_Leave;
             // 
             // label11
             // 
