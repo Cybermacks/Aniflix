@@ -337,5 +337,15 @@ namespace Aniflix.Views
         {
             UpdateData();
         }
+
+        private void EstudioText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FaseMCUText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
     }
 }

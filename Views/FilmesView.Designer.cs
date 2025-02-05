@@ -157,6 +157,7 @@
             EstudioText.PlaceholderText = "Estúdio";
             EstudioText.Size = new Size(658, 23);
             EstudioText.TabIndex = 119;
+            EstudioText.TextChanged += EstudioText_TextChanged;
             // 
             // ResumoText
             // 
@@ -175,6 +176,7 @@
             FaseMCUText.Size = new Size(96, 23);
             FaseMCUText.TabIndex = 116;
             FaseMCUText.Text = "--";
+            FaseMCUText.TextChanged += FaseMCUText_TextChanged;
             // 
             // EstrelasText
             // 
