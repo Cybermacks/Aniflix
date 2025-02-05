@@ -265,6 +265,7 @@
             GeneroText.PlaceholderText = "Gênero ";
             GeneroText.Size = new Size(386, 23);
             GeneroText.TabIndex = 104;
+            GeneroText.TextChanged += GeneroText_TextChanged;
             // 
             // DiretorText
             // 
@@ -273,6 +274,7 @@
             DiretorText.PlaceholderText = "Diretor";
             DiretorText.Size = new Size(761, 23);
             DiretorText.TabIndex = 103;
+            DiretorText.TextChanged += DiretorText_TextChanged;
             // 
             // label5
             // 

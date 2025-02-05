@@ -322,5 +322,15 @@ namespace Aniflix.Views
         {
             UpdateData();
         }
+
+        private void GeneroText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void DiretorText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
     }
 }
