@@ -457,5 +457,19 @@ namespace Aniflix.Views
             }
 
         }
+
+        private void ProximoButton_Click(object sender, EventArgs e)
+        {
+            var nextRecord = FilmesController.ProcuraFilmeProximo(currentId);
+
+            if (nextRecord != null)
+            {
+                PreencheDados(nextRecord);
+            }
+            else
+            {
+                MessageBox.Show("Você chegou ao primeiro registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

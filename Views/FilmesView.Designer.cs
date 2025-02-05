@@ -93,6 +93,7 @@
             ProximoButton.TabIndex = 124;
             ProximoButton.Text = "Próximo";
             ProximoButton.UseVisualStyleBackColor = false;
+            ProximoButton.Click += ProximoButton_Click;
             // 
             // AnteriorButton
             // 
