@@ -46,7 +46,7 @@ public partial class SeriesView : Form
                     DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
                     PaisOrigemText.Text = "#" + StringExtensions.RemoveDiacritics(country.Text.Replace(" ", ""));
                     IdiomaOriginalText.Text = "#" + StringExtensions.RemoveDiacritics(language.Text.Replace(" ", ""));
-                    SerieText.Text = "#" + StringExtensions.RemoveDiacritics(given.Name.Replace(" ", ""));
+                    SerieText.Text = "#" + StringExtensions.RemoveExcept(given.Name.Replace(" ", ""));
                 }));
 
                 if (
