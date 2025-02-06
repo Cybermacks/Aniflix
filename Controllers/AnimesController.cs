@@ -40,7 +40,6 @@ namespace Aniflix.Controllers
                     new MySqlParameter("@genero", series.Genero),
                     new MySqlParameter("@tags", series.Tags),
                     new MySqlParameter("@diretor", series.Diretor),
-                    new MySqlParameter("@mcu", series.MCU),
                     new MySqlParameter("@estrelas", series.Estrelas),
                     new MySqlParameter("@estudio", series.Estudio)
                 );
