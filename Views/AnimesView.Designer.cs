@@ -537,6 +537,7 @@
             Controls.Add(AudioBox);
             Controls.Add(TituloText);
             Controls.Add(CodigoText);
+            MaximizeBox = false;
             Name = "AnimesView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AnimesView";
