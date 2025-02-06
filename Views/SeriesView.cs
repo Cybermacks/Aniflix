@@ -39,8 +39,8 @@ public partial class SeriesView : Form
                     SinopseText.Text = given.Overview;
                     TituloOriginalText.Text = given.OriginalName;
                     DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
-                    PaisOrigemText.Text = given.OriginCountry.ToString();
-                    IdiomaOriginalText.Text = given.OriginalLanguage.ToString();
+                    PaisOrigemText.Text = given.ProductionCountries[0].Name;
+                    IdiomaOriginalText.Text = given.SpokenLanguages[0].Name;
                 }));
 
                 if (
