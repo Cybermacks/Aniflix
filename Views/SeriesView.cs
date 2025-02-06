@@ -218,4 +218,9 @@ public partial class SeriesView : Form
             );
         ResumoText.Text = model.GetFormattedText();
     }
+
+    private void TituloText_TextChanged(object sender, EventArgs e)
+    {
+        UpdateData();
+    }
 }

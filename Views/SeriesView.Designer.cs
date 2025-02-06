@@ -417,6 +417,7 @@ partial class SeriesView
         TituloText.PlaceholderText = "Título";
         TituloText.Size = new Size(506, 23);
         TituloText.TabIndex = 45;
+        TituloText.TextChanged += TituloText_TextChanged;
         // 
         // CodigoText
         // 
