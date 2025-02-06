@@ -538,6 +538,7 @@
             Controls.Add(TituloText);
             Controls.Add(CodigoText);
             Name = "AnimesView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AnimesView";
             Load += AnimesView_Load;
             ResumeLayout(false);
