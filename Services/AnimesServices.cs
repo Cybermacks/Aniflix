@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Aniflix.Services
 {
-    internal class AnimesServices(string titulo, string? audio, string? sinopse = null, string? tituloOriginal = null,
+    public class AnimesServices(string titulo, string? audio, string? sinopse = null, string? tituloOriginal = null,
                string? dataLancamento = null, string? tituloAlternativo = null, string? paisOrigem = null, string? idiomaOriginal = null, string? serie = null,
                string? autores = null, string? criadores = null, string? obraOriginal = null, string? genero = null, string? tags = null, string? diretor = null,
                string? mcu = null, string? estrelas = null, string? estudio = null)
