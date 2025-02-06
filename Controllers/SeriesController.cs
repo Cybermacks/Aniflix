@@ -62,7 +62,7 @@ namespace Aniflix.Controllers
             return _conn.GetNextRecord("series", id);
         }
 
-        public static void AtualizaFilme(Series series)
+        public static void AtualizaDados(Series series)
         {
             int rowsAffected = _conn.UpdateData("series", "codigo = @codigo",
                 new MySqlParameter("@codigo", series.Codigo),

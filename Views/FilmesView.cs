@@ -423,7 +423,7 @@ namespace Aniflix.Views
 
                 if (atualizar == DialogResult.Yes)
                 {
-                    FilmesController.AtualizaFilme(filmes);
+                    FilmesController.AtualizaDados(filmes);
                 }
 
                 Functions.DoReadOnly(this);
