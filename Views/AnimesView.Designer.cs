@@ -449,6 +449,7 @@
             CodigoText.PlaceholderText = "Código";
             CodigoText.Size = new Size(100, 23);
             CodigoText.TabIndex = 90;
+            CodigoText.KeyPress += CodigoText_KeyPress;
             CodigoText.Leave += CodigoText_Leave;
             // 
             // label6
