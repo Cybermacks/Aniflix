@@ -10,8 +10,6 @@ using System.Globalization;
 namespace Aniflix;
 public partial class SeriesView : Form
 {
-    private int GlobalVars.currentId = 0;
-    private bool GlobalVars.editando = false;
     public SeriesView()
     {
         InitializeComponent();
