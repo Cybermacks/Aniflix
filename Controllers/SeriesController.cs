@@ -40,12 +40,11 @@ namespace Aniflix.Controllers
                     new MySqlParameter("@mcu", series.MCU),
                     new MySqlParameter("@estrelas", series.Estrelas),
                     new MySqlParameter("@estudio", series.Estudio)
-
                 );
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show(series.Titulo + " cadastrado com sucesso!", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(series.Titulo + " cadastrada com sucesso!", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -88,7 +87,7 @@ namespace Aniflix.Controllers
 
             if (rowsAffected > 0)
             {
-                MessageBox.Show("Registro atualizado com sucesso!", "séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Série atualizada com sucesso!", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
