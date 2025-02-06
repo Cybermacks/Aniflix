@@ -51,7 +51,7 @@ namespace Aniflix.Controllers
         }
         public static DataRow? BuscaPrimeiroFilme()
         {
-            return _conn.GetFirstRecord("");
+            return _conn.GetFirstRecord("series");
         }
         public static DataRow? ProcuraFilmeAnterior(int id)
         {
@@ -65,34 +65,34 @@ namespace Aniflix.Controllers
         public static void AtualizaFilme(Series series)
         {
             int rowsAffected = _conn.UpdateData("series", "codigo = @codigo",
-              new MySqlParameter("@codigo", series.Codigo),
-                    new MySqlParameter("@titulo", series.Titulo),
-                    new MySqlParameter("@audio", series.Audio),
-                    new MySqlParameter("@sinopse", series.Sinopse),
-                    new MySqlParameter("@titulo_original", series.TituloOriginal),
-                    new MySqlParameter("@data_lancamento", series.DataLancamento),
-                    new MySqlParameter("@titulo_alternativo", series.TituloAlternativo),
-                    new MySqlParameter("@pais_origem", series.PaisOrigem),
-                    new MySqlParameter("@idioma_original", series.IdiomaOriginal),
-                    new MySqlParameter("@serie", series.Serie),
-                    new MySqlParameter("@autores", series.Autores),
-                    new MySqlParameter("@criadores", series.Criadores),
-                    new MySqlParameter("@obra_original", series.PaisOrigem),
-                    new MySqlParameter("@genero", series.Genero),
-                    new MySqlParameter("@tags", series.Tags),
-                    new MySqlParameter("@diretor", series.Diretor),
-                    new MySqlParameter("@mcu", series.MCU),
-                    new MySqlParameter("@estrelas", series.Estrelas),
-                    new MySqlParameter("@estudio", series.Estudio)
+                new MySqlParameter("@codigo", series.Codigo),
+                new MySqlParameter("@titulo", series.Titulo),
+                new MySqlParameter("@audio", series.Audio),
+                new MySqlParameter("@sinopse", series.Sinopse),
+                new MySqlParameter("@titulo_original", series.TituloOriginal),
+                new MySqlParameter("@data_lancamento", series.DataLancamento),
+                new MySqlParameter("@titulo_alternativo", series.TituloAlternativo),
+                new MySqlParameter("@pais_origem", series.PaisOrigem),
+                new MySqlParameter("@idioma_original", series.IdiomaOriginal),
+                new MySqlParameter("@serie", series.Serie),
+                new MySqlParameter("@autores", series.Autores),
+                new MySqlParameter("@criadores", series.Criadores),
+                new MySqlParameter("@obra_original", series.PaisOrigem),
+                new MySqlParameter("@genero", series.Genero),
+                new MySqlParameter("@tags", series.Tags),
+                new MySqlParameter("@diretor", series.Diretor),
+                new MySqlParameter("@mcu", series.MCU),
+                new MySqlParameter("@estrelas", series.Estrelas),
+                new MySqlParameter("@estudio", series.Estudio)
             );
 
             if (rowsAffected > 0)
             {
-                MessageBox.Show("Registro atualizado com sucesso!", "series", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Registro atualizado com sucesso!", "séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Erro ao atualizar o registro.", "series", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao atualizar o registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
