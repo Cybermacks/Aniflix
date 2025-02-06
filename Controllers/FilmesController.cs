@@ -20,7 +20,7 @@ namespace Aniflix.Controllers
             }
             else
             {
-                int rowsAffected = _conn.InsertData("filmes",
+                int rowsAffected = GlobalVars._conn.InsertData("filmes",
                     new MySqlParameter("@codigo", filmes.Codigo),
                     new MySqlParameter("@titulo", filmes.Titulo),
                     new MySqlParameter("@audio", filmes.Audio),
