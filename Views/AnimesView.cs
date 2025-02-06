@@ -124,25 +124,6 @@ namespace Aniflix.Views
                     });
                 }
 
-                if (given != null && given.CreatedBy != null)
-                {
-                    var creators = given
-                    .CreatedBy.Select(person => $"#{person.Name.Replace(" ", "")}")
-                    .ToList();
-
-                    Invoke((Action)(() =>
-                    {
-                        CriadoresText.Text = string.Join(" ", StringExtensions.ClearLists(creators));
-                    }));
-                }
-                else
-                {
-                    Invoke((Action)(() =>
-                    {
-                        CriadoresText.Text = string.Empty;
-                    }));
-                }
-
                 if (credits != null && credits.Cast != null)
                 {
 
@@ -187,15 +168,10 @@ namespace Aniflix.Views
             {
                 Invoke((Action)(() =>
                 {
-                    MessageBox.Show($"Erro ao buscar o filme: {ex.Message}", "Séries - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Erro ao buscar o anime: {ex.Message}", "Animes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }));
             }
         }
-
-
-
-
-
         private void UpdateData()
         {
             var model = new SeriesServices(
