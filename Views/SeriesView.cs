@@ -299,17 +299,14 @@ public partial class SeriesView : Form
     {
         UpdateData();
     }
-
     private void EstrelasText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
     }
-
     private void EstudioText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
     }
-
     private void SeriesView_Load(object sender, EventArgs e)
     {
         UpdateData();
