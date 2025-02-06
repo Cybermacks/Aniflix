@@ -273,7 +273,7 @@ public partial class SeriesView : Form
         }
     }
 
-    #region TextboxEvents
+
     private void TituloText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
@@ -363,8 +363,8 @@ public partial class SeriesView : Form
     {
         UpdateData();
     }
-    #region
 
+    #region "Buttons"
     private void CopiarButton_Click(object sender, EventArgs e)
     {
         ResumoText.SelectAll();
@@ -475,4 +475,5 @@ public partial class SeriesView : Form
             editando = false;
         }
     }
+    #endregion
 }
