@@ -389,14 +389,11 @@ namespace Aniflix.Views
                 TituloAlternativo = TituloAlternativoText.Text,
                 PaisOrigem = PaisOrigemText.Text,
                 IdiomaOriginal = IdiomaOriginalText.Text,
-                Serie = SerieText.Text,
+                Anime = AnimeText.Text,
                 Autores = AutoresText.Text,
-                Criadores = CriadoresText.Text,
-                ObraOriginal = ObraOriginalText.Text,
                 Genero = GeneroText.Text,
                 Tags = TagsText.Text,
                 Diretor = DiretorText.Text,
-                MCU = FaseMCUText.Text,
                 Estrelas = EstrelasText.Text,
                 Estudio = EstudioText.Text
             };
