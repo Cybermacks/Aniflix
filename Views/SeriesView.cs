@@ -327,7 +327,12 @@ public partial class SeriesView : Form
             TituloOriginal = TituloOriginalText.Text,
             DataLancamento = DataLancamentoText.Text,
             TituloAlternativo = TituloAlternativoText.Text,
-
+            PaisOrigem = PaisOrigemText.Text,
+            IdiomaOriginal = IdiomaOriginalText.Text,
+            Serie = SerieText.Text,
+            Autores = AutoresText.Text,
+            Criadores = CriadoresText.Text,
+            ObraOriginal = ObraOriginalText.Text,
             Genero = GeneroText.Text,
             Tags = TagsText.Text,
             Diretor = DiretorText.Text,
