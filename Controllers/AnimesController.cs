@@ -63,7 +63,7 @@ namespace Aniflix.Controllers
             return _conn.GetNextRecord("animes", id);
         }
 
-        public static void AtualizaDados(animes animes)
+        public static void AtualizaDados(Animes animes)
         {
             int rowsAffected = _conn.UpdateData("animes", "codigo = @codigo",
                 new MySqlParameter("@codigo", animes.Codigo),
@@ -75,14 +75,12 @@ namespace Aniflix.Controllers
                 new MySqlParameter("@titulo_alternativo", animes.TituloAlternativo),
                 new MySqlParameter("@pais_origem", animes.PaisOrigem),
                 new MySqlParameter("@idioma_original", animes.IdiomaOriginal),
-                new MySqlParameter("@serie", animes.Serie),
+                new MySqlParameter("@serie", animes.Anime),
                 new MySqlParameter("@autores", animes.Autores),
-                new MySqlParameter("@criadores", animes.Criadores),
                 new MySqlParameter("@obra_original", animes.PaisOrigem),
                 new MySqlParameter("@genero", animes.Genero),
                 new MySqlParameter("@tags", animes.Tags),
                 new MySqlParameter("@diretor", animes.Diretor),
-                new MySqlParameter("@mcu", animes.MCU),
                 new MySqlParameter("@estrelas", animes.Estrelas),
                 new MySqlParameter("@estudio", animes.Estudio)
             );
