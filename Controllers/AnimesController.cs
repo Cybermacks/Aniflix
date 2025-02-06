@@ -82,7 +82,7 @@ namespace Aniflix.Controllers
 
             if (rowsAffected > 0)
             {
-                MessageBox.Show("Anime atualizada com sucesso!", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Anime atualizado com sucesso!", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
