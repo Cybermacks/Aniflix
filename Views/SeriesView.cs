@@ -358,6 +358,11 @@ public partial class SeriesView : Form
     private void SeriesView_Load(object sender, EventArgs e)
     {
         UpdateData();
+        CarregarFilme();
+        Functions.DoReadOnly(this);
+        TituloAlternativoText.Text = "--";
+        FaseMCUText.Text = "--";
+        FranquiaText.Text = "--";
     }
     private void CopiarButton_Click(object sender, EventArgs e)
     {
