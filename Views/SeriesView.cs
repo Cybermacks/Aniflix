@@ -28,13 +28,13 @@ public partial class SeriesView : Form
             var givenTask = client.GetTvShowAsync(codigo);
             var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
-            var country = await deepL.TranslateTextAsync(given.ProductionCountries[0].Name, null, LanguageCode.PortugueseBrazilian);
-            var language = await deepL.TranslateTextAsync(given.SpokenLanguages[0].Name, null, LanguageCode.PortugueseBrazilian);
-
             await Task.WhenAll(givenTask, creditsTask);
 
             var given = givenTask.Result;
             var credits = creditsTask.Result;
+            var country = await deepL.TranslateTextAsync(given.ProductionCountries[0].Name, null, LanguageCode.PortugueseBrazilian);
+            var language = await deepL.TranslateTextAsync(given.SpokenLanguages[0].Name, null, LanguageCode.PortugueseBrazilian);
+
 
             if (given != null)
             {
