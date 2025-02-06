@@ -38,16 +38,14 @@ namespace Aniflix.Controllers
                     new MySqlParameter("@tags", series.Tags),
                     new MySqlParameter("@diretor", series.Diretor),
                     new MySqlParameter("@mcu", series.MCU),
-                                        new MySqlParameter("@estrelas", series.Estrelas),
-                    new MySqlParameter("@estudio", series.Estudio),
-                    new MySqlParameter(
-
+                    new MySqlParameter("@estrelas", series.Estrelas),
+                    new MySqlParameter("@estudio", series.Estudio)
 
                 );
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show(series.Titulo + " cadastrado com sucesso!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(series.Titulo + " cadastrado com sucesso!", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
