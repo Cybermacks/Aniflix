@@ -97,6 +97,3 @@ namespace Aniflix.Controllers
         }
     }
 }
-    }
-
-}
