@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace Aniflix.Services
 {
     public class AnimesServices(string titulo, string? audio, string? sinopse = null, string? tituloOriginal = null,
-               string? dataLancamento = null, string? tituloAlternativo = null, string? paisOrigem = null, string? idiomaOriginal = null, string? anime = null,
+               string? dataLancamento = null, string? tituloAlternativo = null, string? franquia = null, string? paisOrigem = null, string? idiomaOriginal = null, string? anime = null,
                string? autores = null, string? genero = null, string? tags = null, string? diretor = null,
                string? estrelas = null, string? estudio = null)
     {
@@ -17,6 +17,7 @@ namespace Aniflix.Services
         public string? TituloOriginal { get; private set; } = tituloOriginal;
         public string? DataLancamento { get; private set; } = dataLancamento;
         public string? TituloAlternativo { get; private set; } = tituloAlternativo;
+        public string? Franquia { get; private set; } = franquia;
         public string? PaisOrigem { get; private set; } = paisOrigem;
         public string? IdiomaOriginal { get; private set; } = idiomaOriginal;
         public string? Anime { get; private set; } = anime;
@@ -41,6 +42,7 @@ __[Os vídeos estão em ordem crescente, ou seja, de cima para baixo, tal como n
 **Nome Original:** __{TituloOriginal}__
 **Título Alternativo:** {TituloAlternativo}
 **Data de lançamento:** __{DataLancamento}__
+**Franquia:** __{Franquia}__
 **Países de Origem:** __{PaisOrigem}__
 **Idioma Original:** __{IdiomaOriginal}__
 **Anime:** {Anime}
