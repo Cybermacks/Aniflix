@@ -341,7 +341,7 @@ namespace Aniflix.Views
         }
         private void AnimeText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void GeneroText_TextChanged(object sender, EventArgs e)
