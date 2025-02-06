@@ -11,7 +11,7 @@
         public string? TituloAlternativo { get; set; }
         public string? PaisOrigem { get; set; }
         public string? IdiomaOriginal { get; set; }
-        public string? Serie { get; set; }
+        public string? Anime { get; set; }
         public string? Autores { get; set; }
         public string? Criadores { get; set; }
         public string? ObraOriginal { get; set; }
