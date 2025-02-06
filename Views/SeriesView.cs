@@ -291,21 +291,21 @@ public partial class SeriesView : Form
 
     private void FaseMCUText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void DiretorText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void EstrelasText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void EstudioText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 }
