@@ -86,19 +86,17 @@ namespace Aniflix.Extensions
             return string.Join(" ", uniqueNames);
         }
 
-        public static string ClearPunctuation(string input)
+        public static string StripPunctuation(this string s)
         {
-            List<string> words = [];
-
-            bool quit = false;
-            while (!quit)
+            var sb = new StringBuilder();
+            foreach (char c in s)
             {
-                String word = input;
-                words.Add(word.TrimEnd('.'));
-                quit = word.EndsWith('.');
+                if (!char.IsPunctuation(c))
+                {
+                    sb.Append(c);
+                }
             }
-            return String.Join(" ", words);
-
+            return sb.ToString();
         }
     }
 }
