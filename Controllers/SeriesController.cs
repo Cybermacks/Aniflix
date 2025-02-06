@@ -5,6 +5,7 @@ using System.Text;
 using System.Drawing;
 using Aniflix.Models;
 using MySqlConnector;
+using Aniflix.Factory;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
@@ -12,6 +13,8 @@ namespace Aniflix.Controllers
 {
     public static class SeriesController
     {
+        public static readonly DatabaseConnection _conn = DatabaseConnection.Instance;
+
         public static void InsereNovoFilme(Filmes filmes)
         {
             var filme = _conn.SelectData("filmes", "codigo = @codigo", new MySqlParameter("@codigo", filmes.Codigo));
