@@ -26,7 +26,7 @@ public partial class SeriesView : Form
             var deepL = new DeepLClient("7feb3eb8-de95-4312-843c-1064aecdab8b:fx");
             var codigo = int.Parse(CodigoText.Text);
             var givenTask = client.GetTvShowAsync(codigo);
-            var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
+            var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));            
 
             await Task.WhenAll(givenTask, creditsTask);
 
@@ -34,6 +34,8 @@ public partial class SeriesView : Form
             var credits = creditsTask.Result;
             var country = await deepL.TranslateTextAsync(given.ProductionCountries[0].Name, null, LanguageCode.PortugueseBrazilian);
             var language = await deepL.TranslateTextAsync(given.SpokenLanguages[0].Name, null, LanguageCode.PortugueseBrazilian);
+
+            
 
 
             if (given != null)
@@ -113,24 +115,22 @@ public partial class SeriesView : Form
                 });
             }
 
-            if (credits != null && credits.Crew != null)
+            if (given != null && given.CreatedBy != null)
             {
-                var directors = credits
-                .Crew.Where(person => person.Job == "Director")
-                .Take(4)
-                .Select(person => $"#{person.Name.Replace(" ", "")}")
+                var creators = given
+                .CreatedBy.Select(person => $"#{person.Name.Replace(" ", "")}")
                 .ToList();
 
                 Invoke((Action)(() =>
                 {
-                    DiretorText.Text = string.Join(" ", StringExtensions.ClearLists(directors));
+                    CriadoresText.Text = string.Join(" ", StringExtensions.ClearLists(creators));
                 }));
             }
             else
             {
                 Invoke((Action)(() =>
                 {
-                    DiretorText.Text = string.Empty;
+                    CriadoresText.Text = string.Empty;
                 }));
             }
 
