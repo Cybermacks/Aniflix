@@ -247,7 +247,7 @@ namespace Aniflix.Views
 
         private void LoadRecord()
         {
-            var serie = SeriesController.MostraPrimeiro();
+            var serie = AnimesController.MostraPrimeiro();
 
             if (serie != null)
             {
