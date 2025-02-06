@@ -404,7 +404,7 @@ namespace Aniflix.Views
             }
             else
             {
-                MessageBox.Show("Por favor, insira o código do anime.", "Animesies - Inserir Novo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, insira o código do anime.", "Animes - Inserir Novo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
