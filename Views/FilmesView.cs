@@ -368,7 +368,7 @@ namespace Aniflix.Views
 
             if (!string.IsNullOrEmpty(filmes.Codigo))
             {
-                FilmesController.InsereNovoFilme(filmes);
+                FilmesController.Registrar(filmes);
             }
             else
             {

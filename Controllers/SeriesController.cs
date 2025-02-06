@@ -9,7 +9,7 @@ namespace Aniflix.Controllers
     {
         public static readonly DatabaseConnection _conn = DatabaseConnection.Instance;
 
-        public static void InsereNovoFilme(Series series)
+        public static void Registrar(Series series)
         {
             var filme = _conn.SelectData("series", "codigo = @codigo", new MySqlParameter("@codigo", series.Codigo));
 
