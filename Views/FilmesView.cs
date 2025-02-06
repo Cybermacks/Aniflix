@@ -264,7 +264,7 @@ namespace Aniflix.Views
         {
             if (string.IsNullOrEmpty(CodigoText.Text))
             {
-                MessageBox.Show("Por favor, insira o código do filme.");
+                MessageBox.Show("Por favor, insira o código do filme.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 CodigoText.Focus();
             }
             else
