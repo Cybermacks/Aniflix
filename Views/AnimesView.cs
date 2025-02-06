@@ -174,7 +174,7 @@ namespace Aniflix.Views
         }
         private void UpdateData()
         {
-            var model = new SeriesServices(
+            var model = new AnimesServices(
                 titulo: TituloText.Text,
                 audio: AudioBox.SelectedItem?.ToString() ?? string.Empty,
                 sinopse: SinopseText.Text,
@@ -185,7 +185,7 @@ namespace Aniflix.Views
                 idiomaOriginal: IdiomaOriginalText.Text,
                 serie: SerieText.Text,
                 autores: AutoresText.Text,
-        | genero: GeneroText.Text,
+              | genero: GeneroText.Text,
                 tags: TagsText.Text,
                 diretor: DiretorText.Text,
                 estrelas: EstrelasText.Text,
