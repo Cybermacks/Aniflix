@@ -28,14 +28,21 @@ namespace Aniflix.Controllers
                     new MySqlParameter("@titulo_original", series.TituloOriginal),
                     new MySqlParameter("@data_lancamento", series.DataLancamento),
                     new MySqlParameter("@titulo_alternativo", series.TituloAlternativo),
-                    new MySqlParameter("@franquia", series.Franquia),
+                    new MySqlParameter("@pais_origem", series.PaisOrigem),
+                      new MySqlParameter("@idioma_original", series.PaisOrigem),
+                        new MySqlParameter("@autores", series.PaisOrigem),
+                          new MySqlParameter("@criadores", series.PaisOrigem),
+                          new MySqlParameter("@pais_origem", series.PaisOrigem),
+
+
                     new MySqlParameter("@genero", series.Genero),
+
                     new MySqlParameter("@tags", series.Tags),
                     new MySqlParameter("@diretor", series.Diretor),
                     new MySqlParameter("@mcu", series.MCU),
 
-                    new MySqlParameter( "@estrelas", series.Estrelas),
-                    new MySqlParameter("@estudio", series.Estudio) ,
+                    new MySqlParameter("@estrelas", series.Estrelas),
+                    new MySqlParameter("@estudio", series.Estudio),
                     new MySqlParameter(
 
 
