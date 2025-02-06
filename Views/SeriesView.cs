@@ -447,7 +447,7 @@ public partial class SeriesView : Form
         }
         else if (EditarButton.Text == "Cancelar")
         {
-            var cancelar = MessageBox.Show($"Cancelar a edição do filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var cancelar = MessageBox.Show($"Cancelar a edição da série {series.Titulo} ?", "Séries - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (cancelar == DialogResult.Yes)
             {
@@ -462,11 +462,11 @@ public partial class SeriesView : Form
         }
         else if (EditarButton.Text == "Salvar")
         {
-            var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {series.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (atualizar == DialogResult.Yes)
             {
-                FilmesController.AtualizaDados(filmes);
+                SeriesController.AtualizaDados(series);
             }
 
             Functions.DoReadOnly(this);
