@@ -9,6 +9,7 @@
         public string? TituloOriginal { get; set; }
         public string? DataLancamento { get; set; }
         public string? TituloAlternativo { get; set; }
+        public string? Franquia { get; set; }
         public string? PaisOrigem { get; set; }
         public string? IdiomaOriginal { get; set; }
         public string? Anime { get; set; }
