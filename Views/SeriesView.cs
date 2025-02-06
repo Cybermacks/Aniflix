@@ -1,4 +1,5 @@
 using DeepL;
+using Aniflix.Services;
 using Aniflix.Extensions;
 using System.Globalization;
 
@@ -26,7 +27,7 @@ public partial class SeriesView : Form
             var deepL = new DeepLClient("7feb3eb8-de95-4312-843c-1064aecdab8b:fx");
             var codigo = int.Parse(CodigoText.Text);
             var givenTask = client.GetTvShowAsync(codigo);
-            var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));            
+            var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
             await Task.WhenAll(givenTask, creditsTask);
 
@@ -35,7 +36,7 @@ public partial class SeriesView : Form
             var country = await deepL.TranslateTextAsync(given.ProductionCountries[0].Name, null, LanguageCode.PortugueseBrazilian);
             var language = await deepL.TranslateTextAsync(given.SpokenLanguages[0].Name, null, LanguageCode.PortugueseBrazilian);
 
-            
+
 
 
             if (given != null)
@@ -186,5 +187,30 @@ public partial class SeriesView : Form
     private async void CodigoText_Leave(object sender, EventArgs e)
     {
         await GivenData();
+    }
+
+
+
+
+    private void UpdateData()
+    {
+        var model = new SeriesServices(
+            titulo: TituloText.Text,
+            audio: AudioBox.SelectedItem?.ToString() ?? string.Empty,
+            sinopse: SinopseText.Text,
+            tituloOriginal: TituloOriginalText.Text,
+            dataLancamento: DataLancamentoText.Text,
+            tituloAlternativo: TituloAlternativoText.Text,
+
+
+            genero: GeneroText.Text,
+            tags: TagsText.Text,
+            diretor: DiretorText.Text,
+              mcu: FaseMCUText.Text,
+            estrelas: EstrelasText.Text,
+            estudio: EstudioText.Text
+
+            );
+        ResumoText.Text = model.GetFormattedText();
     }
 }
