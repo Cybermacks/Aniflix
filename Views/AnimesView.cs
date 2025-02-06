@@ -57,7 +57,7 @@ namespace Aniflix.Views
                         DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
                         PaisOrigemText.Text = "#" + StringExtensions.RemoveDiacritics(country.Text.Replace(" ", ""));
                         IdiomaOriginalText.Text = "#" + StringExtensions.RemoveDiacritics(language.Text.Replace(" ", ""));
-                        SerieText.Text = "#" + StringExtensions.StripPunctuation(given.Name.Replace(" ", ""));
+                        FranquiaText.Text = "#" + StringExtensions.StripPunctuation(given.Name.Replace(" ", ""));
                     }));
 
                     if (
@@ -212,7 +212,7 @@ namespace Aniflix.Views
                 TituloAlternativoText.Text = record["titulo_alternativo"].ToString();
                 PaisOrigemText.Text = record["pais_origem"].ToString();
                 IdiomaOriginalText.Text = record["idioma_original"].ToString();
-                SerieText.Text = record["serie"].ToString();
+                FranquiaText.Text = record["serie"].ToString();
                 AutoresText.Text = record["autores"].ToString();
                 GeneroText.Text = record["genero"].ToString();
                 TagsText.Text = record["tags"].ToString();
@@ -263,7 +263,7 @@ namespace Aniflix.Views
                 TituloAlternativoText.Text = serie["titulo_alternativo"].ToString();
                 PaisOrigemText.Text = serie["pais_origem"].ToString();
                 IdiomaOriginalText.Text = serie["idioma_original"].ToString();
-                SerieText.Text = serie["serie"].ToString();
+                FranquiaText.Text = serie["serie"].ToString();
                 AutoresText.Text = serie["autores"].ToString();
                 GeneroText.Text = serie["genero"].ToString();
                 TagsText.Text = serie["tags"].ToString();

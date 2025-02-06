@@ -31,7 +31,7 @@
             label19 = new Label();
             AutoresText = new TextBox();
             label18 = new Label();
-            SerieText = new TextBox();
+            FranquiaText = new TextBox();
             label15 = new Label();
             IdiomaOriginalText = new TextBox();
             label9 = new Label();
@@ -69,7 +69,7 @@
             TituloText = new TextBox();
             CodigoText = new TextBox();
             label6 = new Label();
-            textBox1 = new TextBox();
+            AnimeText = new TextBox();
             SuspendLayout();
             // 
             // label19
@@ -94,17 +94,17 @@
             label18.AutoSize = true;
             label18.Location = new Point(13, 427);
             label18.Name = "label18";
-            label18.Size = new Size(42, 15);
+            label18.Size = new Size(53, 15);
             label18.TabIndex = 131;
-            label18.Text = "Anime";
+            label18.Text = "Franquia";
             // 
-            // SerieText
+            // FranquiaText
             // 
-            SerieText.Location = new Point(12, 445);
-            SerieText.Name = "SerieText";
-            SerieText.PlaceholderText = "Franquia";
-            SerieText.Size = new Size(381, 23);
-            SerieText.TabIndex = 130;
+            FranquiaText.Location = new Point(12, 445);
+            FranquiaText.Name = "FranquiaText";
+            FranquiaText.PlaceholderText = "Franquia";
+            FranquiaText.Size = new Size(381, 23);
+            FranquiaText.TabIndex = 130;
             // 
             // label15
             // 
@@ -459,13 +459,13 @@
             label6.TabIndex = 135;
             label6.Text = "Anime";
             // 
-            // textBox1
+            // AnimeText
             // 
-            textBox1.Location = new Point(401, 445);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Anime";
-            textBox1.Size = new Size(372, 23);
-            textBox1.TabIndex = 134;
+            AnimeText.Location = new Point(401, 445);
+            AnimeText.Name = "AnimeText";
+            AnimeText.PlaceholderText = "Anime";
+            AnimeText.Size = new Size(372, 23);
+            AnimeText.TabIndex = 134;
             // 
             // AnimesView
             // 
@@ -473,11 +473,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1399, 772);
             Controls.Add(label6);
-            Controls.Add(textBox1);
+            Controls.Add(AnimeText);
             Controls.Add(label19);
             Controls.Add(AutoresText);
             Controls.Add(label18);
-            Controls.Add(SerieText);
+            Controls.Add(FranquiaText);
             Controls.Add(label15);
             Controls.Add(IdiomaOriginalText);
             Controls.Add(label9);
@@ -525,7 +525,7 @@
         private Label label19;
         private TextBox AutoresText;
         private Label label18;
-        private TextBox SerieText;
+        private TextBox FranquiaText;
         private Label label15;
         private TextBox IdiomaOriginalText;
         private Label label9;
@@ -563,6 +563,6 @@
         private TextBox TituloText;
         private TextBox CodigoText;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox AnimeText;
     }
 }
