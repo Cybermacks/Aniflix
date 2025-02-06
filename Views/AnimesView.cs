@@ -398,13 +398,13 @@ namespace Aniflix.Views
                 Estudio = EstudioText.Text
             };
 
-            if (!string.IsNullOrEmpty(series.Codigo))
+            if (!string.IsNullOrEmpty(animes.Codigo))
             {
-                SeriesController.Registrar(series);
+                SeriesController.Registrar(animes);
             }
             else
             {
-                MessageBox.Show("Por favor, insira o código de pesquisa da série.", "Séries - Inserir Novo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, insira o código do anime.", "Animesies - Inserir Novo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
