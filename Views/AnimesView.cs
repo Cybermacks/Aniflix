@@ -438,7 +438,7 @@ namespace Aniflix.Views
             }
             else if (EditarButton.Text == "Cancelar")
             {
-                var cancelar = MessageBox.Show($"Cancelar a edição de {animes.Titulo} ?", "Animes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var cancelar = MessageBox.Show($"Cancelar a edição do anime {animes.Titulo} ?", "Animes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (cancelar == DialogResult.Yes)
                 {
@@ -453,7 +453,7 @@ namespace Aniflix.Views
             }
             else if (EditarButton.Text == "Salvar")
             {
-                var atualizar = MessageBox.Show($"Atualizar as informações sobre {animes.Titulo} ?", "Animes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var atualizar = MessageBox.Show($"Atualizar as informações sobre o anime {animes.Titulo} ?", "Animes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (atualizar == DialogResult.Yes)
                 {
