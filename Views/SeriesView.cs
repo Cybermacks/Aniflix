@@ -271,7 +271,6 @@ public partial class SeriesView : Form
         }
     }
 
-
     private void CarregarFilme()
     {
         var serie = SeriesController.MostraPrimeiro();
