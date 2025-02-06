@@ -223,4 +223,64 @@ public partial class SeriesView : Form
     {
         UpdateData();
     }
+
+    private void AudioBox_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void SinopseText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void TituloOriginalText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void DataLancamentoText_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+    {
+
+    }
+
+    private void TituloAlternativoText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void PaisOrigemText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void IdiomaOriginalText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void AutoresText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void SerieText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void CriadoresText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void ObraOriginalText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void GeneroText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

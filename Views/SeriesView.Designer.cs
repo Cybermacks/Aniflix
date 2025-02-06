@@ -259,6 +259,7 @@ partial class SeriesView
         DataLancamentoText.Size = new Size(118, 23);
         DataLancamentoText.TabIndex = 63;
         DataLancamentoText.ValidatingType = typeof(DateTime);
+        DataLancamentoText.MaskInputRejected += DataLancamentoText_MaskInputRejected;
         // 
         // label11
         // 
@@ -286,6 +287,7 @@ partial class SeriesView
         TituloAlternativoText.Size = new Size(382, 23);
         TituloAlternativoText.TabIndex = 60;
         TituloAlternativoText.Text = "--";
+        TituloAlternativoText.TextChanged += TituloAlternativoText_TextChanged;
         // 
         // ObraOriginalText
         // 
@@ -295,6 +297,7 @@ partial class SeriesView
         ObraOriginalText.Size = new Size(381, 23);
         ObraOriginalText.TabIndex = 59;
         ObraOriginalText.Text = "--";
+        ObraOriginalText.TextChanged += ObraOriginalText_TextChanged;
         // 
         // GeneroText
         // 
@@ -303,6 +306,7 @@ partial class SeriesView
         GeneroText.PlaceholderText = "Gênero da Série";
         GeneroText.Size = new Size(374, 23);
         GeneroText.TabIndex = 58;
+        GeneroText.TextChanged += GeneroText_TextChanged;
         // 
         // DiretorText
         // 
@@ -354,6 +358,7 @@ partial class SeriesView
         TituloOriginalText.PlaceholderText = "Título Original";
         TituloOriginalText.Size = new Size(638, 23);
         TituloOriginalText.TabIndex = 52;
+        TituloOriginalText.TextChanged += TituloOriginalText_TextChanged;
         // 
         // label4
         // 
@@ -399,6 +404,7 @@ partial class SeriesView
         SinopseText.PlaceholderText = "Sinopse";
         SinopseText.Size = new Size(762, 217);
         SinopseText.TabIndex = 47;
+        SinopseText.TextChanged += SinopseText_TextChanged;
         // 
         // AudioBox
         // 
@@ -409,6 +415,7 @@ partial class SeriesView
         AudioBox.Size = new Size(144, 23);
         AudioBox.TabIndex = 46;
         AudioBox.Text = "Dublado";
+        AudioBox.SelectedIndexChanged += AudioBox_SelectedIndexChanged;
         // 
         // TituloText
         // 
@@ -444,6 +451,7 @@ partial class SeriesView
         PaisOrigemText.PlaceholderText = "País de Origem";
         PaisOrigemText.Size = new Size(374, 23);
         PaisOrigemText.TabIndex = 80;
+        PaisOrigemText.TextChanged += PaisOrigemText_TextChanged;
         // 
         // label15
         // 
@@ -461,6 +469,7 @@ partial class SeriesView
         IdiomaOriginalText.PlaceholderText = "Idioma de Origem";
         IdiomaOriginalText.Size = new Size(381, 23);
         IdiomaOriginalText.TabIndex = 82;
+        IdiomaOriginalText.TextChanged += IdiomaOriginalText_TextChanged;
         // 
         // label18
         // 
@@ -478,6 +487,7 @@ partial class SeriesView
         SerieText.PlaceholderText = "Série";
         SerieText.Size = new Size(381, 23);
         SerieText.TabIndex = 84;
+        SerieText.TextChanged += SerieText_TextChanged;
         // 
         // label19
         // 
@@ -495,6 +505,7 @@ partial class SeriesView
         AutoresText.PlaceholderText = "Autores";
         AutoresText.Size = new Size(374, 23);
         AutoresText.TabIndex = 86;
+        AutoresText.TextChanged += AutoresText_TextChanged;
         // 
         // label20
         // 
@@ -512,6 +523,7 @@ partial class SeriesView
         CriadoresText.PlaceholderText = "Criadores";
         CriadoresText.Size = new Size(373, 23);
         CriadoresText.TabIndex = 88;
+        CriadoresText.TextChanged += CriadoresText_TextChanged;
         // 
         // SeriesView
         // 
