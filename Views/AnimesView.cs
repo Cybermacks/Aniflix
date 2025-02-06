@@ -411,6 +411,40 @@ namespace Aniflix.Views
         private void EditarButton_Click(object sender, EventArgs e)
         {
 
+            if (!GlobalVars.editando)
+            {
+                GlobalVars.editando = true;
+                EditarButton.Text = "Cancelar";
+                Functions.UndoReadOnly(this);
+            }
+            else if (EditarButton.Text == "Cancelar")
+            {
+                var cancelar = MessageBox.Show($"Cancelar a edição do filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (cancelar == DialogResult.Yes)
+                {
+                    GlobalVars.editando = false;
+                    Functions.DoReadOnly(this);
+                    EditarButton.Text = "Editar";
+                }
+                else
+                {
+                    EditarButton.Text = "Salvar";
+                }
+            }
+            else if (EditarButton.Text == "Salvar")
+            {
+                var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {filmes.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (atualizar == DialogResult.Yes)
+                {
+                    FilmesController.AtualizaDados(filmes);
+                }
+
+                Functions.DoReadOnly(this);
+                EditarButton.Text = "Editar";
+                GlobalVars.editando = false;
+            }
         }
 
         private void AnteriorButton_Click(object sender, EventArgs e)
