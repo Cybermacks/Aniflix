@@ -57,7 +57,7 @@ namespace Aniflix.Controllers
         {
             return _conn.GetPreviousRecord("series", id);
         }
-        public static DataRow?MoveProximo(int id)
+        public static DataRow? MoveProximo(int id)
         {
             return _conn.GetNextRecord("series", id);
         }
