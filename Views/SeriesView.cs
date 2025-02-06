@@ -273,7 +273,7 @@ public partial class SeriesView : Form
         }
     }
 
-
+    #region "Textbox Events"
     private void TituloText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
@@ -363,6 +363,7 @@ public partial class SeriesView : Form
     {
         UpdateData();
     }
+    #region
 
     private void CopiarButton_Click(object sender, EventArgs e)
     {
