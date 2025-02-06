@@ -1,5 +1,6 @@
 ﻿using DeepL;
 using System.Data;
+using Aniflix.Models;
 using Aniflix.Globals;
 using Aniflix.Services;
 using Aniflix.Extensions;
@@ -377,7 +378,37 @@ namespace Aniflix.Views
 
         private void InserirNovoButton_Click(object sender, EventArgs e)
         {
+            var series = new Animes
+            {
+                Codigo = CodigoText.Text,
+                Titulo = TituloText.Text,
+                Audio = AudioBox.SelectedItem?.ToString() ?? string.Empty,
+                Sinopse = SinopseText.Text,
+                TituloOriginal = TituloOriginalText.Text,
+                DataLancamento = DataLancamentoText.Text,
+                TituloAlternativo = TituloAlternativoText.Text,
+                PaisOrigem = PaisOrigemText.Text,
+                IdiomaOriginal = IdiomaOriginalText.Text,
+                Serie = SerieText.Text,
+                Autores = AutoresText.Text,
+                Criadores = CriadoresText.Text,
+                ObraOriginal = ObraOriginalText.Text,
+                Genero = GeneroText.Text,
+                Tags = TagsText.Text,
+                Diretor = DiretorText.Text,
+                MCU = FaseMCUText.Text,
+                Estrelas = EstrelasText.Text,
+                Estudio = EstudioText.Text
+            };
 
+            if (!string.IsNullOrEmpty(series.Codigo))
+            {
+                SeriesController.Registrar(series);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira o código de pesquisa da série.", "Séries - Inserir Novo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void EditarButton_Click(object sender, EventArgs e)
