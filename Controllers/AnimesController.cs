@@ -2,16 +2,16 @@
 using Aniflix.Models;
 using MySqlConnector;
 using Aniflix.Factory;
+using Aniflix.Globals;
 
 namespace Aniflix.Controllers
 {
     public static class AnimesController
     {
-        public static readonly DatabaseConnection _conn = DatabaseConnection.Instance;
 
         public static void Registrar(Animes animes)
         {
-            var serie = _conn.SelectData("animes", "codigo = @codigo", new MySqlParameter("@codigo", animes.Codigo));
+            var serie = GlobalVars._conn.SelectData("animes", "codigo = @codigo", new MySqlParameter("@codigo", animes.Codigo));
 
             if (serie.Rows.Count > 0)
             {
@@ -20,7 +20,7 @@ namespace Aniflix.Controllers
             }
             else
             {
-                int rowsAffected = _conn.InsertData("animes",
+                int rowsAffected = GlobalVars._conn.InsertData("animes",
                     new MySqlParameter("@codigo", animes.Codigo),
                     new MySqlParameter("@titulo", animes.Titulo),
                     new MySqlParameter("@audio", animes.Audio),
