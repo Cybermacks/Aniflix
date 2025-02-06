@@ -274,24 +274,29 @@ public partial class SeriesView : Form
 
     private void CarregarFilme()
     {
-        var filme = FilmesController.MostraPrimeiro();
+        var serie = SeriesController.MostraPrimeiro();
 
-        if (filme != null)
+        if (serie != null)
         {
-            CodigoText.Text = filme["codigo"].ToString();
-            TituloText.Text = filme["titulo"].ToString();
-            AudioBox.SelectedItem = filme["audio"].ToString();
-            SinopseText.Text = filme["sinopse"].ToString();
-            TituloOriginalText.Text = filme["titulo_original"].ToString();
-            DataLancamentoText.Text = filme["data_lancamento"].ToString();
-            TituloAlternativoText.Text = filme["titulo_alternativo"].ToString();
-            FranquiaText.Text = filme["franquia"].ToString();
-            GeneroText.Text = filme["genero"].ToString();
-            TagsText.Text = filme["tags"].ToString();
-            DiretorText.Text = filme["diretor"].ToString();
-            FaseMCUText.Text = filme["mcu"].ToString();
-            EstrelasText.Text = filme["estrelas"].ToString();
-            EstudioText.Text = filme["estudio"].ToString();
+            CodigoText.Text = record["codigo"].ToString();
+            TituloText.Text = record["titulo"].ToString();
+            AudioBox.SelectedItem = record["audio"].ToString();
+            SinopseText.Text = record["sinopse"].ToString();
+            TituloOriginalText.Text = record["titulo_original"].ToString();
+            DataLancamentoText.Text = record["data_lancamento"].ToString();
+            TituloAlternativoText.Text = record["titulo_alternativo"].ToString();
+            PaisOrigemText.Text = record["pais_origem"].ToString();
+            IdiomaOriginalText.Text = record["idioma_original"].ToString();
+            SerieText.Text = record["serie"].ToString();
+            AutoresText.Text = record["autores"].ToString();
+            CriadoresText.Text = record["criadores"].ToString();
+            ObraOriginalText.Text = record["obra_original"].ToString();
+            GeneroText.Text = record["genero"].ToString();
+            TagsText.Text = record["tags"].ToString();
+            DiretorText.Text = record["diretor"].ToString();
+            FaseMCUText.Text = record["mcu"].ToString();
+            EstrelasText.Text = record["estrelas"].ToString();
+            EstudioText.Text = record["estudio"].ToString();
         }
     }
 
