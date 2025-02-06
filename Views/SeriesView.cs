@@ -38,14 +38,14 @@ public partial class SeriesView : Form
 
             if (given != null)
             {
-                Invoke((Action)(() =>
+                Invoke((Action)(async () =>
                 {
                     TituloText.Text = given.Name;
                     SinopseText.Text = given.Overview;
                     TituloOriginalText.Text = given.OriginalName;
                     DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
-                    PaisOrigemText.Text = "#" + country.Text.Replace(" ", "");
-                    IdiomaOriginalText.Text = "#" + language.Text.Replace(" ", "");
+                    PaisOrigemText.Text = "#" + StringExtensions.RemoveDiacritics(country.Text.Replace(" ", ""));
+                    IdiomaOriginalText.Text = "#" + StringExtensions.RemoveDiacritics(language.Text.Replace(" ", ""));
                 }));
 
                 if (
