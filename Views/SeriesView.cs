@@ -278,28 +278,27 @@ public partial class SeriesView : Form
 
         if (serie != null)
         {
-            CodigoText.Text = record["codigo"].ToString();
-            TituloText.Text = record["titulo"].ToString();
-            AudioBox.SelectedItem = record["audio"].ToString();
-            SinopseText.Text = record["sinopse"].ToString();
-            TituloOriginalText.Text = record["titulo_original"].ToString();
-            DataLancamentoText.Text = record["data_lancamento"].ToString();
-            TituloAlternativoText.Text = record["titulo_alternativo"].ToString();
-            PaisOrigemText.Text = record["pais_origem"].ToString();
-            IdiomaOriginalText.Text = record["idioma_original"].ToString();
-            SerieText.Text = record["serie"].ToString();
-            AutoresText.Text = record["autores"].ToString();
-            CriadoresText.Text = record["criadores"].ToString();
-            ObraOriginalText.Text = record["obra_original"].ToString();
-            GeneroText.Text = record["genero"].ToString();
-            TagsText.Text = record["tags"].ToString();
-            DiretorText.Text = record["diretor"].ToString();
-            FaseMCUText.Text = record["mcu"].ToString();
-            EstrelasText.Text = record["estrelas"].ToString();
-            EstudioText.Text = record["estudio"].ToString();
+            CodigoText.Text = serie["codigo"].ToString();
+            TituloText.Text = serie["titulo"].ToString();
+            AudioBox.SelectedItem = serie["audio"].ToString();
+            SinopseText.Text = serie["sinopse"].ToString();
+            TituloOriginalText.Text = serie["titulo_original"].ToString();
+            DataLancamentoText.Text = serie["data_lancamento"].ToString();
+            TituloAlternativoText.Text = serie["titulo_alternativo"].ToString();
+            PaisOrigemText.Text = serie["pais_origem"].ToString();
+            IdiomaOriginalText.Text = serie["idioma_original"].ToString();
+            SerieText.Text = serie["serie"].ToString();
+            AutoresText.Text = serie["autores"].ToString();
+            CriadoresText.Text = serie["criadores"].ToString();
+            ObraOriginalText.Text = serie["obra_original"].ToString();
+            GeneroText.Text = serie["genero"].ToString();
+            TagsText.Text = serie["tags"].ToString();
+            DiretorText.Text = serie["diretor"].ToString();
+            FaseMCUText.Text = serie["mcu"].ToString();
+            EstrelasText.Text = serie["estrelas"].ToString();
+            EstudioText.Text = serie["estudio"].ToString();
         }
     }
-
 
     private void TituloText_TextChanged(object sender, EventArgs e)
     {
