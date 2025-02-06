@@ -292,17 +292,17 @@ namespace Aniflix.Views
 
         private void TituloText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void AudioBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void SinopseText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void TituloOriginalText_TextChanged(object sender, EventArgs e)
