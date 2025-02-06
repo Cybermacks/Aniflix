@@ -153,7 +153,7 @@ namespace Aniflix.Views
                     .ToList();
                     Invoke((Action)(() =>
                     {
-                        EstudioText.Text = StringExtensions.FirstCharToUpper(string.Join(" ", StringExtensions.ClearLists(studios)));
+                        EstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
                     }));
                 }
                 else
