@@ -1,4 +1,5 @@
 using DeepL;
+using System.Data;
 using Aniflix.Models;
 using Aniflix.Services;
 using Aniflix.Extensions;
@@ -190,10 +191,6 @@ public partial class SeriesView : Form
     {
         await GivenData();
     }
-
-
-
-
     private void UpdateData()
     {
         var model = new SeriesServices(
@@ -219,6 +216,30 @@ public partial class SeriesView : Form
             );
         ResumoText.Text = model.GetFormattedText();
     }
+
+    private void PreencheDados(DataRow record)
+    {
+        if (record != null)
+        {
+            currentId = Convert.ToInt32(record["id"]);
+            CodigoText.Text = record["codigo"].ToString();
+            TituloText.Text = record["titulo"].ToString();
+            AudioBox.SelectedItem = record["audio"].ToString();
+            SinopseText.Text = record["sinopse"].ToString();
+            TituloOriginalText.Text = record["titulo_original"].ToString();
+            DataLancamentoText.Text = record["data_lancamento"].ToString();
+            TituloAlternativoText.Text = record["titulo_alternativo"].ToString();
+            PaisOrigemText.Text = record["pais_origem"].ToString();
+            IdiomaOriginalText.Text = record["idioma_original"].ToString();
+            GeneroText.Text = record["genero"].ToString();
+            TagsText.Text = record["tags"].ToString();
+            DiretorText.Text = record["diretor"].ToString();
+            FaseMCUText.Text = record["mcu"].ToString();
+            EstrelasText.Text = record["estrelas"].ToString();
+            EstudioText.Text = record["estudio"].ToString();
+        }
+    }
+
 
     private void TituloText_TextChanged(object sender, EventArgs e)
     {
@@ -347,8 +368,7 @@ public partial class SeriesView : Form
         }
         else
         {
-            MessageBox.Show("Por favor, insira o código do filme.", "Filmes - Salvar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Por favor, insira o código de pesquisa da série.", "Séries - Inserir Novo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
     }
 }
