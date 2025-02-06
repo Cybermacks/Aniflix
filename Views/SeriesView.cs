@@ -24,10 +24,14 @@ public partial class SeriesView : Form
             };
 
             var deepL = new DeepLClient("7feb3eb8-de95-4312-843c-1064aecdab8b:fx");
-
             var codigo = int.Parse(CodigoText.Text);
             var givenTask = client.GetTvShowAsync(codigo);
             var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
+
+            var country = await deepL.TranslateTextAsync(
+                [PaisOrigemText.Text], null, "PT-BR"
+            );
+
 
             await Task.WhenAll(givenTask, creditsTask);
 
@@ -36,7 +40,7 @@ public partial class SeriesView : Form
 
             if (given != null)
             {
-                Invoke((Action)(() =>
+                Invoke((Action)(async () =>
                 {
                     TituloText.Text = given.Name;
                     SinopseText.Text = given.Overview;
