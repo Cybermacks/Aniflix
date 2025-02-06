@@ -267,7 +267,7 @@ public partial class SeriesView : Form
         }
         else
         {
-            MessageBox.Show("Você chegou ao último registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Você chegou ao primeiro registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
     private void TituloText_TextChanged(object sender, EventArgs e)
