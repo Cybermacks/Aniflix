@@ -13,12 +13,9 @@
         public string? IdiomaOriginal { get; set; }
         public string? Anime { get; set; }
         public string? Autores { get; set; }
-        public string? Criadores { get; set; }
-        public string? ObraOriginal { get; set; }
         public string? Genero { get; set; }
         public string? Tags { get; set; }
         public string? Diretor { get; set; }
-        public string? MCU { get; set; }
         public string? Estrelas { get; set; }
         public string? Estudio { get; set; }
     }
