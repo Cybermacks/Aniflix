@@ -86,7 +86,7 @@ namespace Aniflix.Extensions
             return string.Join(" ", uniqueNames);
         }
 
-        public static string ClearPunctation(string input)
+        public static string ClearPunctuation(string input)
         {
             List<string> words = [];
 
