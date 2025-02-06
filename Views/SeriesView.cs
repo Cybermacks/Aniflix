@@ -282,9 +282,7 @@ public partial class SeriesView : Form
     private void GeneroText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
-
     }
-
     private void TagsText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
@@ -294,7 +292,6 @@ public partial class SeriesView : Form
     {
         UpdateData();
     }
-
     private void DiretorText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
