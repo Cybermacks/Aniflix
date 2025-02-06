@@ -246,9 +246,9 @@ partial class SeriesView
         label13.AutoSize = true;
         label13.Location = new Point(399, 473);
         label13.Name = "label13";
-        label13.Size = new Size(89, 15);
+        label13.Size = new Size(45, 15);
         label13.TabIndex = 65;
-        label13.Text = "Gênero da Série";
+        label13.Text = "Gênero";
         // 
         // label10
         // 
@@ -311,7 +311,7 @@ partial class SeriesView
         // 
         GeneroText.Location = new Point(399, 491);
         GeneroText.Name = "GeneroText";
-        GeneroText.PlaceholderText = "Gênero da Série";
+        GeneroText.PlaceholderText = "Gênero ";
         GeneroText.Size = new Size(374, 23);
         GeneroText.TabIndex = 58;
         GeneroText.TextChanged += GeneroText_TextChanged;
