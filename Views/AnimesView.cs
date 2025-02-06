@@ -45,6 +45,7 @@ namespace Aniflix.Views
                 var credits = creditsTask.Result;
                 var country = await deepL.TranslateTextAsync(given.ProductionCountries[0].Name, null, LanguageCode.PortugueseBrazilian);
                 var language = await deepL.TranslateTextAsync(given.SpokenLanguages[0].Name, null, LanguageCode.PortugueseBrazilian);
+                var idioma = language.Text.Replace("(idioma)", "").Replace(" ", "").ToLower();
 
                 if (given != null)
                 {
@@ -55,7 +56,7 @@ namespace Aniflix.Views
                         TituloOriginalText.Text = given.OriginalName;
                         DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
                         PaisOrigemText.Text = "#" + StringExtensions.RemoveDiacritics(country.Text.Replace(" ", ""));
-                        IdiomaOriginalText.Text = "#" + StringExtensions.RemoveDiacritics(language.Text.Replace(" ", "").ToLower());
+                        IdiomaOriginalText.Text = "#" + StringExtensions.RemoveDiacritics(idioma);
                         AnimeText.Text = "#" + StringExtensions.StripPunctuation(given.Name.Replace(" ", ""));
                     }));
 
