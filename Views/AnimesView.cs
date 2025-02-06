@@ -368,5 +368,30 @@ namespace Aniflix.Views
         {
             UpdateData();
         }
+
+        private void CopiarButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InserirNovoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditarButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AnteriorButton_Click(object sender, EventArgs e)
+        {
+            Previous();
+        }
+
+        private void ProximoButton_Click(object sender, EventArgs e)
+        {
+            Next();
+        }
     }
 }

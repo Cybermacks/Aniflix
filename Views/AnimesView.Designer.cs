@@ -171,6 +171,7 @@
             ProximoButton.TabIndex = 124;
             ProximoButton.Text = "Próximo";
             ProximoButton.UseVisualStyleBackColor = false;
+            ProximoButton.Click += ProximoButton_Click;
             // 
             // AnteriorButton
             // 
@@ -185,6 +186,7 @@
             AnteriorButton.TabIndex = 123;
             AnteriorButton.Text = "Anterior";
             AnteriorButton.UseVisualStyleBackColor = false;
+            AnteriorButton.Click += AnteriorButton_Click;
             // 
             // EditarButton
             // 
@@ -199,6 +201,7 @@
             EditarButton.TabIndex = 122;
             EditarButton.Text = "Editar";
             EditarButton.UseVisualStyleBackColor = false;
+            EditarButton.Click += EditarButton_Click;
             // 
             // InserirNovoButton
             // 
@@ -213,6 +216,7 @@
             InserirNovoButton.TabIndex = 121;
             InserirNovoButton.Text = "Inserir Novo";
             InserirNovoButton.UseVisualStyleBackColor = false;
+            InserirNovoButton.Click += InserirNovoButton_Click;
             // 
             // CopiarButton
             // 
@@ -227,6 +231,7 @@
             CopiarButton.TabIndex = 120;
             CopiarButton.Text = "Copiar Dados";
             CopiarButton.UseVisualStyleBackColor = false;
+            CopiarButton.Click += CopiarButton_Click;
             // 
             // EstudioText
             // 
