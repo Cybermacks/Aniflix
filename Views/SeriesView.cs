@@ -231,12 +231,30 @@ public partial class SeriesView : Form
             TituloAlternativoText.Text = record["titulo_alternativo"].ToString();
             PaisOrigemText.Text = record["pais_origem"].ToString();
             IdiomaOriginalText.Text = record["idioma_original"].ToString();
+            SerieText.Text = record["serie"].ToString();
+            AutoresText.Text = record["autores"].ToString();
+            CriadoresText.Text = record["criadores"].ToString();
+            ObraOriginalText.Text = record["obra_original"].ToString();
             GeneroText.Text = record["genero"].ToString();
             TagsText.Text = record["tags"].ToString();
             DiretorText.Text = record["diretor"].ToString();
             FaseMCUText.Text = record["mcu"].ToString();
             EstrelasText.Text = record["estrelas"].ToString();
             EstudioText.Text = record["estudio"].ToString();
+        }
+    }
+
+   private void Next()
+    {
+        var nextRecord = SeriesController.MoveProximo(currentId);
+
+        if (nextRecord != null)
+        {
+            PreencheDados(nextRecord);
+        }
+        else
+        {
+            MessageBox.Show("Você chegou ao último registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 
