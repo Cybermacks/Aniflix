@@ -1,13 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TMDbLib.Objects.General;
-using System.Collections.Generic;
-using Microsoft.VisualBasic.Devices;
-
-namespace Aniflix.Models
+﻿namespace Aniflix.Models
 {
     public class Series
     {
