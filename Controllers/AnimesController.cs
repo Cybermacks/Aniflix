@@ -20,7 +20,7 @@ namespace Aniflix.Controllers
 
             if (serie.Rows.Count > 0)
             {
-                MessageBox.Show(animes.Titulo + " já está cadastrada!", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(animes.Titulo + " já está cadastrado!", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
