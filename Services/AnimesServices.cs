@@ -19,7 +19,7 @@ namespace Aniflix.Services
         public string? TituloAlternativo { get; private set; } = tituloAlternativo;
         public string? PaisOrigem { get; private set; } = paisOrigem;
         public string? IdiomaOriginal { get; private set; } = idiomaOriginal;
-        public string? Serie { get; private set; } = serie;
+        public string? Anime { get; private set; } = anime;
         public string? Autores { get; private set; } = autores;
         public string? Genero { get; private set; } = genero;
         public string? Tags { get; private set; } = tags;
