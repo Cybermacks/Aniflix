@@ -47,7 +47,7 @@ namespace Aniflix.Controllers
         {
             return _conn.GetFirstRecord("filmes");
         }
-        public static DataRow? ProcuraFilmeAnterior(int id)
+        public static DataRow? MoveAnterior(int id)
         {
             return _conn.GetPreviousRecord("filmes", id);
         }

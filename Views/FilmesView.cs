@@ -434,7 +434,7 @@ namespace Aniflix.Views
 
         private void AnteriorButton_Click(object sender, EventArgs e)
         {
-            var previousRecord = FilmesController.ProcuraFilmeAnterior(currentId);
+            var previousRecord = FilmesController.MoveAnterior(currentId);
 
             if (previousRecord != null)
             {
