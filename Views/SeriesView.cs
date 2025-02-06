@@ -11,7 +11,7 @@ namespace Aniflix;
 public partial class SeriesView : Form
 {
     private int GlobalVars.currentId = 0;
-    private bool editando = false;
+    private bool GlobalVars.editando = false;
     public SeriesView()
     {
         InitializeComponent();
@@ -471,9 +471,9 @@ public partial class SeriesView : Form
             Estudio = EstudioText.Text
         };
 
-        if (!editando)
+        if (!GlobalVars.editando)
         {
-            editando = true;
+            GlobalVars.editando = true;
             EditarButton.Text = "Cancelar";
             Functions.UndoReadOnly(this);
         }
@@ -483,7 +483,7 @@ public partial class SeriesView : Form
 
             if (cancelar == DialogResult.Yes)
             {
-                editando = false;
+                GlobalVars.editando = false;
                 Functions.DoReadOnly(this);
                 EditarButton.Text = "Editar";
             }
@@ -503,7 +503,7 @@ public partial class SeriesView : Form
 
             Functions.DoReadOnly(this);
             EditarButton.Text = "Editar";
-            editando = false;
+            GlobalVars.editando = false;
         }
     }
 }

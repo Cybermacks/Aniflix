@@ -393,9 +393,9 @@ namespace Aniflix.Views
                 Estudio = EstudioText.Text
             };
 
-            if (!editando)
+            if (!GlobalVars.editando)
             {
-                editando = true;
+                GlobalVars.editando = true;
                 EditarButton.Text = "Cancelar";
                 Functions.UndoReadOnly(this);
             }
@@ -405,7 +405,7 @@ namespace Aniflix.Views
 
                 if (cancelar == DialogResult.Yes)
                 {
-                    editando = false;
+                    GlobalVars.editando = false;
                     Functions.DoReadOnly(this);
                     EditarButton.Text = "Editar";
                 }
@@ -425,7 +425,7 @@ namespace Aniflix.Views
 
                 Functions.DoReadOnly(this);
                 EditarButton.Text = "Editar";
-                editando = false;
+                GlobalVars.editando = false;
             }
         }
 
