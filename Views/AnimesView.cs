@@ -457,7 +457,7 @@ namespace Aniflix.Views
 
                 if (atualizar == DialogResult.Yes)
                 {
-                    FilmesController.AtualizaDados(animes);
+                    AnimesController.AtualizaDados(animes);
                 }
 
                 Functions.DoReadOnly(this);
