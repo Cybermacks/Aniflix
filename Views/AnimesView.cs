@@ -247,26 +247,26 @@ namespace Aniflix.Views
 
         private void LoadRecord()
         {
-            var serie = AnimesController.MostraPrimeiro();
+            var animes = AnimesController.MostraPrimeiro();
 
-            if (serie != null)
+            if (animes != null)
             {
-                CodigoText.Text = serie["codigo"].ToString();
-                TituloText.Text = serie["titulo"].ToString();
-                AudioBox.SelectedItem = serie["audio"].ToString();
-                SinopseText.Text = serie["sinopse"].ToString();
-                TituloOriginalText.Text = serie["titulo_original"].ToString();
-                DataLancamentoText.Text = serie["data_lancamento"].ToString();
-                TituloAlternativoText.Text = serie["titulo_alternativo"].ToString();
-                PaisOrigemText.Text = serie["pais_origem"].ToString();
-                IdiomaOriginalText.Text = serie["idioma_original"].ToString();
-                FranquiaText.Text = serie["serie"].ToString();
-                AutoresText.Text = serie["autores"].ToString();
-                GeneroText.Text = serie["genero"].ToString();
-                TagsText.Text = serie["tags"].ToString();
-                DiretorText.Text = serie["diretor"].ToString();
-                EstrelasText.Text = serie["estrelas"].ToString();
-                EstudioText.Text = serie["estudio"].ToString();
+                CodigoText.Text = animes["codigo"].ToString();
+                TituloText.Text = animes["titulo"].ToString();
+                AudioBox.SelectedItem = animes["audio"].ToString();
+                SinopseText.Text = animes["sinopse"].ToString();
+                TituloOriginalText.Text = animes["titulo_original"].ToString();
+                DataLancamentoText.Text = animes["data_lancamento"].ToString();
+                TituloAlternativoText.Text = animes["titulo_alternativo"].ToString();
+                PaisOrigemText.Text = animes["pais_origem"].ToString();
+                IdiomaOriginalText.Text = animes["idioma_original"].ToString();
+                FranquiaText.Text = animes["franquia"].ToString();
+                AutoresText.Text = animes["autores"].ToString();
+                GeneroText.Text = animes["genero"].ToString();
+                TagsText.Text = animes["tags"].ToString();
+                DiretorText.Text = animes["diretor"].ToString();
+                EstrelasText.Text = animes["estrelas"].ToString();
+                EstudioText.Text = animes["estudio"].ToString();
             }
         }
 
