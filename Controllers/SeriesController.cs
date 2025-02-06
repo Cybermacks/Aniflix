@@ -11,11 +11,11 @@ namespace Aniflix.Controllers
 
         public static void InsereNovoFilme(Series series)
         {
-            var filme = _conn.SelectData("filmes", "codigo = @codigo", new MySqlParameter("@codigo", series.Codigo));
+            var filme = _conn.SelectData("series", "codigo = @codigo", new MySqlParameter("@codigo", series.Codigo));
 
             if (filme.Rows.Count > 0)
             {
-                MessageBox.Show(series.Titulo + " já está cadastrado!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(series.Titulo + " já está cadastrado!", "series", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
@@ -51,43 +51,43 @@ namespace Aniflix.Controllers
         }
         public static DataRow? BuscaPrimeiroFilme()
         {
-            return _conn.GetFirstRecord("filmes");
+            return _conn.GetFirstRecord("");
         }
         public static DataRow? ProcuraFilmeAnterior(int id)
         {
-            return _conn.GetPreviousRecord("filmes", id);
+            return _conn.GetPreviousRecord("series", id);
         }
         public static DataRow? ProcuraFilmeProximo(int id)
         {
-            return _conn.GetNextRecord("filmes", id);
+            return _conn.GetNextRecord("series", id);
         }
 
-        public static void AtualizaFilme(Filmes filmes)
+        public static void AtualizaFilme(Series series)
         {
-            int rowsAffected = _conn.UpdateData("filmes", "codigo = @codigo",
-                new MySqlParameter("@codigo", filmes.Codigo),
-                new MySqlParameter("@titulo", filmes.Titulo),
-                new MySqlParameter("@audio", filmes.Audio),
-                new MySqlParameter("@sinopse", filmes.Sinopse),
-                new MySqlParameter("@titulo_original", filmes.TituloOriginal),
-                new MySqlParameter("@data_lancamento", filmes.DataLancamento),
-                new MySqlParameter("@titulo_alternativo", filmes.TituloAlternativo),
-                new MySqlParameter("@franquia", filmes.Franquia),
-                new MySqlParameter("@genero", filmes.Genero),
-                new MySqlParameter("@tags", filmes.Tags),
-                new MySqlParameter("@diretor", filmes.Diretor),
-                new MySqlParameter("@mcu", filmes.MCU),
-                new MySqlParameter("@estrelas", filmes.Estrelas),
-                new MySqlParameter("@estudio", filmes.Estudio)
+            int rowsAffected = _conn.UpdateData("series", "codigo = @codigo",
+                new MySqlParameter("@codigo", series.Codigo),
+                new MySqlParameter("@titulo", series.Titulo),
+                new MySqlParameter("@audio", series.Audio),
+                new MySqlParameter("@sinopse", series.Sinopse),
+                new MySqlParameter("@titulo_original", series.TituloOriginal),
+                new MySqlParameter("@data_lancamento", series.DataLancamento),
+                new MySqlParameter("@titulo_alternativo", series.TituloAlternativo),
+                new MySqlParameter("@franquia", series.Franquia),
+                new MySqlParameter("@genero", series.Genero),
+                new MySqlParameter("@tags", series.Tags),
+                new MySqlParameter("@diretor", series.Diretor),
+                new MySqlParameter("@mcu", series.MCU),
+                new MySqlParameter("@estrelas", series.Estrelas),
+                new MySqlParameter("@estudio", series.Estudio)
             );
 
             if (rowsAffected > 0)
             {
-                MessageBox.Show("Registro atualizado com sucesso!", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Registro atualizado com sucesso!", "series", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Erro ao atualizar o registro.", "Filmes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao atualizar o registro.", "series", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
