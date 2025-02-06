@@ -2,6 +2,7 @@ using DeepL;
 using Aniflix.Models;
 using Aniflix.Services;
 using Aniflix.Extensions;
+using Aniflix.Controllers;
 using System.Globalization;
 
 namespace Aniflix;
@@ -313,5 +314,36 @@ public partial class SeriesView : Form
     {
         ResumoText.SelectAll();
         ResumoText.Copy();
+    }
+
+    private void InserirNovoButton_Click(object sender, EventArgs e)
+    {
+        var series = new Series
+        {
+            Codigo = CodigoText.Text,
+            Titulo = TituloText.Text,
+            Audio = AudioBox.SelectedItem?.ToString() ?? string.Empty,
+            Sinopse = SinopseText.Text,
+            TituloOriginal = TituloOriginalText.Text,
+            DataLancamento = DataLancamentoText.Text,
+            TituloAlternativo = TituloAlternativoText.Text,
+
+            Genero = GeneroText.Text,
+            Tags = TagsText.Text,
+            Diretor = DiretorText.Text,
+            MCU = FaseMCUText.Text,
+            Estrelas = EstrelasText.Text,
+            Estudio = EstudioText.Text
+        };
+
+        if (!string.IsNullOrEmpty(series.Codigo))
+        {
+            SeriesController.Registrar(series);
+        }
+        else
+        {
+            MessageBox.Show("Por favor, insira o código do filme.", "Filmes - Salvar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
     }
 }

@@ -35,7 +35,7 @@ partial class SeriesView
         ProximoButton = new Button();
         AnteriorButton = new Button();
         EditarButton = new Button();
-        SalvarButton = new Button();
+        InserirNovoButton = new Button();
         CopiarButton = new Button();
         EstudioText = new TextBox();
         label8 = new Label();
@@ -135,19 +135,20 @@ partial class SeriesView
         EditarButton.Text = "Editar";
         EditarButton.UseVisualStyleBackColor = false;
         // 
-        // SalvarButton
+        // InserirNovoButton
         // 
-        SalvarButton.BackColor = Color.FromArgb(229, 92, 68);
-        SalvarButton.FlatStyle = FlatStyle.Popup;
-        SalvarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-        SalvarButton.ForeColor = Color.White;
-        SalvarButton.ImageIndex = 2;
-        SalvarButton.Location = new Point(363, 719);
-        SalvarButton.Name = "SalvarButton";
-        SalvarButton.Size = new Size(137, 61);
-        SalvarButton.TabIndex = 75;
-        SalvarButton.Text = "Inserir Novo";
-        SalvarButton.UseVisualStyleBackColor = false;
+        InserirNovoButton.BackColor = Color.FromArgb(229, 92, 68);
+        InserirNovoButton.FlatStyle = FlatStyle.Popup;
+        InserirNovoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+        InserirNovoButton.ForeColor = Color.White;
+        InserirNovoButton.ImageIndex = 2;
+        InserirNovoButton.Location = new Point(363, 719);
+        InserirNovoButton.Name = "InserirNovoButton";
+        InserirNovoButton.Size = new Size(137, 61);
+        InserirNovoButton.TabIndex = 75;
+        InserirNovoButton.Text = "Inserir Novo";
+        InserirNovoButton.UseVisualStyleBackColor = false;
+        InserirNovoButton.Click += InserirNovoButton_Click;
         // 
         // CopiarButton
         // 
@@ -550,7 +551,7 @@ partial class SeriesView
         Controls.Add(ProximoButton);
         Controls.Add(AnteriorButton);
         Controls.Add(EditarButton);
-        Controls.Add(SalvarButton);
+        Controls.Add(InserirNovoButton);
         Controls.Add(CopiarButton);
         Controls.Add(EstudioText);
         Controls.Add(label8);
@@ -598,7 +599,7 @@ partial class SeriesView
     private Button ProximoButton;
     private Button AnteriorButton;
     private Button EditarButton;
-    private Button SalvarButton;
+    private Button InserirNovoButton;
     private Button CopiarButton;
     private TextBox EstudioText;
     private Label label8;
