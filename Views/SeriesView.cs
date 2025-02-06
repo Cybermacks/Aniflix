@@ -203,6 +203,12 @@ public partial class SeriesView : Form
             tituloAlternativo: TituloAlternativoText.Text,
 
 
+
+
+
+
+
+
             genero: GeneroText.Text,
             tags: TagsText.Text,
             diretor: DiretorText.Text,

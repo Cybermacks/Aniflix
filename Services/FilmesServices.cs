@@ -40,7 +40,7 @@ __[Os vídeos estão em ordem crescente, ou seja, de cima para baixo, tal como n
 **Diretor:** {Diretor}
 **FaseMCU:** {MCU}
 **Estrelas:** {Estrelas}
-**Estúdio:** {Estudio?.TrimEnd()}
+**Estúdio:** {Estudio}
 ";
             return formattedText;
         }
