@@ -2,15 +2,16 @@
 using Aniflix.Models;
 using MySqlConnector;
 using Aniflix.Factory;
+using Aniflix.Globals;
 
 namespace Aniflix.Controllers
 {
     public static class FilmesController
-    {       
+    {
 
         public static void Registrar(Filmes filmes)
         {
-            var filme = _conn.SelectData("filmes", "codigo = @codigo", new MySqlParameter("@codigo", filmes.Codigo));
+            var filme = GlobalVars._conn.SelectData("filmes", "codigo = @codigo", new MySqlParameter("@codigo", filmes.Codigo));
 
             if (filme.Rows.Count > 0)
             {
