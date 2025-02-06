@@ -495,6 +495,7 @@
             Controls.Add(CodigoText);
             Name = "AnimesView";
             Text = "AnimesView";
+            Load += AnimesView_Load;
             ResumeLayout(false);
             PerformLayout();
         }
