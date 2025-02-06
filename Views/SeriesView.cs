@@ -391,7 +391,9 @@ public partial class SeriesView : Form
         Functions.DoReadOnly(this);
         TituloAlternativoText.Text = "--";
         FaseMCUText.Text = "--";
-        FranquiaText.Text = "--";
+        ObraOriginalText.Text = "--";
+        AutoresText.Text = "--";
+        CriadoresText.Text = "--";
     }
     private void CopiarButton_Click(object sender, EventArgs e)
     {
