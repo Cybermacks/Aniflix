@@ -226,37 +226,37 @@ public partial class SeriesView : Form
 
     private void AudioBox_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void SinopseText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void TituloOriginalText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void DataLancamentoText_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
     {
-
+        UpdateData();
     }
 
     private void TituloAlternativoText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void PaisOrigemText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void IdiomaOriginalText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void AutoresText_TextChanged(object sender, EventArgs e)
@@ -306,6 +306,11 @@ public partial class SeriesView : Form
     }
 
     private void EstudioText_TextChanged(object sender, EventArgs e)
+    {
+        UpdateData();
+    }
+
+    private void SeriesView_Load(object sender, EventArgs e)
     {
         UpdateData();
     }

@@ -586,6 +586,7 @@ partial class SeriesView
         Name = "SeriesView";
         StartPosition = FormStartPosition.CenterScreen;
         Text = "Séries";
+        Load += SeriesView_Load;
         ResumeLayout(false);
         PerformLayout();
     }
