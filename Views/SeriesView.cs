@@ -261,32 +261,33 @@ public partial class SeriesView : Form
 
     private void AutoresText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void SerieText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void CriadoresText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void ObraOriginalText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void GeneroText_TextChanged(object sender, EventArgs e)
     {
+        UpdateData();
 
     }
 
     private void TagsText_TextChanged(object sender, EventArgs e)
     {
-
+        UpdateData();
     }
 
     private void FaseMCUText_TextChanged(object sender, EventArgs e)
