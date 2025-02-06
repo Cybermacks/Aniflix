@@ -27,7 +27,7 @@
         public string GetFormattedText()
         {
             string formattedText =
-    $@"**{Titulo}** - **{Audio}**
+$@"**{Titulo}** - **{Audio}**
 
 **HD** - __720p__
 **SD** - __480p__
