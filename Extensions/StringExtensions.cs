@@ -95,7 +95,7 @@ namespace Aniflix.Extensions
             {
                 String word = input;
                 words.Add(word.TrimEnd('.'));
-                quit = word.EndsWith(".");
+                quit = word.EndsWith(""".""");
             }
             return String.Join(" ", words);
 
