@@ -273,7 +273,7 @@ public partial class SeriesView : Form
         }
     }
 
-    #region Textbox Events
+    #region TextboxEvents
     private void TituloText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
