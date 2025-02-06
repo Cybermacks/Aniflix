@@ -1,15 +1,7 @@
-﻿using System;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Drawing;
+﻿using System.Data;
 using Aniflix.Globals;
 using Aniflix.Services;
 using Aniflix.Controllers;
-using System.Windows.Forms;
-using System.ComponentModel;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace Aniflix.Views
 {
@@ -56,7 +48,7 @@ namespace Aniflix.Views
         {
             if (record != null)
             {
-                currentId = Convert.ToInt32(record["id"]);
+                GlobalVars.currentId = Convert.ToInt32(record["id"]);
                 CodigoText.Text = record["codigo"].ToString();
                 TituloText.Text = record["titulo"].ToString();
                 AudioBox.SelectedItem = record["audio"].ToString();
@@ -77,7 +69,7 @@ namespace Aniflix.Views
         }
         private void Next()
         {
-            var nextRecord = SeriesController.MoveProximo(currentId);
+            var nextRecord = SeriesController.MoveProximo(GlobalVars.currentId);
 
             if (nextRecord != null)
             {
@@ -90,7 +82,7 @@ namespace Aniflix.Views
         }
         private void Previous()
         {
-            var previousRecord = SeriesController.MoveAnterior(currentId);
+            var previousRecord = SeriesController.MoveAnterior(GlobalVars.currentId);
 
             if (previousRecord != null)
             {

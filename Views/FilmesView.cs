@@ -234,7 +234,7 @@ namespace Aniflix.Views
         {
             if (record != null)
             {
-                currentId = Convert.ToInt32(record["id"]);
+                GlobalVars.currentId = Convert.ToInt32(record["id"]);
                 CodigoText.Text = record["codigo"].ToString();
                 TituloText.Text = record["titulo"].ToString();
                 AudioBox.SelectedItem = record["audio"].ToString();
@@ -431,7 +431,7 @@ namespace Aniflix.Views
 
         private void AnteriorButton_Click(object sender, EventArgs e)
         {
-            var previousRecord = FilmesController.MoveAnterior(currentId);
+            var previousRecord = FilmesController.MoveAnterior(GlobalVars.currentId);
 
             if (previousRecord != null)
             {
@@ -445,7 +445,7 @@ namespace Aniflix.Views
 
         private void ProximoButton_Click(object sender, EventArgs e)
         {
-            var nextRecord = FilmesController.MoveProximo(currentId);
+            var nextRecord = FilmesController.MoveProximo(GlobalVars.currentId);
 
             if (nextRecord != null)
             {

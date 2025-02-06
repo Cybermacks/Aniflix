@@ -10,7 +10,7 @@ using System.Globalization;
 namespace Aniflix;
 public partial class SeriesView : Form
 {
-    private int currentId = 0;
+    private int GlobalVars.currentId = 0;
     private bool editando = false;
     public SeriesView()
     {
@@ -222,7 +222,7 @@ public partial class SeriesView : Form
     {
         if (record != null)
         {
-            currentId = Convert.ToInt32(record["id"]);
+            GlobalVars.currentId = Convert.ToInt32(record["id"]);
             CodigoText.Text = record["codigo"].ToString();
             TituloText.Text = record["titulo"].ToString();
             AudioBox.SelectedItem = record["audio"].ToString();
@@ -246,7 +246,7 @@ public partial class SeriesView : Form
     }
     private void Next()
     {
-        var nextRecord = SeriesController.MoveProximo(currentId);
+        var nextRecord = SeriesController.MoveProximo(GlobalVars.currentId);
 
         if (nextRecord != null)
         {
@@ -259,7 +259,7 @@ public partial class SeriesView : Form
     }
     private void Previous()
     {
-        var previousRecord = SeriesController.MoveAnterior(currentId);
+        var previousRecord = SeriesController.MoveAnterior(GlobalVars.currentId);
 
         if (previousRecord != null)
         {

@@ -6,8 +6,8 @@ namespace Aniflix.Globals
     {
         public static readonly DatabaseConnection _conn = DatabaseConnection.Instance;
 
-        private int currentId = 0;
-        private bool editando = false;
+        private static int GlobalVars.currentId = 0;
+        private static bool editando = false;
 
 
     }
