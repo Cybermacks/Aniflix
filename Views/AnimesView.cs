@@ -186,7 +186,7 @@ namespace Aniflix.Views
 
                 paisOrigem: PaisOrigemText.Text,
                 idiomaOriginal: IdiomaOriginalText.Text,
-                serie: SerieText.Text,
+              anime: AnimeText.Text,
                 autores: AutoresText.Text,
               | genero: GeneroText.Text,
                 tags: TagsText.Text,
