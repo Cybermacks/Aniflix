@@ -38,7 +38,7 @@ public partial class SeriesView : Form
 
             if (given != null)
             {
-                Invoke((Action)(async () =>
+                Invoke((Action)(() =>
                 {
                     TituloText.Text = given.Name;
                     SinopseText.Text = given.Overview;
