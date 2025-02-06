@@ -6,12 +6,12 @@ using System.Collections.Generic;
 
 namespace Aniflix.Services
 {
-    public class AnimesServices(string? titulo = null, string? audio, string? sinopse = null, string? tituloOriginal = null,
+    public class AnimesServices(string? titulo, string? audio, string? sinopse = null, string? tituloOriginal = null,
                string? dataLancamento = null, string? tituloAlternativo = null, string? franquia = null, string? paisOrigem = null, string? idiomaOriginal = null,
                string? anime = null, string? autores = null, string? genero = null, string? tags = null, string? diretor = null,
                string? estrelas = null, string? estudio = null)
     {
-        public string Titulo { get; private set; } = titulo;
+        public string? Titulo { get; private set; } = titulo;
         public string? Audio { get; private set; } = audio;
         public string? Sinopse { get; private set; } = sinopse;
         public string? TituloOriginal { get; private set; } = tituloOriginal;
