@@ -410,6 +410,25 @@ namespace Aniflix.Views
 
         private void EditarButton_Click(object sender, EventArgs e)
         {
+            var animes = new Animes
+            {
+                Codigo = CodigoText.Text,
+                Titulo = TituloText.Text,
+                Audio = AudioBox.SelectedItem?.ToString() ?? string.Empty,
+                Sinopse = SinopseText.Text,
+                TituloOriginal = TituloOriginalText.Text,
+                DataLancamento = DataLancamentoText.Text,
+                TituloAlternativo = TituloAlternativoText.Text,
+                PaisOrigem = PaisOrigemText.Text,
+                IdiomaOriginal = IdiomaOriginalText.Text,
+                Anime = AnimeText.Text,
+                Autores = AutoresText.Text,
+                Genero = GeneroText.Text,
+                Tags = TagsText.Text,
+                Diretor = DiretorText.Text,
+                Estrelas = EstrelasText.Text,
+                Estudio = EstudioText.Text
+            };
 
             if (!GlobalVars.editando)
             {
