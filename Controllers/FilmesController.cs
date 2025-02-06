@@ -45,15 +45,15 @@ namespace Aniflix.Controllers
         }
         public static DataRow? MostraPrimeiro()
         {
-            return _conn.GetFirstRecord("filmes");
+            return GlobalVars._conn.GetFirstRecord("filmes");
         }
         public static DataRow? MoveAnterior(int id)
         {
-            return _conn.GetPreviousRecord("filmes", id);
+            return GlobalVars._conn.GetPreviousRecord("filmes", id);
         }
         public static DataRow? MoveProximo(int id)
         {
-            return _conn.GetNextRecord("filmes", id);
+            return GlobalVars._conn.GetNextRecord("filmes", id);
         }
 
         public static void AtualizaDados(Filmes filmes)
