@@ -244,7 +244,6 @@ public partial class SeriesView : Form
             EstudioText.Text = record["estudio"].ToString();
         }
     }
-
     private void Next()
     {
         var nextRecord = SeriesController.MoveProximo(currentId);
