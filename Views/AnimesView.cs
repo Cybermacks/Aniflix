@@ -314,5 +314,60 @@ namespace Aniflix.Views
         {
 
         }
+
+        private void TituloAlternativoText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PaisOrigemText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IdiomaOriginalText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AutoresText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FranquiaText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AnimeText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GeneroText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TagsText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DiretorText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EstrelasText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EstudioText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

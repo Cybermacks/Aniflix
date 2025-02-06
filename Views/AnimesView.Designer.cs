@@ -88,6 +88,7 @@
             AutoresText.PlaceholderText = "Autores";
             AutoresText.Size = new Size(374, 23);
             AutoresText.TabIndex = 132;
+            AutoresText.TextChanged += AutoresText_TextChanged;
             // 
             // label18
             // 
@@ -105,6 +106,7 @@
             FranquiaText.PlaceholderText = "Franquia";
             FranquiaText.Size = new Size(381, 23);
             FranquiaText.TabIndex = 130;
+            FranquiaText.TextChanged += FranquiaText_TextChanged;
             // 
             // label15
             // 
@@ -122,6 +124,7 @@
             IdiomaOriginalText.PlaceholderText = "Idioma de Origem";
             IdiomaOriginalText.Size = new Size(381, 23);
             IdiomaOriginalText.TabIndex = 128;
+            IdiomaOriginalText.TextChanged += IdiomaOriginalText_TextChanged;
             // 
             // label9
             // 
@@ -139,6 +142,7 @@
             PaisOrigemText.PlaceholderText = "País de Origem";
             PaisOrigemText.Size = new Size(374, 23);
             PaisOrigemText.TabIndex = 126;
+            PaisOrigemText.TextChanged += PaisOrigemText_TextChanged;
             // 
             // VoltarButton
             // 
@@ -231,6 +235,7 @@
             EstudioText.PlaceholderText = "Estúdio";
             EstudioText.Size = new Size(761, 23);
             EstudioText.TabIndex = 119;
+            EstudioText.TextChanged += EstudioText_TextChanged;
             // 
             // label8
             // 
@@ -257,6 +262,7 @@
             EstrelasText.PlaceholderText = "Estrelas";
             EstrelasText.Size = new Size(759, 23);
             EstrelasText.TabIndex = 115;
+            EstrelasText.TextChanged += EstrelasText_TextChanged;
             // 
             // label17
             // 
@@ -329,6 +335,7 @@
             TituloAlternativoText.PlaceholderText = "Título Alternativo";
             TituloAlternativoText.Size = new Size(382, 23);
             TituloAlternativoText.TabIndex = 106;
+            TituloAlternativoText.TextChanged += TituloAlternativoText_TextChanged;
             // 
             // GeneroText
             // 
@@ -337,6 +344,7 @@
             GeneroText.PlaceholderText = "Gênero";
             GeneroText.Size = new Size(504, 23);
             GeneroText.TabIndex = 104;
+            GeneroText.TextChanged += GeneroText_TextChanged;
             // 
             // DiretorText
             // 
@@ -345,6 +353,7 @@
             DiretorText.PlaceholderText = "Diretor";
             DiretorText.Size = new Size(761, 23);
             DiretorText.TabIndex = 103;
+            DiretorText.TextChanged += DiretorText_TextChanged;
             // 
             // label5
             // 
@@ -371,6 +380,7 @@
             TagsText.PlaceholderText = "Tags";
             TagsText.Size = new Size(251, 23);
             TagsText.TabIndex = 99;
+            TagsText.TextChanged += TagsText_TextChanged;
             // 
             // TituloOriginalText
             // 
@@ -473,6 +483,7 @@
             AnimeText.PlaceholderText = "Anime";
             AnimeText.Size = new Size(372, 23);
             AnimeText.TabIndex = 134;
+            AnimeText.TextChanged += AnimeText_TextChanged;
             // 
             // AnimesView
             // 
