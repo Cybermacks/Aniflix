@@ -104,7 +104,7 @@
             FranquiaText.Location = new Point(12, 445);
             FranquiaText.Name = "FranquiaText";
             FranquiaText.PlaceholderText = "Franquia";
-            FranquiaText.Size = new Size(381, 23);
+            FranquiaText.Size = new Size(762, 23);
             FranquiaText.TabIndex = 130;
             FranquiaText.TextChanged += FranquiaText_TextChanged;
             // 
@@ -151,7 +151,7 @@
             VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             VoltarButton.ForeColor = Color.White;
             VoltarButton.ImageIndex = 0;
-            VoltarButton.Location = new Point(1076, 679);
+            VoltarButton.Location = new Point(1076, 723);
             VoltarButton.Name = "VoltarButton";
             VoltarButton.Size = new Size(137, 61);
             VoltarButton.TabIndex = 125;
@@ -165,7 +165,7 @@
             ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             ProximoButton.ForeColor = Color.White;
             ProximoButton.ImageIndex = 3;
-            ProximoButton.Location = new Point(898, 679);
+            ProximoButton.Location = new Point(898, 723);
             ProximoButton.Name = "ProximoButton";
             ProximoButton.Size = new Size(137, 61);
             ProximoButton.TabIndex = 124;
@@ -180,7 +180,7 @@
             AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             AnteriorButton.ForeColor = Color.White;
             AnteriorButton.ImageIndex = 4;
-            AnteriorButton.Location = new Point(720, 679);
+            AnteriorButton.Location = new Point(720, 723);
             AnteriorButton.Name = "AnteriorButton";
             AnteriorButton.Size = new Size(137, 61);
             AnteriorButton.TabIndex = 123;
@@ -195,7 +195,7 @@
             EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             EditarButton.ForeColor = Color.White;
             EditarButton.ImageIndex = 2;
-            EditarButton.Location = new Point(542, 679);
+            EditarButton.Location = new Point(542, 723);
             EditarButton.Name = "EditarButton";
             EditarButton.Size = new Size(137, 61);
             EditarButton.TabIndex = 122;
@@ -210,7 +210,7 @@
             InserirNovoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             InserirNovoButton.ForeColor = Color.White;
             InserirNovoButton.ImageIndex = 2;
-            InserirNovoButton.Location = new Point(364, 679);
+            InserirNovoButton.Location = new Point(364, 723);
             InserirNovoButton.Name = "InserirNovoButton";
             InserirNovoButton.Size = new Size(137, 61);
             InserirNovoButton.TabIndex = 121;
@@ -225,7 +225,7 @@
             CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             CopiarButton.ForeColor = Color.White;
             CopiarButton.ImageIndex = 1;
-            CopiarButton.Location = new Point(186, 679);
+            CopiarButton.Location = new Point(186, 723);
             CopiarButton.Name = "CopiarButton";
             CopiarButton.Size = new Size(137, 61);
             CopiarButton.TabIndex = 120;
@@ -235,7 +235,7 @@
             // 
             // EstudioText
             // 
-            EstudioText.Location = new Point(12, 621);
+            EstudioText.Location = new Point(11, 665);
             EstudioText.Name = "EstudioText";
             EstudioText.PlaceholderText = "Estúdio";
             EstudioText.Size = new Size(761, 23);
@@ -245,7 +245,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(14, 603);
+            label8.Location = new Point(14, 647);
             label8.Name = "label8";
             label8.Size = new Size(46, 15);
             label8.TabIndex = 118;
@@ -257,12 +257,12 @@
             ResumoText.Multiline = true;
             ResumoText.Name = "ResumoText";
             ResumoText.PlaceholderText = "Resumo";
-            ResumoText.Size = new Size(605, 613);
+            ResumoText.Size = new Size(605, 657);
             ResumoText.TabIndex = 117;
             // 
             // EstrelasText
             // 
-            EstrelasText.Location = new Point(14, 577);
+            EstrelasText.Location = new Point(13, 621);
             EstrelasText.Name = "EstrelasText";
             EstrelasText.PlaceholderText = "Estrelas";
             EstrelasText.Size = new Size(759, 23);
@@ -272,7 +272,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(12, 515);
+            label17.Location = new Point(13, 559);
             label17.Name = "label17";
             label17.Size = new Size(43, 15);
             label17.TabIndex = 114;
@@ -281,7 +281,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(14, 559);
+            label16.Location = new Point(12, 603);
             label16.Name = "label16";
             label16.Size = new Size(46, 15);
             label16.TabIndex = 113;
@@ -290,7 +290,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(779, 13);
+            label14.Location = new Point(780, 13);
             label14.Name = "label14";
             label14.Size = new Size(50, 15);
             label14.TabIndex = 112;
@@ -299,7 +299,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(14, 471);
+            label13.Location = new Point(13, 515);
             label13.Name = "label13";
             label13.Size = new Size(45, 15);
             label13.TabIndex = 111;
@@ -308,7 +308,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(522, 471);
+            label10.Location = new Point(523, 515);
             label10.Name = "label10";
             label10.Size = new Size(31, 15);
             label10.TabIndex = 110;
@@ -344,7 +344,7 @@
             // 
             // GeneroText
             // 
-            GeneroText.Location = new Point(12, 489);
+            GeneroText.Location = new Point(13, 533);
             GeneroText.Name = "GeneroText";
             GeneroText.PlaceholderText = "Gênero";
             GeneroText.Size = new Size(504, 23);
@@ -353,7 +353,7 @@
             // 
             // DiretorText
             // 
-            DiretorText.Location = new Point(12, 533);
+            DiretorText.Location = new Point(13, 577);
             DiretorText.Name = "DiretorText";
             DiretorText.PlaceholderText = "Diretor";
             DiretorText.Size = new Size(761, 23);
@@ -380,7 +380,7 @@
             // 
             // TagsText
             // 
-            TagsText.Location = new Point(522, 489);
+            TagsText.Location = new Point(523, 533);
             TagsText.Name = "TagsText";
             TagsText.PlaceholderText = "Tags";
             TagsText.Size = new Size(251, 23);
@@ -475,7 +475,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(401, 427);
+            label6.Location = new Point(13, 471);
             label6.Name = "label6";
             label6.Size = new Size(42, 15);
             label6.TabIndex = 135;
@@ -483,10 +483,10 @@
             // 
             // AnimeText
             // 
-            AnimeText.Location = new Point(401, 445);
+            AnimeText.Location = new Point(13, 489);
             AnimeText.Name = "AnimeText";
             AnimeText.PlaceholderText = "Anime";
-            AnimeText.Size = new Size(372, 23);
+            AnimeText.Size = new Size(761, 23);
             AnimeText.TabIndex = 134;
             AnimeText.TextChanged += AnimeText_TextChanged;
             // 
@@ -494,7 +494,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1399, 772);
+            ClientSize = new Size(1399, 827);
             Controls.Add(label6);
             Controls.Add(AnimeText);
             Controls.Add(label19);
