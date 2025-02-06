@@ -11,9 +11,9 @@ namespace Aniflix.Controllers
 
         public static void Registrar(Series series)
         {
-            var filme = _conn.SelectData("series", "codigo = @codigo", new MySqlParameter("@codigo", series.Codigo));
+            var serie = _conn.SelectData("series", "codigo = @codigo", new MySqlParameter("@codigo", series.Codigo));
 
-            if (filme.Rows.Count > 0)
+            if (serie.Rows.Count > 0)
             {
                 MessageBox.Show(series.Titulo + " já está cadastrado!", "series", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
