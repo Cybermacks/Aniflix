@@ -400,7 +400,7 @@ namespace Aniflix.Views
 
             if (!string.IsNullOrEmpty(animes.Codigo))
             {
-                SeriesController.Registrar(animes);
+                AnimesController.Registrar(animes);
             }
             else
             {
