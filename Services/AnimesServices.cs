@@ -8,8 +8,8 @@ namespace Aniflix.Services
 {
     public class AnimesServices(string titulo, string? audio, string? sinopse = null, string? tituloOriginal = null,
                string? dataLancamento = null, string? tituloAlternativo = null, string? paisOrigem = null, string? idiomaOriginal = null, string? serie = null,
-               string? autores = null, string? criadores = null, string? obraOriginal = null, string? genero = null, string? tags = null, string? diretor = null,
-               string? mcu = null, string? estrelas = null, string? estudio = null)
+               string? autores = null, string? genero = null, string? tags = null, string? diretor = null,
+               string? estrelas = null, string? estudio = null)
     {
         public string Titulo { get; private set; } = titulo;
         public string? Audio { get; private set; } = audio;
@@ -21,12 +21,9 @@ namespace Aniflix.Services
         public string? IdiomaOriginal { get; private set; } = idiomaOriginal;
         public string? Serie { get; private set; } = serie;
         public string? Autores { get; private set; } = autores;
-        public string? Criadores { get; private set; } = criadores;
-        public string? ObraOriginal { get; private set; } = obraOriginal;
         public string? Genero { get; private set; } = genero;
         public string? Tags { get; private set; } = tags;
         public string? Diretor { get; private set; } = diretor;
-        public string? MCU { get; private set; } = mcu;
         public string? Estrelas { get; private set; } = estrelas;
         public string? Estudio { get; private set; } = estudio;
 
@@ -48,12 +45,9 @@ __[Os vídeos estão em ordem crescente, ou seja, de cima para baixo, tal como n
 **Idioma Original:** __{IdiomaOriginal}__
 **Serie:** {Serie}
 **Autores:** {Autores}
-**Criadores:** {Criadores}
-**Obra Original:** {ObraOriginal}
 **Gênero:** {Genero}
 **Tags:** {Tags}
 **Diretor:** {Diretor}
-**FaseMCU:** {MCU}
 **Estrelas:**`{Estrelas}
 **Estúdio:** {Estudio}
 ";
