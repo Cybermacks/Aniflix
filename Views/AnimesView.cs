@@ -181,6 +181,8 @@ namespace Aniflix.Views
                 tituloOriginal: TituloOriginalText.Text,
                 dataLancamento: DataLancamentoText.Text,
                 tituloAlternativo: TituloAlternativoText.Text,
+                   franquia: FranquiaText.Text,
+
 
                 paisOrigem: PaisOrigemText.Text,
                 idiomaOriginal: IdiomaOriginalText.Text,
