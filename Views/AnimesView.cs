@@ -347,27 +347,27 @@ namespace Aniflix.Views
 
         private void GeneroText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void TagsText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void DiretorText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void EstrelasText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void EstudioText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
     }
 }
