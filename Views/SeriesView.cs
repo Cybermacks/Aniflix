@@ -1,4 +1,5 @@
 using DeepL;
+using Aniflix.Models;
 using Aniflix.Services;
 using Aniflix.Extensions;
 using System.Globalization;
@@ -201,14 +202,12 @@ public partial class SeriesView : Form
             tituloOriginal: TituloOriginalText.Text,
             dataLancamento: DataLancamentoText.Text,
             tituloAlternativo: TituloAlternativoText.Text,
-
-
-
-
-
-
-
-
+            paisOrigem: PaisOrigemText.Text,
+            idiomaOriginal: IdiomaOriginalText.Text,
+            serie: SerieText.Text,
+            autores: AutoresText.Text,
+            criadores: CriadoresText.Text,
+            obraOriginal: ObraOriginalText.Text,
             genero: GeneroText.Text,
             tags: TagsText.Text,
             diretor: DiretorText.Text,
