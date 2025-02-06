@@ -326,7 +326,6 @@
             TituloAlternativoText.PlaceholderText = "Título Alternativo";
             TituloAlternativoText.Size = new Size(382, 23);
             TituloAlternativoText.TabIndex = 106;
-            TituloAlternativoText.Text = "--";
             // 
             // GeneroText
             // 
