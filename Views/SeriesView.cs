@@ -244,7 +244,7 @@ public partial class SeriesView : Form
         }
     }
 
-   private void Next()
+    private void Next()
     {
         var nextRecord = SeriesController.MoveProximo(currentId);
 
@@ -256,6 +256,21 @@ public partial class SeriesView : Form
         {
             MessageBox.Show("Você chegou ao último registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+    }
+
+    private void Previous()
+    {
+        var previousRecord = SeriesController.MoveAnterior(currentId);
+
+        if (previousRecord != null)
+        {
+            PreencheDados(previousRecord);
+        }
+        else
+        {
+            MessageBox.Show("Você chegou ao último registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 
 
