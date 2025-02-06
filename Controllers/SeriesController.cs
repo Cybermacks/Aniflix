@@ -1,7 +1,6 @@
 ﻿using System.Data;
 using Aniflix.Models;
 using MySqlConnector;
-using Aniflix.Factory;
 using Aniflix.Globals;
 
 namespace Aniflix.Controllers
