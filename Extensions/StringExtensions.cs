@@ -88,10 +88,7 @@ namespace Aniflix.Extensions
 
         public static string ClearPunctation(string input)
         {
-            List<string> words = new List<string>();
-
-            Console.WriteLine("Type one word at at time, each followed by Enter.");
-            Console.WriteLine("A word ending with a period, '.', will stop word entries.");
+            List<string> words = [];
 
             bool quit = false;
             while (!quit)
