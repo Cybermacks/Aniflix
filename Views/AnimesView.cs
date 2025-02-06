@@ -220,7 +220,7 @@ namespace Aniflix.Views
         }
         private void Next()
         {
-            var nextRecord = SeriesController.MoveProximo(GlobalVars.currentId);
+            var nextRecord = AnimesController.MoveProximo(GlobalVars.currentId);
 
             if (nextRecord != null)
             {
@@ -233,7 +233,7 @@ namespace Aniflix.Views
         }
         private void Previous()
         {
-            var previousRecord = SeriesController.MoveAnterior(GlobalVars.currentId);
+            var previousRecord = AnimesController.MoveAnterior(GlobalVars.currentId);
 
             if (previousRecord != null)
             {
