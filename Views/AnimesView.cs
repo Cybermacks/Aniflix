@@ -21,7 +21,7 @@ namespace Aniflix.Views
         private void AnimesView_Load(object sender, EventArgs e)
         {
             UpdateData();
-            CarregarFilme();
+            LoadRecord();
             Functions.DoReadOnly(this);
             TituloAlternativoText.Text = "--";
             AutoresText.Text = "--";

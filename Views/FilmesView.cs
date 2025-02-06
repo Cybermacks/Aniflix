@@ -205,13 +205,13 @@ namespace Aniflix.Views
         private void FilmesView_Load(object sender, EventArgs e)
         {
             UpdateData();
-            CarregarFilme();
+            LoadRecord();
             Functions.DoReadOnly(this);
             TituloAlternativoText.Text = "--";
             FaseMCUText.Text = "--";
             FranquiaText.Text = "--";
         }
-        private void CarregarFilme()
+        private void LoadRecord()
         {
             var filme = FilmesController.MostraPrimeiro();
 

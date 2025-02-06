@@ -271,7 +271,7 @@ public partial class SeriesView : Form
         }
     }
 
-    private void CarregarFilme()
+    private void LoadRecord()
     {
         var serie = SeriesController.MostraPrimeiro();
 
@@ -387,7 +387,7 @@ public partial class SeriesView : Form
     private void SeriesView_Load(object sender, EventArgs e)
     {
         UpdateData();
-        CarregarFilme();
+        LoadRecord();
         Functions.DoReadOnly(this);
         TituloAlternativoText.Text = "--";
         FaseMCUText.Text = "--";
