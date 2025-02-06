@@ -71,12 +71,9 @@ namespace Aniflix.Views
                 IdiomaOriginalText.Text = record["idioma_original"].ToString();
                 SerieText.Text = record["serie"].ToString();
                 AutoresText.Text = record["autores"].ToString();
-                CriadoresText.Text = record["criadores"].ToString();
-                ObraOriginalText.Text = record["obra_original"].ToString();
                 GeneroText.Text = record["genero"].ToString();
                 TagsText.Text = record["tags"].ToString();
                 DiretorText.Text = record["diretor"].ToString();
-                FaseMCUText.Text = record["mcu"].ToString();
                 EstrelasText.Text = record["estrelas"].ToString();
                 EstudioText.Text = record["estudio"].ToString();
             }
@@ -125,12 +122,9 @@ namespace Aniflix.Views
                 IdiomaOriginalText.Text = serie["idioma_original"].ToString();
                 SerieText.Text = serie["serie"].ToString();
                 AutoresText.Text = serie["autores"].ToString();
-                CriadoresText.Text = serie["criadores"].ToString();
-                ObraOriginalText.Text = serie["obra_original"].ToString();
                 GeneroText.Text = serie["genero"].ToString();
                 TagsText.Text = serie["tags"].ToString();
                 DiretorText.Text = serie["diretor"].ToString();
-                FaseMCUText.Text = serie["mcu"].ToString();
                 EstrelasText.Text = serie["estrelas"].ToString();
                 EstudioText.Text = serie["estudio"].ToString();
             }
