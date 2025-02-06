@@ -378,7 +378,7 @@ namespace Aniflix.Views
 
         private void InserirNovoButton_Click(object sender, EventArgs e)
         {
-            var series = new Animes
+            var animes = new Animes
             {
                 Codigo = CodigoText.Text,
                 Titulo = TituloText.Text,
