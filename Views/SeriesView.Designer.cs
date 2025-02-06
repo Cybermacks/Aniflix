@@ -106,6 +106,7 @@ partial class SeriesView
         ProximoButton.TabIndex = 78;
         ProximoButton.Text = "Próximo";
         ProximoButton.UseVisualStyleBackColor = false;
+        ProximoButton.Click += ProximoButton_Click;
         // 
         // AnteriorButton
         // 
@@ -120,6 +121,7 @@ partial class SeriesView
         AnteriorButton.TabIndex = 77;
         AnteriorButton.Text = "Anterior";
         AnteriorButton.UseVisualStyleBackColor = false;
+        AnteriorButton.Click += AnteriorButton_Click;
         // 
         // EditarButton
         // 

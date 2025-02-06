@@ -403,4 +403,13 @@ public partial class SeriesView : Form
             MessageBox.Show("Por favor, insira o código de pesquisa da série.", "Séries - Inserir Novo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
+    private void AnteriorButton_Click(object sender, EventArgs e)
+    {
+        Previous();
+    }
+
+    private void ProximoButton_Click(object sender, EventArgs e)
+    {
+        Next();
+    }
 }
