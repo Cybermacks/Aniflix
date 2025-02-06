@@ -35,17 +35,21 @@ __[Os vídeos estão em ordem crescente, ou seja, de cima para baixo, tal como n
 
 **Sinopse:** __{Sinopse}__
 
-**Título Original:** __{TituloOriginal}__
+**Nome Original:** __{TituloOriginal}__
 **Título Alternativo:** {TituloAlternativo}
 **Data de lançamento:** __{DataLancamento}__
-**Filme:** #{Titulo.Replace(" ", string.Empty)}
-**Franquia:** {Franquia}
-**Gênero:** {Genero}
-**Tags:** {Tags}
-**Diretor:** {Diretor}
-**FaseMCU:** {MCU}
-**Estrelas:** {Estrelas}
-**Estúdio:** {Estudio?.TrimEnd()}
+**Países de Origem:** __{PaisOrigem}__
+**Idioma Original:** __{IdiomaOriginal}__
+**Serie:** __{Serie}__
+**Autores:** __{Autores}__
+**Criadores:** __{Criadores}__
+**Obra Original:** __{ObraOriginal}__
+**Gênero:** __{Genero}__
+**Tags:** __{Tags}__
+**Diretor:** __{Diretor}__
+**FaseMCU:** __{MCU}__
+**Estrelas:** __{Estrelas}__
+**Estúdio:** __{Estudio}__
 ";
             return formattedText;
         }
