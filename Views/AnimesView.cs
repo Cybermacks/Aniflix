@@ -181,12 +181,10 @@ namespace Aniflix.Views
                 tituloOriginal: TituloOriginalText.Text,
                 dataLancamento: DataLancamentoText.Text,
                 tituloAlternativo: TituloAlternativoText.Text,
-                   franquia: FranquiaText.Text,
-
-
+                franquia: FranquiaText.Text,
                 paisOrigem: PaisOrigemText.Text,
                 idiomaOriginal: IdiomaOriginalText.Text,
-              anime: AnimeText.Text,
+                anime: AnimeText.Text,
                 autores: AutoresText.Text,
               | genero: GeneroText.Text,
                 tags: TagsText.Text,
