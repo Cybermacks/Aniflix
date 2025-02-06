@@ -45,7 +45,7 @@ public partial class SeriesView : Form
                     TituloOriginalText.Text = given.OriginalName;
                     DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
                     PaisOrigemText.Text = "#" + country.Text.Replace(" ", "");
-                    IdiomaOriginalText.Text = language.ToString();
+                    IdiomaOriginalText.Text = "#" + language.Text.Replace(" ", "");
                 }));
 
                 if (
