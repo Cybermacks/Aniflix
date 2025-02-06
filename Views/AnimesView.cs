@@ -289,5 +289,11 @@ namespace Aniflix.Views
                 e.Handled = true;
             }
         }
+
+
+
+
+
+
     }
 }
