@@ -20,7 +20,6 @@ namespace Aniflix.Views
         {
             UpdateData();
             LoadRecord();
-            Functions.DoReadOnly(this);
             TituloAlternativoText.Text = "--";
             AutoresText.Text = "--";
         }
