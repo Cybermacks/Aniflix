@@ -191,8 +191,7 @@ namespace Aniflix.Views
                 diretor: DiretorText.Text,
                 estrelas: EstrelasText.Text,
                 estudio: EstudioText.Text
-
-                );
+            );
             ResumoText.Text = model.GetFormattedText();
         }
 
