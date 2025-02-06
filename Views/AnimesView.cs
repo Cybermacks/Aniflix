@@ -42,12 +42,9 @@ namespace Aniflix.Views
                 idiomaOriginal: IdiomaOriginalText.Text,
                 serie: SerieText.Text,
                 autores: AutoresText.Text,
-                criadores: CriadoresText.Text,
-                obraOriginal: ObraOriginalText.Text,
-                genero: GeneroText.Text,
+        | genero: GeneroText.Text,
                 tags: TagsText.Text,
                 diretor: DiretorText.Text,
-                mcu: FaseMCUText.Text,
                 estrelas: EstrelasText.Text,
                 estudio: EstudioText.Text
 
