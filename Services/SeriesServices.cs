@@ -1,8 +1,9 @@
 ﻿namespace Aniflix.Services
 {
-    public class SeriesServices(string titulo, string franquia, string? sinopse = null, string? tituloOriginal = null,
-               string? dataLancamento = null, string? tituloAlternativo = null, string? genero = null, string? tags = null,
-               string? diretor = null, string? mcu = null, string? estrelas = null, string? estudio = null, string? audio = null)
+    public class SeriesServices(string titulo, string? audio, string? sinopse = null, string? tituloOriginal = null,
+               string? dataLancamento = null, string? tituloAlternativo = null, string? paisOrigem, string? idiomaOriginal, string? serie,
+               string? autores, string? criadores, string? obraOriginal,
+               string? genero = null, string? tags = null, string? diretor = null, string? mcu = null, string? estrelas = null, string? estudio = null)
     {
         public string Titulo { get; private set; } = titulo;
         public string? Audio { get; private set; } = audio;
@@ -10,13 +11,19 @@
         public string? TituloOriginal { get; private set; } = tituloOriginal;
         public string? DataLancamento { get; private set; } = dataLancamento;
         public string? TituloAlternativo { get; private set; } = tituloAlternativo;
-        public string? Franquia { get; private set; } = franquia;
+        public string? PaisOrigem { get; private set; } = paisOrigem;
+        public string? IdiomaOriginal { get; private set; } = idiomaOriginal;
+        public string? Serie { get; private set; } = serie;
+        public string? Autores { get; private set; } = autores;
+        public string? Criadores { get; private set; } = criadores;
+        public string? ObraOriginal { get; private set; } = obraOriginal;
         public string? Genero { get; private set; } = genero;
         public string? Tags { get; private set; } = tags;
         public string? Diretor { get; private set; } = diretor;
         public string? MCU { get; private set; } = mcu;
         public string? Estrelas { get; private set; } = estrelas;
         public string? Estudio { get; private set; } = estudio;
+
 
 
         public string GetFormattedText()
