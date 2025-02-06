@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Aniflix.Globals
+﻿namespace Aniflix.Globals
 {
-    internal class Vars
+    public static class Vars
     {
+
     }
 }
