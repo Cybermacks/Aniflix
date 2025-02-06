@@ -178,7 +178,7 @@ public partial class SeriesView : Form
         {
             Invoke((Action)(() =>
             {
-                MessageBox.Show($"Erro ao buscar o filme: {ex.Message}", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro ao buscar o filme: {ex.Message}", "Séries - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }));
         }
     }
