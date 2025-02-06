@@ -1,4 +1,5 @@
 using Aniflix.Views;
+using Aniflix.Services;
 
 namespace Aniflix
 {
@@ -13,7 +14,7 @@ namespace Aniflix
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new SeriesView());
+            Application.Run(new AnimesView());
         }
     }
 }
