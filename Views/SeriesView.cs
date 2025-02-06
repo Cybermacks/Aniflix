@@ -462,7 +462,7 @@ public partial class SeriesView : Form
         }
         else if (EditarButton.Text == "Salvar")
         {
-            var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {series.Titulo} ?", "Filmes - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var atualizar = MessageBox.Show($"Atualizar as informações sobre o filme {series.Titulo} ?", "Séries - Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (atualizar == DialogResult.Yes)
             {
