@@ -136,6 +136,7 @@ partial class SeriesView
         EditarButton.TabIndex = 76;
         EditarButton.Text = "Editar";
         EditarButton.UseVisualStyleBackColor = false;
+        EditarButton.Click += EditarButton_Click;
         // 
         // InserirNovoButton
         // 
