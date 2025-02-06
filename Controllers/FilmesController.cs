@@ -6,8 +6,7 @@ using Aniflix.Factory;
 namespace Aniflix.Controllers
 {
     public static class FilmesController
-    {
-        public static readonly DatabaseConnection _conn = DatabaseConnection.Instance;
+    {       
 
         public static void Registrar(Filmes filmes)
         {
