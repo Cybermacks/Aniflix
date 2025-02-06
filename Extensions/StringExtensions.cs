@@ -85,5 +85,23 @@ namespace Aniflix.Extensions
 
             return string.Join(" ", uniqueNames);
         }
+
+        public static string ClearPunctation(string input)
+        {
+            List<string> words = new List<string>();
+
+            Console.WriteLine("Type one word at at time, each followed by Enter.");
+            Console.WriteLine("A word ending with a period, '.', will stop word entries.");
+
+            bool quit = false;
+            while (!quit)
+            {
+                String word = input;
+                words.Add(word.TrimEnd('.'));
+                quit = word.EndsWith(".");
+            }
+            return String.Join(" ", words);
+
+        }
     }
 }
