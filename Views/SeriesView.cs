@@ -270,6 +270,32 @@ public partial class SeriesView : Form
             MessageBox.Show("Você chegou ao primeiro registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
+
+
+    private void CarregarFilme()
+    {
+        var filme = FilmesController.MostraPrimeiro();
+
+        if (filme != null)
+        {
+            CodigoText.Text = filme["codigo"].ToString();
+            TituloText.Text = filme["titulo"].ToString();
+            AudioBox.SelectedItem = filme["audio"].ToString();
+            SinopseText.Text = filme["sinopse"].ToString();
+            TituloOriginalText.Text = filme["titulo_original"].ToString();
+            DataLancamentoText.Text = filme["data_lancamento"].ToString();
+            TituloAlternativoText.Text = filme["titulo_alternativo"].ToString();
+            FranquiaText.Text = filme["franquia"].ToString();
+            GeneroText.Text = filme["genero"].ToString();
+            TagsText.Text = filme["tags"].ToString();
+            DiretorText.Text = filme["diretor"].ToString();
+            FaseMCUText.Text = filme["mcu"].ToString();
+            EstrelasText.Text = filme["estrelas"].ToString();
+            EstudioText.Text = filme["estudio"].ToString();
+        }
+    }
+
+
     private void TituloText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
