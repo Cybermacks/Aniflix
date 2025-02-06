@@ -58,7 +58,7 @@ namespace Aniflix.Controllers
 
         public static void AtualizaDados(Filmes filmes)
         {
-            int rowsAffected = _conn.UpdateData("filmes", "codigo = @codigo",
+            int rowsAffected = GlobalVars._conn.UpdateData("filmes", "codigo = @codigo",
                 new MySqlParameter("@codigo", filmes.Codigo),
                 new MySqlParameter("@titulo", filmes.Titulo),
                 new MySqlParameter("@audio", filmes.Audio),
