@@ -56,7 +56,7 @@ namespace Aniflix.Views
                         DataLancamentoText.Text = given.FirstAirDate?.ToString("dd/MM/yyyy");
                         PaisOrigemText.Text = "#" + StringExtensions.RemoveDiacritics(country.Text.Replace(" ", ""));
                         IdiomaOriginalText.Text = "#" + StringExtensions.RemoveDiacritics(language.Text.Replace(" ", ""));
-                        FranquiaText.Text = "#" + StringExtensions.StripPunctuation(given.Name.Replace(" ", ""));
+                        AnimeText.Text = "#" + StringExtensions.StripPunctuation(given.Name.Replace(" ", ""));
                     }));
 
                     if (
