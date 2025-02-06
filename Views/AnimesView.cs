@@ -270,7 +270,7 @@ namespace Aniflix.Views
             }
         }
 
-        private void CodigoText_Leave(object sender, EventArgs e)
+        private async void CodigoText_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(CodigoText.Text))
             {
