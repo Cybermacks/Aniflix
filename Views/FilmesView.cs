@@ -252,11 +252,6 @@ namespace Aniflix.Views
             }
         }
 
-        private void CodigoText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CodigoText_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
