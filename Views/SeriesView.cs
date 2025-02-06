@@ -257,7 +257,6 @@ public partial class SeriesView : Form
             MessageBox.Show("Você chegou ao último registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
-
     private void Previous()
     {
         var previousRecord = SeriesController.MoveAnterior(currentId);
@@ -271,8 +270,6 @@ public partial class SeriesView : Form
             MessageBox.Show("Você chegou ao último registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
-
-
     private void TituloText_TextChanged(object sender, EventArgs e)
     {
         UpdateData();
