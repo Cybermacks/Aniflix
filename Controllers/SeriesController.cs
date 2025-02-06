@@ -2,15 +2,16 @@
 using Aniflix.Models;
 using MySqlConnector;
 using Aniflix.Factory;
+using Aniflix.Globals;
 
 namespace Aniflix.Controllers
 {
     public static class SeriesController
     {
-       
+
         public static void Registrar(Series series)
         {
-            var serie = _conn.SelectData("series", "codigo = @codigo", new MySqlParameter("@codigo", series.Codigo));
+            var serie = GlobalVars._conn.SelectData("series", "codigo = @codigo", new MySqlParameter("@codigo", series.Codigo));
 
             if (serie.Rows.Count > 0)
             {
@@ -19,7 +20,7 @@ namespace Aniflix.Controllers
             }
             else
             {
-                int rowsAffected = _conn.InsertData("series",
+                int rowsAffected = GlobalVars._conn.InsertData("series",
                     new MySqlParameter("@codigo", series.Codigo),
                     new MySqlParameter("@titulo", series.Titulo),
                     new MySqlParameter("@audio", series.Audio),
@@ -49,20 +50,20 @@ namespace Aniflix.Controllers
         }
         public static DataRow? MostraPrimeiro()
         {
-            return _conn.GetFirstRecord("series");
+            return GlobalVars._conn.GetFirstRecord("series");
         }
         public static DataRow? MoveAnterior(int id)
         {
-            return _conn.GetPreviousRecord("series", id);
+            return GlobalVars._conn.GetPreviousRecord("series", id);
         }
         public static DataRow? MoveProximo(int id)
         {
-            return _conn.GetNextRecord("series", id);
+            return GlobalVars._conn.GetNextRecord("series", id);
         }
 
         public static void AtualizaDados(Series series)
         {
-            int rowsAffected = _conn.UpdateData("series", "codigo = @codigo",
+            int rowsAffected = GlobalVars._conn.UpdateData("series", "codigo = @codigo",
                 new MySqlParameter("@codigo", series.Codigo),
                 new MySqlParameter("@titulo", series.Titulo),
                 new MySqlParameter("@audio", series.Audio),
