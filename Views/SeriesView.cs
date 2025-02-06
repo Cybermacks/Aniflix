@@ -1,3 +1,4 @@
+using DeepL;
 using Aniflix.Extensions;
 using System.Globalization;
 
@@ -21,6 +22,8 @@ public partial class SeriesView : Form
                 DefaultLanguage = "pt-BR",
                 DefaultCountry = "BR",
             };
+
+            var deepL = new DeepLClient("7feb3eb8-de95-4312-843c-1064aecdab8b:fx");
 
             var codigo = int.Parse(CodigoText.Text);
             var givenTask = client.GetTvShowAsync(codigo);
