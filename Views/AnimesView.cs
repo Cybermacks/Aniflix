@@ -119,7 +119,7 @@ namespace Aniflix.Views
                 {
                     Invoke(() =>
                     {
-                        MessageBox.Show("Nenhuma série encontrada.", "Séries - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Nenhum anime foi encontrado.", "Animes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         CodigoText.Focus();
                     });
                 }
