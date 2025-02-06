@@ -290,10 +290,29 @@ namespace Aniflix.Views
             }
         }
 
+        private void TituloText_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void AudioBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void SinopseText_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void TituloOriginalText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataLancamentoText_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

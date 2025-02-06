@@ -311,6 +311,7 @@
             DataLancamentoText.Size = new Size(118, 23);
             DataLancamentoText.TabIndex = 109;
             DataLancamentoText.ValidatingType = typeof(DateTime);
+            DataLancamentoText.MaskInputRejected += DataLancamentoText_MaskInputRejected;
             // 
             // label12
             // 
@@ -378,6 +379,7 @@
             TituloOriginalText.PlaceholderText = "Título Original";
             TituloOriginalText.Size = new Size(638, 23);
             TituloOriginalText.TabIndex = 98;
+            TituloOriginalText.TextChanged += TituloOriginalText_TextChanged;
             // 
             // label4
             // 
@@ -423,6 +425,7 @@
             SinopseText.PlaceholderText = "Sinopse";
             SinopseText.Size = new Size(762, 217);
             SinopseText.TabIndex = 93;
+            SinopseText.TextChanged += SinopseText_TextChanged;
             // 
             // AudioBox
             // 
@@ -433,6 +436,7 @@
             AudioBox.Size = new Size(144, 23);
             AudioBox.TabIndex = 92;
             AudioBox.Text = "Dublado";
+            AudioBox.SelectedIndexChanged += AudioBox_SelectedIndexChanged;
             // 
             // TituloText
             // 
@@ -441,6 +445,7 @@
             TituloText.PlaceholderText = "Título";
             TituloText.Size = new Size(506, 23);
             TituloText.TabIndex = 91;
+            TituloText.TextChanged += TituloText_TextChanged;
             // 
             // CodigoText
             // 
