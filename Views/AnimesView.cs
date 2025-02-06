@@ -371,7 +371,8 @@ namespace Aniflix.Views
 
         private void CopiarButton_Click(object sender, EventArgs e)
         {
-
+            ResumoText.SelectAll();
+            ResumoText.Copy();
         }
 
         private void InserirNovoButton_Click(object sender, EventArgs e)
