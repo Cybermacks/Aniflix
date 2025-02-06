@@ -333,7 +333,7 @@
             GeneroText.Location = new Point(269, 445);
             GeneroText.Name = "GeneroText";
             GeneroText.PlaceholderText = "Gênero da Série";
-            GeneroText.Size = new Size(495, 23);
+            GeneroText.Size = new Size(504, 23);
             GeneroText.TabIndex = 104;
             // 
             // DiretorText
