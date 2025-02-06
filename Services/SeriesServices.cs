@@ -40,16 +40,16 @@ __[Os vídeos estão em ordem crescente, ou seja, de cima para baixo, tal como n
 **Data de lançamento:** __{DataLancamento}__
 **Países de Origem:** __{PaisOrigem}__
 **Idioma Original:** __{IdiomaOriginal}__
-**Serie:** __{Serie}__
-**Autores:** __{Autores}__
-**Criadores:** __{Criadores}__
-**Obra Original:** __{ObraOriginal}__
-**Gênero:** __{Genero}__
-**Tags:** __{Tags}__
-**Diretor:** __{Diretor}__
-**FaseMCU:** __{MCU}__
-**Estrelas:** __{Estrelas}__
-**Estúdio:** __{Estudio}__
+**Serie:** {Serie}
+**Autores:** {Autores}
+**Criadores:** {Criadores}
+**Obra Original:** {ObraOriginal}
+**Gênero:** {Genero}
+**Tags:** {Tags}
+**Diretor:** {Diretor}
+**FaseMCU:** {MCU}
+**Estrelas:**`{Estrelas}
+**Estúdio:** {Estudio}
 ";
             return formattedText;
         }
