@@ -210,9 +210,7 @@ namespace Aniflix.Views
             TituloAlternativoText.Text = "--";
             FaseMCUText.Text = "--";
             FranquiaText.Text = "--";
-
         }
-
         private void CarregarFilme()
         {
             var filme = FilmesController.BuscaPrimeiroFilme();
