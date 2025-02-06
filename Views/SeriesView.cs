@@ -509,4 +509,12 @@ public partial class SeriesView : Form
             GlobalVars.editando = false;
         }
     }
+
+    private void CodigoText_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+        {
+            e.Handled = true;
+        }
+    }
 }
