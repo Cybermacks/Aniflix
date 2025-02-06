@@ -24,10 +24,7 @@ namespace Aniflix.Views
             CarregarFilme();
             Functions.DoReadOnly(this);
             TituloAlternativoText.Text = "--";
-            FaseMCUText.Text = "--";
-            ObraOriginalText.Text = "--";
             AutoresText.Text = "--";
-            CriadoresText.Text = "--";
         }
     }
 }
