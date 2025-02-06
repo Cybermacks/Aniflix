@@ -170,6 +170,7 @@ partial class SeriesView
         EstudioText.PlaceholderText = "Estúdio";
         EstudioText.Size = new Size(761, 23);
         EstudioText.TabIndex = 73;
+        EstudioText.TextChanged += EstudioText_TextChanged;
         // 
         // label8
         // 
@@ -197,6 +198,7 @@ partial class SeriesView
         FaseMCUText.Size = new Size(96, 23);
         FaseMCUText.TabIndex = 70;
         FaseMCUText.Text = "--";
+        FaseMCUText.TextChanged += FaseMCUText_TextChanged;
         // 
         // EstrelasText
         // 
@@ -205,6 +207,7 @@ partial class SeriesView
         EstrelasText.PlaceholderText = "Estrelas";
         EstrelasText.Size = new Size(761, 23);
         EstrelasText.TabIndex = 69;
+        EstrelasText.TextChanged += EstrelasText_TextChanged;
         // 
         // label17
         // 
@@ -315,6 +318,7 @@ partial class SeriesView
         DiretorText.PlaceholderText = "Diretor";
         DiretorText.Size = new Size(761, 23);
         DiretorText.TabIndex = 57;
+        DiretorText.TextChanged += DiretorText_TextChanged;
         // 
         // label5
         // 
@@ -350,6 +354,7 @@ partial class SeriesView
         TagsText.PlaceholderText = "Tags";
         TagsText.Size = new Size(658, 23);
         TagsText.TabIndex = 53;
+        TagsText.TextChanged += TagsText_TextChanged;
         // 
         // TituloOriginalText
         // 

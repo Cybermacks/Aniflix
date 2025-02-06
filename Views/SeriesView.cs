@@ -283,4 +283,29 @@ public partial class SeriesView : Form
     {
 
     }
+
+    private void TagsText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void FaseMCUText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void DiretorText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void EstrelasText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void EstudioText_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }
