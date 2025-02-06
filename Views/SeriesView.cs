@@ -187,7 +187,15 @@ public partial class SeriesView : Form
 
     private async void CodigoText_Leave(object sender, EventArgs e)
     {
-        await GivenData();
+        if (string.IsNullOrEmpty(CodigoText.Text))
+        {
+            MessageBox.Show("Por favor, insira o código do filme.");
+            CodigoText.Focus();
+        }
+        else
+        {
+            await GivenData();
+        }
     }
     private void UpdateData()
     {
