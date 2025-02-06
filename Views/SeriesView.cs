@@ -22,7 +22,7 @@ public partial class SeriesView : Form
         try
         {
 
-            var client = new TMDbLib.Client.TMDbClient("1dcbf681735d3e7454953f5b7c22b6dc")
+            var client = new TMDbLib.Client.TMDbClient(GlobalVars.API_KEY)
             {
                 DefaultLanguage = "pt-BR",
                 DefaultCountry = "BR",
@@ -39,9 +39,6 @@ public partial class SeriesView : Form
             var credits = creditsTask.Result;
             var country = await deepL.TranslateTextAsync(given.ProductionCountries[0].Name, null, LanguageCode.PortugueseBrazilian);
             var language = await deepL.TranslateTextAsync(given.SpokenLanguages[0].Name, null, LanguageCode.PortugueseBrazilian);
-
-
-
 
             if (given != null)
             {
