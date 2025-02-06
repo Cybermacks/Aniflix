@@ -71,7 +71,7 @@ namespace Aniflix.Views
                     )
                     {
                         string ano = releaseData.Year.ToString();
-                        TagsText.Text = $"#Serie #Serie{ano} #Série #Série{ano}";
+                        TagsText.Text = $"#Anime #Anime{ano}";
                     }
 
                     if (given.Genres != null && given.Genres.Count > 2)
