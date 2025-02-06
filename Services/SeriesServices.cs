@@ -24,8 +24,6 @@
         public string? Estrelas { get; private set; } = estrelas;
         public string? Estudio { get; private set; } = estudio;
 
-
-
         public string GetFormattedText()
         {
             string formattedText =
