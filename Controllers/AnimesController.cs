@@ -20,7 +20,7 @@ namespace Aniflix.Controllers
 
             if (serie.Rows.Count > 0)
             {
-                MessageBox.Show(animes.Titulo + " já está cadastrada!", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(animes.Titulo + " já está cadastrada!", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
@@ -46,7 +46,7 @@ namespace Aniflix.Controllers
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show(animes.Titulo + " cadastrada com sucesso!", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(animes.Titulo + " cadastrada com sucesso!", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -87,11 +87,11 @@ namespace Aniflix.Controllers
 
             if (rowsAffected > 0)
             {
-                MessageBox.Show("Série atualizada com sucesso!", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Anime atualizada com sucesso!", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Erro ao atualizar o registro.", "Séries", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao atualizar o registro.", "Animes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
