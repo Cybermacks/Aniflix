@@ -307,39 +307,38 @@ namespace Aniflix.Views
 
         private void TituloOriginalText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void DataLancamentoText_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
+            UpdateData();
         }
 
         private void TituloAlternativoText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void PaisOrigemText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void IdiomaOriginalText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void AutoresText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
 
         private void FranquiaText_TextChanged(object sender, EventArgs e)
         {
-
+            UpdateData();
         }
-
         private void AnimeText_TextChanged(object sender, EventArgs e)
         {
 
