@@ -43,7 +43,7 @@ __[Os vídeos estão em ordem crescente, ou seja, de cima para baixo, tal como n
 **Data de lançamento:** __{DataLancamento}__
 **Países de Origem:** __{PaisOrigem}__
 **Idioma Original:** __{IdiomaOriginal}__
-**Serie:** {Serie}
+**Anime:** {Anime}
 **Autores:** {Autores}
 **Gênero:** {Genero}
 **Tags:** {Tags}
