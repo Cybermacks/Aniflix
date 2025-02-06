@@ -1,13 +1,7 @@
-﻿using System;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Drawing;
+﻿using System.Data;
 using Aniflix.Models;
 using MySqlConnector;
 using Aniflix.Factory;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace Aniflix.Controllers
 {
