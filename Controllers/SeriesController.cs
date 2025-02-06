@@ -49,7 +49,7 @@ namespace Aniflix.Controllers
                 }
             }
         }
-        public static DataRow? BuscaPrimeiroFilme()
+        public static DataRow? MostraPrimeiro()
         {
             return _conn.GetFirstRecord("series");
         }

@@ -213,7 +213,7 @@ namespace Aniflix.Views
         }
         private void CarregarFilme()
         {
-            var filme = FilmesController.BuscaPrimeiroFilme();
+            var filme = FilmesController.MostraPrimeiro();
 
             if (filme != null)
             {
