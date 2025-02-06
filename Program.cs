@@ -1,5 +1,4 @@
 using Aniflix.Views;
-using Aniflix.Services;
 
 namespace Aniflix
 {
