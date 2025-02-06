@@ -47,20 +47,20 @@ namespace Aniflix.Controllers
         }
         public static DataRow? MostraPrimeiro()
         {
-            return _conn.GetFirstRecord("animes");
+            return GlobalVars._conn.GetFirstRecord("animes");
         }
         public static DataRow? MoveAnterior(int id)
         {
-            return _conn.GetPreviousRecord("animes", id);
+            return GlobalVars._conn.GetPreviousRecord("animes", id);
         }
         public static DataRow? MoveProximo(int id)
         {
-            return _conn.GetNextRecord("animes", id);
+            return GlobalVars._conn.GetNextRecord("animes", id);
         }
 
         public static void AtualizaDados(Animes animes)
         {
-            int rowsAffected = _conn.UpdateData("animes", "codigo = @codigo",
+            int rowsAffected = GlobalVars._conn.UpdateData("animes", "codigo = @codigo",
                 new MySqlParameter("@codigo", animes.Codigo),
                 new MySqlParameter("@titulo", animes.Titulo),
                 new MySqlParameter("@audio", animes.Audio),
