@@ -29,7 +29,7 @@ public partial class SeriesView : Form
             var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
             var country = await deepL.TranslateTextAsync(PaisOrigemText.Text, null, LanguageCode.PortugueseBrazilian);
-
+            var language = await deepL.TranslateTextAsync(IdiomaOriginalText.Text, null, LanguageCode.PortugueseBrazilian);
 
             await Task.WhenAll(givenTask, creditsTask);
 
