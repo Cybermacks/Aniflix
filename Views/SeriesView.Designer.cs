@@ -162,6 +162,7 @@ partial class SeriesView
         CopiarButton.TabIndex = 74;
         CopiarButton.Text = "Copiar Dados";
         CopiarButton.UseVisualStyleBackColor = false;
+        CopiarButton.Click += CopiarButton_Click;
         // 
         // EstudioText
         // 
