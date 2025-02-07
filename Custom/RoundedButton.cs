@@ -43,7 +43,6 @@ namespace Aniflix.Custom
             }
         }
 
-
         public Color BackgroundColor
         {
             get { return BackColor; }
@@ -57,7 +56,6 @@ namespace Aniflix.Custom
             set { ForeColor = value; }
         }
 
-        //Constructor
         public RoundedButton()
         {
             FlatStyle = FlatStyle.Flat;
@@ -68,7 +66,6 @@ namespace Aniflix.Custom
             Resize += new EventHandler(Button_Resize);
         }
 
-        //Methods
         private GraphicsPath GetFigurePath(Rectangle rect, int radius)
         {
             GraphicsPath path = new GraphicsPath();
@@ -94,31 +91,23 @@ namespace Aniflix.Custom
             if (borderSize > 0)
                 smoothSize = borderSize;
 
-            if (borderRadius > 2) //Rounded button
+            if (borderRadius > 2)
             {
-                using (GraphicsPath pathSurface = GetFigurePath(rectSurface, borderRadius))
-                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
-                using (Pen penSurface = new Pen(Parent.BackColor, smoothSize))
-                using (Pen penBorder = new Pen(borderColor, borderSize))
-                {
-                    pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                    //Button surface
-                    Region = new Region(pathSurface);
-                    //Draw surface border for HD result
-                    pevent.Graphics.DrawPath(penSurface, pathSurface);
+                using GraphicsPath pathSurface = GetFigurePath(rectSurface, borderRadius);
+                using GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize);
+                using Pen penSurface = new(Parent!.BackColor, smoothSize);
+                using Pen penBorder = new(borderColor, borderSize);
+                pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                Region = new Region(pathSurface);
+                pevent.Graphics.DrawPath(penSurface, pathSurface);
 
-                    //Button border
-                    if (borderSize >= 1)
-                        //Draw control border
-                        pevent.Graphics.DrawPath(penBorder, pathBorder);
-                }
+                if (borderSize >= 1)
+                    pevent.Graphics.DrawPath(penBorder, pathBorder);
             }
-            else //Normal button
+            else
             {
                 pevent.Graphics.SmoothingMode = SmoothingMode.None;
-                //Button surface
                 Region = new Region(rectSurface);
-                //Button border
                 if (borderSize >= 1)
                 {
                     using (Pen penBorder = new Pen(borderColor, borderSize))
