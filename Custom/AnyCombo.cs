@@ -19,7 +19,7 @@ namespace Aniflix.Custom
         private readonly Label lblText;
         private readonly Button btnIcon;
 
-        public event EventHandler OnSelectedIndexChanged;
+        public event EventHandler? OnSelectedIndexChanged;
         #endregion
 
         #region -> Constructor
@@ -28,13 +28,13 @@ namespace Aniflix.Custom
             cmbList = new ComboBox();
             lblText = new Label();
             btnIcon = new Button();
-            this.SuspendLayout();
+            SuspendLayout();
 
             cmbList.BackColor = listBackColor;
-            cmbList.Font = new Font(this.Font.Name, 10F);
+            cmbList.Font = new Font(Font.Name, 10F);
             cmbList.ForeColor = listTextColor;
-            cmbList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged);
-            cmbList.TextChanged += new EventHandler(ComboBox_TextChanged);
+            cmbList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged!);
+            cmbList.TextChanged += new EventHandler(ComboBox_TextChanged!);
 
             btnIcon.Dock = DockStyle.Right;
             btnIcon.FlatStyle = FlatStyle.Flat;
@@ -42,30 +42,30 @@ namespace Aniflix.Custom
             btnIcon.BackColor = backColor;
             btnIcon.Size = new Size(30, 30);
             btnIcon.Cursor = Cursors.Hand;
-            btnIcon.Click += new EventHandler(Icon_Click);
-            btnIcon.Paint += new PaintEventHandler(Icon_Paint);
+            btnIcon.Click += new EventHandler(Icon_Click!);
+            btnIcon.Paint += new PaintEventHandler(Icon_Paint!);
 
             lblText.Dock = DockStyle.Fill;
             lblText.AutoSize = false;
             lblText.BackColor = backColor;
             lblText.TextAlign = ContentAlignment.MiddleLeft;
             lblText.Padding = new Padding(8, 0, 0, 0);
-            lblText.Font = new Font(this.Font.Name, 10F);
-            lblText.Click += new EventHandler(Surface_Click);
-            lblText.MouseEnter += new EventHandler(Surface_MouseEnter);
-            lblText.MouseLeave += new EventHandler(Surface_MouseLeave);
+            lblText.Font = new Font(Font.Name, 10F);
+            lblText.Click += new EventHandler(Surface_Click!);
+            lblText.MouseEnter += new EventHandler(Surface_MouseEnter!);
+            lblText.MouseLeave += new EventHandler(Surface_MouseLeave!);
 
-            this.Controls.Add(lblText);
-            this.Controls.Add(btnIcon);
-            this.Controls.Add(cmbList);
-            this.MinimumSize = new Size(200, 30);
-            this.Size = new Size(200, 30);
-            this.ForeColor = Color.DimGray;
-            this.Padding = new Padding(borderSize);
-            this.Font = new Font(this.Font.Name, 10F);
+            Controls.Add(lblText);
+            Controls.Add(btnIcon);
+            Controls.Add(cmbList);
+            MinimumSize = new Size(200, 30);
+            Size = new Size(200, 30);
+            ForeColor = Color.DimGray;
+            Padding = new Padding(borderSize);
+            Font = new Font(Font.Name, 10F);
             base.BackColor = borderColor;
-            this.Load += new System.EventHandler(this.AnyCombo_Load);
-            this.ResumeLayout();
+            Load += new System.EventHandler(this.AnyCombo_Load!);
+            ResumeLayout();
             AdjustComboBoxDimensions();
         }
         #endregion
@@ -134,7 +134,7 @@ namespace Aniflix.Custom
             set
             {
                 borderSize = value;
-                this.Padding = new Padding(borderSize);
+                Padding = new Padding(borderSize);
                 AdjustComboBoxDimensions();
             }
         }
@@ -280,12 +280,12 @@ namespace Aniflix.Custom
             cmbList.Width = lblText.Width;
             cmbList.Location = new Point()
             {
-                X = this.Width - this.Padding.Right - cmbList.Width,
+                X = Width - Padding.Right - cmbList.Width,
                 Y = lblText.Bottom - cmbList.Height
             };
-            if (cmbList.Height >= this.Height)
+            if (cmbList.Height >= Height)
             {
-                this.Height = cmbList.Height + (this.borderSize * 2);
+                Height = cmbList.Height + (borderSize * 2);
             }
         }
         #endregion
@@ -323,7 +323,7 @@ namespace Aniflix.Custom
         }
         private void Surface_Click(object sender, EventArgs e)
         {
-            this.OnClick(e);
+            OnClick(e);
             cmbList.Select();
             if (cmbList.DropDownStyle == ComboBoxStyle.DropDownList)
                 cmbList.DroppedDown = true;
@@ -335,12 +335,12 @@ namespace Aniflix.Custom
 
         private void Surface_MouseLeave(object sender, EventArgs e)
         {
-            this.OnMouseLeave(e);
+            OnMouseLeave(e);
         }
 
         private void Surface_MouseEnter(object sender, EventArgs e)
         {
-            this.OnMouseEnter(e);
+            OnMouseEnter(e);
         }
         #endregion
 
