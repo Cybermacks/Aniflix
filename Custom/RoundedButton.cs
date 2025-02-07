@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Aniflix.Custom
 {
-    internal class RoundedButton
+    public class RoundedButton : Button
     {
+        private int borderSize = 0;
+        private int borderRadius = 0;
+        private Color borderColor = Color.PaleVioletRed;
+
     }
 }
