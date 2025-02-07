@@ -15,6 +15,7 @@ namespace Aniflix.Views
     {
         private RoundedButton? currentBtn;
         private Panel? leftBorderBtn;
+        private Form currentChildForm;
 
         public AniflixView()
         {
