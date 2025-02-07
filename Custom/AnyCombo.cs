@@ -177,7 +177,9 @@ namespace Aniflix.Custom
             set
             {
                 if (cmbList.DropDownStyle != ComboBoxStyle.Simple)
+                {
                     cmbList.DropDownStyle = value;
+                }
             }
         }
         #endregion
@@ -295,7 +297,10 @@ namespace Aniflix.Custom
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (OnSelectedIndexChanged != null)
+            {
                 OnSelectedIndexChanged.Invoke(sender, e);
+            }
+
             lblText.Text = cmbList.Text;
         }
 
@@ -326,7 +331,9 @@ namespace Aniflix.Custom
             OnClick(e);
             cmbList.Select();
             if (cmbList.DropDownStyle == ComboBoxStyle.DropDownList)
+            {
                 cmbList.DroppedDown = true;
+            }
         }
         private void ComboBox_TextChanged(object sender, EventArgs e)
         {
@@ -349,7 +356,9 @@ namespace Aniflix.Custom
         {
             base.OnResize(e);
             if (DesignMode)
+            {
                 AdjustComboBoxDimensions();
+            }
         }
         #endregion
 
