@@ -78,7 +78,7 @@ partial class SeriesView
         EditarButton = new Button();
         InserirNovoButton = new Button();
         CopiarButton = new Button();
-        imageList1 = new ImageList(components);
+        ListImage = new ImageList(components);
         SuspendLayout();
         // 
         // EstudioText
@@ -516,6 +516,7 @@ partial class SeriesView
         InserirNovoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         InserirNovoButton.ForeColor = Color.White;
         InserirNovoButton.ImageIndex = 5;
+        InserirNovoButton.ImageList = ListImage;
         InserirNovoButton.Location = new Point(344, 729);
         InserirNovoButton.Name = "InserirNovoButton";
         InserirNovoButton.Size = new Size(160, 85);
@@ -531,6 +532,7 @@ partial class SeriesView
         CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         CopiarButton.ForeColor = Color.White;
         CopiarButton.ImageKey = "content-copy.png";
+        CopiarButton.ImageList = ListImage;
         CopiarButton.Location = new Point(161, 729);
         CopiarButton.Name = "CopiarButton";
         CopiarButton.Size = new Size(160, 85);
@@ -539,11 +541,17 @@ partial class SeriesView
         CopiarButton.TextAlign = ContentAlignment.BottomLeft;
         CopiarButton.UseVisualStyleBackColor = false;
         // 
-        // imageList1
+        // ListImage
         // 
-        imageList1.ColorDepth = ColorDepth.Depth32Bit;
-        imageList1.ImageSize = new Size(16, 16);
-        imageList1.TransparentColor = Color.Transparent;
+        ListImage.ColorDepth = ColorDepth.Depth32Bit;
+        ListImage.ImageStream = (ImageListStreamer)resources.GetObject("ListImage.ImageStream");
+        ListImage.TransparentColor = Color.Transparent;
+        ListImage.Images.SetKeyName(0, "arrow-left.png");
+        ListImage.Images.SetKeyName(1, "content-copy.png");
+        ListImage.Images.SetKeyName(2, "content-save.png");
+        ListImage.Images.SetKeyName(3, "file-edit.png");
+        ListImage.Images.SetKeyName(4, "skip-next.png");
+        ListImage.Images.SetKeyName(5, "skip-previous.png");
         // 
         // SeriesView
         // 
@@ -653,5 +661,5 @@ partial class SeriesView
     private Button EditarButton;
     private Button InserirNovoButton;
     private Button CopiarButton;
-    private ImageList imageList1;
+    private ImageList ListImage;
 }

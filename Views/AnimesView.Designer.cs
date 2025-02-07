@@ -237,7 +237,7 @@
             CopiarButton.FlatStyle = FlatStyle.Popup;
             CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             CopiarButton.ForeColor = Color.White;
-            CopiarButton.ImageKey = "content-copy.png";
+            CopiarButton.ImageIndex = 1;
             CopiarButton.ImageList = ListImage;
             CopiarButton.Location = new Point(161, 723);
             CopiarButton.Name = "CopiarButton";
