@@ -494,7 +494,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1399, 827);
+            ClientSize = new Size(1399, 860);
             Controls.Add(label6);
             Controls.Add(AnimeText);
             Controls.Add(label19);
