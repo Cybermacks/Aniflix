@@ -9,6 +9,12 @@ namespace Aniflix.Views
         private Panel? leftBorderBtn;
         private Form? currentChildForm;
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
+
+
         public AniflixView()
         {
             InitializeComponent();
@@ -82,10 +88,6 @@ namespace Aniflix.Views
             lblTitleChildForm.Text = "Home";
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
 
 
 
