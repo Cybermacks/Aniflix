@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using static Interop;
+using System.ComponentModel;
 using System.Drawing.Drawing2D;
 
 namespace Aniflix.Custom
@@ -28,6 +29,8 @@ namespace Aniflix.Custom
 
 
         public void Copy() => PInvoke.SendMessage(this, PInvoke.WM_COPY);
+
+
         #region -> Properties
         [Category("AnyText")]
         public Color BorderColor
