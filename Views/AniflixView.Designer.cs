@@ -38,6 +38,8 @@
             roundedButton2 = new Custom.RoundedButton();
             Filmesutton = new Custom.RoundedButton();
             panel2 = new Panel();
+            panel3 = new Panel();
+            panelDesktop = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -228,11 +230,29 @@
             panel2.Size = new Size(280, 100);
             panel2.TabIndex = 0;
             // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(280, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1407, 100);
+            panel3.TabIndex = 1;
+            // 
+            // panelDesktop
+            // 
+            panelDesktop.Dock = DockStyle.Fill;
+            panelDesktop.Location = new Point(280, 100);
+            panelDesktop.Name = "panelDesktop";
+            panelDesktop.Size = new Size(1407, 824);
+            panelDesktop.TabIndex = 2;
+            // 
             // AniflixView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1687, 924);
+            Controls.Add(panelDesktop);
+            Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "AniflixView";
             StartPosition = FormStartPosition.CenterScreen;
@@ -253,5 +273,7 @@
         private Custom.RoundedButton roundedButton4;
         private Custom.RoundedButton roundedButton3;
         private Custom.RoundedButton roundedButton2;
+        private Panel panel3;
+        private Panel panelDesktop;
     }
 }

@@ -66,13 +66,11 @@ namespace Aniflix.Views
 
         private void OpenChildForm(Form childForm)
         {
-            //open only form
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
-            //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -80,7 +78,7 @@ namespace Aniflix.Views
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitleChildForm.Text = childForm.Text;
+            //lblTitleChildForm.Text = childForm.Text;
         }
 
         private void Filmesutton_Click(object sender, EventArgs e)
