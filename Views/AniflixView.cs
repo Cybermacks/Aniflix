@@ -123,7 +123,7 @@ namespace Aniflix.Views
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            FecharButton_Click(sender, e);
+            Application.Exit();
         }
     }
 }
