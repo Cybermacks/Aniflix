@@ -12,13 +12,11 @@ namespace Aniflix.Custom
         private int borderSize = 2;
         private bool underlinedStyle = false;
         private bool isFocused = false;
-
         private int borderRadius = 0;
         private Color placeholderColor = Color.DarkGray;
         private string placeholderText = "";
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
-
         public event EventHandler? _TextChanged;
 
         #endregion
