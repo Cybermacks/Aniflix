@@ -199,7 +199,7 @@ namespace Aniflix.Custom
         [DefaultValue(null)]
         public object DataSource
         {
-            get { return cmbList.DataSource; }
+            get { return cmbList.DataSource!; }
             set { cmbList.DataSource = value; }
         }
 
@@ -241,7 +241,7 @@ namespace Aniflix.Custom
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public object SelectedItem
         {
-            get { return cmbList.SelectedItem; }
+            get { return cmbList.SelectedItem!; }
             set { cmbList.SelectedItem = value; }
         }
 
@@ -358,3 +358,4 @@ namespace Aniflix.Custom
             AdjustComboBoxDimensions();
         }
     }
+}
