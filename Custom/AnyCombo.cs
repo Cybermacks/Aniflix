@@ -4,6 +4,7 @@ using System.Drawing.Drawing2D;
 
 namespace Aniflix.Custom
 {
+    [DefaultEvent("OnSelectedIndexChanged")]
     public partial class AnyCombo : UserControl
     {
         #region -> Fields
