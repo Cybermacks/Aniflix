@@ -56,6 +56,7 @@ namespace Aniflix.Views
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
+                iconCurrentChildForm.Image = currentBtn.Image;
             }
         }
         private void DisableButton()
