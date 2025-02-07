@@ -56,7 +56,7 @@ namespace Aniflix.Views
                 currentBtn.BackColor = Color.FromArgb(31, 30, 68);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.TextImageRelation = TextImageRelation.Overlay;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
