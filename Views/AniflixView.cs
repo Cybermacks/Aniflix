@@ -86,7 +86,7 @@ namespace Aniflix.Views
         private void Reset()
         {
             DisableButton();
-            leftBorderBtn.Visible = false;
+            leftBorderBtn!.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lblTitleChildForm.Text = "Home";
