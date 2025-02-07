@@ -70,7 +70,7 @@
             roundedButton8.FlatAppearance.BorderSize = 0;
             roundedButton8.FlatStyle = FlatStyle.Flat;
             roundedButton8.ForeColor = Color.White;
-            roundedButton8.Location = new Point(0, 618);
+            roundedButton8.Location = new Point(0, 612);
             roundedButton8.Name = "roundedButton8";
             roundedButton8.Padding = new Padding(10, 0, 20, 0);
             roundedButton8.Size = new Size(280, 74);
@@ -90,7 +90,7 @@
             roundedButton7.FlatAppearance.BorderSize = 0;
             roundedButton7.FlatStyle = FlatStyle.Flat;
             roundedButton7.ForeColor = Color.White;
-            roundedButton7.Location = new Point(0, 544);
+            roundedButton7.Location = new Point(0, 538);
             roundedButton7.Name = "roundedButton7";
             roundedButton7.Padding = new Padding(10, 0, 20, 0);
             roundedButton7.Size = new Size(280, 74);
@@ -110,7 +110,7 @@
             roundedButton6.FlatAppearance.BorderSize = 0;
             roundedButton6.FlatStyle = FlatStyle.Flat;
             roundedButton6.ForeColor = Color.White;
-            roundedButton6.Location = new Point(0, 470);
+            roundedButton6.Location = new Point(0, 464);
             roundedButton6.Name = "roundedButton6";
             roundedButton6.Padding = new Padding(10, 0, 20, 0);
             roundedButton6.Size = new Size(280, 74);
@@ -130,7 +130,7 @@
             roundedButton5.FlatAppearance.BorderSize = 0;
             roundedButton5.FlatStyle = FlatStyle.Flat;
             roundedButton5.ForeColor = Color.White;
-            roundedButton5.Location = new Point(0, 396);
+            roundedButton5.Location = new Point(0, 390);
             roundedButton5.Name = "roundedButton5";
             roundedButton5.Padding = new Padding(10, 0, 20, 0);
             roundedButton5.Size = new Size(280, 74);
@@ -150,7 +150,7 @@
             roundedButton4.FlatAppearance.BorderSize = 0;
             roundedButton4.FlatStyle = FlatStyle.Flat;
             roundedButton4.ForeColor = Color.White;
-            roundedButton4.Location = new Point(0, 322);
+            roundedButton4.Location = new Point(0, 316);
             roundedButton4.Name = "roundedButton4";
             roundedButton4.Padding = new Padding(10, 0, 20, 0);
             roundedButton4.Size = new Size(280, 74);
@@ -170,7 +170,7 @@
             roundedButton3.FlatAppearance.BorderSize = 0;
             roundedButton3.FlatStyle = FlatStyle.Flat;
             roundedButton3.ForeColor = Color.White;
-            roundedButton3.Location = new Point(0, 248);
+            roundedButton3.Location = new Point(0, 242);
             roundedButton3.Name = "roundedButton3";
             roundedButton3.Padding = new Padding(10, 0, 20, 0);
             roundedButton3.Size = new Size(280, 74);
@@ -190,7 +190,7 @@
             roundedButton2.FlatAppearance.BorderSize = 0;
             roundedButton2.FlatStyle = FlatStyle.Flat;
             roundedButton2.ForeColor = Color.White;
-            roundedButton2.Location = new Point(0, 174);
+            roundedButton2.Location = new Point(0, 168);
             roundedButton2.Name = "roundedButton2";
             roundedButton2.Padding = new Padding(10, 0, 20, 0);
             roundedButton2.Size = new Size(280, 74);
@@ -213,7 +213,7 @@
             Filmesutton.Location = new Point(0, 100);
             Filmesutton.Name = "Filmesutton";
             Filmesutton.Padding = new Padding(10, 0, 20, 0);
-            Filmesutton.Size = new Size(280, 74);
+            Filmesutton.Size = new Size(280, 68);
             Filmesutton.TabIndex = 1;
             Filmesutton.Text = "Filmes";
             Filmesutton.TextColor = Color.White;
