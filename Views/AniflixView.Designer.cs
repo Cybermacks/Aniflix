@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             roundedButton1 = new Custom.RoundedButton();
+            anyCombo1 = new Custom.AnyCombo();
             SuspendLayout();
             // 
             // roundedButton1
@@ -49,11 +50,31 @@
             roundedButton1.TextColor = Color.White;
             roundedButton1.UseVisualStyleBackColor = false;
             // 
+            // anyCombo1
+            // 
+            anyCombo1.BackColor = Color.WhiteSmoke;
+            anyCombo1.BorderColor = Color.MediumSlateBlue;
+            anyCombo1.BorderSize = 1;
+            anyCombo1.DropDownStyle = ComboBoxStyle.DropDown;
+            anyCombo1.Font = new Font("Segoe UI", 10F);
+            anyCombo1.ForeColor = Color.DimGray;
+            anyCombo1.IconColor = Color.MediumSlateBlue;
+            anyCombo1.ListBackColor = Color.FromArgb(230, 228, 245);
+            anyCombo1.ListTextColor = Color.DimGray;
+            anyCombo1.Location = new Point(561, 242);
+            anyCombo1.MinimumSize = new Size(200, 30);
+            anyCombo1.Name = "anyCombo1";
+            anyCombo1.Padding = new Padding(1);
+            anyCombo1.Size = new Size(200, 30);
+            anyCombo1.TabIndex = 2;
+            anyCombo1.Texts = "";
+            // 
             // AniflixView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1122, 613);
+            Controls.Add(anyCombo1);
             Controls.Add(roundedButton1);
             Name = "AniflixView";
             Text = "AniflixView";
@@ -63,5 +84,6 @@
         #endregion
 
         private Custom.RoundedButton roundedButton1;
+        private Custom.AnyCombo anyCombo1;
     }
 }

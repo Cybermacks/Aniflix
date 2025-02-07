@@ -311,10 +311,9 @@ namespace Aniflix.Custom
         #endregion
 
         #region -> TextBox events
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (TextChanged != null)
-                TextChanged.Invoke(sender, e);
+            _TextChanged?.Invoke(sender, e);
         }
         private void textBox1_Click(object sender, EventArgs e)
         {
