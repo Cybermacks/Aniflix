@@ -12,5 +12,15 @@ namespace Aniflix.Custom
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
 
+        public int BorderSize
+        {
+            get { return borderSize; }
+            set
+            {
+                borderSize = value;
+                this.Invalidate();
+            }
+        }
+
     }
 }
