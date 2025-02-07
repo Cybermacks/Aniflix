@@ -1,10 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.ComponentModel;
-using System.Threading.Tasks;
-using System.Drawing.Drawing2D;
-using System.Collections.Generic;
+﻿using System.Drawing.Drawing2D;
 
 namespace Aniflix.Custom
 {
@@ -63,7 +57,7 @@ namespace Aniflix.Custom
             Size = new Size(150, 40);
             BackColor = Color.MediumSlateBlue;
             ForeColor = Color.White;
-            Resize += new EventHandler(Button_Resize);
+            Resize += new EventHandler(Button_Resize!);
         }
 
         private GraphicsPath GetFigurePath(Rectangle rect, int radius)
