@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimesView));
             label19 = new Label();
             AutoresText = new TextBox();
             label18 = new Label();
@@ -153,9 +154,10 @@
             VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             VoltarButton.ForeColor = Color.White;
             VoltarButton.ImageIndex = 0;
+            VoltarButton.ImageList = imageListAnime;
             VoltarButton.Location = new Point(1076, 723);
             VoltarButton.Name = "VoltarButton";
-            VoltarButton.Size = new Size(137, 61);
+            VoltarButton.Size = new Size(160, 85);
             VoltarButton.TabIndex = 125;
             VoltarButton.Text = "Voltar";
             VoltarButton.TextAlign = ContentAlignment.BottomLeft;
@@ -168,9 +170,10 @@
             ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             ProximoButton.ForeColor = Color.White;
             ProximoButton.ImageIndex = 3;
-            ProximoButton.Location = new Point(898, 723);
+            ProximoButton.ImageList = imageListAnime;
+            ProximoButton.Location = new Point(893, 723);
             ProximoButton.Name = "ProximoButton";
-            ProximoButton.Size = new Size(137, 61);
+            ProximoButton.Size = new Size(160, 85);
             ProximoButton.TabIndex = 124;
             ProximoButton.Text = "Próximo";
             ProximoButton.TextAlign = ContentAlignment.BottomLeft;
@@ -184,9 +187,10 @@
             AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             AnteriorButton.ForeColor = Color.White;
             AnteriorButton.ImageIndex = 4;
-            AnteriorButton.Location = new Point(720, 723);
+            AnteriorButton.ImageList = imageListAnime;
+            AnteriorButton.Location = new Point(710, 723);
             AnteriorButton.Name = "AnteriorButton";
-            AnteriorButton.Size = new Size(137, 61);
+            AnteriorButton.Size = new Size(160, 85);
             AnteriorButton.TabIndex = 123;
             AnteriorButton.Text = "Anterior";
             AnteriorButton.TextAlign = ContentAlignment.BottomLeft;
@@ -200,9 +204,10 @@
             EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             EditarButton.ForeColor = Color.White;
             EditarButton.ImageIndex = 2;
-            EditarButton.Location = new Point(542, 723);
+            EditarButton.ImageList = imageListAnime;
+            EditarButton.Location = new Point(527, 723);
             EditarButton.Name = "EditarButton";
-            EditarButton.Size = new Size(137, 61);
+            EditarButton.Size = new Size(160, 85);
             EditarButton.TabIndex = 122;
             EditarButton.Text = "Editar";
             EditarButton.TextAlign = ContentAlignment.BottomLeft;
@@ -215,10 +220,11 @@
             InserirNovoButton.FlatStyle = FlatStyle.Popup;
             InserirNovoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             InserirNovoButton.ForeColor = Color.White;
-            InserirNovoButton.ImageIndex = 2;
-            InserirNovoButton.Location = new Point(364, 723);
+            InserirNovoButton.ImageIndex = 5;
+            InserirNovoButton.ImageList = imageListAnime;
+            InserirNovoButton.Location = new Point(344, 723);
             InserirNovoButton.Name = "InserirNovoButton";
-            InserirNovoButton.Size = new Size(137, 61);
+            InserirNovoButton.Size = new Size(160, 85);
             InserirNovoButton.TabIndex = 121;
             InserirNovoButton.Text = "Inserir Novo";
             InserirNovoButton.TextAlign = ContentAlignment.BottomLeft;
@@ -231,9 +237,11 @@
             CopiarButton.FlatStyle = FlatStyle.Popup;
             CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             CopiarButton.ForeColor = Color.White;
-            CopiarButton.Location = new Point(186, 723);
+            CopiarButton.ImageKey = "content-copy.png";
+            CopiarButton.ImageList = imageListAnime;
+            CopiarButton.Location = new Point(161, 723);
             CopiarButton.Name = "CopiarButton";
-            CopiarButton.Size = new Size(137, 85);
+            CopiarButton.Size = new Size(160, 85);
             CopiarButton.TabIndex = 120;
             CopiarButton.Text = "Copiar Dados";
             CopiarButton.TextAlign = ContentAlignment.BottomLeft;
@@ -500,14 +508,20 @@
             // imageListAnime
             // 
             imageListAnime.ColorDepth = ColorDepth.Depth32Bit;
-            imageListAnime.ImageSize = new Size(16, 16);
+            imageListAnime.ImageStream = (ImageListStreamer)resources.GetObject("imageListAnime.ImageStream");
             imageListAnime.TransparentColor = Color.Transparent;
+            imageListAnime.Images.SetKeyName(0, "arrow-left.png");
+            imageListAnime.Images.SetKeyName(1, "content-copy.png");
+            imageListAnime.Images.SetKeyName(2, "file-edit.png");
+            imageListAnime.Images.SetKeyName(3, "skip-next.png");
+            imageListAnime.Images.SetKeyName(4, "skip-previous.png");
+            imageListAnime.Images.SetKeyName(5, "content-save.png");
             // 
             // AnimesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1399, 860);
+            ClientSize = new Size(1399, 844);
             Controls.Add(label6);
             Controls.Add(AnimeText);
             Controls.Add(label19);
