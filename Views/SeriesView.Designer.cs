@@ -30,6 +30,7 @@ partial class SeriesView
     /// </summary>
     private void InitializeComponent()
     {
+        components = new Container();
         ComponentResourceManager resources = new ComponentResourceManager(typeof(SeriesView));
         EstudioText = new TextBox();
         label8 = new Label();
@@ -77,6 +78,7 @@ partial class SeriesView
         EditarButton = new Button();
         InserirNovoButton = new Button();
         CopiarButton = new Button();
+        imageList1 = new ImageList(components);
         SuspendLayout();
         // 
         // EstudioText
@@ -537,6 +539,12 @@ partial class SeriesView
         CopiarButton.TextAlign = ContentAlignment.BottomLeft;
         CopiarButton.UseVisualStyleBackColor = false;
         // 
+        // imageList1
+        // 
+        imageList1.ColorDepth = ColorDepth.Depth32Bit;
+        imageList1.ImageSize = new Size(16, 16);
+        imageList1.TransparentColor = Color.Transparent;
+        // 
         // SeriesView
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
@@ -645,4 +653,5 @@ partial class SeriesView
     private Button EditarButton;
     private Button InserirNovoButton;
     private Button CopiarButton;
+    private ImageList imageList1;
 }

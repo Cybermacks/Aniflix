@@ -72,7 +72,7 @@
             CodigoText = new TextBox();
             label6 = new Label();
             AnimeText = new TextBox();
-            imageListAnime = new ImageList(components);
+            ListImage = new ImageList(components);
             SuspendLayout();
             // 
             // label19
@@ -154,7 +154,7 @@
             VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             VoltarButton.ForeColor = Color.White;
             VoltarButton.ImageIndex = 0;
-            VoltarButton.ImageList = imageListAnime;
+            VoltarButton.ImageList = ListImage;
             VoltarButton.Location = new Point(1076, 723);
             VoltarButton.Name = "VoltarButton";
             VoltarButton.Size = new Size(160, 85);
@@ -170,7 +170,7 @@
             ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             ProximoButton.ForeColor = Color.White;
             ProximoButton.ImageIndex = 3;
-            ProximoButton.ImageList = imageListAnime;
+            ProximoButton.ImageList = ListImage;
             ProximoButton.Location = new Point(893, 723);
             ProximoButton.Name = "ProximoButton";
             ProximoButton.Size = new Size(160, 85);
@@ -187,7 +187,7 @@
             AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             AnteriorButton.ForeColor = Color.White;
             AnteriorButton.ImageIndex = 4;
-            AnteriorButton.ImageList = imageListAnime;
+            AnteriorButton.ImageList = ListImage;
             AnteriorButton.Location = new Point(710, 723);
             AnteriorButton.Name = "AnteriorButton";
             AnteriorButton.Size = new Size(160, 85);
@@ -204,7 +204,7 @@
             EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             EditarButton.ForeColor = Color.White;
             EditarButton.ImageIndex = 2;
-            EditarButton.ImageList = imageListAnime;
+            EditarButton.ImageList = ListImage;
             EditarButton.Location = new Point(527, 723);
             EditarButton.Name = "EditarButton";
             EditarButton.Size = new Size(160, 85);
@@ -221,7 +221,7 @@
             InserirNovoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             InserirNovoButton.ForeColor = Color.White;
             InserirNovoButton.ImageIndex = 5;
-            InserirNovoButton.ImageList = imageListAnime;
+            InserirNovoButton.ImageList = ListImage;
             InserirNovoButton.Location = new Point(344, 723);
             InserirNovoButton.Name = "InserirNovoButton";
             InserirNovoButton.Size = new Size(160, 85);
@@ -238,7 +238,7 @@
             CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             CopiarButton.ForeColor = Color.White;
             CopiarButton.ImageKey = "content-copy.png";
-            CopiarButton.ImageList = imageListAnime;
+            CopiarButton.ImageList = ListImage;
             CopiarButton.Location = new Point(161, 723);
             CopiarButton.Name = "CopiarButton";
             CopiarButton.Size = new Size(160, 85);
@@ -505,17 +505,17 @@
             AnimeText.TabIndex = 134;
             AnimeText.TextChanged += AnimeText_TextChanged;
             // 
-            // imageListAnime
+            // ListImage
             // 
-            imageListAnime.ColorDepth = ColorDepth.Depth32Bit;
-            imageListAnime.ImageStream = (ImageListStreamer)resources.GetObject("imageListAnime.ImageStream");
-            imageListAnime.TransparentColor = Color.Transparent;
-            imageListAnime.Images.SetKeyName(0, "arrow-left.png");
-            imageListAnime.Images.SetKeyName(1, "content-copy.png");
-            imageListAnime.Images.SetKeyName(2, "file-edit.png");
-            imageListAnime.Images.SetKeyName(3, "skip-next.png");
-            imageListAnime.Images.SetKeyName(4, "skip-previous.png");
-            imageListAnime.Images.SetKeyName(5, "content-save.png");
+            ListImage.ColorDepth = ColorDepth.Depth32Bit;
+            ListImage.ImageStream = (ImageListStreamer)resources.GetObject("ListImage.ImageStream");
+            ListImage.TransparentColor = Color.Transparent;
+            ListImage.Images.SetKeyName(0, "arrow-left.png");
+            ListImage.Images.SetKeyName(1, "content-copy.png");
+            ListImage.Images.SetKeyName(2, "file-edit.png");
+            ListImage.Images.SetKeyName(3, "skip-next.png");
+            ListImage.Images.SetKeyName(4, "skip-previous.png");
+            ListImage.Images.SetKeyName(5, "content-save.png");
             // 
             // AnimesView
             // 
@@ -616,6 +616,6 @@
         private TextBox CodigoText;
         private Label label6;
         private TextBox AnimeText;
-        private ImageList imageListAnime;
+        private ImageList ListImage;
     }
 }
