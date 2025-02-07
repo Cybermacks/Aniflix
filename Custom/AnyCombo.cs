@@ -296,10 +296,7 @@ namespace Aniflix.Custom
 
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (OnSelectedIndexChanged != null)
-            {
-                OnSelectedIndexChanged.Invoke(sender, e);
-            }
+            OnSelectedIndexChanged?.Invoke(sender, e);
 
             lblText.Text = cmbList.Text;
         }
@@ -311,14 +308,12 @@ namespace Aniflix.Custom
             var rectIcon = new Rectangle((btnIcon.Width - iconWidht) / 2, (btnIcon.Height - iconHeight) / 2, iconWidht, iconHeight);
             Graphics graph = e.Graphics;
 
-            using (GraphicsPath path = new GraphicsPath())
-            using (Pen pen = new Pen(iconColor, 2))
-            {
-                graph.SmoothingMode = SmoothingMode.AntiAlias;
-                path.AddLine(rectIcon.X, rectIcon.Y, rectIcon.X + (iconWidht / 2), rectIcon.Bottom);
-                path.AddLine(rectIcon.X + (iconWidht / 2), rectIcon.Bottom, rectIcon.Right, rectIcon.Y);
-                graph.DrawPath(pen, path);
-            }
+            using GraphicsPath path = new();
+            using Pen pen = new(iconColor, 2);
+            graph.SmoothingMode = SmoothingMode.AntiAlias;
+            path.AddLine(rectIcon.X, rectIcon.Y, rectIcon.X + (iconWidht / 2), rectIcon.Bottom);
+            path.AddLine(rectIcon.X + (iconWidht / 2), rectIcon.Bottom, rectIcon.Right, rectIcon.Y);
+            graph.DrawPath(pen, path);
         }
 
         private void Icon_Click(object sender, EventArgs e)
