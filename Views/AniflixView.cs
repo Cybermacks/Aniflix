@@ -110,5 +110,11 @@ namespace Aniflix.Views
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void SeriesButton_Click(object sender, EventArgs e)
+        {
+            ActivateButton((object)sender, RGBColors.color2);
+            OpenChildForm(new SeriesView());
+        }
     }
 }

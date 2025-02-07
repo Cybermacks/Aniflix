@@ -37,8 +37,8 @@
             roundedButton5 = new Custom.RoundedButton();
             roundedButton4 = new Custom.RoundedButton();
             roundedButton3 = new Custom.RoundedButton();
-            roundedButton2 = new Custom.RoundedButton();
-            Filmesutton = new Custom.RoundedButton();
+            SeriesButton = new Custom.RoundedButton();
+            FilmesButton = new Custom.RoundedButton();
             panel2 = new Panel();
             panelTitleBar = new Panel();
             iconCurrentChildForm = new PictureBox();
@@ -59,8 +59,8 @@
             panel1.Controls.Add(roundedButton5);
             panel1.Controls.Add(roundedButton4);
             panel1.Controls.Add(roundedButton3);
-            panel1.Controls.Add(roundedButton2);
-            panel1.Controls.Add(Filmesutton);
+            panel1.Controls.Add(SeriesButton);
+            panel1.Controls.Add(FilmesButton);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -208,49 +208,50 @@
             roundedButton3.TextColor = Color.White;
             roundedButton3.UseVisualStyleBackColor = false;
             // 
-            // roundedButton2
+            // SeriesButton
             // 
-            roundedButton2.BackColor = Color.Transparent;
-            roundedButton2.BackgroundColor = Color.Transparent;
-            roundedButton2.BorderColor = Color.PaleVioletRed;
-            roundedButton2.BorderRadius = 0;
-            roundedButton2.BorderSize = 0;
-            roundedButton2.Dock = DockStyle.Top;
-            roundedButton2.FlatAppearance.BorderSize = 0;
-            roundedButton2.FlatStyle = FlatStyle.Flat;
-            roundedButton2.ForeColor = Color.White;
-            roundedButton2.Location = new Point(0, 160);
-            roundedButton2.Name = "roundedButton2";
-            roundedButton2.Padding = new Padding(10, 0, 20, 0);
-            roundedButton2.Size = new Size(280, 60);
-            roundedButton2.TabIndex = 2;
-            roundedButton2.Text = "Séries";
-            roundedButton2.TextColor = Color.White;
-            roundedButton2.UseVisualStyleBackColor = false;
+            SeriesButton.BackColor = Color.Transparent;
+            SeriesButton.BackgroundColor = Color.Transparent;
+            SeriesButton.BorderColor = Color.PaleVioletRed;
+            SeriesButton.BorderRadius = 0;
+            SeriesButton.BorderSize = 0;
+            SeriesButton.Dock = DockStyle.Top;
+            SeriesButton.FlatAppearance.BorderSize = 0;
+            SeriesButton.FlatStyle = FlatStyle.Flat;
+            SeriesButton.ForeColor = Color.White;
+            SeriesButton.Location = new Point(0, 160);
+            SeriesButton.Name = "SeriesButton";
+            SeriesButton.Padding = new Padding(10, 0, 20, 0);
+            SeriesButton.Size = new Size(280, 60);
+            SeriesButton.TabIndex = 2;
+            SeriesButton.Text = "Séries";
+            SeriesButton.TextColor = Color.White;
+            SeriesButton.UseVisualStyleBackColor = false;
+            SeriesButton.Click += SeriesButton_Click;
             // 
-            // Filmesutton
+            // FilmesButton
             // 
-            Filmesutton.BackColor = Color.Transparent;
-            Filmesutton.BackgroundColor = Color.Transparent;
-            Filmesutton.BackgroundImageLayout = ImageLayout.Stretch;
-            Filmesutton.BorderColor = Color.PaleVioletRed;
-            Filmesutton.BorderRadius = 0;
-            Filmesutton.BorderSize = 0;
-            Filmesutton.Dock = DockStyle.Top;
-            Filmesutton.FlatAppearance.BorderSize = 0;
-            Filmesutton.FlatStyle = FlatStyle.Flat;
-            Filmesutton.ForeColor = Color.White;
-            Filmesutton.Image = (Image)resources.GetObject("Filmesutton.Image");
-            Filmesutton.ImageAlign = ContentAlignment.MiddleLeft;
-            Filmesutton.Location = new Point(0, 100);
-            Filmesutton.Name = "Filmesutton";
-            Filmesutton.Padding = new Padding(10, 0, 20, 0);
-            Filmesutton.Size = new Size(280, 60);
-            Filmesutton.TabIndex = 1;
-            Filmesutton.Text = "Filmes";
-            Filmesutton.TextColor = Color.White;
-            Filmesutton.UseVisualStyleBackColor = false;
-            Filmesutton.Click += Filmesutton_Click;
+            FilmesButton.BackColor = Color.Transparent;
+            FilmesButton.BackgroundColor = Color.Transparent;
+            FilmesButton.BackgroundImageLayout = ImageLayout.Stretch;
+            FilmesButton.BorderColor = Color.PaleVioletRed;
+            FilmesButton.BorderRadius = 0;
+            FilmesButton.BorderSize = 0;
+            FilmesButton.Dock = DockStyle.Top;
+            FilmesButton.FlatAppearance.BorderSize = 0;
+            FilmesButton.FlatStyle = FlatStyle.Flat;
+            FilmesButton.ForeColor = Color.White;
+            FilmesButton.Image = (Image)resources.GetObject("FilmesButton.Image");
+            FilmesButton.ImageAlign = ContentAlignment.MiddleLeft;
+            FilmesButton.Location = new Point(0, 100);
+            FilmesButton.Name = "FilmesButton";
+            FilmesButton.Padding = new Padding(10, 0, 20, 0);
+            FilmesButton.Size = new Size(280, 60);
+            FilmesButton.TabIndex = 1;
+            FilmesButton.Text = "Filmes";
+            FilmesButton.TextColor = Color.White;
+            FilmesButton.UseVisualStyleBackColor = false;
+            FilmesButton.Click += Filmesutton_Click;
             // 
             // panel2
             // 
@@ -320,7 +321,7 @@
         #endregion
 
         private Panel panel1;
-        private Custom.RoundedButton Filmesutton;
+        private Custom.RoundedButton FilmesButton;
         private Panel panel2;
         private Custom.RoundedButton roundedButton8;
         private Custom.RoundedButton roundedButton7;
@@ -328,7 +329,7 @@
         private Custom.RoundedButton roundedButton5;
         private Custom.RoundedButton roundedButton4;
         private Custom.RoundedButton roundedButton3;
-        private Custom.RoundedButton roundedButton2;
+        private Custom.RoundedButton SeriesButton;
         private Panel panelTitleBar;
         private Panel panelDesktop;
         private Custom.RoundedButton roundedButton1;
