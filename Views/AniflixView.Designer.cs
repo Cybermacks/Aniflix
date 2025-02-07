@@ -43,8 +43,8 @@
             panel2 = new Panel();
             HomeButton = new PictureBox();
             TitleBarPanel = new Panel();
-            pictureBox1 = new PictureBox();
-            Minimize = new PictureBox();
+            CloseButton = new PictureBox();
+            MinimizeButton = new PictureBox();
             iconCurrentChildForm = new PictureBox();
             lblTitleChildForm = new Label();
             panelDesktop = new Panel();
@@ -52,8 +52,8 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HomeButton).BeginInit();
             TitleBarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Minimize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CloseButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)MinimizeButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
             SuspendLayout();
             // 
@@ -304,8 +304,8 @@
             // TitleBarPanel
             // 
             TitleBarPanel.BackColor = Color.FromArgb(26, 25, 62);
-            TitleBarPanel.Controls.Add(pictureBox1);
-            TitleBarPanel.Controls.Add(Minimize);
+            TitleBarPanel.Controls.Add(CloseButton);
+            TitleBarPanel.Controls.Add(MinimizeButton);
             TitleBarPanel.Controls.Add(iconCurrentChildForm);
             TitleBarPanel.Controls.Add(lblTitleChildForm);
             TitleBarPanel.Dock = DockStyle.Top;
@@ -315,26 +315,26 @@
             TitleBarPanel.TabIndex = 1;
             TitleBarPanel.MouseDown += PanelTitleBar_MouseDown;
             // 
-            // pictureBox1
+            // CloseButton
             // 
-            pictureBox1.Image = Properties.Resources.window_close;
-            pictureBox1.Location = new Point(1381, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(24, 24);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            CloseButton.Image = Properties.Resources.window_close;
+            CloseButton.Location = new Point(1381, 2);
+            CloseButton.Name = "CloseButton";
+            CloseButton.Size = new Size(24, 24);
+            CloseButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseButton.TabIndex = 3;
+            CloseButton.TabStop = false;
+            CloseButton.Click += pictureBox1_Click;
             // 
-            // Minimize
+            // MinimizeButton
             // 
-            Minimize.Image = Properties.Resources.window_minimize;
-            Minimize.Location = new Point(1355, 2);
-            Minimize.Name = "Minimize";
-            Minimize.Size = new Size(24, 24);
-            Minimize.SizeMode = PictureBoxSizeMode.StretchImage;
-            Minimize.TabIndex = 2;
-            Minimize.TabStop = false;
+            MinimizeButton.Image = Properties.Resources.window_minimize;
+            MinimizeButton.Location = new Point(1355, 2);
+            MinimizeButton.Name = "MinimizeButton";
+            MinimizeButton.Size = new Size(24, 24);
+            MinimizeButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            MinimizeButton.TabIndex = 2;
+            MinimizeButton.TabStop = false;
             // 
             // iconCurrentChildForm
             // 
@@ -380,8 +380,8 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)HomeButton).EndInit();
             TitleBarPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Minimize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CloseButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MinimizeButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             ResumeLayout(false);
         }
@@ -396,8 +396,8 @@
         private Panel panelDesktop;
         private Label lblTitleChildForm;
         private PictureBox iconCurrentChildForm;
-        private PictureBox Minimize;
-        private PictureBox pictureBox1;
+        private PictureBox MinimizeButton;
+        private PictureBox CloseButton;
         private Custom.RoundedButton FecharButton;
         private Custom.RoundedButton TrashFlixButton;
         private Custom.RoundedButton GoreSeriesButton;
