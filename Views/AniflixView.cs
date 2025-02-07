@@ -88,10 +88,8 @@ namespace Aniflix.Views
             leftBorderBtn!.Visible = false;
             iconCurrentChildForm.Image = Resources.home_circle;
             lblTitleChildForm.Text = "Home";
+            currentChildForm = null;
         }
-
-
-
 
         private void Filmesutton_Click(object sender, EventArgs e)
         {
