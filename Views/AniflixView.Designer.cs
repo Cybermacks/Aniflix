@@ -240,6 +240,7 @@
             Filmesutton.FlatStyle = FlatStyle.Flat;
             Filmesutton.ForeColor = Color.White;
             Filmesutton.Image = (Image)resources.GetObject("Filmesutton.Image");
+            Filmesutton.ImageAlign = ContentAlignment.MiddleLeft;
             Filmesutton.Location = new Point(0, 100);
             Filmesutton.Name = "Filmesutton";
             Filmesutton.Padding = new Padding(10, 0, 20, 0);
@@ -247,7 +248,6 @@
             Filmesutton.TabIndex = 1;
             Filmesutton.Text = "Filmes";
             Filmesutton.TextColor = Color.White;
-            Filmesutton.TextImageRelation = TextImageRelation.ImageBeforeText;
             Filmesutton.UseVisualStyleBackColor = false;
             Filmesutton.Click += Filmesutton_Click;
             // 
