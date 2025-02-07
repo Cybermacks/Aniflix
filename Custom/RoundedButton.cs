@@ -60,7 +60,7 @@ namespace Aniflix.Custom
             Resize += new EventHandler(Button_Resize!);
         }
 
-        private GraphicsPath GetFigurePath(Rectangle rect, int radius)
+        private static GraphicsPath GetFigurePath(Rectangle rect, int radius)
         {
             GraphicsPath path = new();
             float curveSize = radius * 2F;
@@ -78,12 +78,13 @@ namespace Aniflix.Custom
         {
             base.OnPaint(pevent);
 
-
             Rectangle rectSurface = ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
             int smoothSize = 2;
             if (borderSize > 0)
+            {
                 smoothSize = borderSize;
+            }
 
             if (borderRadius > 2)
             {
@@ -96,7 +97,9 @@ namespace Aniflix.Custom
                 pevent.Graphics.DrawPath(penSurface, pathSurface);
 
                 if (borderSize >= 1)
+                {
                     pevent.Graphics.DrawPath(penBorder, pathBorder);
+                }
             }
             else
             {
