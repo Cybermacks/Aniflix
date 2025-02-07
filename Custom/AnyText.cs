@@ -217,10 +217,9 @@ namespace Aniflix.Custom
                 var rectBorderSmooth = ClientRectangle;
                 var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
                 int smoothSize = borderSize > 0 ? borderSize : 1;
-
                 using GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius);
                 using GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize);
-                using Pen penBorderSmooth = new(Parent.BackColor, smoothSize);
+                using Pen penBorderSmooth = new(Parent!.BackColor, smoothSize);
                 using Pen penBorder = new(borderColor, borderSize);
                 Region = new Region(pathBorderSmooth);
                 if (borderRadius > 15)
