@@ -21,6 +21,16 @@ namespace Aniflix.Custom
                 this.Invalidate();
             }
         }
+        public int BorderRadius
+        {
+            get { return borderRadius; }
+            set
+            {
+                borderRadius = value;
+                this.Invalidate();
+            }
+        }
+
 
     }
 }
