@@ -36,7 +36,7 @@ namespace Aniflix.Custom
             set
             {
                 borderColor = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
@@ -56,7 +56,7 @@ namespace Aniflix.Custom
                 if (value >= 1)
                 {
                     borderSize = value;
-                    this.Invalidate();
+                    Invalidate();
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace Aniflix.Custom
             set
             {
                 underlinedStyle = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
@@ -121,7 +121,7 @@ namespace Aniflix.Custom
             {
                 base.Font = value;
                 textBox1.Font = value;
-                if (this.DesignMode)
+                if (DesignMode)
                     UpdateControlHeight();
             }
         }
@@ -151,7 +151,7 @@ namespace Aniflix.Custom
                 if (value >= 0)
                 {
                     borderRadius = value;
-                    this.Invalidate();
+                    Invalidate();
                 }
             }
         }
@@ -185,7 +185,7 @@ namespace Aniflix.Custom
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            if (this.DesignMode)
+            if (DesignMode)
                 UpdateControlHeight();
         }
         protected override void OnLoad(EventArgs e)
@@ -200,16 +200,16 @@ namespace Aniflix.Custom
 
             if (borderRadius > 1)
             {
-                var rectBorderSmooth = this.ClientRectangle;
+                var rectBorderSmooth = ClientRectangle;
                 var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
                 int smoothSize = borderSize > 0 ? borderSize : 1;
 
                 using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
                 using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
-                using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
+                using (Pen penBorderSmooth = new Pen(Parent.BackColor, smoothSize))
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
-                    this.Region = new Region(pathBorderSmooth);
+                    Region = new Region(pathBorderSmooth);
                     if (borderRadius > 15) SetTextBoxRoundedRegion();
                     graph.SmoothingMode = SmoothingMode.AntiAlias;
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
@@ -219,7 +219,7 @@ namespace Aniflix.Custom
                     {
                         graph.DrawPath(penBorderSmooth, pathBorderSmooth);
                         graph.SmoothingMode = SmoothingMode.None;
-                        graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                        graph.DrawLine(penBorder, 0, Height - 1, Width, Height - 1);
                     }
                     else
                     {
@@ -232,14 +232,14 @@ namespace Aniflix.Custom
             {
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
-                    this.Region = new Region(this.ClientRectangle);
+                    Region = new Region(ClientRectangle);
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
                     if (isFocused) penBorder.Color = borderFocusColor;
 
                     if (underlinedStyle)
-                        graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                        graph.DrawLine(penBorder, 0, Height - 1, Width, Height - 1);
                     else
-                        graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                        graph.DrawRectangle(penBorder, 0, 0, Width - 0.5F, Height - 0.5F);
                 }
             }
         }
@@ -263,7 +263,7 @@ namespace Aniflix.Custom
             {
                 isPlaceholder = false;
                 textBox1.Text = "";
-                textBox1.ForeColor = this.ForeColor;
+                textBox1.ForeColor = ForeColor;
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = true;
             }
@@ -300,12 +300,12 @@ namespace Aniflix.Custom
         {
             if (textBox1.Multiline == false)
             {
-                int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height + 1;
+                int txtHeight = TextRenderer.MeasureText("Text", Font).Height + 1;
                 textBox1.Multiline = true;
                 textBox1.MinimumSize = new Size(0, txtHeight);
                 textBox1.Multiline = false;
 
-                this.Height = textBox1.Height + this.Padding.Top + this.Padding.Bottom;
+                Height = textBox1.Height + Padding.Top + Padding.Bottom;
             }
         }
         #endregion
@@ -318,31 +318,31 @@ namespace Aniflix.Custom
         }
         private void textBox1_Click(object sender, EventArgs e)
         {
-            this.OnClick(e);
+            OnClick(e);
         }
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
-            this.OnMouseEnter(e);
+            OnMouseEnter(e);
         }
         private void textBox1_MouseLeave(object sender, EventArgs e)
         {
-            this.OnMouseLeave(e);
+            OnMouseLeave(e);
         }
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.OnKeyPress(e);
+            OnKeyPress(e);
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void TextBox1_Enter(object sender, EventArgs e)
         {
             isFocused = true;
-            this.Invalidate();
+            Invalidate();
             RemovePlaceholder();
         }
         private void TextBox1_Leave(object sender, EventArgs e)
         {
             isFocused = false;
-            this.Invalidate();
+            Invalidate();
             SetPlaceholder();
         }
         #endregion
