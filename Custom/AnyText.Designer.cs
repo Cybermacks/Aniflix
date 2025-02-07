@@ -46,6 +46,7 @@
             Font = new Font("Segoe UI", 9.5F);
             ForeColor = Color.DimGray;
             Name = "AnyText";
+            Padding = new Padding(7);
             Size = new Size(526, 37);
             ResumeLayout(false);
             PerformLayout();
