@@ -34,28 +34,21 @@ namespace Aniflix.Views
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
-        //Methods
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
                 DisableButton();
-                //Button
-                currentBtn = (IconButton)senderBtn;
+                currentBtn = (RoundedButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-                //Left border button
-                leftBorderBtn.BackColor = color;
+                leftBorderBtn!.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-                //Current Child Form Icon
-                iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = color;
             }
         }
         private void DisableButton()
@@ -72,13 +65,11 @@ namespace Aniflix.Views
         }
         private void OpenChildForm(Form childForm)
         {
-            //open only form
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
-            //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
