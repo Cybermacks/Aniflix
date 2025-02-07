@@ -87,7 +87,7 @@ namespace Aniflix.Views
             DisableButton();
             leftBorderBtn!.Visible = false;
             iconCurrentChildForm.Image = Resources.home_circle;
-            iconCurrentChildForm.Image = Resources.home_circle;
+            lblTitleChildForm.Text = "Home";
         }
 
 
