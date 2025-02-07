@@ -71,10 +71,7 @@ namespace Aniflix.Views
 
         private void OpenChildForm(Form childForm)
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
+            currentChildForm?.Close();
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -84,6 +81,15 @@ namespace Aniflix.Views
             childForm.BringToFront();
             childForm.Show();
             lblTitleChildForm.Text = childForm.Text;
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.MediumPurple;
+            lblTitleChildForm.Text = "Home";
         }
 
         private void Filmesutton_Click(object sender, EventArgs e)
