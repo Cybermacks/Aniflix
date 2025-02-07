@@ -80,7 +80,9 @@ namespace Aniflix.Custom
             {
                 isPasswordChar = value;
                 if (!isPlaceholder)
+                {
                     textBox1.UseSystemPasswordChar = value;
+                }
             }
         }
 
@@ -122,7 +124,9 @@ namespace Aniflix.Custom
                 base.Font = value;
                 textBox1.Font = value;
                 if (DesignMode)
+                {
                     UpdateControlHeight();
+                }
             }
         }
 
@@ -131,8 +135,14 @@ namespace Aniflix.Custom
         {
             get
             {
-                if (isPlaceholder) return "";
-                else return textBox1.Text;
+                if (isPlaceholder)
+                {
+                    return "";
+                }
+                else
+                {
+                    return textBox1.Text;
+                }
             }
             set
             {
@@ -164,7 +174,9 @@ namespace Aniflix.Custom
             {
                 placeholderColor = value;
                 if (isPlaceholder)
+                {
                     textBox1.ForeColor = value;
+                }
             }
         }
 
@@ -186,7 +198,9 @@ namespace Aniflix.Custom
         {
             base.OnResize(e);
             if (DesignMode)
+            {
                 UpdateControlHeight();
+            }
         }
         protected override void OnLoad(EventArgs e)
         {
@@ -204,42 +218,52 @@ namespace Aniflix.Custom
                 var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
                 int smoothSize = borderSize > 0 ? borderSize : 1;
 
-                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
-                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
-                using (Pen penBorderSmooth = new Pen(Parent.BackColor, smoothSize))
-                using (Pen penBorder = new Pen(borderColor, borderSize))
+                using GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius);
+                using GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize);
+                using Pen penBorderSmooth = new(Parent.BackColor, smoothSize);
+                using Pen penBorder = new(borderColor, borderSize);
+                Region = new Region(pathBorderSmooth);
+                if (borderRadius > 15)
                 {
-                    Region = new Region(pathBorderSmooth);
-                    if (borderRadius > 15) SetTextBoxRoundedRegion();
-                    graph.SmoothingMode = SmoothingMode.AntiAlias;
-                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-                    if (isFocused) penBorder.Color = borderFocusColor;
+                    SetTextBoxRoundedRegion();
+                }
 
-                    if (underlinedStyle)
-                    {
-                        graph.DrawPath(penBorderSmooth, pathBorderSmooth);
-                        graph.SmoothingMode = SmoothingMode.None;
-                        graph.DrawLine(penBorder, 0, Height - 1, Width, Height - 1);
-                    }
-                    else
-                    {
-                        graph.DrawPath(penBorderSmooth, pathBorderSmooth);
-                        graph.DrawPath(penBorder, pathBorder);
-                    }
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+                if (isFocused)
+                {
+                    penBorder.Color = borderFocusColor;
+                }
+
+                if (underlinedStyle)
+                {
+                    graph.DrawPath(penBorderSmooth, pathBorderSmooth);
+                    graph.SmoothingMode = SmoothingMode.None;
+                    graph.DrawLine(penBorder, 0, Height - 1, Width, Height - 1);
+                }
+                else
+                {
+                    graph.DrawPath(penBorderSmooth, pathBorderSmooth);
+                    graph.DrawPath(penBorder, pathBorder);
                 }
             }
             else
             {
-                using (Pen penBorder = new Pen(borderColor, borderSize))
+                using Pen penBorder = new(borderColor, borderSize);
+                Region = new Region(ClientRectangle);
+                penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
+                if (isFocused)
                 {
-                    Region = new Region(ClientRectangle);
-                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
-                    if (isFocused) penBorder.Color = borderFocusColor;
+                    penBorder.Color = borderFocusColor;
+                }
 
-                    if (underlinedStyle)
-                        graph.DrawLine(penBorder, 0, Height - 1, Width, Height - 1);
-                    else
-                        graph.DrawRectangle(penBorder, 0, 0, Width - 0.5F, Height - 0.5F);
+                if (underlinedStyle)
+                {
+                    graph.DrawLine(penBorder, 0, Height - 1, Width, Height - 1);
+                }
+                else
+                {
+                    graph.DrawRectangle(penBorder, 0, 0, Width - 0.5F, Height - 0.5F);
                 }
             }
         }
@@ -254,7 +278,9 @@ namespace Aniflix.Custom
                 textBox1.Text = placeholderText;
                 textBox1.ForeColor = placeholderColor;
                 if (isPasswordChar)
+                {
                     textBox1.UseSystemPasswordChar = false;
+                }
             }
         }
         private void RemovePlaceholder()
@@ -265,12 +291,14 @@ namespace Aniflix.Custom
                 textBox1.Text = "";
                 textBox1.ForeColor = ForeColor;
                 if (isPasswordChar)
+                {
                     textBox1.UseSystemPasswordChar = true;
+                }
             }
         }
         private static GraphicsPath GetFigurePath(Rectangle rect, int radius)
         {
-            GraphicsPath path = new GraphicsPath();
+            GraphicsPath path = new();
             float curveSize = radius * 2F;
 
             path.StartFigure();
