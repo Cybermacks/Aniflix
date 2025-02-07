@@ -315,15 +315,15 @@ namespace Aniflix.Custom
         {
             _TextChanged?.Invoke(sender, e);
         }
-        private void textBox1_Click(object sender, EventArgs e)
+        private void TextBox1_Click(object sender, EventArgs e)
         {
             OnClick(e);
         }
-        private void textBox1_MouseEnter(object sender, EventArgs e)
+        private void TextBox1_MouseEnter(object sender, EventArgs e)
         {
             OnMouseEnter(e);
         }
-        private void textBox1_MouseLeave(object sender, EventArgs e)
+        private void TextBox1_MouseLeave(object sender, EventArgs e)
         {
             OnMouseLeave(e);
         }
