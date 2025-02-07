@@ -1,13 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Drawing;
-using Aniflix.Custom;
-using System.Windows.Forms;
-using System.ComponentModel;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using Aniflix.Custom;
 using System.Runtime.InteropServices;
 
 namespace Aniflix.Views
@@ -95,7 +86,7 @@ namespace Aniflix.Views
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
 
 
 
