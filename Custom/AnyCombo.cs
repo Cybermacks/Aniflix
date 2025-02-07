@@ -154,6 +154,7 @@ namespace Aniflix.Custom
         public override Font Font
         {
             get { return base.Font; }
+
             set
             {
                 base.Font = value ?? throw new ArgumentNullException(nameof(value));
