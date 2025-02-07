@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmesView));
-            VoltarButton = new Button();
-            ProximoButton = new Button();
-            AnteriorButton = new Button();
-            EditarButton = new Button();
-            InserirButton = new Button();
-            CopiarButton = new Button();
             EstudioText = new TextBox();
             ResumoText = new TextBox();
             FaseMCUText = new TextBox();
@@ -65,96 +60,14 @@
             label11 = new Label();
             FranquiaText = new TextBox();
             label9 = new Label();
+            ListImage = new ImageList(components);
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            InserirNovoButton = new Button();
+            button5 = new Button();
             SuspendLayout();
-            // 
-            // VoltarButton
-            // 
-            VoltarButton.BackColor = Color.FromArgb(9, 32, 63);
-            VoltarButton.FlatStyle = FlatStyle.Popup;
-            VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-            VoltarButton.ForeColor = Color.White;
-            VoltarButton.ImageIndex = 0;
-            VoltarButton.Location = new Point(1070, 597);
-            VoltarButton.Name = "VoltarButton";
-            VoltarButton.Size = new Size(137, 61);
-            VoltarButton.TabIndex = 125;
-            VoltarButton.Text = "Voltar";
-            VoltarButton.UseVisualStyleBackColor = false;
-            // 
-            // ProximoButton
-            // 
-            ProximoButton.BackColor = Color.FromArgb(29, 38, 113);
-            ProximoButton.FlatStyle = FlatStyle.Popup;
-            ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-            ProximoButton.ForeColor = Color.White;
-            ProximoButton.ImageIndex = 3;
-            ProximoButton.Location = new Point(892, 597);
-            ProximoButton.Name = "ProximoButton";
-            ProximoButton.Size = new Size(137, 61);
-            ProximoButton.TabIndex = 124;
-            ProximoButton.Text = "Próximo";
-            ProximoButton.UseVisualStyleBackColor = false;
-            ProximoButton.Click += ProximoButton_Click;
-            // 
-            // AnteriorButton
-            // 
-            AnteriorButton.BackColor = Color.FromArgb(195, 55, 100);
-            AnteriorButton.FlatStyle = FlatStyle.Popup;
-            AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-            AnteriorButton.ForeColor = Color.White;
-            AnteriorButton.ImageIndex = 4;
-            AnteriorButton.Location = new Point(714, 597);
-            AnteriorButton.Name = "AnteriorButton";
-            AnteriorButton.Size = new Size(137, 61);
-            AnteriorButton.TabIndex = 123;
-            AnteriorButton.Text = "Anterior";
-            AnteriorButton.UseVisualStyleBackColor = false;
-            AnteriorButton.Click += AnteriorButton_Click;
-            // 
-            // EditarButton
-            // 
-            EditarButton.BackColor = Color.FromArgb(46, 34, 114);
-            EditarButton.FlatStyle = FlatStyle.Popup;
-            EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-            EditarButton.ForeColor = Color.White;
-            EditarButton.ImageIndex = 2;
-            EditarButton.Location = new Point(536, 597);
-            EditarButton.Name = "EditarButton";
-            EditarButton.Size = new Size(137, 61);
-            EditarButton.TabIndex = 122;
-            EditarButton.Text = "Editar";
-            EditarButton.UseVisualStyleBackColor = false;
-            EditarButton.Click += EditarButton_Click;
-            // 
-            // InserirButton
-            // 
-            InserirButton.BackColor = Color.FromArgb(229, 92, 68);
-            InserirButton.FlatStyle = FlatStyle.Popup;
-            InserirButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-            InserirButton.ForeColor = Color.White;
-            InserirButton.ImageIndex = 2;
-            InserirButton.Location = new Point(358, 597);
-            InserirButton.Name = "InserirButton";
-            InserirButton.Size = new Size(137, 61);
-            InserirButton.TabIndex = 121;
-            InserirButton.Text = "Inserir Novo";
-            InserirButton.UseVisualStyleBackColor = false;
-            InserirButton.Click += InserirButton_Click;
-            // 
-            // CopiarButton
-            // 
-            CopiarButton.BackColor = Color.FromArgb(0, 97, 149);
-            CopiarButton.FlatStyle = FlatStyle.Popup;
-            CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
-            CopiarButton.ForeColor = Color.White;
-            CopiarButton.ImageIndex = 1;
-            CopiarButton.Location = new Point(180, 597);
-            CopiarButton.Name = "CopiarButton";
-            CopiarButton.Size = new Size(137, 61);
-            CopiarButton.TabIndex = 120;
-            CopiarButton.Text = "Copiar Dados";
-            CopiarButton.UseVisualStyleBackColor = false;
-            CopiarButton.Click += CopiarButton_Click;
             // 
             // EstudioText
             // 
@@ -433,20 +346,117 @@
             label9.TabIndex = 128;
             label9.Text = "Estúdio";
             // 
+            // ListImage
+            // 
+            ListImage.ColorDepth = ColorDepth.Depth32Bit;
+            ListImage.ImageSize = new Size(16, 16);
+            ListImage.TransparentColor = Color.Transparent;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(9, 32, 63);
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.ImageList = ListImage;
+            button1.Location = new Point(1078, 595);
+            button1.Name = "button1";
+            button1.Size = new Size(160, 85);
+            button1.TabIndex = 134;
+            button1.Text = "Voltar";
+            button1.TextAlign = ContentAlignment.BottomLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(29, 38, 113);
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            button2.ForeColor = Color.White;
+            button2.ImageList = ListImage;
+            button2.Location = new Point(895, 595);
+            button2.Name = "button2";
+            button2.Size = new Size(160, 85);
+            button2.TabIndex = 133;
+            button2.Text = "Próximo";
+            button2.TextAlign = ContentAlignment.BottomLeft;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(195, 55, 100);
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            button3.ForeColor = Color.White;
+            button3.ImageList = ListImage;
+            button3.Location = new Point(712, 595);
+            button3.Name = "button3";
+            button3.Size = new Size(160, 85);
+            button3.TabIndex = 132;
+            button3.Text = "Anterior";
+            button3.TextAlign = ContentAlignment.BottomLeft;
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(46, 34, 114);
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            button4.ForeColor = Color.White;
+            button4.ImageList = ListImage;
+            button4.Location = new Point(529, 595);
+            button4.Name = "button4";
+            button4.Size = new Size(160, 85);
+            button4.TabIndex = 131;
+            button4.Text = "Editar";
+            button4.TextAlign = ContentAlignment.BottomLeft;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // InserirNovoButton
+            // 
+            InserirNovoButton.BackColor = Color.FromArgb(229, 92, 68);
+            InserirNovoButton.FlatStyle = FlatStyle.Popup;
+            InserirNovoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            InserirNovoButton.ForeColor = Color.White;
+            InserirNovoButton.ImageList = ListImage;
+            InserirNovoButton.Location = new Point(346, 595);
+            InserirNovoButton.Name = "InserirNovoButton";
+            InserirNovoButton.Size = new Size(160, 85);
+            InserirNovoButton.TabIndex = 130;
+            InserirNovoButton.Text = "Inserir Novo";
+            InserirNovoButton.TextAlign = ContentAlignment.BottomLeft;
+            InserirNovoButton.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(0, 97, 149);
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            button5.ForeColor = Color.White;
+            button5.ImageKey = "content-copy.png";
+            button5.ImageList = ListImage;
+            button5.Location = new Point(163, 595);
+            button5.Name = "button5";
+            button5.Size = new Size(160, 85);
+            button5.TabIndex = 129;
+            button5.Text = "Copiar Dados";
+            button5.TextAlign = ContentAlignment.BottomLeft;
+            button5.UseVisualStyleBackColor = false;
+            // 
             // FilmesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1400, 695);
+            ClientSize = new Size(1400, 704);
+            Controls.Add(button1);
+            Controls.Add(button2);
+            Controls.Add(button3);
+            Controls.Add(button4);
+            Controls.Add(InserirNovoButton);
+            Controls.Add(button5);
             Controls.Add(label9);
             Controls.Add(label11);
             Controls.Add(FranquiaText);
-            Controls.Add(VoltarButton);
-            Controls.Add(ProximoButton);
-            Controls.Add(AnteriorButton);
-            Controls.Add(EditarButton);
-            Controls.Add(InserirButton);
-            Controls.Add(CopiarButton);
             Controls.Add(EstudioText);
             Controls.Add(ResumoText);
             Controls.Add(FaseMCUText);
@@ -485,13 +495,6 @@
         }
 
         #endregion
-
-        private Button VoltarButton;
-        private Button ProximoButton;
-        private Button AnteriorButton;
-        private Button EditarButton;
-        private Button InserirButton;
-        private Button CopiarButton;
         private TextBox EstudioText;
         private TextBox ResumoText;
         private TextBox FaseMCUText;
@@ -522,5 +525,12 @@
         private Label label11;
         private TextBox FranquiaText;
         private Label label9;
+        private ImageList ListImage;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button InserirNovoButton;
+        private Button button5;
     }
 }
