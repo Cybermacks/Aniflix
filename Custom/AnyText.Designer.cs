@@ -33,9 +33,11 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(3, 3);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Dock = DockStyle.Fill;
+            textBox1.Location = new Point(7, 7);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(516, 24);
+            textBox1.Size = new Size(236, 17);
             textBox1.TabIndex = 0;
             // 
             // AnyText
@@ -47,7 +49,7 @@
             ForeColor = Color.DimGray;
             Name = "AnyText";
             Padding = new Padding(7);
-            Size = new Size(526, 37);
+            Size = new Size(250, 30);
             ResumeLayout(false);
             PerformLayout();
         }
