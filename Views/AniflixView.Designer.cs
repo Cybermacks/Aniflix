@@ -41,14 +41,16 @@
             FilmesButton = new Custom.RoundedButton();
             panel2 = new Panel();
             panelTitleBar = new Panel();
+            Minimize = new PictureBox();
             iconCurrentChildForm = new PictureBox();
             lblTitleChildForm = new Label();
             panelDesktop = new Panel();
-            Minimize = new PictureBox();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Minimize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -266,6 +268,7 @@
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(26, 25, 62);
+            panelTitleBar.Controls.Add(pictureBox1);
             panelTitleBar.Controls.Add(Minimize);
             panelTitleBar.Controls.Add(iconCurrentChildForm);
             panelTitleBar.Controls.Add(lblTitleChildForm);
@@ -275,6 +278,16 @@
             panelTitleBar.Size = new Size(1407, 80);
             panelTitleBar.TabIndex = 1;
             panelTitleBar.MouseDown += PanelTitleBar_MouseDown;
+            // 
+            // Minimize
+            // 
+            Minimize.Image = Properties.Resources.window_minimize;
+            Minimize.Location = new Point(1321, 12);
+            Minimize.Name = "Minimize";
+            Minimize.Size = new Size(34, 39);
+            Minimize.SizeMode = PictureBoxSizeMode.StretchImage;
+            Minimize.TabIndex = 2;
+            Minimize.TabStop = false;
             // 
             // iconCurrentChildForm
             // 
@@ -304,15 +317,15 @@
             panelDesktop.Size = new Size(1407, 844);
             panelDesktop.TabIndex = 2;
             // 
-            // Minimize
+            // pictureBox1
             // 
-            Minimize.Image = Properties.Resources.window_minimize;
-            Minimize.Location = new Point(1321, 12);
-            Minimize.Name = "Minimize";
-            Minimize.Size = new Size(34, 39);
-            Minimize.SizeMode = PictureBoxSizeMode.StretchImage;
-            Minimize.TabIndex = 2;
-            Minimize.TabStop = false;
+            pictureBox1.Image = Properties.Resources.window_close;
+            pictureBox1.Location = new Point(1361, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(34, 39);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // AniflixView
             // 
@@ -327,8 +340,9 @@
             Text = "Aniflix";
             panel1.ResumeLayout(false);
             panelTitleBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)Minimize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -350,5 +364,6 @@
         private Label lblTitleChildForm;
         private PictureBox iconCurrentChildForm;
         private PictureBox Minimize;
+        private PictureBox pictureBox1;
     }
 }
