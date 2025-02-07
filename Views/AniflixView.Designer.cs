@@ -39,11 +39,13 @@
             roundedButton2 = new Custom.RoundedButton();
             Filmesutton = new Custom.RoundedButton();
             panel2 = new Panel();
-            panel3 = new Panel();
-            panelDesktop = new Panel();
+            panelTitleBar = new Panel();
             lblTitleChildForm = new Label();
+            panelDesktop = new Panel();
+            iconCurrentChildForm = new PictureBox();
             panel1.SuspendLayout();
-            panel3.SuspendLayout();
+            panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -254,30 +256,43 @@
             panel2.Size = new Size(280, 100);
             panel2.TabIndex = 0;
             // 
-            // panel3
+            // panelTitleBar
             // 
-            panel3.Controls.Add(lblTitleChildForm);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(280, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1407, 100);
-            panel3.TabIndex = 1;
-            // 
-            // panelDesktop
-            // 
-            panelDesktop.Dock = DockStyle.Fill;
-            panelDesktop.Location = new Point(280, 100);
-            panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(1407, 824);
-            panelDesktop.TabIndex = 2;
+            panelTitleBar.BackColor = Color.FromArgb(26, 25, 62);
+            panelTitleBar.Controls.Add(iconCurrentChildForm);
+            panelTitleBar.Controls.Add(lblTitleChildForm);
+            panelTitleBar.Dock = DockStyle.Top;
+            panelTitleBar.Location = new Point(280, 0);
+            panelTitleBar.Name = "panelTitleBar";
+            panelTitleBar.Size = new Size(1407, 80);
+            panelTitleBar.TabIndex = 1;
             // 
             // lblTitleChildForm
             // 
-            lblTitleChildForm.Location = new Point(144, 42);
+            lblTitleChildForm.Font = new Font("Segoe UI", 12F);
+            lblTitleChildForm.ForeColor = Color.White;
+            lblTitleChildForm.Location = new Point(78, 28);
             lblTitleChildForm.Name = "lblTitleChildForm";
             lblTitleChildForm.Size = new Size(100, 23);
             lblTitleChildForm.TabIndex = 0;
             lblTitleChildForm.Text = "label1";
+            lblTitleChildForm.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panelDesktop
+            // 
+            panelDesktop.Dock = DockStyle.Fill;
+            panelDesktop.Location = new Point(280, 80);
+            panelDesktop.Name = "panelDesktop";
+            panelDesktop.Size = new Size(1407, 844);
+            panelDesktop.TabIndex = 2;
+            // 
+            // iconCurrentChildForm
+            // 
+            iconCurrentChildForm.Location = new Point(17, 12);
+            iconCurrentChildForm.Name = "iconCurrentChildForm";
+            iconCurrentChildForm.Size = new Size(55, 50);
+            iconCurrentChildForm.TabIndex = 1;
+            iconCurrentChildForm.TabStop = false;
             // 
             // AniflixView
             // 
@@ -285,13 +300,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1687, 924);
             Controls.Add(panelDesktop);
-            Controls.Add(panel3);
+            Controls.Add(panelTitleBar);
             Controls.Add(panel1);
             Name = "AniflixView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Aniflix";
             panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            panelTitleBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             ResumeLayout(false);
         }
 
@@ -307,9 +323,10 @@
         private Custom.RoundedButton roundedButton4;
         private Custom.RoundedButton roundedButton3;
         private Custom.RoundedButton roundedButton2;
-        private Panel panel3;
+        private Panel panelTitleBar;
         private Panel panelDesktop;
         private Custom.RoundedButton roundedButton1;
         private Label lblTitleChildForm;
+        private PictureBox iconCurrentChildForm;
     }
 }
