@@ -6,7 +6,7 @@ namespace Aniflix.Views
     public partial class AniflixView : Form
     {
         private RoundedButton? currentBtn;
-        private Panel? leftBorderBtn;
+        private readonly Panel? leftBorderBtn;
         private Form? currentChildForm;
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
