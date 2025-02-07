@@ -12,10 +12,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aniflix.Custom
 {
+    [DefaultEvent("_TextChanged")]
     public partial class AnyText : UserControl
     {
         #region -> Fields
-        //Fields
         private Color borderColor = Color.MediumSlateBlue;
         private Color borderFocusColor = Color.HotPink;
         private int borderSize = 2;
@@ -28,15 +28,12 @@ namespace Aniflix.Custom
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
 
-        //Events
-        public event EventHandler _TextChanged;
+        public event EventHandler? TextChanged;
 
         #endregion
 
-        //-> Constructor
         public AnyText()
         {
-            //Created by designer
             InitializeComponent();
         }
 
@@ -148,9 +145,9 @@ namespace Aniflix.Custom
             }
             set
             {
-                RemovePlaceholder();//If it is the case.
+                RemovePlaceholder();
                 textBox1.Text = value;
-                SetPlaceholder();//If it is the case.
+                SetPlaceholder();
             }
         }
 
@@ -163,7 +160,7 @@ namespace Aniflix.Custom
                 if (value >= 0)
                 {
                     borderRadius = value;
-                    this.Invalidate();//Redraw control
+                    this.Invalidate();
                 }
             }
         }
@@ -210,9 +207,8 @@ namespace Aniflix.Custom
             base.OnPaint(e);
             Graphics graph = e.Graphics;
 
-            if (borderRadius > 1)//Rounded TextBox
+            if (borderRadius > 1)
             {
-                //-Fields
                 var rectBorderSmooth = this.ClientRectangle;
                 var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
                 int smoothSize = borderSize > 0 ? borderSize : 1;
@@ -222,42 +218,36 @@ namespace Aniflix.Custom
                 using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
-                    //-Drawing
-                    this.Region = new Region(pathBorderSmooth);//Set the rounded region of UserControl
-                    if (borderRadius > 15) SetTextBoxRoundedRegion();//Set the rounded region of TextBox component
+                    this.Region = new Region(pathBorderSmooth);
+                    if (borderRadius > 15) SetTextBoxRoundedRegion();
                     graph.SmoothingMode = SmoothingMode.AntiAlias;
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
                     if (isFocused) penBorder.Color = borderFocusColor;
 
-                    if (underlinedStyle) //Line Style
+                    if (underlinedStyle)
                     {
-                        //Draw border smoothing
                         graph.DrawPath(penBorderSmooth, pathBorderSmooth);
-                        //Draw border
                         graph.SmoothingMode = SmoothingMode.None;
                         graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
                     }
-                    else //Normal Style
+                    else
                     {
-                        //Draw border smoothing
                         graph.DrawPath(penBorderSmooth, pathBorderSmooth);
-                        //Draw border
                         graph.DrawPath(penBorder, pathBorder);
                     }
                 }
             }
-            else //Square/Normal TextBox
+            else
             {
-                //Draw border
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     this.Region = new Region(this.ClientRectangle);
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
                     if (isFocused) penBorder.Color = borderFocusColor;
 
-                    if (underlinedStyle) //Line Style
+                    if (underlinedStyle)
                         graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
-                    else //Normal Style
+                    else
                         graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
                 }
             }
@@ -332,8 +322,8 @@ namespace Aniflix.Custom
         #region -> TextBox events
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (_TextChanged != null)
-                _TextChanged.Invoke(sender, e);
+            if (TextChanged != null)
+                TextChanged.Invoke(sender, e);
         }
         private void textBox1_Click(object sender, EventArgs e)
         {
@@ -364,7 +354,6 @@ namespace Aniflix.Custom
             this.Invalidate();
             SetPlaceholder();
         }
-        ///::::+
         #endregion
     }
 }
