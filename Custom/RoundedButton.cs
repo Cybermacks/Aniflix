@@ -68,7 +68,7 @@ namespace Aniflix.Custom
 
         private GraphicsPath GetFigurePath(Rectangle rect, int radius)
         {
-            GraphicsPath path = new GraphicsPath();
+            GraphicsPath path = new();
             float curveSize = radius * 2F;
 
             path.StartFigure();
@@ -110,7 +110,7 @@ namespace Aniflix.Custom
                 Region = new Region(rectSurface);
                 if (borderSize >= 1)
                 {
-                    using (Pen penBorder = new Pen(borderColor, borderSize))
+                    using (Pen penBorder = new(borderColor, borderSize))
                     {
                         penBorder.Alignment = PenAlignment.Inset;
                         pevent.Graphics.DrawRectangle(penBorder, 0, 0, Width - 1, Height - 1);
