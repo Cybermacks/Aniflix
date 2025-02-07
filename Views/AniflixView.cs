@@ -109,7 +109,7 @@ namespace Aniflix.Views
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-            Reset   ();
+            Reset();
             OpenChildForm(new AniflixView());
         }
     }
