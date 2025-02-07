@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AniflixView));
             panel1 = new Panel();
-            roundedButton1 = new Custom.RoundedButton();
-            roundedButton8 = new Custom.RoundedButton();
-            roundedButton7 = new Custom.RoundedButton();
-            roundedButton6 = new Custom.RoundedButton();
-            roundedButton5 = new Custom.RoundedButton();
-            roundedButton4 = new Custom.RoundedButton();
-            roundedButton3 = new Custom.RoundedButton();
+            FecharButton = new Custom.RoundedButton();
+            TrashFlixButton = new Custom.RoundedButton();
+            GoreSeriesButton = new Custom.RoundedButton();
+            GoreFilmesButton = new Custom.RoundedButton();
+            BreakOutSeries = new Custom.RoundedButton();
+            BreakOutFilmesButton = new Custom.RoundedButton();
+            AnimesButton = new Custom.RoundedButton();
             SeriesButton = new Custom.RoundedButton();
             FilmesButton = new Custom.RoundedButton();
             panel2 = new Panel();
@@ -56,13 +56,13 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(31, 30, 68);
-            panel1.Controls.Add(roundedButton1);
-            panel1.Controls.Add(roundedButton8);
-            panel1.Controls.Add(roundedButton7);
-            panel1.Controls.Add(roundedButton6);
-            panel1.Controls.Add(roundedButton5);
-            panel1.Controls.Add(roundedButton4);
-            panel1.Controls.Add(roundedButton3);
+            panel1.Controls.Add(FecharButton);
+            panel1.Controls.Add(TrashFlixButton);
+            panel1.Controls.Add(GoreSeriesButton);
+            panel1.Controls.Add(GoreFilmesButton);
+            panel1.Controls.Add(BreakOutSeries);
+            panel1.Controls.Add(BreakOutFilmesButton);
+            panel1.Controls.Add(AnimesButton);
             panel1.Controls.Add(SeriesButton);
             panel1.Controls.Add(FilmesButton);
             panel1.Controls.Add(panel2);
@@ -72,145 +72,145 @@
             panel1.Size = new Size(280, 924);
             panel1.TabIndex = 0;
             // 
-            // roundedButton1
+            // FecharButton
             // 
-            roundedButton1.BackColor = Color.Transparent;
-            roundedButton1.BackgroundColor = Color.Transparent;
-            roundedButton1.BorderColor = Color.PaleVioletRed;
-            roundedButton1.BorderRadius = 0;
-            roundedButton1.BorderSize = 0;
-            roundedButton1.Dock = DockStyle.Top;
-            roundedButton1.FlatAppearance.BorderSize = 0;
-            roundedButton1.FlatStyle = FlatStyle.Flat;
-            roundedButton1.ForeColor = Color.White;
-            roundedButton1.Location = new Point(0, 580);
-            roundedButton1.Name = "roundedButton1";
-            roundedButton1.Padding = new Padding(10, 0, 20, 0);
-            roundedButton1.Size = new Size(280, 60);
-            roundedButton1.TabIndex = 9;
-            roundedButton1.Text = "Fechar";
-            roundedButton1.TextColor = Color.White;
-            roundedButton1.UseVisualStyleBackColor = false;
+            FecharButton.BackColor = Color.Transparent;
+            FecharButton.BackgroundColor = Color.Transparent;
+            FecharButton.BorderColor = Color.PaleVioletRed;
+            FecharButton.BorderRadius = 0;
+            FecharButton.BorderSize = 0;
+            FecharButton.Dock = DockStyle.Top;
+            FecharButton.FlatAppearance.BorderSize = 0;
+            FecharButton.FlatStyle = FlatStyle.Flat;
+            FecharButton.ForeColor = Color.White;
+            FecharButton.Location = new Point(0, 580);
+            FecharButton.Name = "FecharButton";
+            FecharButton.Padding = new Padding(10, 0, 20, 0);
+            FecharButton.Size = new Size(280, 60);
+            FecharButton.TabIndex = 9;
+            FecharButton.Text = "Fechar";
+            FecharButton.TextColor = Color.White;
+            FecharButton.UseVisualStyleBackColor = false;
             // 
-            // roundedButton8
+            // TrashFlixButton
             // 
-            roundedButton8.BackColor = Color.Transparent;
-            roundedButton8.BackgroundColor = Color.Transparent;
-            roundedButton8.BorderColor = Color.PaleVioletRed;
-            roundedButton8.BorderRadius = 0;
-            roundedButton8.BorderSize = 0;
-            roundedButton8.Dock = DockStyle.Top;
-            roundedButton8.FlatAppearance.BorderSize = 0;
-            roundedButton8.FlatStyle = FlatStyle.Flat;
-            roundedButton8.ForeColor = Color.White;
-            roundedButton8.Location = new Point(0, 520);
-            roundedButton8.Name = "roundedButton8";
-            roundedButton8.Padding = new Padding(10, 0, 20, 0);
-            roundedButton8.Size = new Size(280, 60);
-            roundedButton8.TabIndex = 8;
-            roundedButton8.Text = "TrashFlix";
-            roundedButton8.TextColor = Color.White;
-            roundedButton8.UseVisualStyleBackColor = false;
+            TrashFlixButton.BackColor = Color.Transparent;
+            TrashFlixButton.BackgroundColor = Color.Transparent;
+            TrashFlixButton.BorderColor = Color.PaleVioletRed;
+            TrashFlixButton.BorderRadius = 0;
+            TrashFlixButton.BorderSize = 0;
+            TrashFlixButton.Dock = DockStyle.Top;
+            TrashFlixButton.FlatAppearance.BorderSize = 0;
+            TrashFlixButton.FlatStyle = FlatStyle.Flat;
+            TrashFlixButton.ForeColor = Color.White;
+            TrashFlixButton.Location = new Point(0, 520);
+            TrashFlixButton.Name = "TrashFlixButton";
+            TrashFlixButton.Padding = new Padding(10, 0, 20, 0);
+            TrashFlixButton.Size = new Size(280, 60);
+            TrashFlixButton.TabIndex = 8;
+            TrashFlixButton.Text = "TrashFlix";
+            TrashFlixButton.TextColor = Color.White;
+            TrashFlixButton.UseVisualStyleBackColor = false;
             // 
-            // roundedButton7
+            // GoreSeriesButton
             // 
-            roundedButton7.BackColor = Color.Transparent;
-            roundedButton7.BackgroundColor = Color.Transparent;
-            roundedButton7.BorderColor = Color.PaleVioletRed;
-            roundedButton7.BorderRadius = 0;
-            roundedButton7.BorderSize = 0;
-            roundedButton7.Dock = DockStyle.Top;
-            roundedButton7.FlatAppearance.BorderSize = 0;
-            roundedButton7.FlatStyle = FlatStyle.Flat;
-            roundedButton7.ForeColor = Color.White;
-            roundedButton7.Location = new Point(0, 460);
-            roundedButton7.Name = "roundedButton7";
-            roundedButton7.Padding = new Padding(10, 0, 20, 0);
-            roundedButton7.Size = new Size(280, 60);
-            roundedButton7.TabIndex = 7;
-            roundedButton7.Text = "Gore Séries";
-            roundedButton7.TextColor = Color.White;
-            roundedButton7.UseVisualStyleBackColor = false;
+            GoreSeriesButton.BackColor = Color.Transparent;
+            GoreSeriesButton.BackgroundColor = Color.Transparent;
+            GoreSeriesButton.BorderColor = Color.PaleVioletRed;
+            GoreSeriesButton.BorderRadius = 0;
+            GoreSeriesButton.BorderSize = 0;
+            GoreSeriesButton.Dock = DockStyle.Top;
+            GoreSeriesButton.FlatAppearance.BorderSize = 0;
+            GoreSeriesButton.FlatStyle = FlatStyle.Flat;
+            GoreSeriesButton.ForeColor = Color.White;
+            GoreSeriesButton.Location = new Point(0, 460);
+            GoreSeriesButton.Name = "GoreSeriesButton";
+            GoreSeriesButton.Padding = new Padding(10, 0, 20, 0);
+            GoreSeriesButton.Size = new Size(280, 60);
+            GoreSeriesButton.TabIndex = 7;
+            GoreSeriesButton.Text = "Gore Séries";
+            GoreSeriesButton.TextColor = Color.White;
+            GoreSeriesButton.UseVisualStyleBackColor = false;
             // 
-            // roundedButton6
+            // GoreFilmesButton
             // 
-            roundedButton6.BackColor = Color.Transparent;
-            roundedButton6.BackgroundColor = Color.Transparent;
-            roundedButton6.BorderColor = Color.PaleVioletRed;
-            roundedButton6.BorderRadius = 0;
-            roundedButton6.BorderSize = 0;
-            roundedButton6.Dock = DockStyle.Top;
-            roundedButton6.FlatAppearance.BorderSize = 0;
-            roundedButton6.FlatStyle = FlatStyle.Flat;
-            roundedButton6.ForeColor = Color.White;
-            roundedButton6.Location = new Point(0, 400);
-            roundedButton6.Name = "roundedButton6";
-            roundedButton6.Padding = new Padding(10, 0, 20, 0);
-            roundedButton6.Size = new Size(280, 60);
-            roundedButton6.TabIndex = 6;
-            roundedButton6.Text = "Gore Filmes";
-            roundedButton6.TextColor = Color.White;
-            roundedButton6.UseVisualStyleBackColor = false;
+            GoreFilmesButton.BackColor = Color.Transparent;
+            GoreFilmesButton.BackgroundColor = Color.Transparent;
+            GoreFilmesButton.BorderColor = Color.PaleVioletRed;
+            GoreFilmesButton.BorderRadius = 0;
+            GoreFilmesButton.BorderSize = 0;
+            GoreFilmesButton.Dock = DockStyle.Top;
+            GoreFilmesButton.FlatAppearance.BorderSize = 0;
+            GoreFilmesButton.FlatStyle = FlatStyle.Flat;
+            GoreFilmesButton.ForeColor = Color.White;
+            GoreFilmesButton.Location = new Point(0, 400);
+            GoreFilmesButton.Name = "GoreFilmesButton";
+            GoreFilmesButton.Padding = new Padding(10, 0, 20, 0);
+            GoreFilmesButton.Size = new Size(280, 60);
+            GoreFilmesButton.TabIndex = 6;
+            GoreFilmesButton.Text = "Gore Filmes";
+            GoreFilmesButton.TextColor = Color.White;
+            GoreFilmesButton.UseVisualStyleBackColor = false;
             // 
-            // roundedButton5
+            // BreakOutSeries
             // 
-            roundedButton5.BackColor = Color.Transparent;
-            roundedButton5.BackgroundColor = Color.Transparent;
-            roundedButton5.BorderColor = Color.PaleVioletRed;
-            roundedButton5.BorderRadius = 0;
-            roundedButton5.BorderSize = 0;
-            roundedButton5.Dock = DockStyle.Top;
-            roundedButton5.FlatAppearance.BorderSize = 0;
-            roundedButton5.FlatStyle = FlatStyle.Flat;
-            roundedButton5.ForeColor = Color.White;
-            roundedButton5.Location = new Point(0, 340);
-            roundedButton5.Name = "roundedButton5";
-            roundedButton5.Padding = new Padding(10, 0, 20, 0);
-            roundedButton5.Size = new Size(280, 60);
-            roundedButton5.TabIndex = 5;
-            roundedButton5.Text = "BreakOut Séries";
-            roundedButton5.TextColor = Color.White;
-            roundedButton5.UseVisualStyleBackColor = false;
+            BreakOutSeries.BackColor = Color.Transparent;
+            BreakOutSeries.BackgroundColor = Color.Transparent;
+            BreakOutSeries.BorderColor = Color.PaleVioletRed;
+            BreakOutSeries.BorderRadius = 0;
+            BreakOutSeries.BorderSize = 0;
+            BreakOutSeries.Dock = DockStyle.Top;
+            BreakOutSeries.FlatAppearance.BorderSize = 0;
+            BreakOutSeries.FlatStyle = FlatStyle.Flat;
+            BreakOutSeries.ForeColor = Color.White;
+            BreakOutSeries.Location = new Point(0, 340);
+            BreakOutSeries.Name = "BreakOutSeries";
+            BreakOutSeries.Padding = new Padding(10, 0, 20, 0);
+            BreakOutSeries.Size = new Size(280, 60);
+            BreakOutSeries.TabIndex = 5;
+            BreakOutSeries.Text = "BreakOut Séries";
+            BreakOutSeries.TextColor = Color.White;
+            BreakOutSeries.UseVisualStyleBackColor = false;
             // 
-            // roundedButton4
+            // BreakOutFilmesButton
             // 
-            roundedButton4.BackColor = Color.Transparent;
-            roundedButton4.BackgroundColor = Color.Transparent;
-            roundedButton4.BorderColor = Color.PaleVioletRed;
-            roundedButton4.BorderRadius = 0;
-            roundedButton4.BorderSize = 0;
-            roundedButton4.Dock = DockStyle.Top;
-            roundedButton4.FlatAppearance.BorderSize = 0;
-            roundedButton4.FlatStyle = FlatStyle.Flat;
-            roundedButton4.ForeColor = Color.White;
-            roundedButton4.Location = new Point(0, 280);
-            roundedButton4.Name = "roundedButton4";
-            roundedButton4.Padding = new Padding(10, 0, 20, 0);
-            roundedButton4.Size = new Size(280, 60);
-            roundedButton4.TabIndex = 4;
-            roundedButton4.Text = "BreakOut Filmes";
-            roundedButton4.TextColor = Color.White;
-            roundedButton4.UseVisualStyleBackColor = false;
+            BreakOutFilmesButton.BackColor = Color.Transparent;
+            BreakOutFilmesButton.BackgroundColor = Color.Transparent;
+            BreakOutFilmesButton.BorderColor = Color.PaleVioletRed;
+            BreakOutFilmesButton.BorderRadius = 0;
+            BreakOutFilmesButton.BorderSize = 0;
+            BreakOutFilmesButton.Dock = DockStyle.Top;
+            BreakOutFilmesButton.FlatAppearance.BorderSize = 0;
+            BreakOutFilmesButton.FlatStyle = FlatStyle.Flat;
+            BreakOutFilmesButton.ForeColor = Color.White;
+            BreakOutFilmesButton.Location = new Point(0, 280);
+            BreakOutFilmesButton.Name = "BreakOutFilmesButton";
+            BreakOutFilmesButton.Padding = new Padding(10, 0, 20, 0);
+            BreakOutFilmesButton.Size = new Size(280, 60);
+            BreakOutFilmesButton.TabIndex = 4;
+            BreakOutFilmesButton.Text = "BreakOut Filmes";
+            BreakOutFilmesButton.TextColor = Color.White;
+            BreakOutFilmesButton.UseVisualStyleBackColor = false;
             // 
-            // roundedButton3
+            // AnimesButton
             // 
-            roundedButton3.BackColor = Color.Transparent;
-            roundedButton3.BackgroundColor = Color.Transparent;
-            roundedButton3.BorderColor = Color.PaleVioletRed;
-            roundedButton3.BorderRadius = 0;
-            roundedButton3.BorderSize = 0;
-            roundedButton3.Dock = DockStyle.Top;
-            roundedButton3.FlatAppearance.BorderSize = 0;
-            roundedButton3.FlatStyle = FlatStyle.Flat;
-            roundedButton3.ForeColor = Color.White;
-            roundedButton3.Location = new Point(0, 220);
-            roundedButton3.Name = "roundedButton3";
-            roundedButton3.Padding = new Padding(10, 0, 20, 0);
-            roundedButton3.Size = new Size(280, 60);
-            roundedButton3.TabIndex = 3;
-            roundedButton3.Text = "Animes";
-            roundedButton3.TextColor = Color.White;
-            roundedButton3.UseVisualStyleBackColor = false;
+            AnimesButton.BackColor = Color.Transparent;
+            AnimesButton.BackgroundColor = Color.Transparent;
+            AnimesButton.BorderColor = Color.PaleVioletRed;
+            AnimesButton.BorderRadius = 0;
+            AnimesButton.BorderSize = 0;
+            AnimesButton.Dock = DockStyle.Top;
+            AnimesButton.FlatAppearance.BorderSize = 0;
+            AnimesButton.FlatStyle = FlatStyle.Flat;
+            AnimesButton.ForeColor = Color.White;
+            AnimesButton.Location = new Point(0, 220);
+            AnimesButton.Name = "AnimesButton";
+            AnimesButton.Padding = new Padding(10, 0, 20, 0);
+            AnimesButton.Size = new Size(280, 60);
+            AnimesButton.TabIndex = 3;
+            AnimesButton.Text = "Animes";
+            AnimesButton.TextColor = Color.White;
+            AnimesButton.UseVisualStyleBackColor = false;
             // 
             // SeriesButton
             // 
@@ -351,16 +351,16 @@
         private Panel panel1;
         private Custom.RoundedButton FilmesButton;
         private Panel panel2;
-        private Custom.RoundedButton roundedButton8;
-        private Custom.RoundedButton roundedButton7;
-        private Custom.RoundedButton roundedButton6;
-        private Custom.RoundedButton roundedButton5;
-        private Custom.RoundedButton roundedButton4;
-        private Custom.RoundedButton roundedButton3;
+        private Custom.RoundedButton TrashFlixButton;
+        private Custom.RoundedButton GoreSeriesButton;
+        private Custom.RoundedButton GoreFilmesButton;
+        private Custom.RoundedButton BreakOutSeries;
+        private Custom.RoundedButton BreakOutFilmesButton;
+        private Custom.RoundedButton AnimesButton;
         private Custom.RoundedButton SeriesButton;
         private Panel panelTitleBar;
         private Panel panelDesktop;
-        private Custom.RoundedButton roundedButton1;
+        private Custom.RoundedButton FecharButton;
         private Label lblTitleChildForm;
         private PictureBox iconCurrentChildForm;
         private PictureBox Minimize;
