@@ -1,14 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Drawing;
-using System.Windows.Forms;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing.Design;
-using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
-using System.Collections.Generic;
 
 namespace Aniflix.Custom
 {
@@ -22,9 +14,9 @@ namespace Aniflix.Custom
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 1;
 
-        private ComboBox cmbList;
-        private Label lblText;
-        private Button btnIcon;
+        private readonly ComboBox cmbList;
+        private readonly Label lblText;
+        private readonly Button btnIcon;
 
         public event EventHandler OnSelectedIndexChanged;
         #endregion
