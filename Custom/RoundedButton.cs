@@ -107,11 +107,9 @@ namespace Aniflix.Custom
                 Region = new Region(rectSurface);
                 if (borderSize >= 1)
                 {
-                    using (Pen penBorder = new(borderColor, borderSize))
-                    {
-                        penBorder.Alignment = PenAlignment.Inset;
-                        pevent.Graphics.DrawRectangle(penBorder, 0, 0, Width - 1, Height - 1);
-                    }
+                    using Pen penBorder = new(borderColor, borderSize);
+                    penBorder.Alignment = PenAlignment.Inset;
+                    pevent.Graphics.DrawRectangle(penBorder, 0, 0, Width - 1, Height - 1);
                 }
             }
         }
