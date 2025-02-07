@@ -276,6 +276,7 @@
             iconCurrentChildForm.Location = new Point(17, 12);
             iconCurrentChildForm.Name = "iconCurrentChildForm";
             iconCurrentChildForm.Size = new Size(55, 50);
+            iconCurrentChildForm.SizeMode = PictureBoxSizeMode.StretchImage;
             iconCurrentChildForm.TabIndex = 1;
             iconCurrentChildForm.TabStop = false;
             // 
