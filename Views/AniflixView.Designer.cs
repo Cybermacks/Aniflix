@@ -336,6 +336,7 @@
             // 
             // iconCurrentChildForm
             // 
+            iconCurrentChildForm.Image = Properties.Resources.home_circle;
             iconCurrentChildForm.Location = new Point(17, 12);
             iconCurrentChildForm.Name = "iconCurrentChildForm";
             iconCurrentChildForm.Size = new Size(55, 50);
@@ -351,7 +352,7 @@
             lblTitleChildForm.Name = "lblTitleChildForm";
             lblTitleChildForm.Size = new Size(100, 23);
             lblTitleChildForm.TabIndex = 0;
-            lblTitleChildForm.Text = "label1";
+            lblTitleChildForm.Text = "Home";
             lblTitleChildForm.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panelDesktop
