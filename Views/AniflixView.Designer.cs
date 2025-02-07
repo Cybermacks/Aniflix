@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            roundedButton1 = new Custom.RoundedButton();
             roundedButton8 = new Custom.RoundedButton();
             roundedButton7 = new Custom.RoundedButton();
             roundedButton6 = new Custom.RoundedButton();
@@ -40,8 +41,9 @@
             panel2 = new Panel();
             panel3 = new Panel();
             panelDesktop = new Panel();
-            roundedButton1 = new Custom.RoundedButton();
+            label1 = new Label();
             panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -62,6 +64,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(280, 924);
             panel1.TabIndex = 0;
+            // 
+            // roundedButton1
+            // 
+            roundedButton1.BackColor = Color.Transparent;
+            roundedButton1.BackgroundColor = Color.Transparent;
+            roundedButton1.BorderColor = Color.PaleVioletRed;
+            roundedButton1.BorderRadius = 0;
+            roundedButton1.BorderSize = 0;
+            roundedButton1.Dock = DockStyle.Top;
+            roundedButton1.FlatAppearance.BorderSize = 0;
+            roundedButton1.FlatStyle = FlatStyle.Flat;
+            roundedButton1.ForeColor = Color.White;
+            roundedButton1.Location = new Point(0, 686);
+            roundedButton1.Name = "roundedButton1";
+            roundedButton1.Padding = new Padding(10, 0, 20, 0);
+            roundedButton1.Size = new Size(280, 74);
+            roundedButton1.TabIndex = 9;
+            roundedButton1.Text = "Fechar";
+            roundedButton1.TextColor = Color.White;
+            roundedButton1.UseVisualStyleBackColor = false;
             // 
             // roundedButton8
             // 
@@ -234,6 +256,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(label1);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(280, 0);
             panel3.Name = "panel3";
@@ -248,25 +271,13 @@
             panelDesktop.Size = new Size(1407, 824);
             panelDesktop.TabIndex = 2;
             // 
-            // roundedButton1
+            // label1
             // 
-            roundedButton1.BackColor = Color.Transparent;
-            roundedButton1.BackgroundColor = Color.Transparent;
-            roundedButton1.BorderColor = Color.PaleVioletRed;
-            roundedButton1.BorderRadius = 0;
-            roundedButton1.BorderSize = 0;
-            roundedButton1.Dock = DockStyle.Top;
-            roundedButton1.FlatAppearance.BorderSize = 0;
-            roundedButton1.FlatStyle = FlatStyle.Flat;
-            roundedButton1.ForeColor = Color.White;
-            roundedButton1.Location = new Point(0, 686);
-            roundedButton1.Name = "roundedButton1";
-            roundedButton1.Padding = new Padding(10, 0, 20, 0);
-            roundedButton1.Size = new Size(280, 74);
-            roundedButton1.TabIndex = 9;
-            roundedButton1.Text = "Fechar";
-            roundedButton1.TextColor = Color.White;
-            roundedButton1.UseVisualStyleBackColor = false;
+            label1.Location = new Point(80, 42);
+            label1.Name = "label1";
+            label1.Size = new Size(8, 8);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
             // AniflixView
             // 
@@ -280,6 +291,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Aniflix";
             panel1.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -298,5 +310,6 @@
         private Panel panel3;
         private Panel panelDesktop;
         private Custom.RoundedButton roundedButton1;
+        private Label label1;
     }
 }

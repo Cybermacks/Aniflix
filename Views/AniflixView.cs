@@ -15,7 +15,7 @@ namespace Aniflix.Views
     {
         private RoundedButton? currentBtn;
         private Panel? leftBorderBtn;
-        private Form currentChildForm;
+        private Form? currentChildForm;
 
         public AniflixView()
         {
@@ -25,6 +25,11 @@ namespace Aniflix.Views
                 Size = new Size(7, 60)
             };
             panel1.Controls.Add(leftBorderBtn);
+
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         private struct RGBColors
         {
