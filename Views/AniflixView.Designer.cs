@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AniflixView));
             panel1 = new Panel();
             roundedButton1 = new Custom.RoundedButton();
             roundedButton8 = new Custom.RoundedButton();
@@ -238,7 +239,7 @@
             Filmesutton.FlatAppearance.BorderSize = 0;
             Filmesutton.FlatStyle = FlatStyle.Flat;
             Filmesutton.ForeColor = Color.White;
-            Filmesutton.Image = Properties.Resources.movie_roll;
+            Filmesutton.Image = (Image)resources.GetObject("Filmesutton.Image");
             Filmesutton.Location = new Point(0, 100);
             Filmesutton.Name = "Filmesutton";
             Filmesutton.Padding = new Padding(10, 0, 20, 0);
@@ -246,7 +247,7 @@
             Filmesutton.TabIndex = 1;
             Filmesutton.Text = "Filmes";
             Filmesutton.TextColor = Color.White;
-            Filmesutton.TextImageRelation = TextImageRelation.TextBeforeImage;
+            Filmesutton.TextImageRelation = TextImageRelation.ImageBeforeText;
             Filmesutton.UseVisualStyleBackColor = false;
             Filmesutton.Click += Filmesutton_Click;
             // 
