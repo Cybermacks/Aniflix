@@ -33,7 +33,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(50, 62);
+            textBox1.Location = new Point(3, 3);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(516, 23);
             textBox1.TabIndex = 0;
@@ -44,7 +44,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(textBox1);
             Name = "AnyText";
-            Size = new Size(632, 161);
+            Size = new Size(526, 33);
             ResumeLayout(false);
             PerformLayout();
         }
