@@ -456,6 +456,7 @@ partial class SeriesView
         VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         VoltarButton.ForeColor = Color.White;
         VoltarButton.ImageIndex = 0;
+        VoltarButton.ImageList = ListImage;
         VoltarButton.Location = new Point(1076, 729);
         VoltarButton.Name = "VoltarButton";
         VoltarButton.Size = new Size(160, 85);
@@ -471,6 +472,7 @@ partial class SeriesView
         ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         ProximoButton.ForeColor = Color.White;
         ProximoButton.ImageIndex = 3;
+        ProximoButton.ImageList = ListImage;
         ProximoButton.Location = new Point(893, 729);
         ProximoButton.Name = "ProximoButton";
         ProximoButton.Size = new Size(160, 85);
@@ -486,6 +488,7 @@ partial class SeriesView
         AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         AnteriorButton.ForeColor = Color.White;
         AnteriorButton.ImageIndex = 4;
+        AnteriorButton.ImageList = ListImage;
         AnteriorButton.Location = new Point(710, 729);
         AnteriorButton.Name = "AnteriorButton";
         AnteriorButton.Size = new Size(160, 85);
@@ -501,6 +504,7 @@ partial class SeriesView
         EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
         EditarButton.ForeColor = Color.White;
         EditarButton.ImageIndex = 2;
+        EditarButton.ImageList = ListImage;
         EditarButton.Location = new Point(527, 729);
         EditarButton.Name = "EditarButton";
         EditarButton.Size = new Size(160, 85);
@@ -548,10 +552,10 @@ partial class SeriesView
         ListImage.TransparentColor = Color.Transparent;
         ListImage.Images.SetKeyName(0, "arrow-left.png");
         ListImage.Images.SetKeyName(1, "content-copy.png");
-        ListImage.Images.SetKeyName(2, "content-save.png");
-        ListImage.Images.SetKeyName(3, "file-edit.png");
-        ListImage.Images.SetKeyName(4, "skip-next.png");
-        ListImage.Images.SetKeyName(5, "skip-previous.png");
+        ListImage.Images.SetKeyName(2, "file-edit.png");
+        ListImage.Images.SetKeyName(3, "skip-next.png");
+        ListImage.Images.SetKeyName(4, "skip-previous.png");
+        ListImage.Images.SetKeyName(5, "content-save.png");
         // 
         // SeriesView
         // 
