@@ -80,7 +80,7 @@
             roundedButton1.ForeColor = Color.White;
             roundedButton1.Location = new Point(0, 100);
             roundedButton1.Name = "roundedButton1";
-            roundedButton1.Padding = new Padding(10, 0, 0, 0);
+            roundedButton1.Padding = new Padding(10, 0, 20, 0);
             roundedButton1.Size = new Size(280, 74);
             roundedButton1.TabIndex = 1;
             roundedButton1.Text = "roundedButton1";
@@ -100,7 +100,7 @@
             roundedButton2.ForeColor = Color.White;
             roundedButton2.Location = new Point(0, 174);
             roundedButton2.Name = "roundedButton2";
-            roundedButton2.Padding = new Padding(10, 0, 0, 0);
+            roundedButton2.Padding = new Padding(10, 0, 20, 0);
             roundedButton2.Size = new Size(280, 74);
             roundedButton2.TabIndex = 2;
             roundedButton2.Text = "roundedButton2";
@@ -120,7 +120,7 @@
             roundedButton3.ForeColor = Color.White;
             roundedButton3.Location = new Point(0, 248);
             roundedButton3.Name = "roundedButton3";
-            roundedButton3.Padding = new Padding(10, 0, 0, 0);
+            roundedButton3.Padding = new Padding(10, 0, 20, 0);
             roundedButton3.Size = new Size(280, 74);
             roundedButton3.TabIndex = 3;
             roundedButton3.Text = "roundedButton3";
@@ -140,7 +140,7 @@
             roundedButton4.ForeColor = Color.White;
             roundedButton4.Location = new Point(0, 322);
             roundedButton4.Name = "roundedButton4";
-            roundedButton4.Padding = new Padding(10, 0, 0, 0);
+            roundedButton4.Padding = new Padding(10, 0, 20, 0);
             roundedButton4.Size = new Size(280, 74);
             roundedButton4.TabIndex = 4;
             roundedButton4.Text = "roundedButton4";
@@ -160,7 +160,7 @@
             roundedButton5.ForeColor = Color.White;
             roundedButton5.Location = new Point(0, 396);
             roundedButton5.Name = "roundedButton5";
-            roundedButton5.Padding = new Padding(10, 0, 0, 0);
+            roundedButton5.Padding = new Padding(10, 0, 20, 0);
             roundedButton5.Size = new Size(280, 74);
             roundedButton5.TabIndex = 5;
             roundedButton5.Text = "roundedButton5";
@@ -180,7 +180,7 @@
             roundedButton6.ForeColor = Color.White;
             roundedButton6.Location = new Point(0, 470);
             roundedButton6.Name = "roundedButton6";
-            roundedButton6.Padding = new Padding(10, 0, 0, 0);
+            roundedButton6.Padding = new Padding(10, 0, 20, 0);
             roundedButton6.Size = new Size(280, 74);
             roundedButton6.TabIndex = 6;
             roundedButton6.Text = "roundedButton6";
@@ -200,7 +200,7 @@
             roundedButton7.ForeColor = Color.White;
             roundedButton7.Location = new Point(0, 544);
             roundedButton7.Name = "roundedButton7";
-            roundedButton7.Padding = new Padding(10, 0, 0, 0);
+            roundedButton7.Padding = new Padding(10, 0, 20, 0);
             roundedButton7.Size = new Size(280, 74);
             roundedButton7.TabIndex = 7;
             roundedButton7.Text = "roundedButton7";
@@ -220,7 +220,7 @@
             roundedButton8.ForeColor = Color.White;
             roundedButton8.Location = new Point(0, 618);
             roundedButton8.Name = "roundedButton8";
-            roundedButton8.Padding = new Padding(10, 0, 0, 0);
+            roundedButton8.Padding = new Padding(10, 0, 20, 0);
             roundedButton8.Size = new Size(280, 74);
             roundedButton8.TabIndex = 8;
             roundedButton8.Text = "roundedButton8";
@@ -235,7 +235,7 @@
             Controls.Add(panel1);
             Name = "AniflixView";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "AniflixView";
+            Text = "Aniflix";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
