@@ -30,6 +30,7 @@
         {
             roundedButton1 = new Custom.RoundedButton();
             anyCombo1 = new Custom.AnyCombo();
+            anyText1 = new Custom.AnyText();
             SuspendLayout();
             // 
             // roundedButton1
@@ -69,11 +70,29 @@
             anyCombo1.TabIndex = 2;
             anyCombo1.Texts = "";
             // 
+            // anyText1
+            // 
+            anyText1.BorderColor = Color.MediumSlateBlue;
+            anyText1.BorderFocusColor = Color.HotPink;
+            anyText1.BorderRadius = 0;
+            anyText1.BorderSize = 2;
+            anyText1.Location = new Point(385, 371);
+            anyText1.Multiline = false;
+            anyText1.Name = "anyText1";
+            anyText1.PasswordChar = false;
+            anyText1.PlaceholderColor = Color.DarkGray;
+            anyText1.PlaceholderText = "";
+            anyText1.Size = new Size(526, 23);
+            anyText1.TabIndex = 3;
+            anyText1.Texts = "";
+            anyText1.UnderlinedStyle = false;
+            // 
             // AniflixView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1122, 613);
+            Controls.Add(anyText1);
             Controls.Add(anyCombo1);
             Controls.Add(roundedButton1);
             Name = "AniflixView";
@@ -85,5 +104,6 @@
 
         private Custom.RoundedButton roundedButton1;
         private Custom.AnyCombo anyCombo1;
+        private Custom.AnyText anyText1;
     }
 }

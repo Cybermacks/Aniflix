@@ -35,16 +35,18 @@
             // 
             textBox1.Location = new Point(3, 3);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(516, 23);
+            textBox1.Size = new Size(516, 24);
             textBox1.TabIndex = 0;
             // 
             // AnyText
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
+            BackColor = Color.White;
             Controls.Add(textBox1);
+            Font = new Font("Segoe UI", 9.5F);
+            ForeColor = Color.DimGray;
             Name = "AnyText";
-            Size = new Size(526, 33);
+            Size = new Size(526, 37);
             ResumeLayout(false);
             PerformLayout();
         }
