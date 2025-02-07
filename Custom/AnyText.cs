@@ -17,7 +17,7 @@ namespace Aniflix.Custom
         private string placeholderText = "";
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
-        public event EventHandler? TextChanged;
+        public event EventHandler? _TextChanged;
 
         #endregion
 
