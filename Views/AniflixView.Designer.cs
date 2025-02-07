@@ -41,7 +41,7 @@
             panel2 = new Panel();
             panel3 = new Panel();
             panelDesktop = new Panel();
-            label1 = new Label();
+            lblTitleChildForm = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -256,7 +256,7 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(label1);
+            panel3.Controls.Add(lblTitleChildForm);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(280, 0);
             panel3.Name = "panel3";
@@ -271,13 +271,13 @@
             panelDesktop.Size = new Size(1407, 824);
             panelDesktop.TabIndex = 2;
             // 
-            // label1
+            // lblTitleChildForm
             // 
-            label1.Location = new Point(80, 42);
-            label1.Name = "label1";
-            label1.Size = new Size(8, 8);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lblTitleChildForm.Location = new Point(144, 42);
+            lblTitleChildForm.Name = "lblTitleChildForm";
+            lblTitleChildForm.Size = new Size(100, 23);
+            lblTitleChildForm.TabIndex = 0;
+            lblTitleChildForm.Text = "label1";
             // 
             // AniflixView
             // 
@@ -310,6 +310,6 @@
         private Panel panel3;
         private Panel panelDesktop;
         private Custom.RoundedButton roundedButton1;
-        private Label label1;
+        private Label lblTitleChildForm;
     }
 }

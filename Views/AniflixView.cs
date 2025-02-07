@@ -83,7 +83,7 @@ namespace Aniflix.Views
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            //lblTitleChildForm.Text = childForm.Text;
+            lblTitleChildForm.Text = childForm.Text;
         }
 
         private void Filmesutton_Click(object sender, EventArgs e)
