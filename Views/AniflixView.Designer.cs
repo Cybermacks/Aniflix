@@ -237,6 +237,7 @@
             AnimesButton.Text = "Animes";
             AnimesButton.TextColor = Color.White;
             AnimesButton.UseVisualStyleBackColor = false;
+            AnimesButton.Click += AnimesButton_Click;
             // 
             // SeriesButton
             // 
