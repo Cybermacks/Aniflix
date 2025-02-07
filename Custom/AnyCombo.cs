@@ -157,7 +157,7 @@ namespace Aniflix.Custom
 
             set
             {
-                base.Font = value ?? throw new ArgumentNullException(nameof(value));
+                base.Font = value;
                 lblText.Font = value;
                 cmbList.Font = value;
                 AdjustComboBoxDimensions();
