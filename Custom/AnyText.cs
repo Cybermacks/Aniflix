@@ -26,6 +26,8 @@ namespace Aniflix.Custom
             InitializeComponent();
         }
 
+
+        public void Copy() => PInvoke.SendMessage(this, PInvoke.WM_COPY);
         #region -> Properties
         [Category("AnyText")]
         public Color BorderColor
