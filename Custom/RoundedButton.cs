@@ -59,12 +59,12 @@ namespace Aniflix.Custom
         //Constructor
         public RoundedButton()
         {
-            this.FlatStyle = FlatStyle.Flat;
-            this.FlatAppearance.BorderSize = 0;
-            this.Size = new Size(150, 40);
-            this.BackColor = Color.MediumSlateBlue;
-            this.ForeColor = Color.White;
-            this.Resize += new EventHandler(Button_Resize);
+            FlatStyle = FlatStyle.Flat;
+            FlatAppearance.BorderSize = 0;
+            Size = new Size(150, 40);
+            BackColor = Color.MediumSlateBlue;
+            ForeColor = Color.White;
+            Resize += new EventHandler(Button_Resize);
         }
 
         //Methods
