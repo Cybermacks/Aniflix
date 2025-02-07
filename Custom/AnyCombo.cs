@@ -30,7 +30,7 @@ namespace Aniflix.Custom
         #endregion
 
         #region -> Constructor
-        public RJComboBox()
+        public AnyCombo()
         {
             cmbList = new ComboBox();
             lblText = new Label();
@@ -71,7 +71,7 @@ namespace Aniflix.Custom
             this.Padding = new Padding(borderSize);
             this.Font = new Font(this.Font.Name, 10F);
             base.BackColor = borderColor;
-            this.Load += new System.EventHandler(this.RJComboBox_Load);
+            this.Load += new System.EventHandler(this.AnyCombo_Load);
             this.ResumeLayout();
             AdjustComboBoxDimensions();
         }
@@ -360,7 +360,7 @@ namespace Aniflix.Custom
         }
         #endregion
 
-        private void RJComboBox_Load(object sender, EventArgs e)
+        private void AnyCombo_Load(object sender, EventArgs e)
         {
             AdjustComboBoxDimensions();
         }
