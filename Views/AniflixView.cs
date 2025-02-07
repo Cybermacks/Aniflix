@@ -115,5 +115,10 @@ namespace Aniflix.Views
         {
             Reset();
         }
+
+        private void FecharButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

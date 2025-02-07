@@ -96,6 +96,7 @@
             FecharButton.Text = "Fechar";
             FecharButton.TextColor = Color.White;
             FecharButton.UseVisualStyleBackColor = false;
+            FecharButton.Click += FecharButton_Click;
             // 
             // TrashFlixButton
             // 
