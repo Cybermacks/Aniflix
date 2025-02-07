@@ -318,17 +318,18 @@
             // CloseButton
             // 
             CloseButton.Image = Properties.Resources.window_close;
-            CloseButton.Location = new Point(1381, 2);
+            CloseButton.Location = new Point(1379, 2);
             CloseButton.Name = "CloseButton";
             CloseButton.Size = new Size(24, 24);
             CloseButton.SizeMode = PictureBoxSizeMode.StretchImage;
             CloseButton.TabIndex = 3;
             CloseButton.TabStop = false;
+            CloseButton.Click += CloseButton_Click;
             // 
             // MinimizeButton
             // 
             MinimizeButton.Image = Properties.Resources.window_minimize;
-            MinimizeButton.Location = new Point(1355, 2);
+            MinimizeButton.Location = new Point(1352, 2);
             MinimizeButton.Name = "MinimizeButton";
             MinimizeButton.Size = new Size(24, 24);
             MinimizeButton.SizeMode = PictureBoxSizeMode.StretchImage;
