@@ -324,7 +324,6 @@
             CloseButton.SizeMode = PictureBoxSizeMode.StretchImage;
             CloseButton.TabIndex = 3;
             CloseButton.TabStop = false;
-            CloseButton.Click += pictureBox1_Click;
             // 
             // MinimizeButton
             // 
