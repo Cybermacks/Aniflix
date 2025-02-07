@@ -64,7 +64,7 @@ namespace Aniflix.Custom
             Padding = new Padding(borderSize);
             Font = new Font(Font.Name, 10F);
             base.BackColor = borderColor;
-            Load += new System.EventHandler(this.AnyCombo_Load!);
+            Load += new EventHandler(this.AnyCombo_Load!);
             ResumeLayout();
             AdjustComboBoxDimensions();
         }
