@@ -44,9 +44,11 @@
             iconCurrentChildForm = new PictureBox();
             lblTitleChildForm = new Label();
             panelDesktop = new Panel();
+            Minimize = new PictureBox();
             panel1.SuspendLayout();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Minimize).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -264,6 +266,7 @@
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(26, 25, 62);
+            panelTitleBar.Controls.Add(Minimize);
             panelTitleBar.Controls.Add(iconCurrentChildForm);
             panelTitleBar.Controls.Add(lblTitleChildForm);
             panelTitleBar.Dock = DockStyle.Top;
@@ -301,6 +304,16 @@
             panelDesktop.Size = new Size(1407, 844);
             panelDesktop.TabIndex = 2;
             // 
+            // Minimize
+            // 
+            Minimize.Image = Properties.Resources.window_minimize;
+            Minimize.Location = new Point(1321, 12);
+            Minimize.Name = "Minimize";
+            Minimize.Size = new Size(34, 39);
+            Minimize.SizeMode = PictureBoxSizeMode.StretchImage;
+            Minimize.TabIndex = 2;
+            Minimize.TabStop = false;
+            // 
             // AniflixView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -315,6 +328,7 @@
             panel1.ResumeLayout(false);
             panelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Minimize).EndInit();
             ResumeLayout(false);
         }
 
@@ -335,5 +349,6 @@
         private Custom.RoundedButton roundedButton1;
         private Label lblTitleChildForm;
         private PictureBox iconCurrentChildForm;
+        private PictureBox Minimize;
     }
 }
