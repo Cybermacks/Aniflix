@@ -1,14 +1,5 @@
-﻿using System;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Drawing;
-using System.Windows.Forms;
-using System.ComponentModel;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Drawing.Drawing2D;
-using System.Collections.Generic;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aniflix.Custom
 {
@@ -28,7 +19,7 @@ namespace Aniflix.Custom
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
 
-        public event EventHandler? TextChanged;
+        public event EventHandler? _TextChanged;
 
         #endregion
 
