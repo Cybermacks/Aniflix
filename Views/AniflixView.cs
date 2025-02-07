@@ -1,4 +1,5 @@
 ﻿using Aniflix.Custom;
+using Aniflix.Properties;
 using System.Runtime.InteropServices;
 
 namespace Aniflix.Views
@@ -85,7 +86,8 @@ namespace Aniflix.Views
         {
             DisableButton();
             leftBorderBtn!.Visible = false;
-            lblTitleChildForm.Text = "Home";
+            iconCurrentChildForm.Image = Resources.home_circle;
+            iconCurrentChildForm.Image = Resources.home_circle;
         }
 
 
