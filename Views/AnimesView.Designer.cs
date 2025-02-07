@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label19 = new Label();
             AutoresText = new TextBox();
             label18 = new Label();
@@ -70,6 +71,7 @@
             CodigoText = new TextBox();
             label6 = new Label();
             AnimeText = new TextBox();
+            imageListAnime = new ImageList(components);
             SuspendLayout();
             // 
             // label19
@@ -156,6 +158,7 @@
             VoltarButton.Size = new Size(137, 61);
             VoltarButton.TabIndex = 125;
             VoltarButton.Text = "Voltar";
+            VoltarButton.TextAlign = ContentAlignment.BottomLeft;
             VoltarButton.UseVisualStyleBackColor = false;
             // 
             // ProximoButton
@@ -170,6 +173,7 @@
             ProximoButton.Size = new Size(137, 61);
             ProximoButton.TabIndex = 124;
             ProximoButton.Text = "Próximo";
+            ProximoButton.TextAlign = ContentAlignment.BottomLeft;
             ProximoButton.UseVisualStyleBackColor = false;
             ProximoButton.Click += ProximoButton_Click;
             // 
@@ -185,6 +189,7 @@
             AnteriorButton.Size = new Size(137, 61);
             AnteriorButton.TabIndex = 123;
             AnteriorButton.Text = "Anterior";
+            AnteriorButton.TextAlign = ContentAlignment.BottomLeft;
             AnteriorButton.UseVisualStyleBackColor = false;
             AnteriorButton.Click += AnteriorButton_Click;
             // 
@@ -200,6 +205,7 @@
             EditarButton.Size = new Size(137, 61);
             EditarButton.TabIndex = 122;
             EditarButton.Text = "Editar";
+            EditarButton.TextAlign = ContentAlignment.BottomLeft;
             EditarButton.UseVisualStyleBackColor = false;
             EditarButton.Click += EditarButton_Click;
             // 
@@ -215,6 +221,7 @@
             InserirNovoButton.Size = new Size(137, 61);
             InserirNovoButton.TabIndex = 121;
             InserirNovoButton.Text = "Inserir Novo";
+            InserirNovoButton.TextAlign = ContentAlignment.BottomLeft;
             InserirNovoButton.UseVisualStyleBackColor = false;
             InserirNovoButton.Click += InserirNovoButton_Click;
             // 
@@ -224,12 +231,12 @@
             CopiarButton.FlatStyle = FlatStyle.Popup;
             CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
             CopiarButton.ForeColor = Color.White;
-            CopiarButton.ImageIndex = 1;
             CopiarButton.Location = new Point(186, 723);
             CopiarButton.Name = "CopiarButton";
-            CopiarButton.Size = new Size(137, 61);
+            CopiarButton.Size = new Size(137, 85);
             CopiarButton.TabIndex = 120;
             CopiarButton.Text = "Copiar Dados";
+            CopiarButton.TextAlign = ContentAlignment.BottomLeft;
             CopiarButton.UseVisualStyleBackColor = false;
             CopiarButton.Click += CopiarButton_Click;
             // 
@@ -475,7 +482,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(13, 471);
+            label6.Location = new Point(13, 470);
             label6.Name = "label6";
             label6.Size = new Size(42, 15);
             label6.TabIndex = 135;
@@ -489,6 +496,12 @@
             AnimeText.Size = new Size(761, 23);
             AnimeText.TabIndex = 134;
             AnimeText.TextChanged += AnimeText_TextChanged;
+            // 
+            // imageListAnime
+            // 
+            imageListAnime.ColorDepth = ColorDepth.Depth32Bit;
+            imageListAnime.ImageSize = new Size(16, 16);
+            imageListAnime.TransparentColor = Color.Transparent;
             // 
             // AnimesView
             // 
@@ -589,5 +602,6 @@
         private TextBox CodigoText;
         private Label label6;
         private TextBox AnimeText;
+        private ImageList imageListAnime;
     }
 }
