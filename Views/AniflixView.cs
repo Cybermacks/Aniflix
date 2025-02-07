@@ -62,5 +62,10 @@ namespace Aniflix.Views
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
+
+        private void Filmesutton_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+        }
     }
 }
