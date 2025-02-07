@@ -268,7 +268,7 @@ namespace Aniflix.Custom
                     textBox1.UseSystemPasswordChar = true;
             }
         }
-        private GraphicsPath GetFigurePath(Rectangle rect, int radius)
+        private static GraphicsPath GetFigurePath(Rectangle rect, int radius)
         {
             GraphicsPath path = new GraphicsPath();
             float curveSize = radius * 2F;
