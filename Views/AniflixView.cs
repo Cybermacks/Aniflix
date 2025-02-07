@@ -103,5 +103,11 @@ namespace Aniflix.Views
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new FilmesView());
         }
+
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

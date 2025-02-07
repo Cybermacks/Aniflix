@@ -40,9 +40,9 @@
             Filmesutton = new Custom.RoundedButton();
             panel2 = new Panel();
             panelTitleBar = new Panel();
+            iconCurrentChildForm = new PictureBox();
             lblTitleChildForm = new Label();
             panelDesktop = new Panel();
-            iconCurrentChildForm = new PictureBox();
             panel1.SuspendLayout();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
@@ -266,6 +266,15 @@
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(1407, 80);
             panelTitleBar.TabIndex = 1;
+            panelTitleBar.MouseDown += PanelTitleBar_MouseDown;
+            // 
+            // iconCurrentChildForm
+            // 
+            iconCurrentChildForm.Location = new Point(17, 12);
+            iconCurrentChildForm.Name = "iconCurrentChildForm";
+            iconCurrentChildForm.Size = new Size(55, 50);
+            iconCurrentChildForm.TabIndex = 1;
+            iconCurrentChildForm.TabStop = false;
             // 
             // lblTitleChildForm
             // 
@@ -285,14 +294,6 @@
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1407, 844);
             panelDesktop.TabIndex = 2;
-            // 
-            // iconCurrentChildForm
-            // 
-            iconCurrentChildForm.Location = new Point(17, 12);
-            iconCurrentChildForm.Name = "iconCurrentChildForm";
-            iconCurrentChildForm.Size = new Size(55, 50);
-            iconCurrentChildForm.TabIndex = 1;
-            iconCurrentChildForm.TabStop = false;
             // 
             // AniflixView
             // 
