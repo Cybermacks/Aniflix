@@ -17,7 +17,8 @@ namespace Aniflix.Views
                 Size = new Size(7, 60)
             };
             panel1.Controls.Add(leftBorderBtn);
-            MaximizeBox = false;
+            Text = string.Empty;
+            ControlBox = false;
             DoubleBuffered = true;
             MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
         }
