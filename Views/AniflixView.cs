@@ -108,7 +108,7 @@ namespace Aniflix.Views
         private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
         private void SeriesButton_Click(object sender, EventArgs e)
