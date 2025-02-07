@@ -234,6 +234,7 @@
             ClientSize = new Size(1687, 924);
             Controls.Add(panel1);
             Name = "AniflixView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AniflixView";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
