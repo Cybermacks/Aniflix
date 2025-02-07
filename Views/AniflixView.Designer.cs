@@ -47,11 +47,14 @@
             GoreSeriesButton = new Custom.RoundedButton();
             TrashFlixButton = new Custom.RoundedButton();
             FecharButton = new Custom.RoundedButton();
+            HomeButton = new PictureBox();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Minimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)HomeButton).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -121,6 +124,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(HomeButton);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
@@ -349,6 +353,15 @@
             FecharButton.TextColor = Color.White;
             FecharButton.UseVisualStyleBackColor = false;
             // 
+            // HomeButton
+            // 
+            HomeButton.Location = new Point(12, 12);
+            HomeButton.Name = "HomeButton";
+            HomeButton.Size = new Size(247, 68);
+            HomeButton.TabIndex = 0;
+            HomeButton.TabStop = false;
+            HomeButton.Click += HomeButton_Click;
+            // 
             // AniflixView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -361,10 +374,12 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Aniflix";
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             panelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Minimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)HomeButton).EndInit();
             ResumeLayout(false);
         }
 
@@ -388,5 +403,6 @@
         private Custom.RoundedButton BreakOutFilmesButton;
         private Custom.RoundedButton AnimesFilmesButton;
         private Custom.RoundedButton AnimesButton;
+        private PictureBox HomeButton;
     }
 }

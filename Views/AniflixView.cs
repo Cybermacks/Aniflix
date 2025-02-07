@@ -106,5 +106,11 @@ namespace Aniflix.Views
             ActivateButton((object)sender, RGBColors.color2);
             OpenChildForm(new SeriesView());
         }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Reset   ();
+            OpenChildForm(new AniflixView());
+        }
     }
 }
