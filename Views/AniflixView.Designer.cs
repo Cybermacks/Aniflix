@@ -284,7 +284,7 @@
             Minimize.Image = Properties.Resources.window_minimize;
             Minimize.Location = new Point(1321, 12);
             Minimize.Name = "Minimize";
-            Minimize.Size = new Size(34, 39);
+            Minimize.Size = new Size(34, 34);
             Minimize.SizeMode = PictureBoxSizeMode.StretchImage;
             Minimize.TabIndex = 2;
             Minimize.TabStop = false;
