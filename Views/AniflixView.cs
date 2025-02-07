@@ -19,8 +19,10 @@ namespace Aniflix.Views
         public AniflixView()
         {
             InitializeComponent();
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn = new Panel
+            {
+                Size = new Size(7, 60)
+            };
             panel1.Controls.Add(leftBorderBtn);
         }
     }
