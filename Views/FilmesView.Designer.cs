@@ -66,7 +66,7 @@
             EditarButton = new Button();
             InserirNovoButton = new Button();
             CopiarButton = new Button();
-            anyText1 = new Custom.AnyText();
+            ResumoText = new Custom.AnyText();
             panel1 = new Panel();
             SuspendLayout();
             // 
@@ -446,26 +446,26 @@
             CopiarButton.TextAlign = ContentAlignment.BottomLeft;
             CopiarButton.UseVisualStyleBackColor = false;
             // 
-            // anyText1
+            // ResumoText
             // 
-            anyText1.BackColor = Color.White;
-            anyText1.BorderColor = Color.MediumSlateBlue;
-            anyText1.BorderFocusColor = Color.HotPink;
-            anyText1.BorderRadius = 0;
-            anyText1.BorderSize = 2;
-            anyText1.Font = new Font("Segoe UI", 9.5F);
-            anyText1.ForeColor = Color.DimGray;
-            anyText1.Location = new Point(780, 104);
-            anyText1.Multiline = true;
-            anyText1.Name = "anyText1";
-            anyText1.Padding = new Padding(7);
-            anyText1.PasswordChar = false;
-            anyText1.PlaceholderColor = Color.DarkGray;
-            anyText1.PlaceholderText = "";
-            anyText1.Size = new Size(605, 525);
-            anyText1.TabIndex = 135;
-            anyText1.Texts = "";
-            anyText1.UnderlinedStyle = false;
+            ResumoText.BackColor = Color.White;
+            ResumoText.BorderColor = Color.MediumSlateBlue;
+            ResumoText.BorderFocusColor = Color.HotPink;
+            ResumoText.BorderRadius = 0;
+            ResumoText.BorderSize = 2;
+            ResumoText.Font = new Font("Segoe UI", 9.5F);
+            ResumoText.ForeColor = Color.DimGray;
+            ResumoText.Location = new Point(780, 104);
+            ResumoText.Multiline = true;
+            ResumoText.Name = "ResumoText";
+            ResumoText.Padding = new Padding(7);
+            ResumoText.PasswordChar = false;
+            ResumoText.PlaceholderColor = Color.DarkGray;
+            ResumoText.PlaceholderText = "";
+            ResumoText.Size = new Size(605, 525);
+            ResumoText.TabIndex = 135;
+            ResumoText.Texts = "";
+            ResumoText.UnderlinedStyle = false;
             // 
             // panel1
             // 
@@ -481,7 +481,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1400, 892);
             Controls.Add(panel1);
-            Controls.Add(anyText1);
+            Controls.Add(ResumoText);
             Controls.Add(VoltarButton);
             Controls.Add(ProximoButton);
             Controls.Add(AnteriorButton);
@@ -565,7 +565,7 @@
         private Button EditarButton;
         private Button InserirNovoButton;
         private Button CopiarButton;
-        private Custom.AnyText anyText1;
+        private Custom.AnyText ResumoText;
         private Panel panel1;
     }
 }
