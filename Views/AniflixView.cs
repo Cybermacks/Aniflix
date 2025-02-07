@@ -22,7 +22,7 @@ namespace Aniflix.Views
             {
                 Size = new Size(7, 60)
             };
-            panel1.Controls.Add(leftBorderBtn);
+            MenuPanel.Controls.Add(leftBorderBtn);
             Text = string.Empty;
             ControlBox = false;
             DoubleBuffered = true;
@@ -112,7 +112,6 @@ namespace Aniflix.Views
         private void HomeButton_Click(object sender, EventArgs e)
         {
             Reset();
-            OpenChildForm(new AniflixView());
         }
     }
 }
