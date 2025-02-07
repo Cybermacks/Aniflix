@@ -28,27 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            roundedButton1 = new Custom.RoundedButton();
             SuspendLayout();
             // 
-            // button1
+            // roundedButton1
             // 
-            button1.BackColor = Color.FromArgb(52, 152, 219);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(221, 157);
-            button1.Name = "button1";
-            button1.Size = new Size(209, 134);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = false;
+            roundedButton1.BackColor = Color.MediumSlateBlue;
+            roundedButton1.BackgroundColor = Color.MediumSlateBlue;
+            roundedButton1.BorderColor = Color.PaleVioletRed;
+            roundedButton1.BorderRadius = 0;
+            roundedButton1.BorderSize = 0;
+            roundedButton1.FlatAppearance.BorderSize = 0;
+            roundedButton1.FlatStyle = FlatStyle.Flat;
+            roundedButton1.ForeColor = Color.White;
+            roundedButton1.Location = new Point(197, 211);
+            roundedButton1.Name = "roundedButton1";
+            roundedButton1.Size = new Size(150, 137);
+            roundedButton1.TabIndex = 1;
+            roundedButton1.Text = "Filmes";
+            roundedButton1.TextColor = Color.White;
+            roundedButton1.UseVisualStyleBackColor = false;
             // 
             // AniflixView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1122, 613);
-            Controls.Add(button1);
+            Controls.Add(roundedButton1);
             Name = "AniflixView";
             Text = "AniflixView";
             ResumeLayout(false);
@@ -56,6 +62,6 @@
 
         #endregion
 
-        private Button button1;
+        private Custom.RoundedButton roundedButton1;
     }
 }
