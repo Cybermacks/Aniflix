@@ -71,7 +71,7 @@ namespace Aniflix.Custom
         #endregion
 
         #region -> Appearance properties
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public new Color BackColor
         {
             get { return backColor; }
@@ -83,7 +83,7 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public Color IconColor
         {
             get { return iconColor; }
@@ -94,7 +94,7 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public Color ListBackColor
         {
             get { return listBackColor; }
@@ -105,7 +105,7 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public Color ListTextColor
         {
             get { return listTextColor; }
@@ -116,7 +116,7 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public Color BorderColor
         {
             get { return borderColor; }
@@ -127,7 +127,7 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -139,7 +139,7 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public override Color ForeColor
         {
             get { return base.ForeColor; }
@@ -150,7 +150,7 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public override Font Font
         {
             get { return base.Font; }
@@ -163,14 +163,14 @@ namespace Aniflix.Custom
             }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public string Texts
         {
             get { return lblText.Text; }
             set { lblText.Text = value; }
         }
 
-        [Category("RJ Code - Appearance")]
+        [Category("AnyCombo - Appearance")]
         public ComboBoxStyle DropDownStyle
         {
             get { return cmbList.DropDownStyle; }
@@ -184,7 +184,7 @@ namespace Aniflix.Custom
 
         #region -> Data properties
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         [Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
         [Localizable(true)]
@@ -194,7 +194,7 @@ namespace Aniflix.Custom
             get { return cmbList.Items; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [AttributeProvider(typeof(IListSource))]
         [DefaultValue(null)]
         public object DataSource
@@ -203,7 +203,7 @@ namespace Aniflix.Custom
             set { cmbList.DataSource = value; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [Browsable(true)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         [Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
@@ -215,7 +215,7 @@ namespace Aniflix.Custom
             set { cmbList.AutoCompleteCustomSource = value; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [Browsable(true)]
         [DefaultValue(AutoCompleteSource.None)]
         [EditorBrowsable(EditorBrowsableState.Always)]
@@ -225,7 +225,7 @@ namespace Aniflix.Custom
             set { cmbList.AutoCompleteSource = value; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [Browsable(true)]
         [DefaultValue(AutoCompleteMode.None)]
         [EditorBrowsable(EditorBrowsableState.Always)]
@@ -235,7 +235,7 @@ namespace Aniflix.Custom
             set { cmbList.AutoCompleteMode = value; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [Bindable(true)]
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -245,7 +245,7 @@ namespace Aniflix.Custom
             set { cmbList.SelectedItem = value; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int SelectedIndex
@@ -254,7 +254,7 @@ namespace Aniflix.Custom
             set { cmbList.SelectedIndex = value; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [DefaultValue("")]
         [Editor("System.Windows.Forms.Design.DataMemberFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
         [TypeConverter("System.Windows.Forms.Design.DataMemberFieldConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
@@ -264,7 +264,7 @@ namespace Aniflix.Custom
             set { cmbList.DisplayMember = value; }
         }
 
-        [Category("RJ Code - Data")]
+        [Category("AnyCombo - Data")]
         [DefaultValue("")]
         [Editor("System.Windows.Forms.Design.DataMemberFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
         public string ValueMember
