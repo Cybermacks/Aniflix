@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmesView));
             EstudioText = new TextBox();
-            ResumoText = new TextBox();
             FaseMCUText = new TextBox();
             EstrelasText = new TextBox();
             label17 = new Label();
@@ -67,6 +66,7 @@
             EditarButton = new Button();
             InserirNovoButton = new Button();
             CopiarButton = new Button();
+            anyText1 = new Custom.AnyText();
             SuspendLayout();
             // 
             // EstudioText
@@ -77,15 +77,6 @@
             EstudioText.Size = new Size(658, 23);
             EstudioText.TabIndex = 119;
             EstudioText.TextChanged += EstudioText_TextChanged;
-            // 
-            // ResumoText
-            // 
-            ResumoText.Location = new Point(780, 30);
-            ResumoText.Multiline = true;
-            ResumoText.Name = "ResumoText";
-            ResumoText.PlaceholderText = "Resumo";
-            ResumoText.Size = new Size(605, 525);
-            ResumoText.TabIndex = 117;
             // 
             // FaseMCUText
             // 
@@ -454,11 +445,33 @@
             CopiarButton.TextAlign = ContentAlignment.BottomLeft;
             CopiarButton.UseVisualStyleBackColor = false;
             // 
+            // anyText1
+            // 
+            anyText1.BackColor = Color.White;
+            anyText1.BorderColor = Color.MediumSlateBlue;
+            anyText1.BorderFocusColor = Color.HotPink;
+            anyText1.BorderRadius = 0;
+            anyText1.BorderSize = 2;
+            anyText1.Font = new Font("Segoe UI", 9.5F);
+            anyText1.ForeColor = Color.DimGray;
+            anyText1.Location = new Point(780, 30);
+            anyText1.Multiline = true;
+            anyText1.Name = "anyText1";
+            anyText1.Padding = new Padding(7);
+            anyText1.PasswordChar = false;
+            anyText1.PlaceholderColor = Color.DarkGray;
+            anyText1.PlaceholderText = "";
+            anyText1.Size = new Size(605, 525);
+            anyText1.TabIndex = 135;
+            anyText1.Texts = "";
+            anyText1.UnderlinedStyle = false;
+            // 
             // FilmesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1400, 704);
+            Controls.Add(anyText1);
             Controls.Add(VoltarButton);
             Controls.Add(ProximoButton);
             Controls.Add(AnteriorButton);
@@ -469,7 +482,6 @@
             Controls.Add(label11);
             Controls.Add(FranquiaText);
             Controls.Add(EstudioText);
-            Controls.Add(ResumoText);
             Controls.Add(FaseMCUText);
             Controls.Add(EstrelasText);
             Controls.Add(label17);
@@ -507,7 +519,6 @@
 
         #endregion
         private TextBox EstudioText;
-        private TextBox ResumoText;
         private TextBox FaseMCUText;
         private TextBox EstrelasText;
         private Label label17;
@@ -543,5 +554,6 @@
         private Button EditarButton;
         private Button InserirNovoButton;
         private Button CopiarButton;
+        private Custom.AnyText anyText1;
     }
 }
