@@ -67,6 +67,7 @@
             InserirNovoButton = new Button();
             CopiarButton = new Button();
             panel1 = new Panel();
+            ResumoText = new TextBox();
             SuspendLayout();
             // 
             // EstudioText
@@ -453,11 +454,20 @@
             panel1.Size = new Size(1400, 68);
             panel1.TabIndex = 136;
             // 
+            // ResumoText
+            // 
+            ResumoText.Location = new Point(780, 104);
+            ResumoText.Multiline = true;
+            ResumoText.Name = "ResumoText";
+            ResumoText.Size = new Size(600, 534);
+            ResumoText.TabIndex = 137;
+            // 
             // FilmesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1400, 892);
+            Controls.Add(ResumoText);
             Controls.Add(panel1);
             Controls.Add(VoltarButton);
             Controls.Add(ProximoButton);
@@ -543,5 +553,6 @@
         private Button InserirNovoButton;
         private Button CopiarButton;
         private Panel panel1;
+        private TextBox ResumoText;
     }
 }
