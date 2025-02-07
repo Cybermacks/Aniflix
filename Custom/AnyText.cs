@@ -339,14 +339,12 @@ namespace Aniflix.Custom
             this.Invalidate();
             RemovePlaceholder();
         }
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void TextBox1_Leave(object sender, EventArgs e)
         {
             isFocused = false;
             this.Invalidate();
             SetPlaceholder();
         }
         #endregion
-    }
-}
     }
 }
