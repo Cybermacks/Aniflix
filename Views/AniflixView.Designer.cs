@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             MenuPanel = new Panel();
             panel2 = new Panel();
             HomeButton = new PictureBox();
@@ -37,8 +38,8 @@
             iconCurrentChildForm = new PictureBox();
             lblTitleChildForm = new Label();
             panelDesktop = new Panel();
-            colorDialog1 = new ColorDialog();
-            button1 = new Button();
+            FilmesButton = new Button();
+            ListImage = new ImageList(components);
             MenuPanel.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HomeButton).BeginInit();
@@ -51,7 +52,7 @@
             // MenuPanel
             // 
             MenuPanel.BackColor = Color.FromArgb(31, 30, 68);
-            MenuPanel.Controls.Add(button1);
+            MenuPanel.Controls.Add(FilmesButton);
             MenuPanel.Controls.Add(panel2);
             MenuPanel.Dock = DockStyle.Left;
             MenuPanel.Location = new Point(0, 0);
@@ -141,16 +142,24 @@
             panelDesktop.Size = new Size(1407, 844);
             panelDesktop.TabIndex = 2;
             // 
-            // button1
+            // FilmesButton
             // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(0, 100);
-            button1.Name = "button1";
-            button1.Size = new Size(280, 49);
-            button1.TabIndex = 1;
-            button1.Text = "Filmes";
-            button1.UseVisualStyleBackColor = true;
+            FilmesButton.Dock = DockStyle.Top;
+            FilmesButton.FlatStyle = FlatStyle.Popup;
+            FilmesButton.ForeColor = Color.White;
+            FilmesButton.Location = new Point(0, 100);
+            FilmesButton.Name = "FilmesButton";
+            FilmesButton.Size = new Size(280, 65);
+            FilmesButton.TabIndex = 1;
+            FilmesButton.Text = "Filmes";
+            FilmesButton.UseVisualStyleBackColor = true;
+            FilmesButton.Click += FilmesButton_Click;
+            // 
+            // ListImage
+            // 
+            ListImage.ColorDepth = ColorDepth.Depth32Bit;
+            ListImage.ImageSize = new Size(16, 16);
+            ListImage.TransparentColor = Color.Transparent;
             // 
             // AniflixView
             // 
@@ -186,6 +195,7 @@
 
         private PictureBox HomeButton;
         private ColorDialog colorDialog1;
-        private Button button1;
+        private Button FilmesButton;
+        private ImageList ListImage;
     }
 }

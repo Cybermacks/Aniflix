@@ -119,12 +119,7 @@ namespace Aniflix.Views
             Application.Exit();
         }
 
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void AnimesButton_Click(object sender, EventArgs e)
+        private void FilmesButton_Click(object sender, EventArgs e)
         {
             ActivateButton((object)sender, RGBColors.color2);
             OpenChildForm(new AnimesView());
