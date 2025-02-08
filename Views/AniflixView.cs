@@ -91,12 +91,6 @@ namespace Aniflix.Views
             currentChildForm = null;
         }
 
-        private void Filmesutton_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FilmesView());
-        }
-
         private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
