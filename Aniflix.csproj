@@ -9,10 +9,15 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <Compile Remove="Custom\**" />
+	  <EmbeddedResource Remove="Custom\**" />
+	  <None Remove="Custom\**" />
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<PackageReference Include="DeepL.net" Version="1.13.0" />
-		<PackageReference Include="ImageListViewCore" Version="0.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.1" />
 		<PackageReference Include="MySqlConnector" Version="2.4.0" />
 		<PackageReference Include="TMDbLib" Version="2.2.0" />
