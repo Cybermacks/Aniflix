@@ -1,12 +1,11 @@
-﻿using Aniflix.Custom;
-using Aniflix.Properties;
+﻿using Aniflix.Properties;
 using System.Runtime.InteropServices;
 
 namespace Aniflix.Views
 {
     public partial class AniflixView : Form
     {
-        private RoundedButton? currentBtn;
+        private Button? currentBtn;
         private readonly Panel? leftBorderBtn;
         private Form? currentChildForm;
 
