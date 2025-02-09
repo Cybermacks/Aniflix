@@ -12,9 +12,10 @@ namespace Aniflix.Views
 
         protected override void OnHandleCreated(EventArgs e)
         {
+            var glob = new GlobFunctions();
             base.OnHandleCreated(e);
-            GlobFunctions.UseImmersiveDarkMode(Handle, true);
-            EnableDarkModeForMenus();
+            glob.UseImmersiveDarkMode(Handle, true);
+            glob.EnableDarkModeForMenus();
             BackColor = Color.FromArgb(30, 30, 30);
         }
 
