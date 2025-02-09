@@ -23,6 +23,12 @@ namespace Aniflix.Globals
             set { _editando = value; }
         }
 
+        public static int CurrentId
+        {
+            get { return _currentId; }
+            set { _currentId = value; }
+        }
+
 
     }
 }
