@@ -12,7 +12,7 @@ namespace Aniflix.Views
         private void button1_Click(object sender, EventArgs e)
         {
             var client = GlobFunctions.MovieDatabase();
-            textBox1.Text = client.ToString();
+            textBox1.Text = client.GetMovieAsync(98);
         }
     }
 }
