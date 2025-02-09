@@ -59,7 +59,6 @@ namespace Aniflix.Globals
         private extern static void ReleaseCapture();
         //[DllImport("user32.DLL", EntryPoint = "SendMessage")]
         [LibraryImport("user32.DLL", EntryPoint = "SendMessage")]
-        //private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
         private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
 
 
