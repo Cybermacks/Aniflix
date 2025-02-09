@@ -11,7 +11,7 @@ namespace Aniflix.Controllers
 
         public static void Registrar(Animes animes)
         {
-            var serie = GlobalVars._conn.SelectData("animes", "codigo = @codigo", new MySqlParameter("@codigo", animes.Codigo));
+            var serie = GlobVars._conn.SelectData("animes", "codigo = @codigo", new MySqlParameter("@codigo", animes.Codigo));
 
             if (serie.Rows.Count > 0)
             {
@@ -20,7 +20,7 @@ namespace Aniflix.Controllers
             }
             else
             {
-                int rowsAffected = GlobalVars._conn.InsertData("animes",
+                int rowsAffected = GlobVars._conn.InsertData("animes",
                     new MySqlParameter("@codigo", animes.Codigo),
                     new MySqlParameter("@titulo", animes.Titulo),
                     new MySqlParameter("@audio", animes.Audio),
@@ -48,20 +48,20 @@ namespace Aniflix.Controllers
         }
         public static DataRow? MostraPrimeiro()
         {
-            return GlobalVars._conn.GetFirstRecord("animes");
+            return GlobVars._conn.GetFirstRecord("animes");
         }
         public static DataRow? MoveAnterior(int id)
         {
-            return GlobalVars._conn.GetPreviousRecord("animes", id);
+            return GlobVars._conn.GetPreviousRecord("animes", id);
         }
         public static DataRow? MoveProximo(int id)
         {
-            return GlobalVars._conn.GetNextRecord("animes", id);
+            return GlobVars._conn.GetNextRecord("animes", id);
         }
 
         public static void AtualizaDados(Animes animes)
         {
-            int rowsAffected = GlobalVars._conn.UpdateData("animes", "codigo = @codigo",
+            int rowsAffected = GlobVars._conn.UpdateData("animes", "codigo = @codigo",
                 new MySqlParameter("@codigo", animes.Codigo),
                 new MySqlParameter("@titulo", animes.Titulo),
                 new MySqlParameter("@audio", animes.Audio),
