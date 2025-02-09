@@ -1,5 +1,6 @@
 ﻿
 using System.Runtime.InteropServices;
+using TMDbLib.Client;
 
 namespace Aniflix.Globals
 {
@@ -74,7 +75,7 @@ namespace Aniflix.Globals
         }
 
 
-        public static TMDbLib.Client.TMDbClient TMDB()
+        public static TMDbClient TMDB()
         {
             var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
             {
