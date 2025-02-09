@@ -49,10 +49,7 @@ namespace Aniflix.Globals
                 }
             }
         }
-    }
 
-
-        //[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
 
         [LibraryImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -62,11 +59,9 @@ namespace Aniflix.Globals
         private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
 
 
-        //[DllImport("dwmapi.dll")]
         [LibraryImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
-        //[DllImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
 
         [LibraryImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
         private static extern int SetPreferredAppMode(int mode);
@@ -108,3 +103,4 @@ namespace Aniflix.Globals
         }
 
     }
+}
