@@ -20,6 +20,7 @@ namespace Aniflix.Views
             MenuPanel.Controls.Add(leftBorderBtn);
             Text = string.Empty;
             DoubleBuffered = true;
+
             dm = new DarkModeCS(this)
             {
                 ColorMode = DarkModeCS.DisplayMode.DarkMode
