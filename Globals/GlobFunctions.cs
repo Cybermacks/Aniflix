@@ -19,6 +19,7 @@ namespace Aniflix.Globals
         private Label? titleLabel;
         private TextBox? inputBox;
         private ComboBox? themeSelector;
+        private Form? form;
 
         private static bool IsWindows10OrGreater(int build = -1)
         {
@@ -48,28 +49,28 @@ namespace Aniflix.Globals
         {
             if (themeIndex == 0) // Escuro Profundo
             {
-                BackColor = Color.FromArgb(30, 30, 30);
-                toggleButton.BackColor = Color.FromArgb(50, 50, 50);
-                inputBox.BackColor = Color.FromArgb(50, 50, 50);
+                form!.BackColor = Color.FromArgb(30, 30, 30);
+                toggleButton!.BackColor = Color.FromArgb(50, 50, 50);
+                inputBox!.BackColor = Color.FromArgb(50, 50, 50);
                 inputBox.ForeColor = Color.White;
             }
             else if (themeIndex == 1) // Cinza Médio
             {
-                BackColor = Color.FromArgb(60, 60, 60);
-                toggleButton.BackColor = Color.FromArgb(80, 80, 80);
-                inputBox.BackColor = Color.FromArgb(80, 80, 80);
+                form!.BackColor = Color.FromArgb(60, 60, 60);
+                toggleButton!.BackColor = Color.FromArgb(80, 80, 80);
+                inputBox!.BackColor = Color.FromArgb(80, 80, 80);
                 inputBox.ForeColor = Color.White;
             }
             else if (themeIndex == 2) // Claro
             {
-                BackColor = Color.White;
-                toggleButton.BackColor = Color.LightGray;
-                inputBox.BackColor = Color.White;
+                form!.BackColor = Color.White;
+                toggleButton!.BackColor = Color.LightGray;
+                inputBox!.BackColor = Color.White;
                 inputBox.ForeColor = Color.Black;
             }
 
-            titleLabel.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
-            toggleButton.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
+            titleLabel!.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
+            toggleButton!.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
         }
 
         private void ToggleDarkMode()
