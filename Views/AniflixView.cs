@@ -10,7 +10,6 @@ namespace Aniflix.Views
         private Form? currentChildForm;
         private readonly DarkModeCS dm;
 
-
         public AniflixView()
         {
             InitializeComponent();
