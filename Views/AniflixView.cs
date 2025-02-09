@@ -21,7 +21,7 @@ namespace Aniflix.Views
         {
             if (DwmSetWindowAttribute(Handle, 19, [1], 4) != 0)
             {
-                _ = DwmSetWindowAttribute(Handle, 20, [1], 4);
+                DwmSetWindowAttribute(Handle, 20, [1], 4);
             }
         }
 
