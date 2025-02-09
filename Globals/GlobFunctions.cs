@@ -76,7 +76,7 @@ namespace Aniflix.Globals
         }
 
 
-        public static TMDbClient TMDB()
+        public static TMDbClient MovieDatabase()
         {
             var client = new TMDbClient(GlobalVars.TMDB_KEY)
             {
@@ -86,9 +86,9 @@ namespace Aniflix.Globals
             return client;
         }
 
-        public static DeepLClient DeepL()
+        public static DeepLClient DeepTranslate()
         {
-            var client = new DeepLClient(GlobalVars.DeepL_KEY);
+            var client = new DeepLClient(GlobalVars.DEEPL_KEY);
             return client;
         }
     }
