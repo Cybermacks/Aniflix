@@ -75,10 +75,7 @@ namespace Aniflix.Views
             };
             MenuPanel.Controls.Add(leftBorderBtn);
             Text = string.Empty;
-            ControlBox = false;
             DoubleBuffered = true;
-            MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
-
         }
         private struct RGBColors
         {
