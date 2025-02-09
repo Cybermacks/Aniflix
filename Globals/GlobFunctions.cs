@@ -1,4 +1,6 @@
-﻿namespace Aniflix.Globals
+﻿using System.Runtime.InteropServices;
+
+namespace Aniflix.Globals
 {
     public class GlobFunctions
     {
