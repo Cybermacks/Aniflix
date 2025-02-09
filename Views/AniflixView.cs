@@ -14,6 +14,15 @@ namespace Aniflix.Views
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
 
+        [DllImport("DwmApi")] //System.Runtime.InteropServices
+        private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, int[] attrValue, int attrSize);
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            if (DwmSetWindowAttribute(Handle, 19, new[] { 1 }, 4) != 0)
+                DwmSetWindowAttribute(Handle, 20, new[] { 1 }, 4);
+        }
+
 
         public AniflixView()
         {
