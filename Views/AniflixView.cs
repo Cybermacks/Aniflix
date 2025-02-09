@@ -1,4 +1,5 @@
-﻿using Aniflix.Properties;
+﻿using Aniflix.Globals;
+using Aniflix.Properties;
 
 namespace Aniflix.Views
 {
@@ -12,7 +13,7 @@ namespace Aniflix.Views
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            UseImmersiveDarkMode(Handle, true);
+            GlobFunctions.UseImmersiveDarkMode(Handle, true);
             EnableDarkModeForMenus();
             BackColor = Color.FromArgb(30, 30, 30);
         }
