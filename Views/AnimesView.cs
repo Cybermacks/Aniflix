@@ -1,11 +1,11 @@
-﻿using DeepL;
-using System.Data;
-using Aniflix.Models;
-using Aniflix.Globals;
-using Aniflix.Services;
-using Aniflix.Extensions;
-using Aniflix.Controllers;
+﻿using System.Data;
 using System.Globalization;
+using Aniflix.Controllers;
+using Aniflix.Extensions;
+using Aniflix.Globals;
+using Aniflix.Models;
+using Aniflix.Services;
+using DeepL;
 
 namespace Aniflix.Views
 {
