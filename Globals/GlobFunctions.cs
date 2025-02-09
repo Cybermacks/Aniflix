@@ -43,8 +43,7 @@ namespace Aniflix.Globals
             }
         }
 
-
-        private void ApplyTheme(int themeIndex)
+        public void ApplyTheme(int themeIndex)
         {
             if (themeIndex == 0) // Escuro Profundo
             {
