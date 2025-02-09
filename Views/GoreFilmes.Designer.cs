@@ -29,30 +29,42 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(298, 300);
+            button1.Location = new Point(268, 339);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(274, 67);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(84, 60);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(620, 148);
+            textBox1.TabIndex = 1;
             // 
             // GoreFilmes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1031, 556);
+            Controls.Add(textBox1);
             Controls.Add(button1);
             Name = "GoreFilmes";
             Text = "GoreFilmes";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
+        private TextBox textBox1;
     }
 }
