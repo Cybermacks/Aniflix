@@ -33,7 +33,7 @@ public partial class SeriesView : Form
                 DefaultCountry = "BR",
             };
 
-            var deepL = new DeepL(GlobalVars.DEEPL_KEY);
+            var deepL = new DeepLClient(GlobalVars.DEEPL_KEY);
             var codigo = int.Parse(CodigoText.Text);
             var givenTask = client.GetTvShowAsync(codigo);
             var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
