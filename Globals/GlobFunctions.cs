@@ -73,12 +73,6 @@ namespace Aniflix.Globals
             toggleButton!.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
         }
 
-        private void ToggleDarkMode()
-        {
-            darkModeEnabled = !darkModeEnabled;
-            UseImmersiveDarkMode(Handle, darkModeEnabled);
-            ApplyTheme(themeSelector!.SelectedIndex);
-        }
 
     }
 
