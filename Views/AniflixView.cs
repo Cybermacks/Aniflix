@@ -1,5 +1,5 @@
-﻿using Aniflix.Properties;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
+using Aniflix.Properties;
 
 namespace Aniflix.Views
 {
