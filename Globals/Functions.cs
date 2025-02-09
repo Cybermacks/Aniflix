@@ -47,9 +47,8 @@
                 }
             }
         }
-    }
 
-     [DllImport("dwmapi.dll")]
+        [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
         [DllImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
@@ -87,5 +86,5 @@
                 SetPreferredAppMode(1); // Ativa tema escuro para menus do sistema (Windows 11)
             }
         }
-
     }
+}
