@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace Aniflix.Globals
 {
-    public static class GlobFunctions
+    public class GlobFunctions
     {
         [LibraryImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
