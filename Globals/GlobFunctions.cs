@@ -86,6 +86,4 @@ namespace Aniflix.Globals
 
         }
     }
-
-
 }
