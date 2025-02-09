@@ -28,7 +28,7 @@ namespace Aniflix.Views
         {
             try
             {
-                var client = new TMDbLib.Client.TMDbClient(GlobalVars.API_KEY)
+                var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
                 {
                     DefaultLanguage = "pt-BR",
                     DefaultCountry = "BR",
