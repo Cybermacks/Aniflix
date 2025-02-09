@@ -15,7 +15,7 @@ namespace Aniflix.Globals
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
 
         private bool darkModeEnabled = true;
-        private Button? toggleButton;
+        private readonly Button? toggleButton;
         private readonly Label? titleLabel;
         private readonly TextBox? inputBox;
         private readonly ComboBox? themeSelector;
