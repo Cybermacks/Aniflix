@@ -77,7 +77,7 @@ namespace Aniflix.Globals
         {
             darkModeEnabled = !darkModeEnabled;
             UseImmersiveDarkMode(Handle, darkModeEnabled);
-            ApplyTheme(themeSelector.SelectedIndex);
+            ApplyTheme(themeSelector!.SelectedIndex);
         }
 
     }
