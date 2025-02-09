@@ -8,7 +8,7 @@ namespace Aniflix.Views
         private Button? currentBtn;
         private readonly Panel? leftBorderBtn;
         private Form? currentChildForm;
-        private DarkModeCS dm = null;
+        private readonly DarkModeCS dm = null;
 
 
         public AniflixView()
