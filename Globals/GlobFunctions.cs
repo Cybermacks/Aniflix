@@ -7,10 +7,10 @@ namespace Aniflix.Globals
 {
     public static class GlobFunctions
     {
-        [LibraryImport("dwmapi.dll")]
+        [DllImport("dwmapi.dll")]
         public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
-        [LibraryImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
+        [DllImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
         public static extern int SetPreferredAppMode(int mode);
 
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1 = 19;
