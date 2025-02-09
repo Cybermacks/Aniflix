@@ -14,7 +14,7 @@ namespace Aniflix.Views
         {
 
             base.OnHandleCreated(e);
-            GlobFunctions.UseImmersiveDarkMode(Handle, true);
+            GlobFunctions.
             GlobFunctions.EnableDarkModeForMenus();
             BackColor = Color.FromArgb(30, 30, 30);
         }
