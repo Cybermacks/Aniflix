@@ -66,7 +66,6 @@
             EditarButton = new Button();
             InserirNovoButton = new Button();
             CopiarButton = new Button();
-            panel1 = new Panel();
             ResumoText = new TextBox();
             SuspendLayout();
             // 
@@ -354,7 +353,7 @@
             // 
             VoltarButton.BackColor = Color.FromArgb(9, 32, 63);
             VoltarButton.FlatStyle = FlatStyle.Popup;
-            VoltarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            VoltarButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             VoltarButton.ForeColor = Color.White;
             VoltarButton.ImageIndex = 0;
             VoltarButton.ImageList = ListImage;
@@ -370,7 +369,7 @@
             // 
             ProximoButton.BackColor = Color.FromArgb(29, 38, 113);
             ProximoButton.FlatStyle = FlatStyle.Popup;
-            ProximoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            ProximoButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             ProximoButton.ForeColor = Color.White;
             ProximoButton.ImageIndex = 3;
             ProximoButton.ImageList = ListImage;
@@ -386,7 +385,7 @@
             // 
             AnteriorButton.BackColor = Color.FromArgb(195, 55, 100);
             AnteriorButton.FlatStyle = FlatStyle.Popup;
-            AnteriorButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            AnteriorButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             AnteriorButton.ForeColor = Color.White;
             AnteriorButton.ImageIndex = 4;
             AnteriorButton.ImageList = ListImage;
@@ -402,7 +401,7 @@
             // 
             EditarButton.BackColor = Color.FromArgb(46, 34, 114);
             EditarButton.FlatStyle = FlatStyle.Popup;
-            EditarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            EditarButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             EditarButton.ForeColor = Color.White;
             EditarButton.ImageIndex = 2;
             EditarButton.ImageList = ListImage;
@@ -418,7 +417,7 @@
             // 
             InserirNovoButton.BackColor = Color.FromArgb(229, 92, 68);
             InserirNovoButton.FlatStyle = FlatStyle.Popup;
-            InserirNovoButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            InserirNovoButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             InserirNovoButton.ForeColor = Color.White;
             InserirNovoButton.ImageIndex = 5;
             InserirNovoButton.ImageList = ListImage;
@@ -434,7 +433,7 @@
             // 
             CopiarButton.BackColor = Color.FromArgb(0, 97, 149);
             CopiarButton.FlatStyle = FlatStyle.Popup;
-            CopiarButton.Font = new Font("Roboto", 12F, FontStyle.Bold);
+            CopiarButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             CopiarButton.ForeColor = Color.White;
             CopiarButton.ImageIndex = 1;
             CopiarButton.ImageList = ListImage;
@@ -445,14 +444,6 @@
             CopiarButton.Text = "Copiar Dados";
             CopiarButton.TextAlign = ContentAlignment.BottomLeft;
             CopiarButton.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1400, 68);
-            panel1.TabIndex = 136;
             // 
             // ResumoText
             // 
@@ -468,7 +459,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1400, 892);
             Controls.Add(ResumoText);
-            Controls.Add(panel1);
             Controls.Add(VoltarButton);
             Controls.Add(ProximoButton);
             Controls.Add(AnteriorButton);
@@ -552,7 +542,6 @@
         private Button EditarButton;
         private Button InserirNovoButton;
         private Button CopiarButton;
-        private Panel panel1;
         private TextBox ResumoText;
     }
 }
