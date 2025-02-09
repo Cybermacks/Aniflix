@@ -1,10 +1,10 @@
 ﻿using System.Data;
-using Aniflix.Models;
-using Aniflix.Globals;
-using Aniflix.Services;
-using Aniflix.Extensions;
-using Aniflix.Controllers;
 using System.Globalization;
+using Aniflix.Controllers;
+using Aniflix.Extensions;
+using Aniflix.Globals;
+using Aniflix.Models;
+using Aniflix.Services;
 
 namespace Aniflix.Views
 {
