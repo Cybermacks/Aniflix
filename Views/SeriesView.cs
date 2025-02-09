@@ -27,7 +27,6 @@ public partial class SeriesView : Form
         try
         {
 
-
             var client = GlobFunctions.MovieDatabase();
 
             var deepL = GlobFunctions.DeepTranslate();
