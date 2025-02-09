@@ -19,7 +19,7 @@ public partial class SeriesView : Form
     {
 
         base.OnHandleCreated(e);
-        GlobFunctions.ApplyTheme(0);
+        GlobFunctions.UseImmersiveDarkMode(Handle, true);
         GlobFunctions.EnableDarkModeForMenus();
     }
     private async Task GivenData()
