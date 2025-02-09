@@ -21,7 +21,7 @@ namespace Aniflix.Globals
         private readonly ComboBox? themeSelector;
         private readonly Form? form;
 
-        private static bool IsWindows10OrGreater(int build = -1)
+        public static bool IsWindows10OrGreater(int build = -1)
         {
             return Environment.OSVersion.Version.Major >= 10 && Environment.OSVersion.Version.Build >= build;
         }
