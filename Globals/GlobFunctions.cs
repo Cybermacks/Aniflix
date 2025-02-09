@@ -77,7 +77,7 @@ namespace Aniflix.Globals
 
         public static TMDbClient TMDB()
         {
-            var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
+            var client = new TMDbClient(GlobalVars.TMDB_KEY)
             {
                 DefaultLanguage = "pt-BR",
                 DefaultCountry = "BR",
