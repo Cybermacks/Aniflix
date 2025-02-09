@@ -71,7 +71,7 @@
             // 
             // EstudioText
             // 
-            EstudioText.Location = new Point(13, 606);
+            EstudioText.Location = new Point(13, 537);
             EstudioText.Name = "EstudioText";
             EstudioText.PlaceholderText = "Estúdio";
             EstudioText.Size = new Size(658, 23);
@@ -80,7 +80,7 @@
             // 
             // FaseMCUText
             // 
-            FaseMCUText.Location = new Point(677, 606);
+            FaseMCUText.Location = new Point(677, 537);
             FaseMCUText.Name = "FaseMCUText";
             FaseMCUText.PlaceholderText = "Fase MCU";
             FaseMCUText.Size = new Size(96, 23);
@@ -90,7 +90,7 @@
             // 
             // EstrelasText
             // 
-            EstrelasText.Location = new Point(12, 562);
+            EstrelasText.Location = new Point(12, 493);
             EstrelasText.Name = "EstrelasText";
             EstrelasText.PlaceholderText = "Estrelas";
             EstrelasText.Size = new Size(761, 23);
@@ -100,7 +100,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(12, 500);
+            label17.Location = new Point(12, 431);
             label17.Name = "label17";
             label17.Size = new Size(43, 15);
             label17.TabIndex = 114;
@@ -109,7 +109,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(13, 544);
+            label16.Location = new Point(13, 475);
             label16.Name = "label16";
             label16.Size = new Size(46, 15);
             label16.TabIndex = 113;
@@ -118,7 +118,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(815, 86);
+            label14.Location = new Point(815, 17);
             label14.Name = "label14";
             label14.Size = new Size(50, 15);
             label14.TabIndex = 112;
@@ -127,7 +127,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(387, 456);
+            label13.Location = new Point(387, 387);
             label13.Name = "label13";
             label13.Size = new Size(45, 15);
             label13.TabIndex = 111;
@@ -136,7 +136,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(546, 412);
+            label10.Location = new Point(546, 343);
             label10.Name = "label10";
             label10.Size = new Size(31, 15);
             label10.TabIndex = 110;
@@ -144,7 +144,7 @@
             // 
             // DataLancamentoText
             // 
-            DataLancamentoText.Location = new Point(656, 386);
+            DataLancamentoText.Location = new Point(656, 317);
             DataLancamentoText.Mask = "00/00/0000";
             DataLancamentoText.Name = "DataLancamentoText";
             DataLancamentoText.Size = new Size(118, 23);
@@ -155,7 +155,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(13, 412);
+            label12.Location = new Point(13, 343);
             label12.Name = "label12";
             label12.Size = new Size(99, 15);
             label12.TabIndex = 107;
@@ -163,7 +163,7 @@
             // 
             // TituloAlternativoText
             // 
-            TituloAlternativoText.Location = new Point(12, 430);
+            TituloAlternativoText.Location = new Point(12, 361);
             TituloAlternativoText.Name = "TituloAlternativoText";
             TituloAlternativoText.PlaceholderText = "Título Alternativo";
             TituloAlternativoText.Size = new Size(528, 23);
@@ -173,7 +173,7 @@
             // 
             // GeneroText
             // 
-            GeneroText.Location = new Point(387, 474);
+            GeneroText.Location = new Point(387, 405);
             GeneroText.Name = "GeneroText";
             GeneroText.PlaceholderText = "Gênero ";
             GeneroText.Size = new Size(386, 23);
@@ -182,7 +182,7 @@
             // 
             // DiretorText
             // 
-            DiretorText.Location = new Point(12, 518);
+            DiretorText.Location = new Point(12, 449);
             DiretorText.Name = "DiretorText";
             DiretorText.PlaceholderText = "Diretor";
             DiretorText.Size = new Size(761, 23);
@@ -192,7 +192,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(658, 368);
+            label5.Location = new Point(658, 299);
             label5.Name = "label5";
             label5.Size = new Size(116, 15);
             label5.TabIndex = 102;
@@ -201,7 +201,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(677, 588);
+            label6.Location = new Point(677, 519);
             label6.Name = "label6";
             label6.Size = new Size(60, 15);
             label6.TabIndex = 101;
@@ -210,7 +210,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(12, 368);
+            label7.Location = new Point(12, 299);
             label7.Name = "label7";
             label7.Size = new Size(83, 15);
             label7.TabIndex = 100;
@@ -218,7 +218,7 @@
             // 
             // TagsText
             // 
-            TagsText.Location = new Point(546, 430);
+            TagsText.Location = new Point(546, 361);
             TagsText.Name = "TagsText";
             TagsText.PlaceholderText = "Tags";
             TagsText.Size = new Size(227, 23);
@@ -227,7 +227,7 @@
             // 
             // TituloOriginalText
             // 
-            TituloOriginalText.Location = new Point(12, 386);
+            TituloOriginalText.Location = new Point(12, 317);
             TituloOriginalText.Name = "TituloOriginalText";
             TituloOriginalText.PlaceholderText = "Título Original";
             TituloOriginalText.Size = new Size(638, 23);
@@ -237,7 +237,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(630, 86);
+            label4.Location = new Point(630, 17);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 97;
@@ -246,7 +246,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(118, 86);
+            label3.Location = new Point(118, 17);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
             label3.TabIndex = 96;
@@ -255,7 +255,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 130);
+            label2.Location = new Point(12, 61);
             label2.Name = "label2";
             label2.Size = new Size(48, 15);
             label2.TabIndex = 95;
@@ -264,7 +264,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 86);
+            label1.Location = new Point(12, 17);
             label1.Name = "label1";
             label1.Size = new Size(46, 15);
             label1.TabIndex = 94;
@@ -272,11 +272,11 @@
             // 
             // SinopseText
             // 
-            SinopseText.Location = new Point(12, 148);
+            SinopseText.Location = new Point(12, 79);
             SinopseText.Multiline = true;
             SinopseText.Name = "SinopseText";
             SinopseText.PlaceholderText = "Sinopse";
-            SinopseText.Size = new Size(762, 217);
+            SinopseText.Size = new Size(762, 209);
             SinopseText.TabIndex = 93;
             SinopseText.TextChanged += SinopseText_TextChanged;
             // 
@@ -284,7 +284,7 @@
             // 
             AudioBox.FormattingEnabled = true;
             AudioBox.Items.AddRange(new object[] { "Dublado", "Legendado", "Nacional", "Desconhecido" });
-            AudioBox.Location = new Point(630, 104);
+            AudioBox.Location = new Point(630, 35);
             AudioBox.Name = "AudioBox";
             AudioBox.Size = new Size(144, 23);
             AudioBox.TabIndex = 92;
@@ -292,7 +292,7 @@
             // 
             // TituloText
             // 
-            TituloText.Location = new Point(118, 104);
+            TituloText.Location = new Point(118, 35);
             TituloText.Name = "TituloText";
             TituloText.PlaceholderText = "Título";
             TituloText.Size = new Size(506, 23);
@@ -301,7 +301,7 @@
             // 
             // CodigoText
             // 
-            CodigoText.Location = new Point(12, 104);
+            CodigoText.Location = new Point(12, 35);
             CodigoText.Name = "CodigoText";
             CodigoText.PlaceholderText = "Código";
             CodigoText.Size = new Size(100, 23);
@@ -312,7 +312,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(13, 456);
+            label11.Location = new Point(13, 387);
             label11.Name = "label11";
             label11.Size = new Size(53, 15);
             label11.TabIndex = 127;
@@ -320,7 +320,7 @@
             // 
             // FranquiaText
             // 
-            FranquiaText.Location = new Point(13, 474);
+            FranquiaText.Location = new Point(13, 405);
             FranquiaText.Name = "FranquiaText";
             FranquiaText.PlaceholderText = "Franquia";
             FranquiaText.Size = new Size(368, 23);
@@ -331,7 +331,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(12, 588);
+            label9.Location = new Point(12, 519);
             label9.Name = "label9";
             label9.Size = new Size(46, 15);
             label9.TabIndex = 128;
@@ -357,9 +357,9 @@
             VoltarButton.ForeColor = Color.White;
             VoltarButton.ImageIndex = 0;
             VoltarButton.ImageList = ListImage;
-            VoltarButton.Location = new Point(1078, 663);
+            VoltarButton.Location = new Point(1078, 594);
             VoltarButton.Name = "VoltarButton";
-            VoltarButton.Size = new Size(160, 85);
+            VoltarButton.Size = new Size(160, 77);
             VoltarButton.TabIndex = 134;
             VoltarButton.Text = "Voltar";
             VoltarButton.TextAlign = ContentAlignment.BottomLeft;
@@ -373,9 +373,9 @@
             ProximoButton.ForeColor = Color.White;
             ProximoButton.ImageIndex = 3;
             ProximoButton.ImageList = ListImage;
-            ProximoButton.Location = new Point(895, 663);
+            ProximoButton.Location = new Point(895, 594);
             ProximoButton.Name = "ProximoButton";
-            ProximoButton.Size = new Size(160, 85);
+            ProximoButton.Size = new Size(160, 77);
             ProximoButton.TabIndex = 133;
             ProximoButton.Text = "Próximo";
             ProximoButton.TextAlign = ContentAlignment.BottomLeft;
@@ -389,9 +389,9 @@
             AnteriorButton.ForeColor = Color.White;
             AnteriorButton.ImageIndex = 4;
             AnteriorButton.ImageList = ListImage;
-            AnteriorButton.Location = new Point(712, 663);
+            AnteriorButton.Location = new Point(712, 594);
             AnteriorButton.Name = "AnteriorButton";
-            AnteriorButton.Size = new Size(160, 85);
+            AnteriorButton.Size = new Size(160, 77);
             AnteriorButton.TabIndex = 132;
             AnteriorButton.Text = "Anterior";
             AnteriorButton.TextAlign = ContentAlignment.BottomLeft;
@@ -405,9 +405,9 @@
             EditarButton.ForeColor = Color.White;
             EditarButton.ImageIndex = 2;
             EditarButton.ImageList = ListImage;
-            EditarButton.Location = new Point(529, 663);
+            EditarButton.Location = new Point(529, 594);
             EditarButton.Name = "EditarButton";
-            EditarButton.Size = new Size(160, 85);
+            EditarButton.Size = new Size(160, 77);
             EditarButton.TabIndex = 131;
             EditarButton.Text = "Editar";
             EditarButton.TextAlign = ContentAlignment.BottomLeft;
@@ -421,9 +421,9 @@
             InserirNovoButton.ForeColor = Color.White;
             InserirNovoButton.ImageIndex = 5;
             InserirNovoButton.ImageList = ListImage;
-            InserirNovoButton.Location = new Point(346, 663);
+            InserirNovoButton.Location = new Point(346, 594);
             InserirNovoButton.Name = "InserirNovoButton";
-            InserirNovoButton.Size = new Size(160, 85);
+            InserirNovoButton.Size = new Size(160, 77);
             InserirNovoButton.TabIndex = 130;
             InserirNovoButton.Text = "Inserir Novo";
             InserirNovoButton.TextAlign = ContentAlignment.BottomLeft;
@@ -437,9 +437,9 @@
             CopiarButton.ForeColor = Color.White;
             CopiarButton.ImageIndex = 1;
             CopiarButton.ImageList = ListImage;
-            CopiarButton.Location = new Point(163, 663);
+            CopiarButton.Location = new Point(163, 594);
             CopiarButton.Name = "CopiarButton";
-            CopiarButton.Size = new Size(160, 85);
+            CopiarButton.Size = new Size(160, 77);
             CopiarButton.TabIndex = 129;
             CopiarButton.Text = "Copiar Dados";
             CopiarButton.TextAlign = ContentAlignment.BottomLeft;
@@ -447,17 +447,17 @@
             // 
             // ResumoText
             // 
-            ResumoText.Location = new Point(780, 104);
+            ResumoText.Location = new Point(780, 35);
             ResumoText.Multiline = true;
             ResumoText.Name = "ResumoText";
-            ResumoText.Size = new Size(600, 534);
+            ResumoText.Size = new Size(600, 526);
             ResumoText.TabIndex = 137;
             // 
             // FilmesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1400, 892);
+            ClientSize = new Size(1400, 703);
             Controls.Add(ResumoText);
             Controls.Add(VoltarButton);
             Controls.Add(ProximoButton);
