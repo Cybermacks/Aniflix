@@ -1,5 +1,4 @@
-﻿using Aniflix.Globals;
-using Aniflix.Properties;
+﻿using Aniflix.Properties;
 
 namespace Aniflix.Views
 {
@@ -8,7 +7,6 @@ namespace Aniflix.Views
         private Button? currentBtn;
         private readonly Panel? leftBorderBtn;
         private Form? currentChildForm;
-        private readonly DarkModeCS dm;
 
         public AniflixView()
         {
@@ -21,10 +19,6 @@ namespace Aniflix.Views
             Text = string.Empty;
             DoubleBuffered = true;
 
-            dm = new DarkModeCS(this)
-            {
-                ColorMode = DarkModeCS.DisplayMode.DarkMode
-            };
 
 
         }
