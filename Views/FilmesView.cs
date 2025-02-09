@@ -34,9 +34,7 @@ namespace Aniflix.Views
                     DefaultCountry = "BR",
                 };
 
-                var movieDB = GlobFunctions.MovieDatabase;
-
-                var movieTask = movieDB.GetMovieAsync(CodigoText.Text);
+                var movieTask = client.GetMovieAsync(CodigoText.Text);
                 var creditsTask = client.GetMovieCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
                 await Task.WhenAll(movieTask, creditsTask);
