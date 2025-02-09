@@ -10,6 +10,7 @@ namespace Aniflix.Views
 {
     public partial class FilmesView : Form
     {
+        private readonly DarkModeCS dm;
         public FilmesView()
         {
             InitializeComponent();
