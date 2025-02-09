@@ -34,10 +34,10 @@ namespace Aniflix.Views
 
         private static bool UseImmersiveDarkMode(IntPtr handle, bool enabled)
         {
-            if (IsWindows10OrGreater(17763)) // Windows 10 1809 ou superior
+            if (IsWindows10OrGreater(17763))
             {
                 int attribute = DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1;
-                if (IsWindows10OrGreater(18985)) // Windows 10 1909 ou superior
+                if (IsWindows10OrGreater(18985))
                 {
                     attribute = DWMWA_USE_IMMERSIVE_DARK_MODE;
                 }
@@ -51,9 +51,9 @@ namespace Aniflix.Views
 
         private static void EnableDarkModeForMenus()
         {
-            if (IsWindows10OrGreater(22000)) // Windows 11
+            if (IsWindows10OrGreater(22000))
             {
-                SetPreferredAppMode(1); // 0 = Light, 1 = Dark
+                SetPreferredAppMode(1);
             }
         }
 
@@ -62,7 +62,7 @@ namespace Aniflix.Views
             base.OnHandleCreated(e);
             UseImmersiveDarkMode(Handle, true);
             EnableDarkModeForMenus();
-            BackColor = Color.FromArgb(30, 30, 30); // Fundo escuro
+            BackColor = Color.FromArgb(30, 30, 30);
         }
 
 
