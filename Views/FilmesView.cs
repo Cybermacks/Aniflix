@@ -31,8 +31,8 @@ namespace Aniflix.Views
 
                 var general = GlobFunctions.MovieDatabase();
 
-                var movieTask = client.GetMovieAsync(CodigoText.Text);
-                var creditsTask = client.GetMovieCreditsAsync(Convert.ToInt32(CodigoText.Text));
+                var movieTask = general.GetMovieAsync(CodigoText.Text);
+                var creditsTask = general.GetMovieCreditsAsync(Convert.ToInt32(CodigoText.Text));
 
                 await Task.WhenAll(movieTask, creditsTask);
 
