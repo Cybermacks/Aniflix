@@ -72,9 +72,9 @@ namespace Aniflix.Globals
             titleLabel!.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
             toggleButton!.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
         }
-    }
 
-    public static void TMDB()
+
+        public static void TMDB()
         {
             var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
             {
