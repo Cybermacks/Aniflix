@@ -8,7 +8,8 @@ namespace Aniflix.Globals
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
-        LibraryImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
+        [DllImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
+        [LibraryImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
         private static extern int SetPreferredAppMode(int mode);
 
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1 = 19;
