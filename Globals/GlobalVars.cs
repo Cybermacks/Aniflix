@@ -9,11 +9,14 @@ namespace Aniflix.Globals
         public static bool editando = false;
         public static string _api_key = "1dcbf681735d3e7454953f5b7c22b6dc";
 
+
         public static string API_KEY
         {
 
             get { return API_KEY; }
             private set { API_KEY = value; }
         }
+
+
     }
 }
