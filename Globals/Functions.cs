@@ -87,5 +87,5 @@
                 SetPreferredAppMode(1); // Ativa tema escuro para menus do sistema (Windows 11)
             }
         }
-    }
 
+    }
