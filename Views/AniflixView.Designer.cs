@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             MenuPanel = new Panel();
+            FilmesButton = new Button();
             panel2 = new Panel();
             HomeButton = new PictureBox();
             TitleBarPanel = new Panel();
@@ -38,7 +39,6 @@
             iconCurrentChildForm = new PictureBox();
             lblTitleChildForm = new Label();
             panelDesktop = new Panel();
-            FilmesButton = new Button();
             ListImage = new ImageList(components);
             MenuPanel.SuspendLayout();
             panel2.SuspendLayout();
@@ -59,6 +59,19 @@
             MenuPanel.Name = "MenuPanel";
             MenuPanel.Size = new Size(280, 924);
             MenuPanel.TabIndex = 0;
+            // 
+            // FilmesButton
+            // 
+            FilmesButton.Dock = DockStyle.Top;
+            FilmesButton.FlatStyle = FlatStyle.Popup;
+            FilmesButton.ForeColor = Color.White;
+            FilmesButton.Location = new Point(0, 100);
+            FilmesButton.Name = "FilmesButton";
+            FilmesButton.Size = new Size(280, 65);
+            FilmesButton.TabIndex = 1;
+            FilmesButton.Text = "Filmes";
+            FilmesButton.UseVisualStyleBackColor = true;
+            FilmesButton.Click += FilmesButton_Click;
             // 
             // panel2
             // 
@@ -90,7 +103,6 @@
             TitleBarPanel.Name = "TitleBarPanel";
             TitleBarPanel.Size = new Size(1407, 80);
             TitleBarPanel.TabIndex = 1;
-            TitleBarPanel.MouseDown += PanelTitleBar_MouseDown;
             // 
             // CloseButton
             // 
@@ -140,19 +152,6 @@
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1407, 844);
             panelDesktop.TabIndex = 2;
-            // 
-            // FilmesButton
-            // 
-            FilmesButton.Dock = DockStyle.Top;
-            FilmesButton.FlatStyle = FlatStyle.Popup;
-            FilmesButton.ForeColor = Color.White;
-            FilmesButton.Location = new Point(0, 100);
-            FilmesButton.Name = "FilmesButton";
-            FilmesButton.Size = new Size(280, 65);
-            FilmesButton.TabIndex = 1;
-            FilmesButton.Text = "Filmes";
-            FilmesButton.UseVisualStyleBackColor = true;
-            FilmesButton.Click += FilmesButton_Click;
             // 
             // ListImage
             // 
