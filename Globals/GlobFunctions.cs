@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace Aniflix.Globals
 {
-    public class GlobFunctions
+    public static class GlobFunctions
     {
         [LibraryImport("dwmapi.dll")]
         public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
@@ -14,12 +14,12 @@ namespace Aniflix.Globals
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1 = 19;
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
 
-        private bool darkModeEnabled = true;
-        private readonly Button? toggleButton;
-        private readonly Label? titleLabel;
-        private readonly TextBox? inputBox;
-        private readonly ComboBox? themeSelector;
-        private readonly Form? form;
+        private static bool darkModeEnabled = true;
+        private static Button? toggleButton;
+        private static Label? titleLabel;
+        private static TextBox? inputBox;
+        private static ComboBox? themeSelector;
+        private static Form? form;
 
         public static bool IsWindows10OrGreater(int build = -1)
         {
