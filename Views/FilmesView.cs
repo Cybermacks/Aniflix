@@ -15,12 +15,20 @@ namespace Aniflix.Views
             InitializeComponent();
         }
 
+        protected override void OnHandleCreated(EventArgs e)
+        {
+
+            base.OnHandleCreated(e);
+            GlobFunctions.ApplyTheme(0);
+            GlobFunctions.EnableDarkModeForMenus();
+        }
+
         private async Task GivenData()
         {
             try
             {
 
-                var client = new TMDbLib.Client.TMDbClient(GlobalVars.API_KEY)
+                var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
                 {
                     DefaultLanguage = "pt-BR",
                     DefaultCountry = "BR",
