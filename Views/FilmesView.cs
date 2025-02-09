@@ -17,8 +17,7 @@ namespace Aniflix.Views
 
             dm = new DarkModeCS(this)
             {
-                //[Optional] Choose your preferred color mode here:
-                ColorMode = DarkModeCS.DisplayMode.SystemDefault
+                ColorMode = DarkModeCS.DisplayMode.DarkMode
             };
         }
 
