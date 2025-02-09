@@ -27,6 +27,7 @@ namespace Aniflix.Views
             ControlBox = false;
             DoubleBuffered = true;
             MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
+
         }
         private struct RGBColors
         {
