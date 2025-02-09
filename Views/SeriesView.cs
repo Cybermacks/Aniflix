@@ -15,6 +15,13 @@ public partial class SeriesView : Form
         InitializeComponent();
     }
 
+    protected override void OnHandleCreated(EventArgs e)
+    {
+
+        base.OnHandleCreated(e);
+        GlobFunctions.ApplyTheme(0);
+        GlobFunctions.EnableDarkModeForMenus();
+    }
     private async Task GivenData()
     {
         try
