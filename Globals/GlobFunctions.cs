@@ -16,10 +16,10 @@ namespace Aniflix.Globals
 
         private bool darkModeEnabled = true;
         private Button? toggleButton;
-        private Label? titleLabel;
-        private TextBox? inputBox;
-        private ComboBox? themeSelector;
-        private Form? form;
+        private readonly Label? titleLabel;
+        private readonly TextBox? inputBox;
+        private readonly ComboBox? themeSelector;
+        private readonly Form? form;
 
         private static bool IsWindows10OrGreater(int build = -1)
         {
