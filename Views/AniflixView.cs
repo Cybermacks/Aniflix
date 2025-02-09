@@ -18,32 +18,44 @@ namespace Aniflix.Views
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
+        [DllImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
+        private static extern int SetPreferredAppMode(int mode);
+
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1 = 19;
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
-
-        private static bool UseImmersiveDarkMode(IntPtr handle, bool enabled)
-        {
-            if (IsWindows10OrGreater(17763))
-            {
-                var attribute = DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1;
-                if (IsWindows10OrGreater(18985))
-                {
-                    attribute = DWMWA_USE_IMMERSIVE_DARK_MODE;
-                }
-
-                int useImmersiveDarkMode = enabled ? 1 : 0;
-                return DwmSetWindowAttribute(handle, (int)attribute, ref useImmersiveDarkMode, sizeof(int)) == 0;
-            }
-
-            return false;
-        }
+        private const int DWMWA_SYSTEMBACKDROP_TYPE = 38;
+        private const int DWMSBT_MAINWINDOW = 2;
+        private const int DWMSBT_TRANSIENTWINDOW = 3;
 
         private static bool IsWindows10OrGreater(int build = -1)
         {
             return Environment.OSVersion.Version.Major >= 10 && Environment.OSVersion.Version.Build >= build;
         }
 
+        private static bool UseImmersiveDarkMode(IntPtr handle, bool enabled)
+        {
+            if (IsWindows10OrGreater(17763)) // Windows 10 1809 ou superior
+            {
+                int attribute = DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1;
+                if (IsWindows10OrGreater(18985)) // Windows 10 1909 ou superior
+                {
+                    attribute = DWMWA_USE_IMMERSIVE_DARK_MODE;
+                }
 
+                int useDark = enabled ? 1 : 0;
+                return DwmSetWindowAttribute(handle, attribute, ref useDark, sizeof(int)) == 0;
+            }
+
+            return false;
+        }
+
+        private static void EnableDarkModeForMenus()
+        {
+            if (IsWindows10OrGreater(22000)) // Windows 11
+            {
+                SetPreferredAppMode(1); // 0 = Light, 1 = Dark
+            }
+        }
 
 
         public AniflixView()
