@@ -83,7 +83,6 @@ namespace Aniflix.Globals
                 DefaultCountry = "BR",
             };
             return client;
-
         }
     }
 }
