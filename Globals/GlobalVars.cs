@@ -9,5 +9,7 @@ namespace Aniflix.Globals
         public static bool editando = false;
         public static string TMDB_KEY = "1dcbf681735d3e7454953f5b7c22b6dc";
         public static string DEEPL_KEY = "7feb3eb8-de95-4312-843c-1064aecdab8b:fx";
+
+
     }
 }
