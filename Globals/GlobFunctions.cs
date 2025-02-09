@@ -5,10 +5,9 @@ namespace Aniflix.Globals
 {
     public class GlobFunctions
     {
-        [DllImport("dwmapi.dll")]
+        [LibraryImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
-        [DllImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
         [LibraryImport("uxtheme.dll", EntryPoint = "#135", SetLastError = true)]
         private static extern int SetPreferredAppMode(int mode);
 
