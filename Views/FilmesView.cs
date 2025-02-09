@@ -28,7 +28,6 @@ namespace Aniflix.Views
             try
             {
 
-
                 var general = GlobFunctions.MovieDatabase();
 
                 var movieTask = general.GetMovieAsync(CodigoText.Text);
