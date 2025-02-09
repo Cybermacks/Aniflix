@@ -229,7 +229,7 @@ public partial class SeriesView : Form
     {
         if (record != null)
         {
-            GlobalVars.currentId = Convert.ToInt32(record["id"]);
+            GlobVars.currentId = Convert.ToInt32(record["id"]);
             CodigoText.Text = record["codigo"].ToString();
             TituloText.Text = record["titulo"].ToString();
             AudioBox.SelectedItem = record["audio"].ToString();
@@ -253,7 +253,7 @@ public partial class SeriesView : Form
     }
     private void Next()
     {
-        var nextRecord = SeriesController.MoveProximo(GlobalVars.currentId);
+        var nextRecord = SeriesController.MoveProximo(GlobVars.currentId);
 
         if (nextRecord != null)
         {
@@ -266,7 +266,7 @@ public partial class SeriesView : Form
     }
     private void Previous()
     {
-        var previousRecord = SeriesController.MoveAnterior(GlobalVars.currentId);
+        var previousRecord = SeriesController.MoveAnterior(GlobVars.currentId);
 
         if (previousRecord != null)
         {
@@ -478,9 +478,9 @@ public partial class SeriesView : Form
             Estudio = EstudioText.Text
         };
 
-        if (!GlobalVars.editando)
+        if (!GlobVars.editando)
         {
-            GlobalVars.editando = true;
+            GlobVars.editando = true;
             EditarButton.Text = "Cancelar";
             Functions.UndoReadOnly(this);
         }
@@ -490,7 +490,7 @@ public partial class SeriesView : Form
 
             if (cancelar == DialogResult.Yes)
             {
-                GlobalVars.editando = false;
+                GlobVars.editando = false;
                 Functions.DoReadOnly(this);
                 EditarButton.Text = "Editar";
             }
@@ -510,7 +510,7 @@ public partial class SeriesView : Form
 
             Functions.DoReadOnly(this);
             EditarButton.Text = "Editar";
-            GlobalVars.editando = false;
+            GlobVars.editando = false;
         }
     }
 

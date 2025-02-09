@@ -2,7 +2,7 @@
 
 namespace Aniflix.Globals
 {
-    public static class GlobalVars
+    public static class GlobVars
     {
         public static readonly DatabaseConnection _conn = DatabaseConnection.Instance;
         public static int currentId = 0;

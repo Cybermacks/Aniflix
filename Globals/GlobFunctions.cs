@@ -78,7 +78,7 @@ namespace Aniflix.Globals
 
         public static TMDbClient MovieDatabase()
         {
-            var client = new TMDbClient(GlobalVars.TMDB_KEY)
+            var client = new TMDbClient(GlobVars.TMDB_KEY)
             {
                 DefaultLanguage = "pt-BR",
                 DefaultCountry = "BR",
@@ -88,7 +88,7 @@ namespace Aniflix.Globals
 
         public static DeepLClient DeepTranslate()
         {
-            var client = new DeepLClient(GlobalVars.DEEPL_KEY);
+            var client = new DeepLClient(GlobVars.DEEPL_KEY);
             return client;
         }
     }
