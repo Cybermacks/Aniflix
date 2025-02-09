@@ -28,11 +28,8 @@ namespace Aniflix.Views
             try
             {
 
-                var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
-                {
-                    DefaultLanguage = "pt-BR",
-                    DefaultCountry = "BR",
-                };
+
+                var general = GlobFunctions.MovieDatabase();
 
                 var movieTask = client.GetMovieAsync(CodigoText.Text);
                 var creditsTask = client.GetMovieCreditsAsync(Convert.ToInt32(CodigoText.Text));
