@@ -82,7 +82,6 @@ namespace Aniflix.Globals
                 DefaultCountry = "BR",
             };
 
-            var deepL = new DeepLClient(GlobalVars.DEEPL_KEY);
         }
 
 
