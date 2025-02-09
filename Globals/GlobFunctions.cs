@@ -72,8 +72,18 @@ namespace Aniflix.Globals
             titleLabel!.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
             toggleButton!.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
         }
+    }
+
+    public static void TMDB()
+        {
+            var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
+            {
+                DefaultLanguage = "pt-BR",
+                DefaultCountry = "BR",
+            };
+
+            var deepL = new DeepLClient(GlobalVars.DEEPL_KEY);
+        }
 
 
     }
-
-}
