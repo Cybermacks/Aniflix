@@ -37,7 +37,7 @@ namespace Aniflix.Globals
             return false;
         }
 
-        private static void EnableDarkModeForMenus()
+        public static void EnableDarkModeForMenus()
         {
             if (IsWindows10OrGreater(22000))
             {
