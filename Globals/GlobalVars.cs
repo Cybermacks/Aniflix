@@ -17,6 +17,12 @@ namespace Aniflix.Globals
             private set { API_KEY = value; }
         }
 
+        public static bool Editando
+        {
+            get { return _editando; }
+            set { _editando = value; }
+        }
+
 
     }
 }
