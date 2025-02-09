@@ -43,4 +43,41 @@ namespace Aniflix.Globals
             }
         }
     }
-}
+
+        private void ApplyTheme(int themeIndex)
+        {
+            if (themeIndex == 0) // Escuro Profundo
+            {
+                BackColor = Color.FromArgb(30, 30, 30);
+                toggleButton.BackColor = Color.FromArgb(50, 50, 50);
+                inputBox.BackColor = Color.FromArgb(50, 50, 50);
+                inputBox.ForeColor = Color.White;
+            }
+            else if (themeIndex == 1) // Cinza Médio
+            {
+                BackColor = Color.FromArgb(60, 60, 60);
+                toggleButton.BackColor = Color.FromArgb(80, 80, 80);
+                inputBox.BackColor = Color.FromArgb(80, 80, 80);
+                inputBox.ForeColor = Color.White;
+            }
+            else if (themeIndex == 2) // Claro
+            {
+                BackColor = Color.White;
+                toggleButton.BackColor = Color.LightGray;
+                inputBox.BackColor = Color.White;
+                inputBox.ForeColor = Color.Black;
+            }
+
+            titleLabel.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
+            toggleButton.ForeColor = (themeIndex == 2) ? Color.Black : Color.White;
+        }
+
+        private void ToggleDarkMode()
+        {
+            darkModeEnabled = !darkModeEnabled;
+            UseImmersiveDarkMode(Handle, darkModeEnabled);
+            ApplyTheme(themeSelector.SelectedIndex);
+        }
+
+    }
+
