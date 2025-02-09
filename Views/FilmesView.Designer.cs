@@ -494,7 +494,7 @@
             Controls.Add(AudioBox);
             Controls.Add(TituloText);
             Controls.Add(CodigoText);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FilmesView";
