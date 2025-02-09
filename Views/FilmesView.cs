@@ -13,15 +13,8 @@ namespace Aniflix.Views
         public FilmesView()
         {
             InitializeComponent();
-        }
 
-        protected override void OnHandleCreated(EventArgs e)
-        {
 
-            base.OnHandleCreated(e);
-            GlobFunctions.UseImmersiveDarkMode(Handle, true);
-            GlobFunctions.EnableDarkModeForMenus();
-            BackColor = Color.FromArgb(30, 30, 30);
         }
 
         private async Task GivenData()
