@@ -20,7 +20,7 @@ namespace Aniflix.Views
         protected override void OnHandleCreated(EventArgs e)
         {
             if (DwmSetWindowAttribute(Handle, 19, new[] { 1 }, 4) != 0)
-                _ = DwmSetWindowAttribute(Handle, 20, [1], 4);
+                DwmSetWindowAttribute(Handle, 20, [1], 4);
         }
 
 
