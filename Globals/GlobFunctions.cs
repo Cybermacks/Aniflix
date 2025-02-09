@@ -14,10 +14,10 @@ namespace Aniflix.Globals
         private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
 
         private bool darkModeEnabled = true;
-        private Button toggleButton;
-        private Label titleLabel;
-        private TextBox inputBox;
-        private ComboBox themeSelector;
+        private Button? toggleButton;
+        private Label? titleLabel;
+        private TextBox? inputBox;
+        private ComboBox? themeSelector;
 
         private static bool IsWindows10OrGreater(int build = -1)
         {
