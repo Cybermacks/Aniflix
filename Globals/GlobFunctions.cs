@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
-
+﻿
 namespace Aniflix.Globals
 {
     public class GlobFunctions
