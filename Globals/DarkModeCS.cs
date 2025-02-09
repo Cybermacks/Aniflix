@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace DarkModeForms
+namespace Aniflix.Globals
 {
     /// <summary>This tries to automatically apply Windows Dark Mode (if enabled) to a Form.
     /// <para>Author: BlueMystic (bluemystic.play@gmail.com)  2024</para></summary>
@@ -178,22 +178,22 @@ namespace DarkModeForms
 
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
+        public static extern nint SendMessage(nint hWnd, int msg, nint wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
         [DllImport("DwmApi")]
-        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, int[] attrValue, int attrSize);
+        public static extern int DwmSetWindowAttribute(nint hwnd, int attr, int[] attrValue, int attrSize);
 
         [DllImport("dwmapi.dll")]
-        public static extern int DwmGetWindowAttribute(IntPtr hwnd, int dwAttribute, out RECT pvAttribute, int cbAttribute);
+        public static extern int DwmGetWindowAttribute(nint hwnd, int dwAttribute, out RECT pvAttribute, int cbAttribute);
 
         [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
-        private static extern int SetWindowTheme(IntPtr hWnd, string pszSubAppName, string pszSubIdList);
+        private static extern int SetWindowTheme(nint hWnd, string pszSubAppName, string pszSubIdList);
 
         [DllImport("dwmapi.dll", EntryPoint = "#127")]
         public static extern void DwmGetColorizationParameters(ref DWMCOLORIZATIONcolors colors);
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
+        private static extern nint CreateRoundRectRgn
         (
           int nLeftRect,     // x-coordinate of upper-left corner
           int nTopRect,      // y-coordinate of upper-left corner
@@ -204,46 +204,46 @@ namespace DarkModeForms
         );
 
         [DllImport("user32")]
-        private static extern IntPtr GetDC(IntPtr hwnd);
+        private static extern nint GetDC(nint hwnd);
 
         [DllImport("user32")]
-        private static extern IntPtr ReleaseDC(IntPtr hwnd, IntPtr hdc);
+        private static extern nint ReleaseDC(nint hwnd, nint hdc);
 
-        private static IntPtr GetHeaderControl(ListView list)
+        private static nint GetHeaderControl(ListView list)
         {
             const int LVM_GETHEADER = 0x1000 + 31;
-            return SendMessage(list.Handle, LVM_GETHEADER, IntPtr.Zero, "");
+            return SendMessage(list.Handle, LVM_GETHEADER, nint.Zero, "");
         }
 
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate IntPtr WndProc(IntPtr hWnd, int msg, IntPtr wParam, IntPtr lParam);
+        private delegate nint WndProc(nint hWnd, int msg, nint wParam, nint lParam);
 
         // This helper static method is required because the 32-bit version of user32.dll does not contain this API
         // (on any versions of Windows), so linking the method will fail at run-time. The bridge dispatches the request
         // to the correct function (GetWindowLong in 32-bit mode and GetWindowLongPtr in 64-bit mode)
-        public static IntPtr SetWindowLongPtr(HandleRef hWnd, int nIndex, IntPtr dwNewLong)
+        public static nint SetWindowLongPtr(HandleRef hWnd, int nIndex, nint dwNewLong)
         {
-            if (IntPtr.Size == 8)
+            if (nint.Size == 8)
                 return SetWindowLongPtr64(hWnd, nIndex, dwNewLong);
             else
-                return new IntPtr(SetWindowLong32(hWnd, nIndex, dwNewLong.ToInt32()));
+                return new nint(SetWindowLong32(hWnd, nIndex, dwNewLong.ToInt32()));
         }
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLong")]
         private static extern int SetWindowLong32(HandleRef hWnd, int nIndex, int dwNewLong);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLongPtr")]
-        private static extern IntPtr SetWindowLongPtr64(HandleRef hWnd, int nIndex, IntPtr dwNewLong);
+        private static extern nint SetWindowLongPtr64(HandleRef hWnd, int nIndex, nint dwNewLong);
         //		If that doesn't work, the following signature can be used alternatively.
         [DllImport("user32.dll")]
-        static extern int SetWindowLong(IntPtr hWnd, int nIndex, uint dwNewLong);
+        static extern int SetWindowLong(nint hWnd, int nIndex, uint dwNewLong);
 
         //[DllImport("user32.dll", SetLastError = true)]
         //private static extern IntPtr SetWindowLongPtr(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
 
 
         [DllImport("user32.dll", SetLastError = true)]
-        private static extern IntPtr CallWindowProc(IntPtr lpPrevWndFunc, IntPtr hWnd, int msg, IntPtr wParam, IntPtr lParam);
+        private static extern nint CallWindowProc(nint lpPrevWndFunc, nint hWnd, int msg, nint wParam, nint lParam);
 
 
         #endregion Win32 API Declarations
@@ -273,9 +273,9 @@ namespace DarkModeForms
 
         private bool _IsDarkMode; //<- storage for the Read Only Proerty 'IsDarkMode'
 
-        private IntPtr originalWndProc;
+        private nint originalWndProc;
         private WndProc newWndProcDelegate;
-        private IntPtr formHandle;
+        private nint formHandle;
         private bool applyingTheme; // Flag to prevent recursion
 
         #endregion
@@ -332,7 +332,7 @@ namespace DarkModeForms
             ColorizeIcons = _ColorizeIcons;
             RoundedPanels = _RoundedPanels;
 
-            if (originalWndProc == IntPtr.Zero)
+            if (originalWndProc == nint.Zero)
             {
                 _Form.HandleCreated += (sender, e) =>
                 {
@@ -354,7 +354,7 @@ namespace DarkModeForms
             };
         }
 
-        private IntPtr CustomWndProc(IntPtr hWnd, int msg, IntPtr wParam, IntPtr lParam)
+        private nint CustomWndProc(nint hWnd, int msg, nint wParam, nint lParam)
         {
             // Handle the WM_THEMECHANGED message
             // Debug.WriteLine($"Message Code: {msg}"); // <-- should not be enabled in production as it slows everything down!
@@ -474,8 +474,8 @@ namespace DarkModeForms
                 controlStatusStorage.RegisterProcessedControl(control, IsDarkMode);
             }
 
-            BorderStyle BStyle = (IsDarkMode ? BorderStyle.FixedSingle : BorderStyle.Fixed3D);
-            FlatStyle FStyle = (IsDarkMode ? FlatStyle.Flat : FlatStyle.Standard);
+            BorderStyle BStyle = IsDarkMode ? BorderStyle.FixedSingle : BorderStyle.Fixed3D;
+            FlatStyle FStyle = IsDarkMode ? FlatStyle.Flat : FlatStyle.Standard;
 
             if (controlHandleCreated == null) controlHandleCreated = (sender, e) =>
             {
@@ -542,7 +542,7 @@ namespace DarkModeForms
                 button.FlatStyle = IsDarkMode ? FlatStyle.Flat : FlatStyle.Standard;
                 button.FlatAppearance.CheckedBackColor = OScolors.Accent;
                 button.BackColor = OScolors.Control;
-                button.FlatAppearance.BorderColor = (OwnerForm.AcceptButton == button) ?
+                button.FlatAppearance.BorderColor = OwnerForm.AcceptButton == button ?
                   OScolors.Accent : OScolors.Control;
             }
             if (control is ComboBox comboBox)
@@ -587,7 +587,7 @@ namespace DarkModeForms
                 {
                     if (control.Enabled == false && IsDarkMode)
                     {
-                        var radio = (sender as GroupBox);
+                        var radio = sender as GroupBox;
                         Brush B = new SolidBrush(control.ForeColor);
 
                         e.Graphics.DrawString(radio.Text, radio.Font,
@@ -629,7 +629,7 @@ namespace DarkModeForms
                             var tBounds = e.Bounds;
                             //tBounds.Inflate(100, 100);
 
-                            bool IsSelected = (tab.SelectedIndex == i);
+                            bool IsSelected = tab.SelectedIndex == i;
                             if (IsSelected)
                             {
                                 e.Graphics.FillRectangle(tabBack, tBounds);
@@ -666,7 +666,7 @@ namespace DarkModeForms
                 {
                     if (control.Enabled == false && IsDarkMode)
                     {
-                        var radio = (sender as CheckBox);
+                        var radio = sender as CheckBox;
                         Brush B = new SolidBrush(control.ForeColor);
 
                         e.Graphics.DrawString(radio.Text, radio.Font,
@@ -682,7 +682,7 @@ namespace DarkModeForms
                 {
                     if (control.Enabled == false && IsDarkMode)
                     {
-                        var radio = (sender as RadioButton);
+                        var radio = sender as RadioButton;
                         Brush B = new SolidBrush(control.ForeColor);
 
                         e.Graphics.DrawString(radio.Text, radio.Font,
@@ -931,10 +931,10 @@ namespace DarkModeForms
 
                     var colorValue = long.Parse(color.ToString(), System.Globalization.NumberStyles.HexNumber);
 
-                    var transparency = (colorValue >> 24) & 0xFF;
-                    var red = (colorValue >> 16) & 0xFF;
-                    var green = (colorValue >> 8) & 0xFF;
-                    var blue = (colorValue >> 0) & 0xFF;
+                    var transparency = colorValue >> 24 & 0xFF;
+                    var red = colorValue >> 16 & 0xFF;
+                    var green = colorValue >> 8 & 0xFF;
+                    var blue = colorValue >> 0 & 0xFF;
 
                     return Color.FromArgb((int)transparency, (int)red, (int)green, (int)blue);
                 }
@@ -963,9 +963,9 @@ namespace DarkModeForms
 
                 var colorValue = long.Parse(color.ToString(), System.Globalization.NumberStyles.HexNumber);
 
-                var red = (colorValue >> 16) & 0xFF;
-                var green = (colorValue >> 8) & 0xFF;
-                var blue = (colorValue >> 0) & 0xFF;
+                var red = colorValue >> 16 & 0xFF;
+                var green = colorValue >> 8 & 0xFF;
+                var blue = colorValue >> 0 & 0xFF;
 
                 return Color.FromArgb(255, (int)red, (int)green, (int)blue);
             }
@@ -1507,9 +1507,9 @@ namespace DarkModeForms
             int Padding = 2; //<- From the right side
             Size cSize = new Size(8, 4); //<- Size of the Chevron: 8x4 px
             Pen ChevronPen = new Pen(MyColors.TextInactive, 2); //<- Color and Border Width
-            Point P1 = new Point(bounds.Width - (cSize.Width + Padding), (bounds.Height / 2) - (cSize.Height / 2));
-            Point P2 = new Point(bounds.Width - Padding, (bounds.Height / 2) - (cSize.Height / 2));
-            Point P3 = new Point(bounds.Width - (cSize.Width / 2 + Padding), (bounds.Height / 2) + (cSize.Height / 2));
+            Point P1 = new Point(bounds.Width - (cSize.Width + Padding), bounds.Height / 2 - cSize.Height / 2);
+            Point P2 = new Point(bounds.Width - Padding, bounds.Height / 2 - cSize.Height / 2);
+            Point P3 = new Point(bounds.Width - (cSize.Width / 2 + Padding), bounds.Height / 2 + cSize.Height / 2);
 
             e.Graphics.DrawLine(ChevronPen, P1, P3);
             e.Graphics.DrawLine(ChevronPen, P2, P3);
