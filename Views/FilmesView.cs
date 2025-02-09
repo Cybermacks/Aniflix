@@ -14,7 +14,11 @@ namespace Aniflix.Views
         {
             InitializeComponent();
 
-
+            dm = new DarkModeCS(this)
+            {
+                //[Optional] Choose your preferred color mode here:
+                ColorMode = DarkModeCS.DisplayMode.SystemDefault
+            };
         }
 
         private async Task GivenData()
