@@ -1,5 +1,6 @@
 ﻿
 using System.Runtime.InteropServices;
+using DeepL;
 using TMDbLib.Client;
 
 namespace Aniflix.Globals
@@ -82,6 +83,12 @@ namespace Aniflix.Globals
                 DefaultLanguage = "pt-BR",
                 DefaultCountry = "BR",
             };
+            return client;
+        }
+
+        public static DeepLClient DeepL()
+        {
+            var client = new DeepLClient(GlobalVars.DeepL_KEY);
             return client;
         }
     }
