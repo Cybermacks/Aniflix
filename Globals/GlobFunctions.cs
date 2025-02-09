@@ -51,7 +51,7 @@ namespace Aniflix.Globals
         {
             if (themeIndex == 0)
             {
-                form!.BackColor = Color.FromArgb(30, 30, 30);
+                //form!.BackColor = Color.FromArgb(30, 30, 30);
                 toggleButton!.BackColor = Color.FromArgb(50, 50, 50);
                 inputBox!.BackColor = Color.FromArgb(50, 50, 50);
                 inputBox.ForeColor = Color.White;
