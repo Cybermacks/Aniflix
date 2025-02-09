@@ -11,6 +11,7 @@ namespace Aniflix.Globals
 
         public static string API_KEY
         {
+
             get { return API_KEY; }
             private set { API_KEY = value; }
         }
