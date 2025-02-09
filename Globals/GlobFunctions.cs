@@ -45,7 +45,7 @@ namespace Aniflix.Globals
             }
         }
 
-        public void ApplyTheme(int themeIndex)
+        public static void ApplyTheme(int themeIndex)
         {
             if (themeIndex == 0)
             {
