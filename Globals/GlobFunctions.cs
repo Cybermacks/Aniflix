@@ -26,7 +26,7 @@ namespace Aniflix.Globals
             return Environment.OSVersion.Version.Major >= 10 && Environment.OSVersion.Version.Build >= build;
         }
 
-        private static bool UseImmersiveDarkMode(IntPtr handle, bool enabled)
+        public static bool UseImmersiveDarkMode(IntPtr handle, bool enabled)
         {
             if (IsWindows10OrGreater(17763))
             {
