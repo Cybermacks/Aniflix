@@ -27,13 +27,13 @@ public partial class SeriesView : Form
         try
         {
 
-            var client = new TMDbLib.Client.TMDbClient(GlobalVars.API_KEY)
+            var client = new TMDbLib.Client.TMDbClient(GlobalVars.TMDB_KEY)
             {
                 DefaultLanguage = "pt-BR",
                 DefaultCountry = "BR",
             };
 
-            var deepL = new DeepLClient("7feb3eb8-de95-4312-843c-1064aecdab8b:fx");
+            var deepL = new DeepLClient("");
             var codigo = int.Parse(CodigoText.Text);
             var givenTask = client.GetTvShowAsync(codigo);
             var creditsTask = client.GetTvShowCreditsAsync(Convert.ToInt32(CodigoText.Text));
